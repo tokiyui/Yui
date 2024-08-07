@@ -686,64 +686,54 @@
         ]
     },
     {
-        "LIVEtitle": "Inori Minase LIVE TOUR 2022 glow 愛知公演",
-        "tourtitle": "Inori Minase LIVE TOUR 2022 glow",
-        "date": "2022年9月10日",
-        "venue": "名古屋国際会議場",
-        "id": "2022091001",
+        "LIVEtitle": "石原夏織 AUTUMN EVENT「ONE DROP」 3部",
+        "tourtitle": "石原夏織 AUTUMN EVENT「ONE DROP」",
+        "artist": "石原夏織",
+        "date": "2020年9月27日",
+        "venue": "ヒューリックホール東京",
+        "id": "2020092703",
         "setlist": [
-            "sunrise glow(overture)",
-            "僕らだけの鼓動",
-            "Step Up!",
-            "Catch the Rainbow!",
-            "Wonder Caravan!",
-            "風色Letter",
-            "We Are The Music",
-            "Melty night",
-            "夏の約束",
-            "八月のスーベニア",
-            "REAL-EYES",
-            "HELLO HORIZON",
-            "Starry Wish",
-            "僕らは今",
-            "Will",
-            "パレオトピア",
-            "心つかまえて",
-            "ココロソマリ",
-            "glow"
-        ],
-        "encore": [
-            "春空",
-            "涙のあとは",
-            "Starlight Museum"
+            "フィービー・フィービー",
+            "夜とワンダーランド",
+            "SUMMER DROP"
         ]
     },
     {
-        "LIVEtitle": "いのりまち町民集会2021-おかわり- 夜公演",
-        "tourtitle": "いのりまち町民集会2021-おかわり-",
-        "date": "2021年12月5日",
-        "venue": "パシフィコ横浜",
-        "id": "2021120502",
+        "LIVEtitle": "石原夏織 AUTUMN EVENT「ONE DROP」 2部",
+        "tourtitle": "石原夏織 AUTUMN EVENT「ONE DROP」",
+        "artist": "石原夏織",
+        "date": "2020年9月27日",
+        "venue": "ヒューリックホール東京",
+        "id": "2020092702",
         "setlist": [
-            "ハートノイロ",
-            "笑顔が似合う日",
-            "Winter Wonder Wander",
-            "いつもずっと",
-            "Innocent flower"
+            "フィービー・フィービー",
+            "キミしきる",
+            "SUMMER DROP"
         ]
     },
     {
-        "LIVEtitle": "いのりまち町民集会2021-おかわり- 昼公演",
-        "tourtitle": "いのりまち町民集会2021-おかわり-",
-        "date": "2021年12月5日",
-        "venue": "パシフィコ横浜",
-        "id": "2021120501",
+        "LIVEtitle": "石原夏織 AUTUMN EVENT「ONE DROP」 1部",
+        "tourtitle": "石原夏織 AUTUMN EVENT「ONE DROP」",
+        "artist": "石原夏織",
+        "date": "2020年9月27日",
+        "venue": "ヒューリックホール東京",
+        "id": "2020092701",
         "setlist": [
-            "ハートノイロ",
-            "Lucky Clover",
-            "Winter Wonder Wander",
-            "いつもずっと",
-            "Innocent flower"
+            "フィービー・フィービー",
+            "Water Front",
+            "SUMMER DROP"
+        ]
+    },
+    {
+        "LIVEtitle": "小倉唯オンラインバースデーパーティー2020~ゆいとおうちクッキング♪~",
+        "tourtitle": "",
+        "artist": "小倉唯",
+        "date": "2020年8月15日",
+        "venue": "オンライン開催",
+        "id": "2020081501",
+        "setlist": [
+            "キッチンはマイステージ",
+            "Honey♥Come!!"
         ]
     },
     {
