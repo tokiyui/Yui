@@ -169,69 +169,128 @@
             "ハイタッチ☆メモリー"
         ]
     },
-    {
-        "LIVEtitle": "Inori Minase LIVE TOUR 2023 SCRAP ART 神奈川公演2日目",
-        "tourtitle": "Inori Minase LIVE TOUR 2023 SCRAP ART",
-        "date": "2023年10月29日",
-        "venue": "ぴあアリーナMM",
-        "id": "2023102901",
+        {
+        "LIVEtitle": "小倉唯 Memorial LIVE 2023 ~10th Anniversary Assemble!!~ 昼公演",
+        "tourtitle": "小倉唯 Memorial LIVE 2023 ~10th Anniversary Assemble!!~",
+        "artist": "小倉唯",
+        "date": "2023年7月17日",
+        "venue": "大宮ソニックシティ",
+        "id": "2023071701",
         "setlist": [
-            "スクラップアート",
-            "identity",
-            "brave climber",
-            "僕らだけの鼓動",
-            "クリスタライズ",
-            "アイマイモコ",
-            "運命の赤い糸",
-            "くらりのうた",
-            "あの日の空へ",
-            "アイオライト",
-            "クータスタ",
-            "TRUST IN ETERNITY",
-            "約束のアステリズム",
-            "Million Futures",
-            "Well Wishing Word",
-            "While We Walk",
-            "Winter Wonder Wander",
-            "僕らは今"
+            "Baby Sweet Berry Love",
+            "I・LOVE・YOU!!",
+            "Honey♥Come!!",
+            "Caramel Ribbon...",
+            "Happy Strawberry",
+            {
+                "medley": [
+                    "Sing-a-ling-a-Harmony",
+                    "winter tale",
+                    "Hop Step Jump!",
+                    "ガーリッシュエイジ",
+                    "ドキドキラビリンス"
+                ]
+            },
+            "Clear Morning",
+            "Fightin★Pose",
+            "ta・ta・tarte♪",
+            "Love∞Vision",
+            "ハピネス*センセーション",
+            "秘密♡Melody",
+            "プラチナ・パスポート",
+            "Raise"
         ],
         "encore": [
-            "Morning Prism",
-            "ココロはMerry-Go-Round",
-            "Ready Steady Go!"
-        ],
-        "Wencore": "Catch the Rainbow!"
+            "Dramatic!",
+            "ハイタッチ☆メモリー"
+        ]
     },
     {
-        "LIVEtitle": "Inori Minase LIVE TOUR 2023 SCRAP ART 神奈川公演1日目",
-        "tourtitle": "Inori Minase LIVE TOUR 2023 SCRAP ART",
-        "date": "2023年10月28日",
-        "venue": "ぴあアリーナMM",
-        "id": "2023102801",
+        "LIVEtitle": "石原夏織 ファンクラブイベント「UNITY」vol.02 夜公演",
+        "tourtitle": "石原夏織 ファンクラブイベント「UNITY」vol.02",
+        "artist": "石原夏織",
+        "date": "2023年3月21日",
+        "venue": "山野ホール",
+        "id": "2023032102",
         "setlist": [
-            "スクラップアート",
-            "identity",
-            "リトルシューゲイザー",
-            "僕らだけの鼓動",
-            "クリスタライズ",
-            "アイマイモコ",
-            "運命の赤い糸",
-            "くらりのうた",
-            "あの日の空へ",
-            "アイオライト",
-            "クータスタ",
-            "HELLO HORIZON",
-            "約束のアステリズム",
-            "Million Futures",
-            "Well Wishing Word",
-            "While We Walk",
-            "Winter Wonder Wander",
-            "僕らは今"
-        ],
-        "encore": [
-            "Shoo-Bee-Doo-Wap-Wap!",
-            "Future Seeker",
-            "Ready Steady Go!"
+            "桜キッス",
+            "CHE.R.RY",
+            "Orange Note",
+            "曖昧蜃気楼",
+            "Face to Face"
+        ]
+    },
+    {
+        "LIVEtitle": "石原夏織 ファンクラブイベント「UNITY」vol.02 昼公演",
+        "tourtitle": "石原夏織 ファンクラブイベント「UNITY」vol.02",
+        "artist": "石原夏織",
+        "date": "2023年3月21日",
+        "venue": "山野ホール",
+        "id": "2023032101",
+        "setlist": [
+            "春～spring～",
+            "CHE.R.RY",
+            "Crispy Love",
+            "マジックマーチ",
+            "Face to Face"
+        ]
+    },
+    {
+        "LIVEtitle": "EJ My Girl Festival 2023",
+        "tourtitle": "",
+        "artist": "石原夏織",
+        "date": "2023年3月11日",
+        "venue": "市川市文化会館",
+        "id": "2023031101",
+        "setlist": [
+            "Cherish",
+            "半透明の世界で",
+            "虹のソルフェージュ",
+            "Plastic Smile"
+        ]
+    },
+    {
+        "LIVEtitle": "Yui's＊Company.大忘年会2022~天真爛漫ゆいらんらん♪~ 夜公演",
+        "tourtitle": "Yui's＊Company.大忘年会2022~天真爛漫ゆいらんらん♪~",
+        "artist": "小倉唯",
+        "date": "2022年12月28日",
+        "venue": "日テレらんらんホール",
+        "id": "2022122802",
+        "setlist": [
+            "Love∞Vision",
+            "Future Strike",
+            "限界突破×サバイバー",
+            "Snow halation",
+            "Dramatic!",
+            "Very Merry Happy Christmas"
+        ]
+    },
+    {
+        "LIVEtitle": "Yui's＊Company.大忘年会2022~天真爛漫ゆいらんらん♪~ 昼公演",
+        "tourtitle": "Yui's＊Company.大忘年会2022~天真爛漫ゆいらんらん♪~",
+        "artist": "小倉唯",
+        "date": "2022年12月28日",
+        "venue": "日テレらんらんホール",
+        "id": "2022122801",
+        "setlist": [
+            "Love∞Vision",
+            "Future Strike",
+            "すきっ!",
+            "Snow halation",
+            "Dramatic!",
+            "Very Merry Happy Christmas"
+        ]
+    },
+    {
+        "LIVEtitle": "ANIMAX MUSIX 2022",
+        "tourtitle": "ANIMAX MUSIX",
+        "artist": "小倉唯",
+        "date": "2022年11月19日",
+        "venue": "横浜アリーナ",
+        "id": "2022111901",
+        "setlist": [
+            "Honey♥Come!!",
+            "Love∞Vision"
         ]
     },
     {
