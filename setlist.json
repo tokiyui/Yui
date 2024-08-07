@@ -1,105 +1,171 @@
 [
     {
-        "LIVEtitle": "KING SUPER LIVE 2024 day2",
-        "tourtitle": "KING SUPER LIVE",
-        "date": "2024年5月12日",
-        "venue": "Kアリーナ横浜",
-        "id": "2024051201",
+        "LIVEtitle": "京 Premium Live 2023",
+        "tourtitle": "",
+        "artist": "石原夏織",
+        "date": "2023年12月9日",
+        "venue": "ロームシアター京都",
+        "id": "2023120901",
         "setlist": [
-            "スクラップアート",
-            "アイオライト"
+            "Paraglider",
+            "Starcast",
+            "empathy",
+            "虹のソルフェージュ",
+            "17歳"
         ]
     },
     {
-        "LIVEtitle": "KING SUPER LIVE 2024 day1",
-        "tourtitle": "KING SUPER LIVE",
-        "date": "2024年5月11日",
-        "venue": "Kアリーナ横浜",
-        "id": "2024051101",
+        "LIVEtitle": "小倉唯 Memorial LIVE 2023 ~To the 11'Eleven~ 夜公演",
+        "tourtitle": "小倉唯 Memorial LIVE 2023 ~To the 11'Eleven~",
+        "artist": "小倉唯",
+        "date": "2023年11月23日",
+        "venue": "パシフィコ横浜",
+        "id": "2023112302",
         "setlist": [
-            "TRUST IN ETERNITY",
-            "Million Futures"
+            "Love∞Vision",
+            "FUN FUN MERRY JAM",
+            "Merry de Cherry",
+            "トキメキWeekend!",
+            "Baby, Baby, Baby♡",
+            "白く咲く花",
+            "ショコラ",
+            "アステリア",
+            "Tomorrow",
+            "Future Strike",
+            "Precious.",
+            "ともだちピンク",
+            "サインはB",
+            "Honey♥Come!!",
+            "Baby Sweet Berry Love",
+            "Empty//Princess."
+        ],
+        "encore": [
+            "Tinkling Smile",
+            "秘密♡Melody"
+        ]    
+    },
+    {
+        "LIVEtitle": "小倉唯 Memorial LIVE 2023 ~To the 11'Eleven~ 昼公演",
+        "tourtitle": "小倉唯 Memorial LIVE 2023 ~To the 11'Eleven~",
+        "artist": "小倉唯",
+        "date": "2023年11月23日",
+        "venue": "パシフィコ横浜",
+        "id": "2023112301",
+        "setlist": [
+            "Love∞Vision",
+            "FUN FUN MERRY JAM",
+            "Merry de Cherry",
+            "トキメキWeekend!",
+            "Baby, Baby, Baby♡",
+            "白く咲く花",
+            "ショコラ",
+            "慈しみカンパニュラ",
+            "Tomorrow",
+            "Future Strike",
+            "Precious.",
+            "ともだちピンク",
+            "サインはB",
+            "Honey♥Come!!",
+            "Baby Sweet Berry Love",
+            "Empty//Princess."
+        ],
+        "encore": [
+            "Charming Do!",
+            "秘密♡Melody"
+        ]    
+    },
+    {
+        "LIVEtitle": "Animelo Summer Live 2023 -AXEL-",
+        "tourtitle": "Animelo Summer Live",
+        "artist": "小倉唯",
+        "date": "2023年8月27日",
+        "venue": "さいたまスーパーアリーナ",
+        "id": "2023082701",
+        "setlist": [
+            "Raise",
+            "秘密♡Melody"
         ]
     },
     {
-        "LIVEtitle": "いのりまち町民集会2024 愛知公演",
-        "tourtitle": "いのりまち町民集会2024",
-        "date": "2024年3月2日",
-        "venue": "日本特殊陶業市民会館",
-        "id": "2024030202",
+        "LIVEtitle": "Animelo Summer Live 2023 -AXEL-",
+        "tourtitle": "Animelo Summer Live",
+        "artist": "石原夏織",
+        "date": "2023年8月26日",
+        "venue": "さいたまスーパーアリーナ",
+        "id": "2023082601",
         "setlist": [
-            "Wonder Caravan!",
-            "春空",
-            "ハートノイロ",
-            "アイマイモコ",
-            "Melty night",
-            "三月と群青",
-            "HELLO HORIZON",
-            "ココロソマリ",
-            "旅の途中",
-            "harmony ribbon"
-        ],
-        "encore": "Lucky Clover"
+            "Paraglider",
+            "Blooming Flower"
+        ]
     },
     {
-        "LIVEtitle": "いのりまち町民集会2024 滋賀公演",
-        "tourtitle": "いのりまち町民集会2024",
-        "date": "2024年2月10日",
-        "venue": "滋賀県立芸術劇場",
-        "id": "2024021001",
+        "LIVEtitle": "Ishihara Kaori 5th Anniversary Live -bouquet-",
+        "tourtitle": "Ishihara Kaori 5th Anniversary Live -bouquet-",
+        "artist": "石原夏織",
+        "date": "2023年8月6日",
+        "venue": "LINE CUBE SHIBUYA",
+        "id": "2023080601",
         "setlist": [
-            "Wonder Caravan!",
-            "春空",
-            "ハートノイロ",
-            "アイマイモコ",
-            "Melty night",
-            "三月と群青",
-            "HELLO HORIZON",
-            "ココロソマリ",
-            "アルペジオ",
-            "harmony ribbon"
+            "SUMMER DROP",
+            "Cherish",
+            "ポペラ・ホリカ",
+            "Paraglider",
+            "半透明の世界で",
+            "夜とワンダーランド",
+            "Taste of Marmalade",
+            "Ray Rule",
+            "Abracada-Boo",
+            "Singularity Point",
+            "Against.",
+            "TEMPEST",
+            "Remember Heart, Remember Love",
+            "曖昧蜃気楼",
+            "To My Dear",
+            "Starcast",
+            "♮ Melody",
+            "Plastic Smile",
+            "虹のソルフェージュ",
+            "Blooming Flower"
         ],
-        "encore": "Lucky Clover"
+        "encore": [
+            "夢想的クロニクル",
+            "Untitled Puzzle",
+            "Face to Face"
+        ]
     },
     {
-        "LIVEtitle": "いのりまち町民集会2024 埼玉夜公演",
-        "tourtitle": "いのりまち町民集会2024",
-        "date": "2024年2月4日",
+        "LIVEtitle": "小倉唯 Memorial LIVE 2023 ~10th Anniversary Assemble!!~ 夜公演",
+        "tourtitle": "小倉唯 Memorial LIVE 2023 ~10th Anniversary Assemble!!~",
+        "artist": "小倉唯",
+        "date": "2023年7月17日",
         "venue": "大宮ソニックシティ",
-        "id": "2024020402",
+        "id": "2023071702",
         "setlist": [
-            "Wonder Caravan!",
-            "春空",
-            "ハートノイロ",
-            "アイマイモコ",
-            "Melty night",
-            "三月と群青",
-            "HELLO HORIZON",
-            "ココロソマリ",
-            "旅の途中",
-            "harmony ribbon"
+            "Baby Sweet Berry Love",
+            "I・LOVE・YOU!!",
+            "Honey♥Come!!",
+            "Caramel Ribbon...",
+            "アップル・ガール",
+            "medley" : [
+                "Sing-a-ling-a-Harmony",
+                "winter tale",
+                "Hop Step Jump!",
+                "ガーリッシュエイジ",
+                "ドキドキラビリンス",
+            ],
+            "Clear Morning",
+            "Fightin★Pose",
+            "ta・ta・tarte♪",
+            "Love∞Vision",
+            "ハピネス*センセーション",
+            "秘密♡Melody",
+            "永遠少年",
+            "Raise"
         ],
-        "encore": "Lucky Clover"
-    },
-    {
-        "LIVEtitle": "いのりまち町民集会2024 埼玉昼公演",
-        "tourtitle": "いのりまち町民集会2024",
-        "date": "2024年2月4日",
-        "venue": "大宮ソニックシティ",
-        "id": "2024020401",
-        "setlist": [
-            "Wonder Caravan!",
-            "春空",
-            "ハートノイロ",
-            "アイマイモコ",
-            "Melty night",
-            "三月と群青",
-            "HELLO HORIZON",
-            "ココロソマリ",
-            "アルペジオ",
-            "harmony ribbon"
-        ],
-        "encore": "Lucky Clover"
+        "encore": [
+            "Wherever",
+            "ハイタッチ☆メモリー"
+        ]
     },
     {
         "LIVEtitle": "Inori Minase LIVE TOUR 2023 SCRAP ART 神奈川公演2日目",
