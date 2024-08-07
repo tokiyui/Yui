@@ -294,131 +294,146 @@
         ]
     },
     {
-        "LIVEtitle": "Inori Minase LIVE TOUR 2023 SCRAP ART 福岡公演",
-        "tourtitle": "Inori Minase LIVE TOUR 2023 SCRAP ART",
-        "date": "2023年10月14日",
-        "venue": "北九州ソレイユホール",
-        "id": "2023101401",
+        "LIVEtitle": "ANISAMA SYMPHONIC NIGHT 2022 hosted by 京まふ＆Ani Love KYOTO",
+        "tourtitle": "",
+        "artist": "石原夏織",
+        "date": "2022年9月17日",
+        "venue": "ロームシアター京都",
+        "id": "2022091701",
         "setlist": [
-            "スクラップアート",
-            "identity",
-            "リトルシューゲイザー",
-            "僕らだけの鼓動",
-            "クリスタライズ",
-            "アイマイモコ",
-            "運命の赤い糸",
-            "くらりのうた",
-            "あの日の空へ",
-            "アイオライト",
-            "クータスタ",
-            "HELLO HORIZON",
-            "約束のアステリズム",
-            "Million Futures",
-            "Well Wishing Word",
-            "While We Walk",
-            "Winter Wonder Wander",
-            "僕らは今"
-        ],
-        "encore": [
-            "Morning Prism",
-            "ココロはMerry-Go-Round",
-            "Ready Steady Go!"
+            "Face to Face",
+            "Cherish",
+            "Plastic Smile",
+            "Starcast"
         ]
     },
     {
-        "LIVEtitle": "Inori Minase LIVE TOUR 2023 SCRAP ART 愛知公演",
-        "tourtitle": "Inori Minase LIVE TOUR 2023 SCRAP ART",
-        "date": "2023年10月8日",
+        "LIVEtitle": "Animelo Summer Live 2022 -Sparkle-",
+        "tourtitle": "Animelo Summer Live",
+        "artist": "石原夏織",
+        "date": "2022年8月27日",
         "venue": "日本特殊陶業市民会館",
-        "id": "2023100801",
+        "id": "2022082701",
         "setlist": [
-            "スクラップアート",
-            "identity",
-            "リトルシューゲイザー",
-            "僕らだけの鼓動",
-            "クリスタライズ",
-            "アイマイモコ",
-            "運命の赤い糸",
-            "くらりのうた",
-            "あの日の空へ",
-            "アイオライト",
-            "クータスタ",
-            "TRUST IN ETERNITY",
-            "約束のアステリズム",
-            "Million Futures",
-            "Well Wishing Word",
-            "While We Walk",
-            "Winter Wonder Wander",
-            "僕らは今"
-        ],
-        "encore": [
-            "Morning Prism",
-            "Future Seeker",
-            "Ready Steady Go!"
+            "Cherish",
+            "夢想的クロニクル",
+            "Abracada-Boo"
         ]
     },
     {
-        "LIVEtitle": "Inori Minase LIVE TOUR 2023 SCRAP ART 宮城公演",
-        "tourtitle": "Inori Minase LIVE TOUR 2023 SCRAP ART",
-        "date": "2023年9月24日",
-        "venue": "仙台サンプラザホール",
-        "id": "2023092401",
+        "LIVEtitle": "ゆいこむ特別総会 -出張版- ~小倉唯 Birthday Party♡2022~ 東京夜公演",
+        "tourtitle": "ゆいこむ特別総会 -出張版- ~小倉唯 Birthday Party♡2022~",
+        "artist": "小倉唯",
+        "date": "2022年8月21日",
+        "venue": "竹芝ニューピアホール",
+        "id": "2022082102",
         "setlist": [
-            "スクラップアート",
-            "identity",
-            "brave climber",
-            "僕らだけの鼓動",
-            "クリスタライズ",
-            "アイマイモコ",
-            "運命の赤い糸",
-            "くらりのうた",
-            "あの日の空へ",
-            "アイオライト",
-            "クータスタ",
-            "HELLO HORIZON",
-            "約束のアステリズム",
-            "Million Futures",
-            "Well Wishing Word",
-            "While We Walk",
-            "Winter Wonder Wander",
-            "僕らは今"
-        ],
-        "encore": [
-            "Shoo-Bee-Doo-Wap-Wap!",
-            "ココロはMerry-Go-Round",
-            "Ready Steady Go!"
+            "ta・ta・tarte♪",
+            "プラチナ・パスポート",
+            {
+                "medley": [
+                    "カワルミライ",
+                    "Party Love ～おっきくなりたい～",
+                    "恋愛裁判"
+                ]
+            },
+            "Raise",
+            "Wish"
         ]
     },
     {
-        "LIVEtitle": "Inori Minase LIVE TOUR 2023 SCRAP ART 兵庫公演",
-        "tourtitle": "Inori Minase LIVE TOUR 2023 SCRAP ART",
-        "date": "2023年9月17日",
-        "venue": "ワールド記念ホール",
-        "id": "2023091701",
+        "LIVEtitle": "ゆいこむ特別総会 -出張版- ~小倉唯 Birthday Party♡2022~ 東京昼公演",
+        "tourtitle": "ゆいこむ特別総会 -出張版- ~小倉唯 Birthday Party♡2022~",
+        "artist": "小倉唯",
+        "date": "2022年8月21日",
+        "venue": "竹芝ニューピアホール",
+        "id": "2022082101",
         "setlist": [
-            "スクラップアート",
-            "identity",
-            "brave climber",
-            "僕らだけの鼓動",
-            "クリスタライズ",
-            "アイマイモコ",
-            "運命の赤い糸",
-            "くらりのうた",
-            "あの日の空へ",
-            "アイオライト",
-            "クータスタ",
-            "TRUST IN ETERNITY",
-            "約束のアステリズム",
-            "Million Futures",
-            "Well Wishing Word",
-            "While We Walk",
-            "Winter Wonder Wander",
-            "僕らは今"
-        ],
-        "encore": [
-            "Shoo-Bee-Doo-Wap-Wap!",
-            "Future Seeker",
-            "Ready Steady Go!"
+            "ta・ta・tarte♪",
+            "プラチナ・パスポート",
+            {
+                "medley": [
+                    "カワルミライ",
+                    "Party Love ～おっきくなりたい～",
+                    "Yeah! めっちゃホリディ"
+                ]
+            },
+            "Baby Sweet Berry Love",
+            "Wish"
+        ]
+    },
+    {
+        "LIVEtitle": "ゆいこむ特別総会 -出張版- ~小倉唯 Birthday Party♡2022~ 大阪夜公演",
+        "tourtitle": "ゆいこむ特別総会 -出張版- ~小倉唯 Birthday Party♡2022~",
+        "artist": "小倉唯",
+        "date": "2022年8月11日",
+        "venue": "森ノ宮ピロティホール",
+        "id": "2022081102",
+        "setlist": [
+            "ta・ta・tarte♪",
+            "プラチナ・パスポート",
+            {
+                "medley": [
+                    "カワルミライ",
+                    "Party Love ～おっきくなりたい～",
+                    "恋愛裁判"
+                ]
+            },
+            "Baby Sweet Berry Love",
+            "Wish"
+        ]
+    },
+    {
+        "LIVEtitle": "ゆいこむ特別総会 -出張版- ~小倉唯 Birthday Party♡2022~ 大阪昼公演",
+        "tourtitle": "ゆいこむ特別総会 -出張版- ~小倉唯 Birthday Party♡2022~",
+        "artist": "小倉唯",
+        "date": "2022年8月11日",
+        "venue": "森ノ宮ピロティホール",
+        "id": "2022081101",
+        "setlist": [
+            "ta・ta・tarte♪",
+            "プラチナ・パスポート",
+            {
+                "medley": [
+                    "カワルミライ",
+                    "Party Love ～おっきくなりたい～",
+                    "Yeah! めっちゃホリディ"
+                ]
+            },
+            "Raise",
+            "Wish"
+        ]
+    },
+    {
+        "LIVEtitle": "石原夏織 ファンクラブイベント「UNITY」vol.01 夜公演",
+        "tourtitle": "石原夏織 ファンクラブイベント「UNITY」vol.01",
+        "artist": "石原夏織",
+        "date": "2022年6月19日",
+        "venue": "三郷市文化会館",
+        "id": "2022061902",
+        "setlist": [
+            "Hello, Again ～昔からある場所～",
+            "Sunny Ray Beam!!",
+            "♮ Melody",
+            "Abracada-Boo",
+            "Remember Heart, Remember Love",
+            "Cherish"
+        ]
+    },
+    {
+        "LIVEtitle": "石原夏織 ファンクラブイベント「UNITY」vol.01 昼公演",
+        "tourtitle": "石原夏織 ファンクラブイベント「UNITY」vol.01",
+        "artist": "石原夏織",
+        "date": "2022年6月19日",
+        "venue": "三郷市文化会館",
+        "id": "2022061902",
+        "setlist": [
+            "fragilelull 〜そして僕らは〜",
+            "Sunny Ray Beam!!",
+            "SUMMER DROP",
+            "夢想的クロニクル",
+            "Remember Heart, Remember Love",
+            "Cherish"
         ]
     },
     {
