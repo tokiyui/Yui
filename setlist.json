@@ -737,37 +737,91 @@
         ]
     },
     {
-        "LIVEtitle": "Inori Minase LIVE TOUR 2021 HELLO HORIZON 神奈川公演・ツアーファイナル",
-        "tourtitle": "Inori Minase LIVE TOUR 2021 HELLO HORIZON",
-        "date": "2021年10月17日",
-        "venue": "横浜アリーナ",
-        "id": "2021101701",
+        "LIVEtitle": "石原夏織 1st LIVE TOUR「Face to FACE」 東京公演",
+        "tourtitle": "石原夏織 1st LIVE TOUR「Face to FACE」",
+        "artist": "石原夏織",
+        "date": "2020年2月24日",
+        "venue": "中野サンプラザ",
+        "id": "2020022401",
         "setlist": [
-            "Ready Steady Go!",
-            "ピュアフレーム",
-            "Million Futures",
-            "Morning Prism",
-            "アイマイモコ",
-            "クリスタライズ",
-            "Well Wishing Word",
-            "思い出のカケラ",
-            "ソライロ",
-            "茜色ノスタルジア",
-            "HELLO HORIZON",
-            "TRUST IN ETERNITY",
-            "Starry Wish",
-            "三月と群青",
-            "Starlight Museum",
-            "アルペジオ",
-            "Sweet Melody",
-            "ココロソマリ"
+            "Blooming Flower",
+            "半透明の世界で",
+            "CREATION×CREATION",
+            "ポペラ・ホリカ",
+            "Clover Wish",
+            "Crispy love",
+            "Orange Note",
+            "empathy",
+            "雨模様リグレット",
+            "Taste of Marmalade",
+            "Singularity Point",
+            "Ray Rule",
+            "TEMPEST",
+            "Face to Face"
         ],
         "encore": [
-            "Dreaming Girls",
-            "Catch the Rainbow!",
-            "僕らは今"
+            "虹のソルベージュ",
+            "♮ Melody",
+            "Face to Face"
+        ]
+    },
+    {
+        "LIVEtitle": "石原夏織 1st LIVE TOUR「Face to FACE」 愛知公演",
+        "tourtitle": "石原夏織 1st LIVE TOUR「Face to FACE」",
+        "artist": "石原夏織",
+        "date": "2020年1月18日",
+        "venue": "日本特殊陶業市民会館ビレッジホール",
+        "id": "2020011801",
+        "setlist": [
+            "Blooming Flower",
+            "Sunny You",
+            "CREATION×CREATION",
+            "ポペラ・ホリカ",
+            "MIRACLE RUSH",
+            "Crispy love",
+            "Orange Note",
+            "empathy",
+            "雨模様リグレット",
+            "Taste of Marmalade",
+            "Singularity Point",
+            "Ray Rule",
+            "TEMPEST",
+            "Face to Face"
         ],
-        "Wencore": "まっすぐに、トウメイに。"
+        "encore": [
+            "虹のソルベージュ",
+            "♮ Melody",
+            "Face to Face"
+        ]
+    },
+    {
+        "LIVEtitle": "石原夏織 1st LIVE TOUR「Face to FACE」 大阪公演",
+        "tourtitle": "石原夏織 1st LIVE TOUR「Face to FACE」",
+        "artist": "石原夏織",
+        "date": "2020年1月13日",
+        "venue": "NHK大阪ホール",
+        "id": "2020011301",
+        "setlist": [
+            "Blooming Flower",
+            "半透明の世界で",
+            "CREATION×CREATION",
+            "ポペラ・ホリカ",
+            "Butter-Fly",
+            "Crispy love",
+            "Orange Note",
+            "empathy",
+            "雨模様リグレット",
+            "Taste of Marmalade",
+            "Untitled Puzzle",
+            "Ray Rule",
+            "TEMPEST",
+            "Face to Face"
+        ],
+        "encore": [
+            "虹のソルベージュ",
+            "♮ Melody",
+            "Face to Face"
+        ]
     },
     {
         "LIVEtitle": "Inori Minase LIVE TOUR 2021 HELLO HORIZON 宮城公演",
