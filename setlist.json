@@ -437,167 +437,252 @@
         ]
     },
     {
-        "LIVEtitle": "いのりまち町民集会2023 夜公演",
-        "tourtitle": "いのりまち町民集会2023",
-        "date": "2023年2月19日",
-        "venue": "両国国技館",
-        "id": "2023021902",
+        "LIVEtitle": "Yui’s＊Company.社員総会 2021 ~Twinkle Holy Day♪~ 夜公演",
+        "tourtitle": "Yui’s＊Company.社員総会 2021 ~Twinkle Holy Day♪~",
+        "artist": "小倉唯",
+        "date": "2021年12月11日",
+        "venue": "神奈川県民ホール",
+        "id": "2021121102",
         "setlist": [
-            "アイマイモコ",
-            "シネマチックダイアリー",
-            "Snow White",
-            "アルペジオ",
-            "水彩メモリー",
-            "思い出のカケラ"
+            "Very Merry Happy Christmas",
+            "エブリデイ☆ハッピーデイ",
+            "天使のクローバー",
+            "Get over",
+            "永遠少年",
+            "Sing-a-ling-a-Harmony"
         ]
     },
     {
-        "LIVEtitle": "いのりまち町民集会2023 昼公演",
-        "tourtitle": "いのりまち町民集会2023",
-        "date": "2023年2月19日",
-        "venue": "両国国技館",
-        "id": "2023021901",
+        "LIVEtitle": "Yui’s＊Company.社員総会 2021 ~Twinkle Holy Day♪~ 夜公演",
+        "tourtitle": "Yui’s＊Company.社員総会 2021 ~Twinkle Holy Day♪~",
+        "artist": "小倉唯",
+        "date": "2021年12月11日",
+        "venue": "神奈川県民ホール",
+        "id": "2021121102",
         "setlist": [
-            "アイマイモコ",
-            "君色プロローグ",
-            "Snow White",
-            "アルペジオ",
-            "これからも。",
-            "My Graffiti"
+            "赤いリボン,
+            "エブリデイ☆ハッピーデイ",
+            "天使のクローバー",
+            "Get over",
+            "永遠少年",
+            "Sing-a-ling-a-Harmony"
         ]
     },
     {
-        "LIVEtitle": "Inori Minase LIVE TOUR 2022 glow 兵庫公演・ツアーファイナル",
-        "tourtitle": "Inori Minase LIVE TOUR 2022 glow",
-        "date": "2022年10月8日",
-        "venue": "神戸国際会館こくさいホール",
-        "id": "2022100801",
+        "LIVEtitle": "ANIMAX MUSIX 2021",
+        "tourtitle": "ANIMAX MUSIX",
+        "artist": "小倉唯",
+        "date": "2021年11月20日",
+        "venue": "横浜アリーナ,
+        "id": "2021112001",
         "setlist": [
-            "sunrise glow(overture)",
-            "僕らだけの鼓動",
-            "Step Up!",
-            "Catch the Rainbow!",
-            "Wonder Caravan!",
-            "風色Letter",
-            "We Are The Music",
-            "Melty night",
-            "夏の約束",
-            "八月のスーベニア",
-            "REAL-EYES",
-            "HELLO HORIZON",
-            "Starry Wish",
-            "Will",
-            "星屑のコントレイル",
-            "パレオトピア",
-            "心つかまえて",
-            "ココロソマリ",
-            "glow"
-        ],
-        "encore": [
-            "春空",
-            "涙のあとは",
-            "Starlight Museum"
-        ],
-        "Wencore": "僕らは今"
-    },
-    {
-        "LIVEtitle": "Inori Minase LIVE TOUR 2022 glow 神奈川公演",
-        "tourtitle": "Inori Minase LIVE TOUR 2022 glow",
-        "date": "2022年10月1日",
-        "venue": "横浜アリーナ",
-        "id": "2022100101",
-        "setlist": [
-            "sunrise glow(overture)",
-            "僕らだけの鼓動",
-            "Step Up!",
-            "Catch the Rainbow!",
-            "Wonder Caravan!",
-            "風色Letter",
-            "We Are The Music",
-            "Melty night",
-            "夏の約束",
-            "八月のスーベニア",
-            "REAL-EYES",
-            "HELLO HORIZON",
-            "Starry Wish",
-            "僕らは今",
-            "星屑のコントレイル",
-            "パレオトピア",
-            "心つかまえて",
-            "ココロソマリ",
-            "glow"
-        ],
-        "encore": [
-            "今を僕らしく生きてくために",
-            "コイセヨオトメ",
-            "Starlight Museum"
-        ],
-        "Wencore": "harmony ribbon"
-    },
-    {
-        "LIVEtitle": "Inori Minase LIVE TOUR 2022 glow 福岡公演",
-        "tourtitle": "Inori Minase LIVE TOUR 2022 glow",
-        "date": "2022年9月24日",
-        "venue": "福岡サンパレス",
-        "id": "2022092401",
-        "setlist": [
-            "sunrise glow(overture)",
-            "僕らだけの鼓動",
-            "Step Up!",
-            "Catch the Rainbow!",
-            "Wonder Caravan!",
-            "風色Letter",
-            "We Are The Music",
-            "Melty night",
-            "夏の約束",
-            "八月のスーベニア",
-            "REAL-EYES",
-            "HELLO HORIZON",
-            "Starry Wish",
-            "僕らは今",
-            "Will",
-            "パレオトピア",
-            "心つかまえて",
-            "ココロソマリ",
-            "glow"
-        ],
-        "encore": [
-            "今を僕らしく生きてくために",
-            "コイセヨオトメ",
-            "Starlight Museum"
+            "Fightin★Pose",
+            "Happy Strawberry"
         ]
     },
     {
-        "LIVEtitle": "Inori Minase LIVE TOUR 2022 glow 宮城公演",
-        "tourtitle": "Inori Minase LIVE TOUR 2022 glow",
-        "date": "2022年9月17日",
-        "venue": "仙台サンプラザホール",
-        "id": "2022091701",
+        "LIVEtitle": "Animelo Summer Live 2021 -COLORS-",
+        "tourtitle": "Animelo Summer Live",
+        "artist": "石原夏織",
+        "date": "2021年8月27日",
+        "venue": "さいたまスーパーアリーナ",
+        "id": "2021082701,
         "setlist": [
-            "sunrise glow(overture)",
-            "僕らだけの鼓動",
-            "Step Up!",
-            "Catch the Rainbow!",
-            "Wonder Caravan!",
-            "風色Letter",
-            "We Are The Music",
-            "Melty night",
-            "夏の約束",
-            "八月のスーベニア",
-            "REAL-EYES",
-            "HELLO HORIZON",
-            "Starry Wish",
-            "僕らは今",
-            "星屑のコントレイル",
-            "パレオトピア",
-            "心つかまえて",
-            "ココロソマリ",
-            "glow"
+            "Plastic Smile",
+            "Against."
+        ]
+    },
+    {
+        "LIVEtitle": "石原夏織 SUMMER EVENT「Smile Go Happy」 夜公演",
+        "tourtitle": "石原夏織 SUMMER EVENT「Smile Go Happy」",
+        "artist": "石原夏織",
+        "date": "2021年8月14日",
+        "venue": "サンシティ越谷市民ホール",
+        "id": "2021081402",
+        "setlist": [
+            "半透明の世界で",
+            "キミに空とクローバー",
+            "SUMMER DROP",
+            "CREATION×CREATION",
+            "Diorama Drama",
+            "Against.",
+            "Plastic Smile"
+        ]
+    },
+    {
+        "LIVEtitle": "石原夏織 SUMMER EVENT「Smile Go Happy」 昼公演",
+        "tourtitle": "石原夏織 SUMMER EVENT「Smile Go Happy」",
+        "artist": "石原夏織",
+        "date": "2021年8月14日",
+        "venue": "サンシティ越谷市民ホール",
+        "id": "2021081401",
+        "setlist": [
+            "半透明の世界で",
+            "キミに空とクローバー",
+            "SUMMER DROP",
+            "CREATION×CREATION",
+            "Diorama Drama",
+            "TEMPEST",
+            "Plastic Smile"
+        ]
+    },
+    {
+        "LIVEtitle": "小倉唯 LIVE 2021「#Re♥LOVEcall」 夜公演",
+        "tourtitle": "小倉唯 LIVE 2021「#Re♥LOVEcall」",
+        "artist": "小倉唯",
+        "date": "2021年7月4日",
+        "venue": "パシフィコ横浜",
+        "id": "2021070402",
+        "setlist": [
+            "pyu♥a purely",
+            "Baby Sweet Berry Love",
+            "アップル・ガール",
+            "バレンタイン・キッス",
+            "いつだって Call Me!",
+            "A Lovely Tea Break",
+            "Love Me × Love Me",
+            {
+                "medley" : [
+                    "エンジョイ!",
+                    "ガーリッシュエイジ",
+                    "ドキドキラビリンス"
+                ]
+            },   
+            "Fightin★Pose",
+            "かけがえのない瞬間",
+            "ハートフォレスト",
+            "PON de Fighting!",
+            "Happy Strawberry",
+            "ずっとふたりで",
+            "I・LOVE・YOU!!"
+        ],
+        "encore": "Look@Me♡"
+    },
+    {
+        "LIVEtitle": "小倉唯 LIVE 2021「#Re♥LOVEcall」 昼公演",
+        "tourtitle": "小倉唯 LIVE 2021「#Re♥LOVEcall」",
+        "artist": "小倉唯",
+        "date": "2021年7月4日",
+        "venue": "パシフィコ横浜",
+        "id": "2021070401",
+        "setlist": [
+            "pyu♥a purely",
+            "Baby Sweet Berry Love",
+            "Charming Do!",
+            "バレンタイン・キッス",
+            "いつだって Call Me!",
+            "A Lovely Tea Break",
+            "Love Me × Love Me",
+            {
+                "medley" : [
+                    "エンジョイ!",
+                    "ガーリッシュエイジ",
+                    "ドキドキラビリンス"
+                ]
+            },   
+            "Fightin★Pose",
+            "かけがえのない瞬間",
+            "ハートフォレスト",
+            "PON de Fighting!",
+            "Merry de Cherry",
+            "ずっとふたりで",
+            "I・LOVE・YOU!!"
+        ],
+        "encore": "ハピネス*センセーション"
+    },
+    {
+        "LIVEtitle": "ゆいこむ ONLINE PROGRAM",
+        "tourtitle": "",
+        "artist": "小倉唯",
+        "date": "2021年3月7日",
+        "venue": "オンライン開催",
+        "id": "2021030701",
+        "setlist": [
+            "♡桃色片想い♡",
+            "ドキドキラビリンス"
+        ]
+    },
+    {
+        "LIVEtitle": "石原夏織 2nd LIVE「MAKE SMILE」 夜公演",
+        "tourtitle": "石原夏織 2nd LIVE「MAKE SMILE」",
+        "artist": "石原夏織",
+        "date": "2021年2月20日",
+        "venue": "パシフィコ横浜",
+        "id": "2021022002",
+        "setlist": [
+            "Face to Face",
+            "夜とワンダーランド",
+            "リトルシング",
+            "Crispy love",
+            "フィービー・フィービー",
+            "ポペラ・ホリカ",
+            "You & I",
+            "Taste of Marmalade",
+            "Diorama-Drama",
+            "キミしきる",
+            "empathy",
+            "Ray Rule",
+            "Against.",
+            "TEMPEST",
+            "SUMMER DROP"
         ],
         "encore": [
-            "今を僕らしく生きてくために",
-            "コイセヨオトメ",
-            "Starlight Museum"
+            "Plastic Smile",
+            "Page Flip"
+        ]
+    },
+    {
+        "LIVEtitle": "石原夏織 2nd LIVE「MAKE SMILE」 昼公演",
+        "tourtitle": "石原夏織 2nd LIVE「MAKE SMILE」",
+        "artist": "石原夏織",
+        "date": "2021年2月20日",
+        "venue": "パシフィコ横浜",
+        "id": "2021022001",
+        "setlist": [
+            "Face to Face",
+            "Water Front",
+            "リトルシング",
+            "Crispy love",
+            "フィービー・フィービー",
+            "ポペラ・ホリカ",
+            "You & I",
+            "Taste of Marmalade",
+            "Diorama-Drama",
+            "キミしきる",
+            "雨模様リグレット",
+            "Ray Rule",
+            "Against.",
+            "TEMPEST",
+            "SUMMER DROP"
+        ],
+        "encore": [
+            "Plastic Smile",
+            "Page Flip"
+        ]
+    },
+    {
+        "LIVEtitle": "小倉唯 ONLINE クリスマス ライブ 2020 ~Winter Twinkle Magic~",
+        "tourtitle": "小倉唯 ONLINE クリスマス ライブ 2020 ~Winter Twinkle Magic~",
+        "artist": "小倉唯",
+        "date": "2020年12月24日",
+        "venue": "オンライン開催",
+        "id": "2020122401",
+        "setlist": [
+            "winter tale",
+            "Baby Sweet Berry Love",
+            "ハピネス*センセーション",
+            "Honey♥Come!!",
+            "瞳の国のアリス -Dance Music Edition-",
+            "ハッピーシンセサイザ",
+            "赤いリボン",
+            "Look@Me♡",
+            "雨の森はウソつき",
+            "Destiny",
+            "Raise"
+        ],
+        "encore": [
+            "I・LOVE・YOU!!",
+            "Very Merry Happy Christmas"
         ]
     },
     {
