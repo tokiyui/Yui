@@ -146,13 +146,15 @@
             "Honey♥Come!!",
             "Caramel Ribbon...",
             "アップル・ガール",
-            "medley" : [
-                "Sing-a-ling-a-Harmony",
-                "winter tale",
-                "Hop Step Jump!",
-                "ガーリッシュエイジ",
-                "ドキドキラビリンス",
-            ],
+            {
+                "medley" : [
+                    "Sing-a-ling-a-Harmony",
+                    "winter tale",
+                    "Hop Step Jump!",
+                    "ガーリッシュエイジ",
+                    "ドキドキラビリンス",
+                ],
+            },
             "Clear Morning",
             "Fightin★Pose",
             "ta・ta・tarte♪",
