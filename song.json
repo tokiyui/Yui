@@ -6,7 +6,10 @@
         "music": "俊龍",
         "arranger": "藤田淳平",
         "length": "",
-        "CDtitle": "RaiseqwertyuiStrawberry JAM",
+        "CDtitle": [
+            "Raise",
+            "Strawberry JAM"
+        ],
         "info": ""
     },
     {
@@ -16,7 +19,10 @@
         "music": "大久保薫",
         "arranger": "大久保薫",
         "length": "",
-        "CDtitle": "RaiseqwertyuiStrawberry JAM",
+        "CDtitle": [
+            "Raise",
+            "Strawberry JAM"
+        [,
         "info": ""
     },
     {
@@ -26,7 +32,10 @@
         "music": "俊龍",
         "arranger": "Sizuk",
         "length": "",
-        "CDtitle": "Baby Sweet Berry LoveqwertyuiStrawberry JAM",
+        "CDtitle": [
+            "Baby Sweet Berry Love",
+            "Strawberry JAM"
+        ],
         "info": ""
     },
     {
@@ -46,7 +55,10 @@
         "music": "奥井康介",
         "arranger": "奥井康介",
         "length": "",
-        "CDtitle": "Charming Do!qwertyuiStrawberry JAM",
+        "CDtitle": [
+            "Charming Do!",
+            "Strawberry JAM"
+        ],
         "info": ""
     },
     {
@@ -66,7 +78,10 @@
         "music": "小野貴光",
         "arranger": "大久保薫",
         "length": "",
-        "CDtitle": "Tinkling SmileqwertyuiStrawberry JAM",
+        "CDtitle": [
+            "Tinkling Smile",
+            "Strawberry JAM"
+        ],
         "info": ""
     },
     {
@@ -74,7 +89,10 @@
         "artist": "小倉唯",
         "lylics": "前山田健一",
         "music": "CHI-MEY",
-        "arranger": "大久保友裕qwertyuiCHI-MEY",
+        "arranger": [
+            "大久保友裕,
+            "CHI-MEY"
+        ],
         "length": "",
         "CDtitle": "Tinkling Smile",
         "info": ""
@@ -114,7 +132,10 @@
         "artist": "小倉唯",
         "lylics": "松井五郎",
         "music": "小野貴光",
-        "arranger": "山口朗彦qwertyui大久保薫",
+        "arranger": [
+            "山口朗彦",
+            "大久保薫"
+        ],
         "length": "",
         "CDtitle": "Strawberry JAM",
         "info": ""
@@ -132,7 +153,10 @@
     {
         "title": "Happy Strawberry",
         "artist": "小倉唯",
-        "lylics": "山口朗彦qwertyui中原徹也",
+        "lylics": [
+            "山口朗彦",
+            "中原徹也"
+        ],
         "music": "山口朗彦",
         "arranger": "山口朗彦",
         "length": "",
@@ -156,7 +180,10 @@
         "music": "俊龍",
         "arranger": "大久保薫",
         "length": "",
-        "CDtitle": "Honey♥Come!!qwertyuiCherry Passport",
+        "CDtitle": [
+            "Honey♥Come!!",
+            "Cherry Passport"
+        ],
         "info": ""
     },
     {
@@ -176,7 +203,10 @@
         "music": "高尾奏之介",
         "arranger": "奈良悠樹",
         "length": "",
-        "CDtitle": "ハイタッチ☆メモリーqwertyuiCherry Passport",
+        "CDtitle": [
+            "ハイタッチ☆メモリー",
+            "Cherry Passport"
+        ],
         "info": ""
     },
     {
@@ -196,7 +226,10 @@
         "music": "俊龍",
         "arranger": "小高光太郎",
         "length": "",
-        "CDtitle": "Future StrikeqwertyuiCherry Passport",
+        "CDtitle": [
+            "Future Strike",
+            "Cherry Passport"
+        ],
         "info": ""
     },
     {
@@ -306,7 +339,10 @@
         "music": "俊龍",
         "arranger": "玉木千尋",
         "length": "",
-        "CDtitle": "白く咲く花qwertyuiホップ・ステップ・アップル",
+        "CDtitle": [
+            "白く咲く花",
+            "ホップ・ステップ・アップル"
+        ],
         "info": ""
     },
     {
@@ -336,7 +372,10 @@
         "music": "小野貴光",
         "arranger": "玉木千尋",
         "length": "",
-        "CDtitle": "永遠少年qwertyuiホップ・ステップ・アップル",
+        "CDtitle": [
+            "永遠少年",
+            "ホップ・ステップ・アップル"
+        ],
         "info": ""
     },
     {
@@ -346,7 +385,10 @@
         "music": "宇田川翔",
         "arranger": "宇田川翔",
         "length": "",
-        "CDtitle": "永遠少年qwertyuiホップ・ステップ・アップル",
+        "CDtitle": [
+            "永遠少年",
+            "ホップ・ステップ・アップル"
+        ],
         "info": ""
     },
     {
@@ -383,8 +425,14 @@
         "title": "雨の森はウソつき",
         "artist": "小倉唯",
         "lylics": "大山恭子",
-        "music": "早川博隆qwertyui川西竜弥",
-        "arranger": "早川博隆qwertyui川西竜弥",
+        "music": [
+            "早川博隆",
+            "川西竜弥"
+        ],
+        "arranger": [
+            "早川博隆",
+            "川西竜弥"
+        ],
         "length": "",
         "CDtitle": "ホップ・ステップ・アップル",
         "info": ""
@@ -404,7 +452,10 @@
         "artist": "小倉唯",
         "lylics": "Sally#Cinnamon",
         "music": "多保孝一",
-        "arranger": "多保孝一qwertyui坂部剛",
+        "arranger": [
+            "多保孝一",
+            "坂部剛"
+        ],
         "length": "",
         "CDtitle": "ホップ・ステップ・アップル",
         "info": ""
@@ -424,7 +475,10 @@
         "artist": "小倉唯",
         "lylics": "クボナオキ",
         "music": "クボナオキ",
-        "arranger": "クボナオキqwertyui辻伶",
+        "arranger": [
+            "クボナオキ",
+            "辻伶"
+        ],
         "length": "",
         "CDtitle": "ホップ・ステップ・アップル",
         "info": ""
@@ -456,13 +510,19 @@
         "music": "上松範康",
         "arranger": "岩橋星実",
         "length": "",
-        "CDtitle": "DestinyqwertyuiTarte",
+        "CDtitle": [
+            "Destiny",
+            "Tarte"
+        ],
         "info": ""
     },
     {
         "title": "赤いリボン",
         "artist": "小倉唯",
-        "lylics": "小倉唯qwertyui塚田耕平",
+        "lylics": [
+            "小倉唯",
+            "塚田耕平"
+        ],
         "music": "塚田耕平",
         "arranger": "塚田耕平",
         "length": "",
@@ -476,7 +536,10 @@
         "music": "遠藤直弥",
         "arranger": "遠藤直弥",
         "length": "",
-        "CDtitle": "I・LOVE・YOU!!qwertyuiTarte",
+        "CDtitle": [
+            "I・LOVE・YOU!!",
+            "Tarte"
+        ],
         "info": ""
     },
     {
@@ -496,7 +559,10 @@
         "music": "鶴﨑輝一",
         "arranger": "鶴﨑輝一",
         "length": "",
-        "CDtitle": "ハピネス*センセーションqwertyuiTarte",
+        "CDtitle": [
+            "ハピネス*センセーション",
+            "Tarte"
+        ],
         "info": ""
     },
     {
@@ -526,7 +592,10 @@
         "music": "本田正樹",
         "arranger": "本田正樹",
         "length": "",
-        "CDtitle": "Very Merry Happy ChristmasqwertyuiTarte",
+        "CDtitle": [
+            "Very Merry Happy Christmas",
+            "Tarte"
+        ],
         "info": ""
     },
     {
@@ -536,7 +605,10 @@
         "music": "小野貴光",
         "arranger": "玉木千尋",
         "length": "",
-        "CDtitle": "Clear MorningqwertyuiTarte",
+        "CDtitle": [
+            "Clear Morning",
+            "Tarte"
+        ],
         "info": ""
     },
     {
@@ -552,11 +624,17 @@
     {
         "title": "Fightin★Pose",
         "artist": "小倉唯",
-        "lylics": "小倉唯qwertyuiKIKUE",
+        "lylics": [
+            "小倉唯",
+            "KIKUE"
+        ],
         "music": "雨漏りP",
         "arranger": "藤田卓也",
         "length": "",
-        "CDtitle": "Fightin★PoseqwertyuiTarte",
+        "CDtitle": [
+            "Fightin★Pose",
+            "Tarte"
+        ],
         "info": ""
     },
     {
@@ -633,7 +711,10 @@
         "title": "Love∞Vision",
         "artist": "小倉唯",
         "lylics": "只野菜摘",
-        "music": "小倉唯qwertyui俊龍",
+        "music": [
+            "小倉唯",
+            "俊龍"
+        ],
         "arranger": "よる。",
         "length": "",
         "CDtitle": "Love∞Vision",
@@ -692,8 +773,14 @@
     {
         "title": "Empty//Princess.",
         "artist": "小倉唯",
-        "lylics": "小倉唯qwertyuiアオワイファイ",
-        "music": "YASUHIRO (康寛)qwertyuiアオワイファイ",
+        "lylics": [
+            "小倉唯",
+            "アオワイファイ"
+        ],
+        "music": [
+            "YASUHIRO (康寛)",
+            "アオワイファイ"
+        ],
         "arranger": "YASUHIRO (康寛)",
         "length": "",
         "CDtitle": "Empty//Princess.",
@@ -702,7 +789,10 @@
     {
         "title": "トキメキWeekend!",
         "artist": "小倉唯",
-        "lylics": "小倉唯qwertyui塚田耕平",
+        "lylics": [
+            "小倉唯",
+            "塚田耕平"
+        ],
         "music": "TAKT",
         "arranger": "塚田耕平",
         "length": "",
@@ -712,7 +802,10 @@
     {
         "title": "アステリア",
         "artist": "小倉唯",
-        "lylics": "小倉唯qwertyui鶴﨑輝一",
+        "lylics": [
+            "小倉唯",
+            "鶴﨑輝一"
+        ],
         "music": "田中透真",
         "arranger": "鶴﨑輝一",
         "length": "",
@@ -732,7 +825,10 @@
     {
         "title": "ココロテレパシー",
         "artist": "小倉唯",
-        "lylics": "小倉唯qwertyui哥丸雄貴",
+        "lylics": [
+            "小倉唯",
+            "哥丸雄貴"
+        ],
         "music": "哥丸雄貴",
         "arranger": "大畑拓也",
         "length": "",
@@ -742,7 +838,10 @@
     {
         "title": "Wild☆Kitty",
         "artist": "小倉唯",
-        "lylics": "小倉唯qwertyuiMaho Hamaguchi",
+        "lylics": [
+            "小倉唯",
+            "Maho Hamaguchi"
+        ],
         "music": "新山俊也",
         "arranger": "藤田卓也",
         "length": "",
@@ -766,7 +865,10 @@
         "music": "植木瑞基 in 俊龍",
         "arranger": "植木瑞基 in 俊龍",
         "length": "",
-        "CDtitle": "Our Steady BoyqwertyuiPuppy",
+        "CDtitle": [
+            "Our Steady Boy",
+            "Puppy"
+        ],
         "info": ""
     },
     {
@@ -786,7 +888,10 @@
         "music": "高橋菜々",
         "arranger": "高橋菜々",
         "length": "",
-        "CDtitle": "ふたり/VIVIVID PARTY!qwertyuiPuppy",
+        "CDtitle": [
+            "ふたり/VIVIVID PARTY!",
+            "Puppy"
+        ],
         "info": ""
     },
     {
@@ -796,7 +901,10 @@
         "music": "宮崎誠",
         "arranger": "宮崎誠",
         "length": "",
-        "CDtitle": "ふたり/VIVIVID PARTY!qwertyuiPuppy",
+        "CDtitle": [
+            "ふたり/VIVIVID PARTY!",
+            "Puppy"
+        ],
         "info": ""
     },
     {
@@ -806,7 +914,10 @@
         "music": "俊龍",
         "arranger": "Sizuk",
         "length": "",
-        "CDtitle": "HEARTBEATが止まらないっ!qwertyuiPuppy",
+        "CDtitle": [
+            "HEARTBEATが止まらないっ!",
+            "Puppy"
+        ],
         "info": ""
     },
     {
@@ -826,7 +937,10 @@
         "music": "俊龍",
         "arranger": "Sizuk",
         "length": "",
-        "CDtitle": "Shooting☆SmileqwertyuiPuppy",
+        "CDtitle": [
+            "Shooting☆Smile",
+            "Puppy"
+        ],
         "info": ""
     },
     {
@@ -906,7 +1020,10 @@
         "music": "中山真斗",
         "arranger": "中山真斗",
         "length": "",
-        "CDtitle": "君のYELLqwertyuiBunny",
+        "CDtitle": [
+            "君のYELL",
+            "Bunny"
+        ],
         "info": ""
     },
     {
@@ -916,7 +1033,10 @@
         "music": "OTOKAM",
         "arranger": "OTOKAM",
         "length": "",
-        "CDtitle": "君のYELLqwertyuiBunny",
+        "CDtitle": [
+            "君のYELL",
+            "Bunny"
+        ],
         "info": ""
     },
     {
@@ -926,7 +1046,10 @@
         "music": "前山田健一",
         "arranger": "前山田健一",
         "length": "",
-        "CDtitle": "ウェィカッ!!qwertyuiBunny",
+        "CDtitle": [
+            "ウェィカッ!!",
+            "Bunny"
+        ],
         "info": ""
     },
     {
@@ -934,7 +1057,10 @@
         "artist": "ゆいかおり",
         "lylics": "こだまさおり",
         "music": "山崎寛子",
-        "arranger": "山崎寛子qwertyui大久保薫(ストリングスアレンジ)",
+        "arranger": [
+            "山崎寛子",
+            "大久保薫(ストリングスアレンジ)"
+        ],
         "length": "",
         "CDtitle": "ウェィカッ!!",
         "info": ""
@@ -946,7 +1072,10 @@
         "music": "sino",
         "arranger": "sino",
         "length": "",
-        "CDtitle": "Shiny BlueqwertyuiBunny",
+        "CDtitle": [
+            "Shiny Blue",
+            "Bunny"
+        ],
         "info": ""
     },
     {
@@ -1046,7 +1175,10 @@
         "music": "田中秀和",
         "arranger": "田中秀和",
         "length": "",
-        "CDtitle": "LUCKY DUCKY!!qwertyuiBright Canary",
+        "CDtitle": [
+            "LUCKY DUCKY!!",
+            "Bright Canary"
+        ],
         "info": ""
     },
     {
@@ -1054,7 +1186,7 @@
         "artist": "ゆいかおり",
         "lylics": "松井五郎",
         "music": "小野貴光",
-        "arranger": "大久保薫(編曲qwertyuiストリングスアレンジ)",
+        "arranger": "大久保薫(編曲、ストリングスアレンジ)",
         "length": "",
         "CDtitle": "LUCKY DUCKY!!",
         "info": ""
@@ -1064,9 +1196,15 @@
         "artist": "ゆいかおり",
         "lylics": "松井五郎",
         "music": "俊龍",
-        "arranger": "山口朗彦(編曲)qwertyui大久保薫(ストリングスアレンジ)",
+        "arranger": [
+            "山口朗彦(編曲)",
+            "大久保薫(ストリングスアレンジ)"
+        ],
         "length": "",
-        "CDtitle": "Intro SituationqwertyuiBright Canary",
+        "CDtitle": [
+            "Intro Situation",
+            "Bright Canary"
+        ],
         "info": ""
     },
     {
@@ -1086,7 +1224,10 @@
         "music": "小野貴光",
         "arranger": "大久保薫",
         "length": "",
-        "CDtitle": "NEO SIGNALIFEqwertyuiBright Canary",
+        "CDtitle": [
+            "NEO SIGNALIFE",
+            "Bright Canary"
+        ],
         "info": ""
     },
     {
@@ -1096,17 +1237,29 @@
         "music": "チーミー",
         "arranger": "大久保友裕",
         "length": "",
-        "CDtitle": "NEO SIGNALIFEqwertyuiBright Canary",
+        "CDtitle": [
+            "NEO SIGNALIFE",
+            "Bright Canary"
+        ],
         "info": ""
     },
     {
         "title": "Ring Ring Rainbow!!",
         "artist": "ゆいかおり",
-        "lylics": "磯谷佳江qwertyui本木咲黒",
+        "lylics": [
+            "磯谷佳江",
+            "本木咲黒"
+        ],
         "music": "小野貴光",
-        "arranger": "山口朗彦qwertyui菊谷知樹(ストリングスアレンジ)",
+        "arranger": [
+            "山口朗彦",
+            "菊谷知樹(ストリングスアレンジ)"
+        ],
         "length": "",
-        "CDtitle": "Ring Ring Rainbow!!qwertyuiBright Canary",
+        "CDtitle": [
+            "Ring Ring Rainbow!!",
+            "Bright Canary"
+        ],
         "info": ""
     },
     {
@@ -1134,7 +1287,10 @@
         "artist": "ゆいかおり",
         "lylics": "服部祐希",
         "music": "服部祐希",
-        "arranger": "河合英嗣qwertyui菊谷知樹(ストリングスアレンジ)",
+        "arranger": [
+            "河合英嗣",
+            "菊谷知樹(ストリングスアレンジ)"
+        ],
         "length": "",
         "CDtitle": "Bright Canary",
         "info": ""
@@ -1174,7 +1330,10 @@
         "artist": "ゆいかおり",
         "lylics": "磯谷佳江",
         "music": "SigN",
-        "arranger": "SigNqwertyui関根佑樹(編曲qwertyuiストリングスアレンジ)",
+        "arranger": [
+            "SigN",
+            "関根佑樹(編曲、ストリングスアレンジ)"
+        ],
         "length": "",
         "CDtitle": "Bright Canary",
         "info": ""
@@ -1226,7 +1385,10 @@
         "music": "俊龍",
         "arranger": "山口朗彦",
         "length": "",
-        "CDtitle": "Blooming FlowerqwertyuiSunny Spot",
+        "CDtitle": [
+            "Blooming Flower",
+            "Sunny Spot"
+        ],
         "info": ""
     },
     {
@@ -1236,7 +1398,10 @@
         "music": "金崎真士",
         "arranger": "岩橋星実(Elements Garden)",
         "length": "",
-        "CDtitle": "Blooming FlowerqwertyuiSunny Spot",
+        "CDtitle": [
+            "Blooming Flower",
+            "Sunny Spot"
+        ],
         "info": ""
     },
     {
@@ -1246,7 +1411,10 @@
         "music": "Coffee Creamers",
         "arranger": "岩橋星実",
         "length": "",
-        "CDtitle": "Ray RuleqwertyuiSunny Spot",
+        "CDtitle": [
+            "Ray Rule",
+            "Sunny Spot"
+        ],
         "info": ""
     },
     {
@@ -1304,7 +1472,10 @@
         "artist": "石原夏織",
         "lylics": "松井五郎",
         "music": "松田彬人",
-        "arranger": "高瀬一矢qwertyui松田彬人",
+        "arranger": [
+            "高瀬一矢",
+            "松田彬人"
+        ],
         "length": "",
         "CDtitle": "Sunny Spot",
         "info": ""
@@ -1333,8 +1504,14 @@
         "title": "♮ Melody",
         "artist": "石原夏織",
         "lylics": "こだまさおり",
-        "music": "早川博隆qwertyui宇田川翔",
-        "arranger": "宇田川翔qwertyui早川博隆",
+        "music": [
+            "早川博隆",
+            "宇田川翔"
+        ],
+        "arranger": [
+            "宇田川翔",
+            "早川博隆"
+        ],
         "length": "",
         "CDtitle": "Sunny Spot",
         "info": ""
@@ -1346,17 +1523,29 @@
         "music": "よる。",
         "arranger": "岩橋星実",
         "length": "",
-        "CDtitle": "TEMPESTqwertyuiWater Drop",
+        "CDtitle": [
+            "TEMPEST",
+            "Water Drop"
+        ],
         "info": ""
     },
     {
         "title": "Crispy love",
         "artist": "石原夏織",
         "lylics": "知念結",
-        "music": "藤末樹qwertyui齊藤湧太",
-        "arranger": "齊藤湧太qwertyui藤末樹",
+        "music": [
+            "藤末樹",
+            "齊藤湧太"
+        ],
+        "arranger": [
+            "齊藤湧太",
+            "藤末樹"
+        ],
         "length": "",
-        "CDtitle": "TEMPESTqwertyuiWater Drop",
+        "CDtitle": [
+            "TEMPEST",
+            "Water Drop"
+        ],
         "info": ""
     },
     {
@@ -1364,9 +1553,15 @@
         "artist": "石原夏織",
         "lylics": "松井五郎",
         "music": "俊龍",
-        "arranger": "長田直之qwertyui黒須克彦",
+        "arranger": [
+            "長田直之",
+            "黒須克彦"
+        ],
         "length": "",
-        "CDtitle": "Face to FaceqwertyuiWater Drop",
+        "CDtitle": [
+            "Face to Face",
+            "Water Drop"
+        ],
         "info": ""
     },
     {
@@ -1403,7 +1598,10 @@
         "title": "Water Front",
         "artist": "石原夏織",
         "lylics": "しほり",
-        "music": "理沙qwertyui工藤政人",
+        "music": [
+            "理沙",
+            "工藤政人"
+        ],
         "arranger": "工藤政人",
         "length": "",
         "CDtitle": "Water Drop",
@@ -1443,7 +1641,10 @@
         "title": "Diorama-Drama",
         "artist": "石原夏織",
         "lylics": "藤林聖子",
-        "music": "中村歩qwertyuiTETTA",
+        "music": [
+            "中村歩",
+            "TETTA"
+        ],
         "arranger": "APAZZI",
         "length": "",
         "CDtitle": "Water Drop",
@@ -1473,8 +1674,14 @@
         "title": "Against.",
         "artist": "石原夏織",
         "lylics": "藤林聖子",
-        "music": "浦島健太qwertyuiH.Shing",
-        "arranger": "H.ShingqwertyuiTETTA",
+        "music": [
+            "浦島健太",
+            "H.Shing"
+        ],
+        "arranger": [
+            "H.Shing",
+            "TETTA"
+        ],
         "length": "",
         "CDtitle": "Against.",
         "info": ""
@@ -1596,7 +1803,10 @@
         "music": "渡辺翔",
         "arranger": "HAMA-kgn",
         "length": "",
-        "CDtitle": "ParagliderqwertyuiCalm Scene",
+        "CDtitle": [
+            "Paraglider",
+            "Calm Scene"
+        ],
         "info": ""
     },
     {
@@ -1606,17 +1816,26 @@
         "music": "フワリ(Dream Monster)",
         "arranger": "フワリ(Dream Monster)",
         "length": "",
-        "CDtitle": "ParagliderqwertyuiCalm Scene",
+        "CDtitle": [
+            "Paraglider",
+            "Calm Scene"
+        ],
         "info": ""
     },
     {
         "title": "Gift",
         "artist": "石原夏織",
-        "lylics": "柳舘周平qwertyui稲葉エミ",
+        "lylics": [
+            "柳舘周平",
+            "稲葉エミ"
+        ],
         "music": "柳舘周平",
         "arranger": "奈良悠樹",
         "length": "",
-        "CDtitle": "GiftqwertyuiCalm Scene",
+        "CDtitle": [
+            "Gift",
+            "Calm Scene"
+        ],
         "info": ""
     },
     {
@@ -1643,7 +1862,10 @@
         "title": "recipe",
         "artist": "石原夏織",
         "lylics": "eill",
-        "music": "☆Taku Takahashi(m-flo)qwertyuieill",
+        "music": [
+            "☆Taku Takahashi(m-flo)",
+            "eill"
+        ],
         "arranger": "☆Taku Takahashi(m-flo)",
         "length": "",
         "CDtitle": "Calm Scene",
