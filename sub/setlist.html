@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>セットリスト表示</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 5px;
+    }
+</style>
+</head>
+<body>
+<div id="liveInfo"></div>
+
+<script>
+const urlParams = new URLSearchParams(window.location.search);
+const targetLiveId = urlParams.get('id');
+
+if (!targetLiveId) {
+    document.getElementById('liveInfo').innerHTML = '<p>No ID provided in the query parameters.</p>';
+} else {
+    const jsonFiles = [];
+    
+    jsonFiles.push("../setlist.json");
+
+    let found = false;
+
+    // 各JSONファイルを順番に読み込み、IDが一致するライブ情報を表示
+    const loadLiveInfo = async () => {
+        for (const file of jsonFiles) {
+            try {
+                const response = await fetch(file);
+                const data = await response.json();
+                const liveData = data.find(item => item.id === targetLiveId);
+
+                if (liveData) {
+                    const liveInfo = document.getElementById('liveInfo');
+
+                    const getDayOfWeek = dateString => {
+                        const days = ['日', '月', '火', '水', '木', '金', '土'];
+                        const date = new Date(dateString.replace(/年|月|日/g, '/'));
+                        return days[date.getDay()];
+                    };
+
+                    const renderSetlist = setlist => {
+                        let setlistHTML = '<ul>';
+                        setlist.forEach((song, index) => {
+                            setlistHTML += `<p>${index + 1}. <a href="https://tokiyui.github.io/Inori/sub/search.html?name=${song}">${song}</a></p>`;
+                        });
+                        setlistHTML += '</ul>';
+                        return setlistHTML;
+                    };
+
+                    const renderEncore = encore => {
+                        if (!encore || encore.length === 0) {
+                            return '';
+                        }
+                        let encoreHTML = '<ul>';
+                        encore.forEach((song, index) => {
+                            encoreHTML += `<p>${index + 1}. <a href="https://tokiyui.github.io/Inori/sub/search.html?name=${song}">${song}</a></p>`;
+                        });
+                        encoreHTML += '</ul>';
+                        return encoreHTML;
+                    };
+
+                    const html = `
+                        <h2>${liveData.LIVEtitle}</h2>
+                        <h3>${liveData.date} (${getDayOfWeek(liveData.date)}) @${liveData.venue}</h3>
+                        ${renderSetlist(liveData.setlist)}
+                        ${liveData.encore && liveData.encore.length > 0 ? `<p>【アンコール】</p>${renderEncore(liveData.encore)}` : ''}
+                        ${liveData.Wencore ? `<p>【ダブルアンコール】</p><p><ul><a href="https://tokiyui.github.io/Inori/sub/search.html?name=${liveData.Wencore}">${liveData.Wencore}</a></ul></p>` : ''}
+                    `;
+                    liveInfo.innerHTML = html;
+
+                    found = true;
+                    break;
+                }
+            } catch (error) {
+                console.error(`Error fetching data from ${file}:`, error);
+            }
+        }
+
+        if (!found) {
+            document.getElementById('liveInfo').innerHTML = '<p>No live information found for the provided ID.</p>';
+        }
+    };
+
+    loadLiveInfo();
+}
+</script>
+</body>
+</html>
