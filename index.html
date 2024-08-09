@@ -73,7 +73,7 @@
             }, { count: 0, latestDate: null });
 
             const formattedDate = oldestDate.date !== 'No release date found' ? oldestDate.date : 'No release date found';
-            const latestPerformanceDate = performanceData.latestDate ? formatDateToJapanese(performanceData.latestDate) : 'まだ披露されていません';
+            const latestPerformanceDate = performanceData.latestDate ? formatDateToJapanese(performanceData.latestDate) : '未披露';
 
             const row = `
                 <tr>
