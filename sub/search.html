@@ -64,7 +64,7 @@ function searchSetlist() {
         // Display the results
         const resultDiv = document.getElementById('results');
         resultDiv.innerHTML = matchingData.map(item => `
-            <p><a href="./sub/setlist.html?id=${item.id}">${item.date} ${item.LIVEtitle}</a></p>
+            <p><a href="./setlist.html?id=${item.id}">${item.date} ${item.LIVEtitle}</a></p>
         `).join('');
 
         document.getElementById('title').innerText = `「${name}」の披露一覧：${count}回`;
