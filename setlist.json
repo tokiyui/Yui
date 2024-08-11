@@ -2116,5 +2116,137 @@
             "Baby Sweet Berry Love",
             "FUN FUN MERRY JAM"
         ]
+    },
+    {
+        "LIVEtitle": "ゆいかおりLIVE TOUR「RAINBOW CANARY!!」横浜公演2日目",
+        "tourtitle": "ゆいかおりLIVE TOUR「RAINBOW CANARY!!」",
+        "artist": "ゆいかおり",
+        "date": "2016年1月3日",
+        "venue": "パシフィコ横浜",
+        "id": "2016010301",
+        "setlist": [
+            "Ring Ring Rainbow!!",
+            "LUCKY DUCKY!!",
+            "倍速∞ラブストレート",
+            "クリスタルの誓い",
+            "Intro Situation",
+            "Rainy Day",
+            "Telephone Call",
+            "Sunny Ray Beam!!",
+            "ライアーシープ",
+            "Honey♥Come!!",
+            "Calling Calling",
+            "Billion-Carat",
+            "NEO SIGNALIFE",
+            "New World",
+            "翼になるよ",
+            "星降る夜のハッピーリンク",
+            "カナリア"
+        ],
+        "encore": [
+            "HEARTBEATが止まらないっ!",
+            "ウェィカッ!!",
+            "PUPPY LOVE!!",
+            "Our Steady Boy"
+        ]
+    },
+    {
+        "LIVEtitle": "ゆいかおりLIVE TOUR「RAINBOW CANARY!!」横浜公演1日目",
+        "tourtitle": "ゆいかおりLIVE TOUR「RAINBOW CANARY!!」",
+        "artist": "ゆいかおり",
+        "date": "2016年1月2日",
+        "venue": "パシフィコ横浜",
+        "id": "2016010201",
+        "setlist": [
+            "Ring Ring Rainbow!!",
+            "LUCKY DUCKY!!",
+            "倍速∞ラブストレート",
+            "CUE the Future ~「Q」のテーマ~",
+            "Intro Situation",
+            "Rainy Day",
+            "Telephone Call",
+            "Sunny Ray Beam!!",
+            "ライアーシープ",
+            "Honey♥Come!!",
+            "Calling Calling",
+            "Billion-Carat",
+            "NEO SIGNALIFE",
+            "New World",
+            "君のYELL",
+            "星降る夜のハッピーリンク",
+            "カナリア"
+        ],
+        "encore": [
+            "HEARTBEATが止まらないっ!",
+            "ウェィカッ!!",
+            "PUPPY LOVE!!",
+            "Our Steady Boy"
+        ]
+    },
+    {
+        "LIVEtitle": "ゆいかおりLIVE TOUR「RAINBOW CANARY!!」愛知公演",
+        "tourtitle": "ゆいかおりLIVE TOUR「RAINBOW CANARY!!」",
+        "artist": "ゆいかおり",
+        "date": "2015年12月26日",
+        "venue": "名古屋国際会議場センチュリーホール",
+        "id": "2015122601",
+        "setlist": [
+            "Ring Ring Rainbow!!",
+            "LUCKY DUCKY!!",
+            "倍速∞ラブストレート",
+            "Intro Situation",
+            "CUE the Future ~「Q」のテーマ~",
+            "Rainy Day",
+            "Telephone Call",
+            "Sunny Ray Beam!!",
+            "ライアーシープ",
+            "Honey♥Come!!",
+            "Calling Calling",
+            "Billion-Carat",
+            "NEO SIGNALIFE",
+            "New World",
+            "君のYELL",
+            "星降る夜のハッピーリンク",
+            "カナリア"
+        ],
+        "encore": [
+            "Shooting☆Smile",
+            "ウェィカッ!!",
+            "PUPPY LOVE!!",
+            "Our Steady Boy"
+        ]
+    },
+    {
+        "LIVEtitle": "ゆいかおりLIVE TOUR「RAINBOW CANARY!!」大阪公演",
+        "tourtitle": "ゆいかおりLIVE TOUR「RAINBOW CANARY!!」",
+        "artist": "ゆいかおり",
+        "date": "2015年12月23日",
+        "venue": "岸和田市立浪切ホール",
+        "id": "2015122301",
+        "setlist": [
+            "Ring Ring Rainbow!!",
+            "LUCKY DUCKY!!",
+            "倍速∞ラブストレート",
+            "Intro Situation",
+            "クリスタルの誓い",
+            "Rainy Day",
+            "Telephone Call",
+            "Sunny Ray Beam!!",
+            "ライアーシープ",
+            "Honey♥Come!!",
+            "Calling Calling",
+            "Billion-Carat",
+            "NEO SIGNALIFE",
+            "New World",
+            "君のYELL",
+            "星降る夜のハッピーリンク",
+            "カナリア"
+        ],
+        "encore": [
+            "Shooting☆Smile",
+            "ウェィカッ!!",
+            "PUPPY LOVE!!",
+            "Our Steady Boy"
+        ]
     }
 ]
