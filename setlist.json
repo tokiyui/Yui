@@ -1951,183 +1951,170 @@
         ]
     },
     {
-        "LIVEtitle": "ANIMAX MUSIX 2018 Guangzhou",
-        "tourtitle": "ANIMAX MUSIX",
-        "date": "2018年4月21日",
-        "venue": "広州体育館（中国・広州）",
-        "id": "2018042101",
+        "LIVEtitle": "Animelo Summer Live 2016 刻 -TOKI-",
+        "tourtitle": "Animelo Summer Live",
+        "artist": [
+            "小倉唯",
+            "ゆいかおり"
+        ]
+        "date": "2016年8月28日",
+        "venue": "さいたまスーパーアリーナ",
+        "id": "2016082801",
         "setlist": [
-            "夢のつぼみ",
-            "アイマイモコ",
-            "innocent starter",
-            "Starry Wish"
+            "Honey♥Come!!",
+            "ハイタッチ☆メモリー",
+            "Ring Ring Rainbow!!",
+            "Promise You!!"
         ]
     },
     {
-        "LIVEtitle": "リスアニ!LIVE 2018 \"FRIDAY STAGE\"",
-        "tourtitle": "リスアニ!LIVE",
-        "date": "2018年1月26日",
-        "venue": "日本武道館",
-        "id": "2018012601",
+        "LIVEtitle": "小倉唯 1st LIVE TOUR「High-Touch☆Summer」群馬公演",
+        "tourtitle": "小倉唯 1st LIVE TOUR「High-Touch☆Summer」",
+        "artist": "小倉唯",
+        "date": "2016年8月14日",
+        "venue": "桐生市市民文化会館",
+        "id": "2016081401",
         "setlist": [
-            "Ready Steady Go!",
-            "MELODY FLAG",
-            "アイマイモコ",
-            "Winter Wonder Wander",
-            "Starry Wish",
-            "星屑のコントレイル",
-            "Innocent Flower"
-        ]
-    },
-    {
-        "LIVEtitle": "水瀬いのり1st LIVE Ready Steady Go!",
-        "tourtitle": "水瀬いのり1st LIVE Ready Steady Go!",
-        "date": "2017年12月2日",
-        "venue": "東京国際フォーラム",
-        "id": "2017120201",
-        "setlist": [
-            "Dreaming Girls",
-            "MELODY FLAG",
-            "コイセヨオトメ",
-            "笑顔が似合う日",
-            "Ready Steady Go!",
-            "夢のつぼみ",
-            "Lucky Clover",
-            "アイマイモコ",
-            "涙のあとは",
-            "星屑のコントレイル",
-            "Will",
-            "リトルシューゲイザー",
-            "Starry Wish",
-            "いつもずっと",
-            "Winter Wonder Wander",
-            "旅の途中",
-            "Innocent flower"
+            "Happy Strawberry",
+            "パンドラ♡ショコラ",
+            "Tinkling Smile",
+            "おねがいBe with you",
+            "thx!!",
+            "Raise",
+            "Get over",
+            "TO BE ALIVE",
+            "ライアーシープ",
+            "ガーリッシュエイジ",
+            "PON de Fighting!",
+            "いつだって Call Me!",
+            "Sing-a-ling-a-Harmony",
+            "Search Light",
+            "Honey♥Come!!",
+            "ハイタッチ☆メモリー"
         ],
         "encore": [
-            "春空",
-            "Happy Birthday",
-            "harmony ribbon"
+            "Baby Sweet Berry Love",
+            "FUN FUN MERRY JAM"
         ]
     },
     {
-        "LIVEtitle": "Animelo Summer Live 2017 -THE CARD-",
-        "tourtitle": "Animelo Summer Live",
-        "date": "2017年8月27日",
-        "venue": "さいたまスーパーアリーナ",
-        "id": "2017082701",
+        "LIVEtitle": "小倉唯 1st LIVE TOUR「High-Touch☆Summer」大阪公演",
+        "tourtitle": "小倉唯 1st LIVE TOUR「High-Touch☆Summer」",
+        "artist": "小倉唯",
+        "date": "2016年8月6日",
+        "venue": "オリックス劇場",
+        "id": "2016080601",
         "setlist": [
-            "Starry Wish",
-            "アイマイモコ"
+            "Happy Strawberry",
+            "パンドラ♡ショコラ",
+            "Tinkling Smile",
+            "おねがいBe with you",
+            "thx!!",
+            "Raise",
+            "Get over",
+            "TO BE ALIVE",
+            "ライアーシープ",
+            "ガーリッシュエイジ",
+            "PON de Fighting!",
+            "いつだって Call Me!",
+            "A Lovely Tea Break",
+            "Search Light",
+            "Honey♥Come!!",
+            "ハイタッチ☆メモリー"
+        ],
+        "encore": [
+            "Baby Sweet Berry Love",
+            "FUN FUN MERRY JAM"
         ]
     },
     {
-        "LIVEtitle": "COMCHA FES 2017 in 野音",
-        "tourtitle": "",
-        "date": "2017年5月14日",
-        "venue": "日比谷野外大音楽堂",
-        "id": "2017051401",
+        "LIVEtitle": "小倉唯 1st LIVE TOUR「High-Touch☆Summer」愛知公演",
+        "tourtitle": "小倉唯 1st LIVE TOUR「High-Touch☆Summer」",
+        "artist": "小倉唯",
+        "date": "2016年7月17日",
+        "venue": "一宮市民会館",
+        "id": "2016071701",
         "setlist": [
-            "春空",
-            "Starry Wish",
-            "Innocent Flower"
+            "Happy Strawberry",
+            "パンドラ♡ショコラ",
+            "Tinkling Smile",
+            "おねがいBe with you",
+            "thx!!",
+            "Raise",
+            "Get over",
+            "TO BE ALIVE",
+            "ライアーシープ",
+            "ガーリッシュエイジ",
+            "PON de Fighting!",
+            "いつだって Call Me!",
+            "Charming Do!",
+            "Search Light",
+            "Honey♥Come!!",
+            "ハイタッチ☆メモリー"
+        ],
+        "encore": [
+            "Baby Sweet Berry Love",
+            "FUN FUN MERRY JAM"
         ]
     },
     {
-        "LIVEtitle": "KING SUPER LIVE 2017 TRINITY",
-        "tourtitle": "KING SUPER LIVE",
-        "date": "2017年3月5日",
-        "venue": "日本武道館",
-        "id": "2017030501",
+        "LIVEtitle": "小倉唯 1st LIVE TOUR「High-Touch☆Summer」幕張公演2日目",
+        "tourtitle": "小倉唯 1st LIVE TOUR「High-Touch☆Summer」",
+        "artist": "小倉唯",
+        "date": "2016年7月10日",
+        "venue": "幕張メッセ",
+        "id": "2016071001",
         "setlist": [
-            "夢のつぼみ",
-            "MELODY FLAG",
-            "Starry Wish",
-            "Ring of Smile",
-            "春空",
-            "harmony ribbon"
+            "Happy Strawberry",
+            "パンドラ♡ショコラ",
+            "Tinkling Smile",
+            "おねがいBe with you",
+            "thx!!",
+            "Raise",
+            "Get over",
+            "TO BE ALIVE",
+            "ライアーシープ",
+            "ガーリッシュエイジ",
+            "PON de Fighting!",
+            "いつだって Call Me!",
+            "A Lovely Tea Break",
+            "Search Light",
+            "Honey♥Come!!",
+            "ハイタッチ☆メモリー"
+        ],
+        "encore": [
+            "Baby Sweet Berry Love",
+            "FUN FUN MERRY JAM"
         ]
     },
     {
-        "LIVEtitle": "ニッポン放送ミュ~コミ+プレゼンツ アニメ紅白歌合戦 Vol.6 代々木ファイナル",
-        "tourtitle": "",
-        "date": "2017年2月5日",
-        "venue": "国立代々木競技場第一体育館",
-        "id": "2017020501",
+        "LIVEtitle": "小倉唯 1st LIVE TOUR「High-Touch☆Summer」幕張公演1日目",
+        "tourtitle": "小倉唯 1st LIVE TOUR「High-Touch☆Summer」",
+        "artist": "小倉唯",
+        "date": "2016年7月9日",
+        "venue": "幕張メッセ",
+        "id": "2016070901",
         "setlist": [
-            "夢のつぼみ",
-            "Starry Wish",
-            "harmony ribbon"
-        ]
-    },
-    {
-        "LIVEtitle": "リスアニ!LIVE 2017 \"SATURDAY STAGE\"",
-        "tourtitle": "リスアニ!LIVE",
-        "date": "2017年1月28日",
-        "venue": "日本武道館",
-        "id": "2017012801",
-        "setlist": [
-            "夢のつぼみ",
-            "MELODY FLAG",
-            "Starry Wish",
-            "あの日の空へ",
-            "harmony ribbon"
-        ]
-    },
-    {
-        "LIVEtitle": "ANIMAX MUSIX 2017 OSAKA",
-        "tourtitle": "ANIMAX MUSIX",
-        "date": "2017年1月14日",
-        "venue": "大阪城ホール",
-        "id": "2017011401",
-        "setlist": [
-            "Starry Wish",
-            "夢のつぼみ",
-            "crossing field"
-        ]
-    },
-    {
-        "LIVEtitle": "ご注文はいのりですか?",
-        "tourtitle": "",
-        "date": "2016年11月20日",
-        "venue": "工学院大学",
-        "id": "2016112001",
-        "setlist": "Starry Wish"
-    },
-    {
-        "LIVEtitle": "@JAM 2016 DAY2 Supported by リスアニ!TV",
-        "tourtitle": "",
-        "date": "2016年5月22日",
-        "venue": "Zeppダイバーシティ東京",
-        "id": "2016052201",
-        "setlist": [
-            "夢のつぼみ",
-            "Dreaming Girls",
-            "Ring of Smile",
-            "harmony ribbon"
-        ]
-    },
-    {
-        "LIVEtitle": "ANISON HISTORY Japan!!",
-        "tourtitle": "",
-        "date": "2016年3月30日",
-        "venue": "NHKホール",
-        "id": "2016033001",
-        "setlist": [
-            "harmony ribbon",
-            "ムーンライト伝説"
-        ]
-    },
-    {
-        "LIVEtitle": "AJ Night 2016",
-        "tourtitle": "",
-        "date": "2016年3月26日",
-        "venue": "ディファ有明",
-        "id": "2016032601",
-        "setlist": [
-            "夢のつぼみ",
-            "殲琴・ダウルダブラ",
-            "harmony ribbon"
+            "Happy Strawberry",
+            "パンドラ♡ショコラ",
+            "Tinkling Smile",
+            "おねがいBe with you",
+            "thx!!",
+            "Raise",
+            "Get over",
+            "TO BE ALIVE",
+            "ライアーシープ",
+            "ガーリッシュエイジ",
+            "PON de Fighting!",
+            "いつだって Call Me!",
+            "Charming Do!",
+            "Search Light",
+            "Honey♥Come!!",
+            "ハイタッチ☆メモリー"
+        ],
+        "encore": [
+            "Baby Sweet Berry Love",
+            "FUN FUN MERRY JAM"
         ]
     }
 ]
