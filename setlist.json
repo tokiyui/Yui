@@ -1256,140 +1256,151 @@
         ]
     },
     {
-        "LIVEtitle": "いのりまち町民集会2019 東京夜公演",
-        "tourtitle": "いのりまち町民集会2019",
-        "date": "2019年12月8日",
-        "venue": "東京国際フォーラム",
-        "id": "2019120802",
+        "LIVEtitle": "石原夏織 1st LIVE「Sunny Spot Story」夜公演",
+        "tourtitle": "石原夏織 1st LIVE「Sunny Spot Story」",
+        "artist": "石原夏織",
+        "date": "2018年12月29日",
+        "venue": "大宮ソニックシティ",
+        "id": "2018122902",
         "setlist": [
-            "Catch the Rainbow!",
-            "ココロはMerry-Go-Round",
-            "Snow White",
-            "Milky Star",
-            "ココロソマリ",
-            "Million Futures"
+            "Sunny You",
+            "CREATION×CREATION",
+            "虹のソルフェージュ",
+            "半透明の世界で",
+            "17才",
+            "Heavenly Lover",
+            "Orange Note",
+            "enpathy",
+            "雨模様リグレット",
+            "Ray Rule",
+            "Untitled Puzzle",
+            "Singularity Point",
+            "Blooming Flower"
+        ],
+        "encore": [
+            "♮ Melody",
+            "Blooming Flower"
         ]
     },
     {
-        "LIVEtitle": "いのりまち町民集会2019 東京昼公演",
-        "tourtitle": "いのりまち町民集会2019",
-        "date": "2019年12月8日",
-        "venue": "東京国際フォーラム",
-        "id": "2019120801",
+        "LIVEtitle": "石原夏織 1st LIVE「Sunny Spot Story」昼公演",
+        "tourtitle": "石原夏織 1st LIVE「Sunny Spot Story」",
+        "artist": "石原夏織",
+        "date": "2018年12月29日",
+        "venue": "大宮ソニックシティ",
+        "id": "2018122901",
         "setlist": [
-            "Catch the Rainbow!",
-            "アルペジオ",
-            "Snow White",
-            "Loop Slider Cider",
-            "ココロソマリ",
-            "Million Futures"
+            "Sunny You",
+            "CREATION×CREATION",
+            "虹のソルフェージュ",
+            "半透明の世界で",
+            "SHINING LINE*",
+            "Heavenly Lover",
+            "Orange Note",
+            "enpathy",
+            "雨模様リグレット",
+            "Ray Rule",
+            "Untitled Puzzle",
+            "Singularity Point",
+            "Blooming Flower"
+        ],
+        "encore": [
+            "♮ Melody",
+            "Blooming Flower"
         ]
     },
     {
-        "LIVEtitle": "いのりまち町民集会2019 兵庫夜公演",
-        "tourtitle": "いのりまち町民集会2019",
-        "date": "2019年11月30日",
-        "venue": "あましんアルカイックホール",
-        "id": "2019113002",
+        "LIVEtitle": "小倉唯 FCイベント「ゆいゆい＊カンパニー社員総会 ~Xmasイブ×3♪~」夜公演",
+        "tourtitle": "小倉唯 FCイベント「ゆいゆい＊カンパニー社員総会 ~Xmasイブ×3♪~」",
+        "artist": "小倉唯",
+        "date": "2018年12月22日",
+        "venue": "相模女子大学グリーンホール",
+        "id": "2018122202",
         "setlist": [
-            "Catch the Rainbow!",
-            "ココロはMerry-Go-Round",
-            "Snow White",
-            "Milky Star",
-            "ココロソマリ",
-            "Million Futures"
+            "winter tale",
+            "ともだちピンク",
+            "カワルミライ",
+            "100回のKISS",
+            "アップル・ガール"
         ]
     },
     {
-        "LIVEtitle": "いのりまち町民集会2019 兵庫昼公演",
-        "tourtitle": "いのりまち町民集会2019",
-        "date": "2019年11月30日",
-        "venue": "あましんアルカイックホール",
-        "id": "2019113001",
+        "LIVEtitle": "小倉唯 FCイベント「ゆいゆい＊カンパニー社員総会 ~Xmasイブ×3♪~」昼公演",
+        "tourtitle": "小倉唯 FCイベント「ゆいゆい＊カンパニー社員総会 ~Xmasイブ×3♪~」",
+        "artist": "小倉唯",
+        "date": "2018年12月22日",
+        "venue": "相模女子大学グリーンホール",
+        "id": "2018122201",
         "setlist": [
-            "Catch the Rainbow!",
-            "アルペジオ",
-            "Snow White",
-            "Loop Slider Cider",
-            "ココロソマリ",
-            "Million Futures"
+            "winter tale",
+            "ともだちピンク",
+            "カワルミライ",
+            "100回のKISS",
+            "アップル・ガール"
         ]
     },
     {
-        "LIVEtitle": "Animelo Summer Live 2019 \"-STORY-\"",
+        "LIVEtitle": "ANIMAX MUSIX 2018 YOKOHAMA supported by ひかりTV",
+        "tourtitle": "ANIMAX MUSIX",
+        "artist": "石原夏織",
+        "date": "2018年11月17日",
+        "venue": "横浜アリーナ",
+        "id": "2018111701",
+        "setlist": [
+            "Sunny You",
+            "Singularity Point"
+        ]
+    },
+    {
+        "LIVEtitle": "KING SUPER LIVE 2018 上海公演",
+        "tourtitle": "KING SUPER LIVE 2018",
+        "artist": "小倉唯",
+        "date": "2018年10月14日",
+        "venue": "メルセデス・ベンツアリーナ（上海）",
+        "id": "2018101401",
+        "setlist": [
+            "Honey♥Come!!",
+            "Future Strike",
+            "Raise",
+            "Baby Sweet Berry Love"
+        ]
+    },
+    {
+        "LIVEtitle": "KING SUPER LIVE 2018 台湾公演",
+        "tourtitle": "KING SUPER LIVE 2018",
+        "artist": "小倉唯",
+        "date": "2018年9月30日",
+        "venue": "国立体育大学体育館（台湾）",
+        "id": "2018093001",
+        "setlist": [
+            "Honey♥Come!!",
+            "Future Strike",
+            "Raise",
+            "Baby Sweet Berry Love"
+        ]
+    },
+    {
+        "LIVEtitle": "KING SUPER LIVE 2018 東京公演",
+        "tourtitle": "KING SUPER LIVE 2018",
+        "artist": "小倉唯",
+        "date": "2018年9月24日",
+        "venue": "東京ドーム",
+        "id": "2018092401",
+        "setlist": [
+            "Raise",
+            "永遠少年",
+            "Honey♥Come!!"
+        ]
+    },
+    {
+        "LIVEtitle": "Animelo Summer Live 2018 \"OK!\"",
         "tourtitle": "Animelo Summer Live",
-        "date": "2019年8月31日",
+        "date": "2018年8月26日",
         "venue": "さいたまスーパーアリーナ",
-        "id": "2019083101",
+        "id": "2018082601",
         "setlist": [
-            "Wonder Caravan!",
-            "Ready Steady Go!",
-            "TRUST IN ETERNITY"
-        ]
-    },
-    {
-        "LIVEtitle": "Inori Minase LIVE TOUR 2019 Catch the Rainbow! 東京公演2日目・ツアーファイナル",
-        "tourtitle": "Inori Minase LIVE TOUR 2019 Catch the Rainbow!",
-        "date": "2019年6月29日",
-        "venue": "日本武道館",
-        "id": "2019062901",
-        "setlist": [
-            "Step Up!",
-            "ピュアフレーム",
-            "Ready Steady Go!",
-            "Kitty Cat Adventure",
-            "Wonder Caravan!",
-            "コイセヨオトメ",
-            "ココロはMerry-Go-Round",
-            "Future Seeker",
-            "君色プロローグ",
-            "水彩メモリー",
-            "約束のアステリズム",
-            "brave climber",
-            "Will",
-            "今を僕らしく生きてくために",
-            "TRUST IN ETERNITY",
-            "Starry Wish",
-            "My Graffiti",
-            "harmony ribbon"
-        ],
-        "encore": [
-            "Dreaming Girls",
-            "Million Futures",
-            "Catch the Rainbow!"
-        ],
-        "Wencore": "夢のつぼみ"
-    },
-    {
-        "LIVEtitle": "Inori Minase LIVE TOUR 2019 Catch the Rainbow! 東京公演1日目",
-        "tourtitle": "Inori Minase LIVE TOUR 2019 Catch the Rainbow!",
-        "date": "2019年6月28日",
-        "venue": "日本武道館",
-        "id": "2019062801",
-        "setlist": [
-            "Step Up!",
-            "ピュアフレーム",
-            "Ready Steady Go!",
-            "Kitty Cat Adventure",
-            "Wonder Caravan!",
-            "コイセヨオトメ",
-            "ココロはMerry-Go-Round",
-            "Future Seeker",
-            "君色プロローグ",
-            "水彩メモリー",
-            "約束のアステリズム",
-            "brave climber",
-            "リトルシューゲイザー",
-            "今を僕らしく生きてくために",
-            "TRUST IN ETERNITY",
-            "Starry Wish",
-            "My Graffiti",
-            "harmony ribbon"
-        ],
-        "encore": [
-            "Dreaming Girls",
-            "Million Futures",
-            "Catch the Rainbow!"
+            "Baby Sweet Berry Love",
+            "永遠少年"
         ]
     },
     {
