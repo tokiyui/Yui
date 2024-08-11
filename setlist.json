@@ -1404,160 +1404,111 @@
         ]
     },
     {
-        "LIVEtitle": "Inori Minase LIVE TOUR 2019 Catch the Rainbow! 愛知公演",
-        "tourtitle": "Inori Minase LIVE TOUR 2019 Catch the Rainbow!",
-        "date": "2019年6月23日",
-        "venue": "日本特殊陶業市民会館",
-        "id": "2019062301",
+        "LIVEtitle": "石原夏織 BIRTHDAY EVENT -Career up Carry- 夜公演",
+        "tourtitle": "石原夏織 BIRTHDAY EVENT -Career up Carry-",
+        "artist": "石原夏織",
+        "date": "2018年8月18日",
+        "venue": "山野ホール",
+        "id": "2018081802",
         "setlist": [
-            "Step Up!",
-            "ピュアフレーム",
-            "Ready Steady Go!",
-            "Kitty Cat Adventure",
-            "Wonder Caravan!",
-            "コイセヨオトメ",
-            "ココロはMerry-Go-Round",
-            "Future Seeker",
-            "君色プロローグ",
-            "水彩メモリー",
-            "約束のアステリズム",
-            "brave climber",
-            "Will",
-            "今を僕らしく生きてくために",
-            "TRUST IN ETERNITY",
-            "Starry Wish",
-            "My Graffiti",
-            "harmony ribbon"
-        ],
-        "encore": [
-            "Dreaming Girls",
-            "Million Futures",
-            "Catch the Rainbow!"
+            "Blooming Flower",
+            "運命は2度ベルを鳴らすんです",
+            "半透明の世界で",
+            "Ray Rule"
+            "Untitled Puzzle",
+            "Blooming Flower"
         ]
     },
     {
-        "LIVEtitle": "Inori Minase LIVE TOUR 2019 Catch the Rainbow! 大阪公演",
-        "tourtitle": "Inori Minase LIVE TOUR 2019 Catch the Rainbow!",
-        "date": "2019年6月16日",
-        "venue": "グランキューブ大阪",
-        "id": "2019061601",
+        "LIVEtitle": "石原夏織 BIRTHDAY EVENT -Career up Carry- 昼公演",
+        "tourtitle": "石原夏織 BIRTHDAY EVENT -Career up Carry-",
+        "artist": "石原夏織",
+        "date": "2018年8月18日",
+        "venue": "山野ホール",
+        "id": "2018081801",
         "setlist": [
-            "Step Up!",
-            "ピュアフレーム",
-            "Ready Steady Go!",
-            "Kitty Cat Adventure",
-            "Wonder Caravan!",
-            "コイセヨオトメ",
-            "ココロはMerry-Go-Round",
-            "Future Seeker",
-            "君色プロローグ",
-            "水彩メモリー",
-            "約束のアステリズム",
-            "brave climber",
-            "リトルシューゲイザー",
-            "今を僕らしく生きてくために",
-            "TRUST IN ETERNITY",
-            "Starry Wish",
-            "My Graffiti",
-            "harmony ribbon"
-        ],
-        "encore": [
-            "Dreaming Girls",
-            "Million Futures",
-            "Catch the Rainbow!"
+            "Blooming Flower",
+            "ちょっやっにゃっ",
+            "半透明の世界で",
+            "Ray Rule"
+            "Untitled Puzzle",
+            "Blooming Flower"
         ]
     },
     {
-        "LIVEtitle": "リスアニ!LIVE 2019 \"SATURDAY STAGE\"",
-        "tourtitle": "リスアニ!LIVE 2019",
-        "date": "2019年1月26日",
-        "venue": "日本武道館",
-        "id": "20190012601",
+        "LIVEtitle": "唯涼祭",
+        "tourtitle": "唯涼祭",
+        "artist": "小倉唯",
+        "date": "2018年8月15日",
+        "venue": "東京ドームシティ ラクーアガーデンステージ",
+        "id": "2018081501",
         "setlist": [
-            "TRUST IN ETERNITY",
-            "ピュアフレーム",
-            "Wonder Caravan!",
-            "Million Futures",
-            "Ready Steady Go!"
-        ]
-    },
-    {
-        "LIVEtitle": "いのりまち町民集会2018 夜公演",
-        "tourtitle": "いのりまち町民集会2018",
-        "date": "2018年12月9日",
-        "venue": "東京国際フォーラム",
-        "id": "2018120902",
-        "setlist": [
-            "Lucky Clover",
-            "Ready Steady Go!",
-            "TRUST IN ETERNITY",
-            "Wonder Caravan!",
-            "あの日の空へ",
-            "Happy Birthday"
-        ]
-    },
-    {
-        "LIVEtitle": "いのりまち町民集会2018 昼公演",
-        "tourtitle": "いのりまち町民集会2018",
-        "date": "2018年12月9日",
-        "venue": "東京国際フォーラム",
-        "id": "2018120901",
-        "setlist": [
-            "Lucky Clover",
-            "Ready Steady Go!",
-            "TRUST IN ETERNITY",
-            "Wonder Caravan!",
-            "Winter Wonder Wander",
-            "Happy Birthday"
-        ]
-    },   
-    {
-        "LIVEtitle": "アニソン!プレミアム!",
-        "tourtitle": "",
-        "date": "2018年11月25日",
-        "venue": "日本工学院片柳アリーナ",
-        "id": "2018112501",
-        "setlist": [
-            "TRUST IN ETERNITY",
-            "Starry Wish"
-        ]
-    },
-    {
-        "LIVEtitle": "ANIMAX MUSIX 2018 YOKOHAMA",
-        "tourtitle": "ANIMAX MUSIX",
-        "date": "2018年11月17日",
-        "venue": "横浜アリーナ",
-        "id": "2018111701",
-        "setlist": [
+            "winter tale",
             "Future Strike",
-            "TRUST IN ETERNITY",
-            "Starry Wish",
-            "Million Futures"
+            "永遠少年",
+            "PON de Fighting!",
+            "ハイタッチ☆メモリー"
         ]
     },
     {
-        "LIVEtitle": "KING SUPER LIVE 2018 台湾公演",
-        "tourtitle": "KING SUPER LIVE",
-        "date": "2018年9月30日",
-        "venue": "国立体育大学体育館（台湾・桃園市）",
-        "id": "2018093001",
+        "LIVEtitle": "テレビ朝日・六本木ヒルズ 夏祭り SUMMER STATION 2018",
+        "tourtitle": "SUMMER STATION",
+        "artist": "小倉唯",
+        "date": "2018年7月25日",
+        "venue": "六本木ヒルズアリーナ",
+        "id": "2018072501",
         "setlist": [
-            "Starry Wish",
-            "Million Futures",
-            "アイマイモコ",
-            "Ready Steady Go!"
+            "ハイタッチ☆メモリー",
+            "永遠少年",
+            "Tinkling Smile",
+            "Future Strike",
+            "Raise"
+        ],
+        "encore": "Honey♥Come!!"
+    },
+    {
+        "LIVEtitle": "リスアニ！Park Vol.02",
+        "tourtitle": "",
+        "date": "2018年6月17日",
+        "venue": "新木場STUDIO COAST",
+        "id": "2018061701",
+        "setlist": [
+            "Blooming Flower",
+            "半透明の世界で",
+            "Untitled Puzzle"
         ]
     },
     {
-        "LIVEtitle": "KING SUPER LIVE 2018 東京公演",
-        "tourtitle": "KING SUPER LIVE",
-        "date": "2018年9月24日",
-        "venue": "東京ドーム",
-        "id": "2018092401",
+        "LIVEtitle": "小倉唯 2nd LIVE TOUR「Platinum Airline☆」 ～Tomorrow Town～",
+        "tourtitle": "小倉唯 2nd LIVE TOUR「Platinum Airline☆」",
+        "date": "2018年5月12日",
+        "venue": "武蔵野の森総合スポーツプラザ",
+        "id": "2018051201",
         "setlist": [
-            "Starry Wish",
-            "アイマイモコ",
-            "Ready Steady Go!"
+            "Honey♥Come!!",
+            "Happy Strawberry",
+            "Merry de Cherry",
+            "パンドラ♡ショコラ",
+            "Baby, Baby, Baby♡",
+            "アコガレCollection!",
+            "シュガーハートエイク",
+            "Dear",
+            "winter tale",
+            "エンジョイ!",
+            "ガーリッシュエイジ",
+            "ドキドキラビリンス",
+            "Tomorrow",
+            "Future Strike",
+            "エブリデイ☆ハッピーデイ",
+            "Baby Sweet Berry Love",
+            "Raise",
+            "白く咲く花",
+            "かけがえのない瞬間"
+        ],
+        "encore": [
+            "ずっとふたりで",
+            "ハイタッチ☆メモリー",
+            "プラチナ・パスポート"
         ]
     },
     {
