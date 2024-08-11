@@ -1681,6 +1681,7 @@
     {
         "LIVEtitle": "小倉唯 LIVE「Smiley Cherry」夜公演",
         "tourtitle": "小倉唯 LIVE「Smiley Cherry」",
+        "artist": "小倉唯",
         "date": "2017年10月9日",
         "venue": "パシフィコ横浜",
         "id": "2017100902",
@@ -1710,6 +1711,7 @@
     {
         "LIVEtitle": "小倉唯 LIVE「Smiley Cherry」昼公演",
         "tourtitle": "小倉唯 LIVE「Smiley Cherry」",
+        "artist": "小倉唯",
         "date": "2017年10月9日",
         "venue": "パシフィコ横浜",
         "id": "2017100901",
@@ -1737,67 +1739,215 @@
         ]
     },
     {
-        "LIVEtitle": "Inori Minase LIVE TOUR 2018 BLUE COMPASS 石川公演",
-        "tourtitle": "Inori Minase LIVE TOUR 2018 BLUE COMPASS",
-        "date": "2018年6月17日",
-        "venue": "本多の森ホール",
-        "id": "2018061701",
+        "LIVEtitle": "Animelo Summer Live 2017 -THE CARD-",
+        "tourtitle": "Animelo Summer Live",
+        "artist": "小倉唯",
+        "date": "2017年8月27日",
+        "venue": "さいたまスーパーアリーナ",
+        "id": "2017082701",
         "setlist": [
-            "これからも。",
-            "アイマイモコ",
-            "identity",
-            "夢のつぼみ",
-            "旅の途中",
-            "夏の約束",
-            "シネマチックダイアリー",
-            "Shoo-Bee-Doo-Wap-Wap!",
-            "夏夢",
-            "ハートノイロ",
-            "Million Futures",
-            "Starry Wish",
-            "星屑のコントレイル",
-            "三月と群青",
-            "アルペジオ",
-            "Happy Birthday",
-            "harmony ribbon",
-            "BLUE COMPASS"
-        ],
-        "encore": [
-            "MELODY FLAG",
-            "Ready Steady Go!",
-            "Sweet Melody"
+            "Future Strike",
+            {
+                "medley": [
+                    "ハイタッチ☆メモリー",
+                    "Honey♥Come!!"
+                ]
+            }
         ]
     },
     {
-        "LIVEtitle": "Inori Minase LIVE TOUR 2018 BLUE COMPASS 愛知公演",
-        "tourtitle": "Inori Minase LIVE TOUR 2018 BLUE COMPASS",
-        "date": "2018年6月9日",
-        "venue": "アイプラザ豊橋",
-        "id": "2018060901",
+        "LIVEtitle": "2ndアルバム発売記念＆バースデーイベント 夜公演",
+        "tourtitle": "2ndアルバム発売記念＆バースデーイベント",
+        "artist": "小倉唯",
+        "date": "2017年8月15日",
+        "venue": "品川インターシティホール",
+        "id": "2017081502",
         "setlist": [
-            "Shoo-Bee-Doo-Wap-Wap!",
-            "夢のつぼみ",
-            "シネマチックダイアリー",
-            "旅の途中",
-            "アイマイモコ",
-            "ハートノイロ",
-            "identity",
-            "夏の約束",
-            "Ring of Smile",
-            "これからも。",
-            "Million Futures",
-            "Starry Wish",
-            "星屑のコントレイル",
-            "三月と群青",
-            "アルペジオ",
-            "Happy Birthday",
-            "harmony ribbon",
-            "BLUE COMPASS"
+            "プラチナ・パスポート",
+            "エンジョイ!",
+            "Dear",
+            "Raise",
+            "Honey♥Come!!"
+        ]
+    },
+    {
+        "LIVEtitle": "2ndアルバム発売記念＆バースデーイベント 昼公演",
+        "tourtitle": "2ndアルバム発売記念＆バースデーイベント",
+        "artist": "小倉唯",
+        "date": "2017年8月15日",
+        "venue": "品川インターシティホール",
+        "id": "2017081501",
+        "setlist": [
+            "プラチナ・パスポート",
+            "エンジョイ!",
+            "Dear",
+            "Future Strike",
+            "ハイタッチ☆メモリー"
+        ]
+    },
+    {
+        "LIVEtitle": "テレビ朝日・六本木ヒルズ 夏祭り SUMMER STATION 2017",
+        "tourtitle": "テレビ朝日・六本木ヒルズ 夏祭り SUMMER STATION",
+        "artist": "小倉唯",
+        "date": "2017年7月26日",
+        "venue": "六本木ヒルズアリーナ",
+        "id": "2017072601",
+        "setlist": [
+            "Honey♥Come!!",
+            "ハイタッチ☆メモリー",
+            "Dear",
+            "Future Strike",
+            "プラチナ・パスポート"
+        ],
+        "encore": "Baby Sweet Berry Love"
+    },
+    {
+        "LIVEtitle": "KING SUPER LIVE 2017 TRINITY",
+        "tourtitle": "KING SUPER LIVE",
+        "artist": "小倉唯",
+        "date": "2017年3月5日",
+        "venue": "日本武道館",
+        "id": "2017030501",
+        "setlist": [
+            "Honey♥Come!!",
+            "Baby Sweet Berry Love",
+            "Future Strike",
+            "Raise",
+            "ガーリッシュエイジ",
+            "ハイタッチ☆メモリー"
+        ]
+    },
+    {
+        "LIVEtitle": "ゆいかおりLIVE TOUR「Starlight Link」東京公演",
+        "tourtitle": "ゆいかおりLIVE TOUR「Starlight Link」",
+        "artist": "ゆいかおり",
+        "date": "2017年2月11日",
+        "venue": "国立代々木競技場第一体育館",
+        "id": "2017021101",
+        "setlist": [
+            "星降る夜のハッピーリンク",
+            "Shooting☆Smile",
+            "ウェィカッ!!",
+            "恋するストール",
+            "marble",
+            "B Ambitious!",
+            "PUPPY LOVE!!",
+            "LUCKY DUCKY!!",
+            "オリオンからのメッセージ",
+            "もうひとりの私",
+            "Telephone Call",
+            "Calling Calling",
+            "NEO SIGNALIFE",
+            "Future Strike",
+            "駆け抜けてBlue",
+            "Intro Situation",
+            "カナリア",
+            "Promise You!!"
         ],
         "encore": [
-            "MELODY FLAG",
-            "Ready Steady Go!",
-            "Sweet Melody"
+            "真夏ハプニング",
+            "君のYELL",
+            "Our Steady Boy"
+        ],
+        "Wencore": "Ring Ring Rainbow!!"
+    },
+    {
+        "LIVEtitle": "ゆいかおりLIVE TOUR「Starlight Link」大阪公演",
+        "tourtitle": "ゆいかおりLIVE TOUR「Starlight Link」",
+        "artist": "ゆいかおり",
+        "date": "2017年2月5日",
+        "venue": "大阪国際会議場グランキューブ大阪",
+        "id": "2017020501",
+        "setlist": [
+            "星降る夜のハッピーリンク",
+            "Shooting☆Smile",
+            "PUPPY LOVE!!",
+            "恋するストール",
+            "Rainy Day",
+            "B Ambitious!",
+            "君のYELL",
+            "LUCKY DUCKY!!",
+            "オリオンからのメッセージ",
+            "もうひとりの私",
+            "Telephone Call",
+            "Calling Calling",
+            "NEO SIGNALIFE",
+            "Future Strike",
+            "駆け抜けてBlue",
+            "Intro Situation",
+            "カナリア",
+            "Promise You!!"
+        ],
+        "encore": [
+            "真夏ハプニング",
+            "VIVIVID PARTY!",
+            "Ring Ring Rainbow!!"
+        ]
+    },
+    {
+        "LIVEtitle": "ゆいかおりLIVE TOUR「Starlight Link」宮城公演",
+        "tourtitle": "ゆいかおりLIVE TOUR「Starlight Link」",
+        "artist": "ゆいかおり",
+        "date": "2017年1月15日",
+        "venue": "仙台サンプラザホール",
+        "id": "2017011501",
+        "setlist": [
+            "星降る夜のハッピーリンク",
+            "Shooting☆Smile",
+            "PUPPY LOVE!!",
+            "恋するストール",
+            "Rainy Day",
+            "B Ambitious!",
+            "君のYELL",
+            "LUCKY DUCKY!!",
+            "オリオンからのメッセージ",
+            "もうひとりの私",
+            "Telephone Call",
+            "Calling Calling",
+            "NEO SIGNALIFE",
+            "Future Strike",
+            "駆け抜けてBlue",
+            "Intro Situation",
+            "カナリア",
+            "Promise You!!"
+        ],
+        "encore": [
+            "真夏ハプニング",
+            "君が世界で世界は君で",
+            "Ring Ring Rainbow!!"
+        ]
+    },
+    {
+        "LIVEtitle": "ゆいかおりLIVE TOUR「Starlight Link」愛知公演",
+        "tourtitle": "ゆいかおりLIVE TOUR「Starlight Link」",
+        "artist": "ゆいかおり",
+        "date": "2017年1月9日",
+        "venue": "名古屋国際会議場センチュリーホール",
+        "id": "2017010901",
+        "setlist": [
+            "星降る夜のハッピーリンク",
+            "Shooting☆Smile",
+            "ウェィカッ!!",
+            "恋するストール",
+            "marble",
+            "B Ambitious!",
+            "君のYELL",
+            "LUCKY DUCKY!!",
+            "オリオンからのメッセージ",
+            "もうひとりの私",
+            "Telephone Call",
+            "Calling Calling",
+            "NEO SIGNALIFE",
+            "Future Strike",
+            "駆け抜けてBlue",
+            "Intro Situation",
+            "カナリア",
+            "Promise You!!"
+        ],
+        "encore": [
+            "真夏ハプニング",
+            "君が世界で世界は君で",
+            "Ring Ring Rainbow!!"
         ]
     },
     {
@@ -1979,67 +2129,5 @@
             "殲琴・ダウルダブラ",
             "harmony ribbon"
         ]
-    },
-    {
-        "LIVEtitle": "しあわせ いのりまち 第二回町民集会 ~まちの感謝祭~ 第3部",
-        "tourtitle": "しあわせ いのりまち 第二回町民集会 ~まちの感謝祭~",
-        "date": "2016年3月19日",
-        "venue": "ラフォーレミュージアム原宿",
-        "id": "2016031903",
-        "setlist": [
-            "(カバー曲の情報調査中)",
-            "夢のつぼみ"
-        ]
-    },
-    {
-        "LIVEtitle": "しあわせ いのりまち 第二回町民集会 ~まちの感謝祭~ 第2部",
-        "tourtitle": "しあわせ いのりまち 第二回町民集会 ~まちの感謝祭~",
-        "date": "2016年3月19日",
-        "venue": "ラフォーレミュージアム原宿",
-        "id": "2016031902",
-        "setlist": [
-            "(カバー曲の情報調査中)",
-            "夢のつぼみ"
-        ]
-    },
-    {
-        "LIVEtitle": "しあわせ いのりまち 第二回町民集会 ~まちの感謝祭~ 第1部",
-        "tourtitle": "しあわせ いのりまち 第二回町民集会 ~まちの感謝祭~",
-        "date": "2016年3月19日",
-        "venue": "ラフォーレミュージアム原宿",
-        "id": "2016031901",
-        "setlist": [
-            "(カバー曲の情報調査中)",
-            "夢のつぼみ"
-        ]
-    },
-    {
-        "LIVEtitle": "ナゴヤアニソンフェス2016",
-        "tourtitle": "",
-        "date": "2016年2月14日",
-        "venue": "ナガシマスパーランド",
-        "id": "2016021401",
-        "setlist": [
-            "夢のつぼみ",
-            "笑顔が似合う日",
-            "ときめきポポロン♪",
-            "あの日の空へ"
-        ]
-    },
-    {
-        "LIVEtitle": "しあわせ いのりまち 第一回町民集会 ~まちの新年会~ 夜公演",
-        "tourtitle": "しあわせ いのりまち 第一回町民集会 ~まちの新年会~",
-        "date": "2015年1月12日",
-        "venue": "STUDIO Dee",
-        "id": "2015011202",
-        "setlist": "(カバー曲の情報調査中)"
-    },
-    {
-        "LIVEtitle": "しあわせ いのりまち 第一回町民集会 ~まちの新年会~ 昼公演",
-        "tourtitle": "しあわせ いのりまち 第一回町民集会 ~まちの新年会~",
-        "date": "2015年1月12日",
-        "venue": "STUDIO Dee",
-        "id": "2015011201",
-        "setlist": "(カバー曲の情報調査中)"
     }
 ]
