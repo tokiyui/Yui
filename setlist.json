@@ -437,6 +437,120 @@
         ]
     },
     {
+        "LIVEtitle": "石原夏織 LIVE 2022「Starcast」-Altair- 夜公演",
+        "tourtitle": "石原夏織 LIVE 2022「Starcast」-Altair-",
+        "artist": "石原夏織",
+        "date": "2022年3月27日",
+        "venue": "神奈川県民ホール",
+        "id": "2022032702",
+        "setlist": [
+            "Diorama-Drama",
+            "Against.",
+            "Singularity Point",
+            "わざと触れた。",
+            "Plastic Smile",
+            "キミしきる",
+            "雨模様リグレット",
+            "夜とワンダーランド",
+            "君の知らない物語",
+            "キミに空とクローバー",
+            "Page Flip",
+            "虹のソルフェージュ",
+            "Starcast"
+        ],
+        "encore": [
+            "Ray Rule",
+            "Cherish",
+            "You & I",
+            "Sunny You"
+        ]
+    },
+    {
+        "LIVEtitle": "石原夏織 LIVE 2022「Starcast」-Altair- 昼公演",
+        "tourtitle": "石原夏織 LIVE 2022「Starcast」-Altair-",
+        "artist": "石原夏織",
+        "date": "2022年3月27日",
+        "venue": "神奈川県民ホール",
+        "id": "2022032701",
+        "setlist": [
+            "Diorama-Drama",
+            "Against.",
+            "Singularity Point",
+            "わざと触れた。",
+            "Plastic Smile",
+            "キミしきる",
+            "雨模様リグレット",
+            "Taste of Marmalade",
+            "星間飛行",
+            "キミに空とクローバー",
+            "Page Flip",
+            "虹のソルフェージュ",
+            "Starcast"
+        ],
+        "encore": [
+            "Ray Rule",
+            "Cherish",
+            "半透明の世界で",
+            "Sunny You"
+        ]
+    },
+    {
+        "LIVEtitle": "石原夏織 LIVE 2022「Starcast」-Vega- 夜公演",
+        "tourtitle": "石原夏織 LIVE 2022「Starcast」-Vega-",
+        "artist": "石原夏織",
+        "date": "2022年3月12日",
+        "venue": "TACHIKAWA STAGE GARDEN",
+        "id": "2022031202",
+        "setlist": [
+            "Orange Note",
+            "フィービー・フィービー",
+            "ポペラ・ホリカ",
+            "わざと触れた。",
+            "Plastic Smile",
+            "キミしきる",
+            "雨模様リグレット",
+            "星になれたら",
+            "Crispy love",
+            "キミに空とクローバー",
+            "Page Flip",
+            "虹のソルフェージュ",
+            "Starcast"
+        ],
+        "encore": [
+            "empathy",
+            "Cherish",
+            "You & I"
+        ]
+    },
+    {
+        "LIVEtitle": "石原夏織 LIVE 2022「Starcast」-Vega- 昼公演",
+        "tourtitle": "石原夏織 LIVE 2022「Starcast」-Vega-",
+        "artist": "石原夏織",
+        "date": "2022年3月12日",
+        "venue": "TACHIKAWA STAGE GARDEN",
+        "id": "2022031201",
+        "setlist": [
+            "Orange Note",
+            "フィービー・フィービー",
+            "ポペラ・ホリカ",
+            "わざと触れた。",
+            "Plastic Smile",
+            "キミしきる",
+            "雨模様リグレット",
+            "天体観測",
+            "Water Front",
+            "キミに空とクローバー",
+            "Page Flip",
+            "虹のソルフェージュ",
+            "Starcast"
+        ],
+        "encore": [
+            "empathy",
+            "Cherish",
+            "Face to Face"
+        ]
+    },
+    {
         "LIVEtitle": "Yui’s＊Company.社員総会 2021 ~Twinkle Holy Day♪~ 夜公演",
         "tourtitle": "Yui’s＊Company.社員総会 2021 ~Twinkle Holy Day♪~",
         "artist": "小倉唯",
@@ -763,6 +877,21 @@
             "虹のソルベージュ",
             "♮ Melody",
             "Face to Face"
+        ]
+    },
+    {
+        "LIVEtitle": "リスアニ! LIVE 2020",
+        "tourtitle": "",
+        "artist": "小倉唯",
+        "date": "2020年2月9日",
+        "venue": "幕張メッセ",
+        "id": "2020020901",
+        "setlist": [
+            "Destiny",
+            "Future Strike",
+            "ドキドキラビリンス",
+            "Baby Sweet Berry Love",
+            "I・LOVE・YOU!!"
         ]
     },
     {
