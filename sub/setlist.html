@@ -47,7 +47,7 @@ if (!targetLiveId) {
                     const renderSetlist = setlist => {
                         let setlistHTML = '<ul>';
                         setlist.forEach((song, index) => {
-                            setlistHTML += `<p>${index + 1}. <a href="./sub/search.html?name=${song}">${song}</a></p>`;
+                            setlistHTML += `<p>${index + 1}. <a href="./search.html?name=${song}">${song}</a></p>`;
                         });
                         setlistHTML += '</ul>';
                         return setlistHTML;
@@ -59,7 +59,7 @@ if (!targetLiveId) {
                         }
                         let encoreHTML = '<ul>';
                         encore.forEach((song, index) => {
-                            encoreHTML += `<p>${index + 1}. <a href="./sub/search.html?name=${song}">${song}</a></p>`;
+                            encoreHTML += `<p>${index + 1}. <a href="./search.html?name=${song}">${song}</a></p>`;
                         });
                         encoreHTML += '</ul>';
                         return encoreHTML;
@@ -70,7 +70,7 @@ if (!targetLiveId) {
                         <h3>${liveData.date} (${getDayOfWeek(liveData.date)}) @${liveData.venue}</h3>
                         ${renderSetlist(liveData.setlist)}
                         ${liveData.encore && liveData.encore.length > 0 ? `<p>【アンコール】</p>${renderEncore(liveData.encore)}` : ''}
-                        ${liveData.Wencore ? `<p>【ダブルアンコール】</p><p><ul><a href="./sub/search.html?name=${liveData.Wencore}">${liveData.Wencore}</a></ul></p>` : ''}
+                        ${liveData.Wencore ? `<p>【ダブルアンコール】</p><p><ul><a href="./search.html?name=${liveData.Wencore}">${liveData.Wencore}</a></ul></p>` : ''}
                     `;
                     liveInfo.innerHTML = html;
 
