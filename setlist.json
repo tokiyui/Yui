@@ -2265,5 +2265,214 @@
             "Our Steady Boy",
             "Ring Ring Rainbow!!"
         ]
+    },
+    {
+        "LIVEtitle": "小倉唯 1st LIVE「HAPPY JAM」夜公演",
+        "tourtitle": "小倉唯 1st LIVE「HAPPY JAM」",
+        "artist": "小倉唯",
+        "date": "2015年7月5日",
+        "venue": "パシフィコ横浜",
+        "id": "2015070502",
+        "setlist": [
+            "FUN FUN MERRY JAM",
+            "Charming Do!",
+            "パンドラ♡ショコラ",
+            "いつだって Call Me!",
+            "in Wonderful Wonder",
+            "A Lovely Tea Break",
+            "Get over",
+            "Raise",
+            "ガーリッシュエイジ",
+            "シュガーハートエイク",
+            "きみがここに来る二、三の理由",
+            "Tinkling Smile",
+            "Honey♥Come!!",
+            "ともだちピンク",
+            "Happy Strawberry",
+            "Sing-a-ling-a-Harmony"
+        ],
+        "encore": [
+            "thx!!",
+            "Baby Sweet Berry Love"
+        ]
+    },
+    {
+        "LIVEtitle": "小倉唯 1st LIVE「HAPPY JAM」昼公演",
+        "tourtitle": "小倉唯 1st LIVE「HAPPY JAM」",
+        "artist": "小倉唯",
+        "date": "2015年7月5日",
+        "venue": "パシフィコ横浜",
+        "id": "2015070501",
+        "setlist": [
+            "FUN FUN MERRY JAM",
+            "Charming Do!",
+            "パンドラ♡ショコラ",
+            "いつだって Call Me!",
+            "in Wonderful Wonder",
+            "A Lovely Tea Break",
+            "Get over",
+            "Raise",
+            "ガーリッシュエイジ",
+            "シュガーハートエイク",
+            "きみがここに来る二、三の理由",
+            "Tinkling Smile",
+            "Honey♥Come!!",
+            "ともだちピンク",
+            "Happy Strawberry",
+            "Sing-a-ling-a-Harmony"
+        ],
+        "encore": [
+            "thx!!",
+            "Baby Sweet Berry Love"
+        ]
+    },
+    {
+        "LIVEtitle": "KING SUPER LIVE 2015 day2",
+        "tourtitle": "KING SUPER LIVE",
+        "artist": [
+            "小倉唯",
+            "ゆいかおり"
+        ],
+        "date": "2015年6月21日",
+        "venue": "さいたまスーパーアリーナ",
+        "id": "2015062101",
+        "setlist": [
+            "Baby Sweet Berry Love",
+            "Charming Do!",
+            "Our Steady Boy"
+        ]
+    },
+    {
+        "LIVEtitle": "KING SUPER LIVE 2015 day1",
+        "tourtitle": "KING SUPER LIVE",
+        "artist": [
+            "小倉唯",
+            "ゆいかおり"
+        ],
+        "date": "2015年6月20日",
+        "venue": "さいたまスーパーアリーナ",
+        "id": "2015062001",
+        "setlist": [
+            "Baby Sweet Berry Love",
+            "Raise",
+            "Our Steady Boy"
+        ]
+    },
+    {
+        "LIVEtitle": "ゆいかおりLIVE TOUR「HEARTY PARTY!!」幕張公演",
+        "tourtitle": "ゆいかおりLIVE TOUR「HEARTY PARTY!!」",
+        "artist": "ゆいかおり",
+        "date": "2014年12月7日",
+        "venue": "幕張メッセ",
+        "id": "2014120701",
+        "setlist": [
+            "PUPPY LOVE!!",
+            "ウェィカッ!!",
+            "Our Song",
+            "Shooting☆Smile",
+            "Intro Situation",
+            "Tinkling Smile",
+            "ハツコイメイズ",
+            "Sunny Ray Beam!!",
+            "Shiny Blue",
+            "ふたり",
+            "恋するストール",
+            "VIVIVID PARTY!",
+            "MIRRORING DESIGNS",
+            "圧倒的な GO!!",
+            "NEO SIGNALIFE",
+            "Our Steady Boy",
+            "LUCKY DUCKY!!"
+        ],
+        "encore": [
+            "Jumpin' Bunny Flash!!",
+            "星降る夜のハッピーリンク"
+        ]
+    },
+    {
+        "LIVEtitle": "ゆいかおりLIVE TOUR「HEARTY PARTY!!」大阪公演",
+        "tourtitle": "ゆいかおりLIVE TOUR「HEARTY PARTY!!」",
+        "artist": "ゆいかおり",
+        "date": "2014年11月29日",
+        "venue": "オリックス劇場",
+        "id": "2014112901",
+        "setlist": [
+            "PUPPY LOVE!!",
+            "君が世界で世界は君で",
+            "Our Song",
+            "HEARTBEATが止まらないっ!",
+            "Intro Situation",
+            "Tinkling Smile",
+            "ハツコイメイズ",
+            "Sunny Ray Beam!!",
+            "Shiny Blue",
+            "ゆびきりCalendar",
+            "恋するストール",
+            "VIVIVID PARTY!",
+            "MIRRORING DESIGNS",
+            "圧倒的な GO!!",
+            "NEO SIGNALIFE",
+            "Our Steady Boy",
+            "LUCKY DUCKY!!"
+        ],
+        "encore": [
+            "Jumpin' Bunny Flash!!",
+            "星降る夜のハッピーリンク"
+        ]
+    },    
+    {
+        "LIVEtitle": "ゆいかおりLIVE TOUR「HEARTY PARTY!!」愛知公演",
+        "tourtitle": "ゆいかおりLIVE TOUR「HEARTY PARTY!!」",
+        "artist": "ゆいかおり",
+        "date": "2014年11月22日",
+        "venue": "名古屋国際会議場センチュリーホール",
+        "id": "2014112201",
+        "setlist": [
+            "PUPPY LOVE!!",
+            "ウェィカッ!!",
+            "Our Song",
+            "HEARTBEATが止まらないっ!",
+            "Intro Situation",
+            "Tinkling Smile",
+            "ハツコイメイズ",
+            "Sunny Ray Beam!!",
+            "Shiny Blue",
+            "ふたり",
+            "恋するストール",
+            "VIVIVID PARTY!",
+            "MIRRORING DESIGNS",
+            "圧倒的な GO!!",
+            "NEO SIGNALIFE",
+            "Our Steady Boy",
+            "LUCKY DUCKY!!"
+        ],
+        "encore": [
+            "Jumpin' Bunny Flash!!",
+            "星降る夜のハッピーリンク"
+        ]
+    },   
+    {
+        "LIVEtitle": "Animelo Summer Live 2014 -ONENESS-",
+        "tourtitle": "Animelo Summer Live 2014",
+        "artist": [
+            "小倉唯",
+            "ゆいかおり"
+        ],
+        "date": "2014年8月31日",
+        "venue": "さいたまスーパーアリーナ",
+        "id": "2014083101",
+        "setlist": [
+            {
+                "medley": [
+                    "Charming Do!",
+                    "Tinkling Smile"
+                ]
+            },
+                "medley": [
+                    "PUPPY LOVE!!",
+                    "Intro Situation"
+                ]
+            }            
+        ]
     }
 ]
