@@ -824,180 +824,436 @@
         ]
     },
     {
-        "LIVEtitle": "Inori Minase LIVE TOUR 2021 HELLO HORIZON 宮城公演",
-        "tourtitle": "Inori Minase LIVE TOUR 2021 HELLO HORIZON",
-        "date": "2021年10月9日",
-        "venue": "仙台サンプラザホール",
-        "id": "2021100901",
+        "LIVEtitle": "小倉唯 FCイベント「Yui's＊Company.社員総会 ~New Year Party♪2020~」夜公演",
+        "tourtitle": "小倉唯 FCイベント「Yui's＊Company.社員総会 ~New Year Party♪2020~」",
+        "artist": "小倉唯",
+        "date": "2020年1月3日",
+        "venue": "舞浜アンフィシアター",
+        "id": "2020010302",
         "setlist": [
-            "Ready Steady Go!",
-            "ピュアフレーム",
-            "Million Futures",
-            "Morning Prism",
-            "アイマイモコ",
-            "クリスタライズ",
-            "Well Wishing Word",
-            "思い出のカケラ",
-            "ソライロ",
-            "茜色ノスタルジア",
-            "HELLO HORIZON",
-            "TRUST IN ETERNITY",
-            "Starry Wish",
-            "三月と群青",
-            "Starlight Museum",
-            "アルペジオ",
-            "旅の途中",
-            "ココロソマリ"
-        ],
-        "encore": [
-            "MELODY FLAG",
-            "Catch the Rainbow!",
-            "僕らは今"
+            "winter tale",
+            "FUN FUN MERRY JAM",
+            "赤いリボン",
+            "Destiny",
+            "Brand-New-Road",
+            "I・LOVE・YOU!!"
         ]
     },
     {
-        "LIVEtitle": "Inori Minase LIVE TOUR 2021 HELLO HORIZON 福岡公演",
-        "tourtitle": "Inori Minase LIVE TOUR 2021 HELLO HORIZON",
-        "date": "2021年10月3日",
-        "venue": "福岡サンパレス",
-        "id": "2021100301",
+        "LIVEtitle": "小倉唯 FCイベント「Yui's＊Company.社員総会 ~New Year Party♪2020~」昼公演",
+        "tourtitle": "小倉唯 FCイベント「Yui's＊Company.社員総会 ~New Year Party♪2020~」",
+        "artist": "小倉唯",
+        "date": "2020年1月3日",
+        "venue": "舞浜アンフィシアター",
+        "id": "2020010301",
         "setlist": [
-            "Ready Steady Go!",
-            "ピュアフレーム",
-            "Million Futures",
-            "Morning Prism",
-            "アイマイモコ",
-            "クリスタライズ",
-            "Well Wishing Word",
-            "思い出のカケラ",
-            "ソライロ",
-            "茜色ノスタルジア",
-            "HELLO HORIZON",
-            "TRUST IN ETERNITY",
-            "Starry Wish",
-            "三月と群青",
-            "Starlight Museum",
-            "アルペジオ",
-            "Sweet Melody",
-            "ココロソマリ"
-        ],
-        "encore": [
-            "MELODY FLAG",
-            "Catch the Rainbow!",
-            "僕らは今"
+            "winter tale",
+            "Merry de Cherry",
+            "赤いリボン",
+            "Destiny",
+            "Brand-New-Road",
+            "I・LOVE・YOU!!"
         ]
     },
     {
-        "LIVEtitle": "Inori Minase LIVE TOUR 2021 HELLO HORIZON 愛知公演",
-        "tourtitle": "Inori Minase LIVE TOUR 2021 HELLO HORIZON",
-        "date": "2021年9月25日",
-        "venue": "名古屋国際会議場",
-        "id": "2021092501",
+        "LIVEtitle": "ANIMAX MUSIX 2019 KOBE supported by スカパー!",
+        "tourtitle": "ANIMAX MUSIX",
+        "artist": "石原夏織",
+        "date": "2019年10月27日",
+        "venue": "神戸ワールド記念ホール",
+        "id": "2019102701",
         "setlist": [
-            "Ready Steady Go!",
-            "ピュアフレーム",
-            "Million Futures",
-            "Morning Prism",
-            "アイマイモコ",
-            "クリスタライズ",
-            "Well Wishing Word",
-            "思い出のカケラ",
-            "ソライロ",
-            "茜色ノスタルジア",
-            "HELLO HORIZON",
-            "TRUST IN ETERNITY",
-            "Starry Wish",
-            "三月と群青",
-            "Starlight Museum",
-            "アルペジオ",
-            "Sweet Melody",
-            "ココロソマリ"
-        ],
-        "encore": [
-            "Dreaming Girls",
-            "Catch the Rainbow!",
-            "僕らは今"
+            "TEMPEST",
+            "Face to Face"
         ]
     },
     {
-        "LIVEtitle": "Inori Minase LIVE TOUR 2021 HELLO HORIZON 大阪公演",
-        "tourtitle": "Inori Minase LIVE TOUR 2021 HELLO HORIZON",
-        "date": "2021年9月18日",
+        "LIVEtitle": "ANIMAX MUSIX 2019 KOBE supported by スカパー!",
+        "tourtitle": "ANIMAX MUSIX",
+        "artist": "小倉唯",
+        "date": "2019年10月26日",
+        "venue": "神戸ワールド記念ホール",
+        "id": "2019102601",
+        "setlist": [
+            "Raise",
+            "Destiny",
+            "Honey♥Come!!
+        ]
+    },
+    {
+        "LIVEtitle": "Animelo Summer Live 2019 -STORY-",
+        "tourtitle": "Animelo Summer Live",
+        "artist": "小倉唯",
+        "date": "2019年9月1日",
+        "venue": "さいたまスーパーアリーナ",
+        "id": "2019090101",
+        "setlist": [
+            "ハイタッチ☆メモリー",
+            "Raise"
+        ]
+    },
+    {
+        "LIVEtitle": "Animelo Summer Live 2019 -STORY-",
+        "tourtitle": "Animelo Summer Live",
+        "artist": "石原夏織",
+        "date": "2019年8月30日",
+        "venue": "さいたまスーパーアリーナ",
+        "id": "2019083001",
+        "setlist": [
+            "Ray Rule",
+            "TEMPEST"
+        ]
+    },
+    {
+        "LIVEtitle": "石原夏織 SUMMER EVENT「TEMPEST MISSION」夜公演",
+        "tourtitle": "石原夏織 SUMMER EVENT「TEMPEST MISSION」",
+        "artist": "石原夏織",
+        "date": "2019年8月24日",
+        "venue": "山野ホール",
+        "id": "2019082402",
+        "setlist": [
+            "CREATION×CREATION",
+            "オリジナルスター☆彡",
+            "Crispy Love",
+            "Ray Rule",
+            "TEMPEST",
+            "Sunny You"
+        ]
+    },
+    {
+        "LIVEtitle": "石原夏織 SUMMER EVENT「TEMPEST MISSION」昼公演",
+        "tourtitle": "石原夏織 SUMMER EVENT「TEMPEST MISSION」",
+        "artist": "石原夏織",
+        "date": "2019年8月24日",
+        "venue": "山野ホール",
+        "id": "2019082401",
+        "setlist": [
+            "CREATION×CREATION",
+            "オリジナルスター☆彡",
+            "Crispy Love",
+            "Untitled Puzzle",
+            "TEMPEST",
+            "Sunny You"
+        ]
+    },
+    {
+        "LIVEtitle": "「Step Apple」Blu-ray＆DVD発売記念イベント 夜公演",
+        "tourtitle": "「Step Apple」Blu-ray＆DVD発売記念イベント",
+        "artist": "小倉唯",
+        "date": "2019年8月15日",
+        "venue": "ヒューリックホール東京",
+        "id": "2019081502",
+        "setlist": [
+            "アップル・ガール",
+            "Honey♥Come!!",
+            "Dear",
+            "Hop Step Jump!",
+            "Tinkling Smile"
+        ]
+    },
+    {
+        "LIVEtitle": "「Step Apple」Blu-ray＆DVD発売記念イベント 昼公演",
+        "tourtitle": "「Step Apple」Blu-ray＆DVD発売記念イベント",
+        "artist": "小倉唯",
+        "date": "2019年8月15日",
+        "venue": "ヒューリックホール東京",
+        "id": "2019081501",
+        "setlist": [
+            "アップル・ガール",
+            "Honey♥Come!!",
+            "Dear",
+            "ピーナッツ!",
+            "Charming Do!"
+        ]
+    },
+    {
+        "LIVEtitle": "小倉唯 LIVE TOUR 2019「Step Apple」幕張公演2日目",
+        "tourtitle": "小倉唯 LIVE TOUR 2019「Step Apple」",
+        "artist": "小倉唯",
+        "date": "2019年5月4日",
+        "venue": "幕張メッセ",
+        "id": "2019050401",
+        "setlist": [
+            "白く咲く花",
+            "ハイタッチ☆メモリー",
+            "Hop Step Jump!",
+            "Honey♥Come!!",
+            "FARAWAY",
+            "TO BE ALIVE",
+            "Future Strike",
+            "Baby Sweet Berry Love",
+            "Happy Strawberry",
+            "君が好きです",
+            {
+                "medley": [
+                    "パンドラ♡ショコラ",
+                    "いつだって Call Me!",
+                    "Baby, Baby, Baby♡"
+                ]
+            },
+            "Love Me × Love Me",
+            "ドキドキラビリンス",
+            "雨の森はウソつき",
+            "ショコラ",
+            "Sing-a-ling-a-Harmony",
+            "Reflect",
+            "Hopeful Days",
+            "アップル・ガール",
+        ],
+        "encore": [
+            "永遠少年",
+            "Tinkling Smile",
+            "thx!!"
+        ],
+        "Wencore": "ピーナッツ!"
+    },
+    {
+        "LIVEtitle": "小倉唯 LIVE TOUR 2019「Step Apple」幕張公演1日目",
+        "tourtitle": "小倉唯 LIVE TOUR 2019「Step Apple」",
+        "artist": "小倉唯",
+        "date": "2019年5月3日",
+        "venue": "幕張メッセ",
+        "id": "2019050301",
+        "setlist": [
+            "白く咲く花",
+            "ハイタッチ☆メモリー",
+            "Hop Step Jump!",
+            "Honey♥Come!!",
+            "FARAWAY",
+            "TO BE ALIVE",
+            "Raise",
+            "Baby Sweet Berry Love",
+            "プラチナ・パスポート",
+            "君が好きです",
+            {
+                "medley": [
+                    "パンドラ♡ショコラ",
+                    "いつだって Call Me!",
+                    "Baby, Baby, Baby♡"
+                ]
+            },
+            "Love Me × Love Me",
+            "ガーリッシュエイジ",
+            "雨の森はウソつき",
+            "ショコラ",
+            "Sing-a-ling-a-Harmony",
+            "Reflect",
+            "Hopeful Days",
+            "アップル・ガール",
+        ],
+        "encore": [
+            "永遠少年",
+            "Tinkling Smile",
+            "ピーナッツ!"
+        ]
+    },
+    {
+        "LIVEtitle": "小倉唯 LIVE TOUR 2019「Step Apple」宮城公演",
+        "tourtitle": "小倉唯 LIVE TOUR 2019「Step Apple」",
+        "artist": "小倉唯",
+        "date": "2019年4月28日",
+        "venue": "仙台サンプラザ",
+        "id": "2019042801",
+        "setlist": [
+            "白く咲く花",
+            "ハイタッチ☆メモリー",
+            "Hop Step Jump!",
+            "Honey♥Come!!",
+            "FARAWAY",
+            "TO BE ALIVE",
+            "Future Strike",
+            "Baby Sweet Berry Love",
+            "Charming Do!",
+            "君が好きです",
+            {
+                "medley": [
+                    "パンドラ♡ショコラ",
+                    "いつだって Call Me!",
+                    "Baby, Baby, Baby♡"
+                ]
+            },
+            "Love Me × Love Me",
+            "ドキドキラビリンス",
+            "雨の森はウソつき",
+            "ショコラ",
+            "Sing-a-ling-a-Harmony",
+            "Reflect",
+            "Hopeful Days",
+            "アップル・ガール",
+        ],
+        "encore": [
+            "永遠少年",
+            "ピーナッツ!"
+        ]
+    },
+    {
+        "LIVEtitle": "小倉唯 LIVE TOUR 2019「Step Apple」新潟公演",
+        "tourtitle": "小倉唯 LIVE TOUR 2019「Step Apple」",
+        "artist": "小倉唯",
+        "date": "2019年4月21日",
+        "venue": "新潟テルサ",
+        "id": "2019042101",
+        "setlist": [
+            "白く咲く花",
+            "ハイタッチ☆メモリー",
+            "Hop Step Jump!",
+            "Honey♥Come!!",
+            "FARAWAY",
+            "TO BE ALIVE",
+            "Raise",
+            "Baby Sweet Berry Love",
+            "Charming Do!",
+            "君が好きです",
+            {
+                "medley": [
+                    "パンドラ♡ショコラ",
+                    "いつだって Call Me!",
+                    "Baby, Baby, Baby♡"
+                ]
+            },
+            "Love Me × Love Me",
+            "ガーリッシュエイジ",
+            "雨の森はウソつき",
+            "ショコラ",
+            "Sing-a-ling-a-Harmony",
+            "Reflect",
+            "Hopeful Days",
+            "アップル・ガール",
+        ],
+        "encore": [
+            "永遠少年",
+            "ピーナッツ!"
+        ]
+    },
+    {
+        "LIVEtitle": "小倉唯 LIVE TOUR 2019「Step Apple」愛知公演",
+        "tourtitle": "小倉唯 LIVE TOUR 2019「Step Apple」",
+        "artist": "小倉唯",
+        "date": "2019年4月14日",
+        "venue": "一宮市民会館",
+        "id": "2019041401",
+        "setlist": [
+            "白く咲く花",
+            "ハイタッチ☆メモリー",
+            "Hop Step Jump!",
+            "Honey♥Come!!",
+            "FARAWAY",
+            "TO BE ALIVE",
+            "Future Strike",
+            "Baby Sweet Berry Love",
+            "プラチナ・パスポート",
+            "君が好きです",
+            {
+                "medley": [
+                    "パンドラ♡ショコラ",
+                    "いつだって Call Me!",
+                    "Baby, Baby, Baby♡"
+                ]
+            },
+            "Love Me × Love Me",
+            "ドキドキラビリンス",
+            "雨の森はウソつき",
+            "ショコラ",
+            "Sing-a-ling-a-Harmony",
+            "Reflect",
+            "Hopeful Days",
+            "アップル・ガール",
+        ],
+        "encore": [
+            "永遠少年",
+            "ピーナッツ!"
+        ]
+    },
+    {
+        "LIVEtitle": "小倉唯 LIVE TOUR 2019「Step Apple」滋賀公演",
+        "tourtitle": "小倉唯 LIVE TOUR 2019「Step Apple」",
+        "artist": "小倉唯",
+        "date": "2019年4月7日",
+        "venue": "滋賀県立芸術劇場 びわ湖ホール",
+        "id": "2019040701",
+        "setlist": [
+            "白く咲く花",
+            "ハイタッチ☆メモリー",
+            "Hop Step Jump!",
+            "Honey♥Come!!",
+            "FARAWAY",
+            "TO BE ALIVE",
+            "Raise",
+            "Baby Sweet Berry Love",
+            "Happy Strawberry",
+            "君が好きです",
+            {
+                "medley": [
+                    "パンドラ♡ショコラ",
+                    "いつだって Call Me!",
+                    "Baby, Baby, Baby♡"
+                ]
+            },
+            "Love Me × Love Me",
+            "ガーリッシュエイジ",
+            "雨の森はウソつき",
+            "ショコラ",
+            "Sing-a-ling-a-Harmony",
+            "Reflect",
+            "Hopeful Days",
+            "アップル・ガール",
+        ],
+        "encore": [
+            "永遠少年",
+            "ピーナッツ!"
+        ]
+    },
+    {
+        "LIVEtitle": "小倉唯 LIVE TOUR 2019「Step Apple」大阪公演",
+        "tourtitle": "小倉唯 LIVE TOUR 2019「Step Apple」",
+        "artist": "小倉唯",
+        "date": "2019年4月6日",
         "venue": "オリックス劇場",
-        "id": "2021091801",
+        "id": "2019040601",
         "setlist": [
-            "Ready Steady Go!",
-            "ピュアフレーム",
-            "Million Futures",
-            "Morning Prism",
-            "アイマイモコ",
-            "クリスタライズ",
-            "Well Wishing Word",
-            "思い出のカケラ",
-            "ソライロ",
-            "茜色ノスタルジア",
-            "HELLO HORIZON",
-            "TRUST IN ETERNITY",
-            "Starry Wish",
-            "三月と群青",
-            "Starlight Museum",
-            "アルペジオ",
-            "旅の途中",
-            "ココロソマリ"
+            "白く咲く花",
+            "ハイタッチ☆メモリー",
+            "Hop Step Jump!",
+            "Honey♥Come!!",
+            "FARAWAY",
+            "TO BE ALIVE",
+            "Future Strike",
+            "Baby Sweet Berry Love",
+            "Happy Strawberry",
+            "君が好きです",
+            {
+                "medley": [
+                    "パンドラ♡ショコラ",
+                    "いつだって Call Me!",
+                    "Baby, Baby, Baby♡"
+                ]
+            },
+            "Love Me × Love Me",
+            "ガーリッシュエイジ",
+            "雨の森はウソつき",
+            "ショコラ",
+            "Sing-a-ling-a-Harmony",
+            "Reflect",
+            "Hopeful Days",
+            "アップル・ガール",
         ],
         "encore": [
-            "Dreaming Girls",
-            "Catch the Rainbow!",
-            "僕らは今"
+            "永遠少年",
+            "ピーナッツ!"
         ]
     },
     {
-        "LIVEtitle": "Bilibili Macro Link - Star Phase 2021",
-        "tourtitle": "",
-        "date": "2021年7月10日",
-        "venue": "オンライン開催",
-        "id": "2021071001",
+        "LIVEtitle": "ANIMAX MUSIX 2019 OSAKA supported by ひかりTV",
+        "tourtitle": "ANIMAX MUSIX",
+        "artist": "小倉唯",
+        "date": "2019年1月19日",
+        "venue": "大阪城ホール",
+        "id": "2019011901",
         "setlist": [
-            "Starry Wish",
-            "アイマイモコ",
-            "ココロソマリ",
-            "untitled world"
+            "ハイタッチ☆メモリー",
+            "永遠少年",
+            "Future Strike"
         ]
-    },
-    {
-        "LIVEtitle": "Inori Minase 5th ANNIVERSARY LIVE Starry Wishes",
-        "tourtitle": "Inori Minase 5th ANNIVERSARY LIVE Starry Wishes",
-        "date": "2020年12月5日",
-        "venue": "オンライン配信",
-        "id": "2020120501",
-        "setlist": [
-            "夢のつぼみ",
-            "Ready Steady Go!",
-            "MELODY FLAG",
-            "笑顔が似合う日",
-            "Wonder Caravan!",
-            "春空",
-            "アイマイモコ",
-            "ココロソマリ",
-            "harmony ribbon",
-            "TRUST IN ETERNITY",
-            "Million Futures",
-            "Starry Wish",
-            "BLUE COMPASS",
-            "Starlight Museum"
-        ],
-        "encore": [
-            "Catch the Rainbow!",
-            "Innocent flower"
-        ]
-    },
-    {
-        "LIVEtitle": "オダイバ!! 超次元音楽祭公開収録",
-        "tourtitle": "",
-        "date": "2019年12月26日",
-        "venue": "フジテレビ湾岸スタジオ",
-        "id": "2019122601",
-        "setlist": "Starry Wish"
     },
     {
         "LIVEtitle": "いのりまち町民集会2019 東京夜公演",
