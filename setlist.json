@@ -2453,7 +2453,7 @@
     },   
     {
         "LIVEtitle": "Animelo Summer Live 2014 -ONENESS-",
-        "tourtitle": "Animelo Summer Live 2014",
+        "tourtitle": "Animelo Summer Live",
         "artist": [
             "小倉唯",
             "ゆいかおり"
@@ -2473,6 +2473,332 @@
                     "Intro Situation"
                 ]
             }            
+        ]
+    },
+    {
+        "LIVEtitle": "ゆいかおりBIRTHDAY SPECIAL LIVE「INTRODUCTION!!」夜公演",
+        "tourtitle": "ゆいかおりBIRTHDAY SPECIAL LIVE「INTRODUCTION!!」",
+        "artist": "ゆいかおり",
+        "date": "2014年8月16日",
+        "venue": "AiiA 2.5 Theater Tokyo",
+        "id": "2014081602",
+        "setlist": [
+            "ウェィカッ!!",
+            "君が世界で世界は君で",
+            "Intro Situation",
+            "MIRRORING DESIGNS",
+            "VIVIVID PARTY!",
+            "Jumpin' Bunny Flash!!",
+            "Our Steady Boy",
+            "星降る夜のハッピーリンク"
+        ]
+    },   
+    {
+        "LIVEtitle": "ゆいかおりBIRTHDAY SPECIAL LIVE「INTRODUCTION!!」昼公演",
+        "tourtitle": "ゆいかおりBIRTHDAY SPECIAL LIVE「INTRODUCTION!!」",
+        "artist": "ゆいかおり",
+        "date": "2014年8月16日",
+        "venue": "AiiA 2.5 Theater Tokyo",
+        "id": "2014081601",
+        "setlist": [
+            "ウェィカッ!!",
+            "LUCKY DUCKY!!",
+            "Intro Situation",
+            "MIRRORING DESIGNS",
+            "VIVIVID PARTY!",
+            "Jumpin' Bunny Flash!!",
+            "Our Steady Boy",
+            "星降る夜のハッピーリンク"
+        ]
+    },   
+    {
+        "LIVEtitle": "ゆいかおりSPECIAL LIVE「LUCKY TUNES!!」夜公演",
+        "tourtitle": "ゆいかおりSPECIAL LIVE「LUCKY TUNES!!」",
+        "artist": "ゆいかおり",
+        "date": "2014年5月24日",
+        "venue": "ディファ有明",
+        "id": "2014052402",
+        "setlist": [
+            "LUCKY DUCKY!!",
+            "PUPPY LOVE!!",
+            "恋するストール",
+            "もうひとりの私",
+            "Blitzallies",
+            "圧倒的な GO!!",
+            "Intro Situation",
+            "Our Steady Boy",
+            "LUCKY DUCKY!!"
+        ]
+    },   
+    {
+        "LIVEtitle": "ゆいかおりSPECIAL LIVE「LUCKY TUNES!!」昼公演",
+        "tourtitle": "ゆいかおりSPECIAL LIVE「LUCKY TUNES!!」",
+        "artist": "ゆいかおり",
+        "date": "2014年5月24日",
+        "venue": "ディファ有明",
+        "id": "2014052401",
+        "setlist": [
+            "LUCKY DUCKY!!",
+            "ウェィカッ!!",
+            "恋するストール",
+            "もうひとりの私",
+            "Blitzallies",
+            "圧倒的な GO!!",
+            "Intro Situation",
+            "Our Steady Boy",
+            "LUCKY DUCKY!!"
+        ]
+    },   
+    {
+        "LIVEtitle": "ゆいかおりLIVE「BUNNY FLASH!!」夜公演",
+        "tourtitle": "ゆいかおりLIVE「BUNNY FLASH!!」",
+        "artist": "ゆいかおり",
+        "date": "2014年2月2日",
+        "venue": "パシフィコ横浜",
+        "id": "2014020202",
+        "setlist": [
+            "ウェィカッ!!",
+            "君が世界で世界は君で",
+            "Shiny Blue",
+            "HEARTBEATが止まらないっ!",
+            "Shooting☆Smile",
+            "in Wonderful Wonder",
+            "Charming Do!",
+            "Magic starter",
+            "Sunny Ray Beam!!",
+            "marble",       
+            "ハツコイメイズ",
+            "Blitzallies",            
+            "圧倒的な GO!!",
+            "Jumpin' Bunny Flash!!",
+            "PUPPY LOVE!!",
+            "Our Steady Boy"
+        ],
+        "encore": [
+            "君のYELL",
+            "星降る夜のハッピーリンク"
+        ]
+    },
+    {
+        "LIVEtitle": "ゆいかおりLIVE「BUNNY FLASH!!」昼公演",
+        "tourtitle": "ゆいかおりLIVE「BUNNY FLASH!!」",
+        "artist": "ゆいかおり",
+        "date": "2014年2月2日",
+        "venue": "パシフィコ横浜",
+        "id": "2014020201",
+        "setlist": [
+            "ウェィカッ!!",
+            "君が世界で世界は君で",
+            "Shiny Blue",
+            "駆け抜けてBlue",
+            "Shooting☆Smile",
+            "in Wonderful Wonder",
+            "Charming Do!",
+            "Magic starter",
+            "Sunny Ray Beam!!",
+            "ゆびきりCalendar",       
+            "ハツコイメイズ",
+            "Blitzallies",            
+            "圧倒的な GO!!",
+            "Jumpin' Bunny Flash!!",
+            "PUPPY LOVE!!",
+            "Our Steady Boy"
+        ],
+        "encore": [
+            "君のYELL",
+            "星降る夜のハッピーリンク"
+        ]
+    },   
+    {
+        "LIVEtitle": "「ゆいかおりの実♪デジタル」公開録音&ミニライブ 夜公演",
+        "tourtitle": "「ゆいかおりの実♪デジタル」公開録音&ミニライブ",
+        "artist": "ゆいかおり",
+        "date": "2013年11月17日",
+        "venue": "日本教育会館 一ツ橋ホール",
+        "id": "2013111702",
+        "setlist": [
+            "Jumpin' Bunny Flash!!",
+            "Blitzallies",
+            "Shiny blue",
+            "君のYELL",            
+            "星降る夜のハッピーリンク"
+        ]
+    },   
+    {
+        "LIVEtitle": "「ゆいかおりの実♪デジタル」公開録音&ミニライブ 昼公演",
+        "tourtitle": "「ゆいかおりの実♪デジタル」公開録音&ミニライブ",
+        "artist": "ゆいかおり",
+        "date": "2013年11月17日",
+        "venue": "日本教育会館 一ツ橋ホール",
+        "id": "2013111701",
+        "setlist": [
+            "Jumpin' Bunny Flash!!",
+            "Blitzallies",
+            "ウェイカッ!!",
+            "君のYELL",            
+            "星降る夜のハッピーリンク"
+        ]
+    },   
+    {
+        "LIVEtitle": "Animelo Summer Live 2013 -FLAG NINE-",
+        "tourtitle": "Animelo Summer Live",
+        "artist": [
+            "小倉唯",
+            "ゆいかおり"
+        ],
+        "date": "2013年8月25日",
+        "venue": "さいたまスーパーアリーナ",
+        "id": "2013082501",
+        "setlist": [
+            {
+                "medley": [
+                    "Baby Sweet Berry Love",
+                    "Raise"
+                ]
+            },
+            "ウェィカッ!!",
+            "Shiny Blue"       
+        ]
+    },
+    {
+        "LIVEtitle": "ブシロードカードゲームライブ2013",
+        "tourtitle": "",
+        "artist": "小倉唯",
+        "date": "2013年3月24日",
+        "venue": "グランキューブ大阪",
+        "id": "2013032401",
+        "setlist": "Baby Sweet Berry Love"
+    },   
+    {
+        "LIVEtitle": "ゆいかおり1st LIVE TOUR「WAKE UP!!」東京夜公演",
+        "tourtitle": "ゆいかおり1st LIVE TOUR「WAKE UP!!」",
+        "artist": "ゆいかおり",
+        "date": "2012年12月2日",
+        "venue": "Zepp DiverCity Tokyo",
+        "id": "2012120202",
+        "setlist": [
+            "ウェィカッ!!",
+            "Our Song",
+            "Our Steady Boy",            
+            "HEARTBEATが止まらないっ!",
+            "Shooting☆Smile",            
+            "Raise",
+            "ともだちピンク",
+            "Magic starter",           
+            "運命は2度ベルを鳴らすんです",
+            "ゆびきりCalendar",       
+            "ふたり",
+            "未来形アイドル",            
+            "圧倒的な GO!!",
+            "君のYELL",
+            "PUPPY LOVE!!"
+        ],
+        "encore": [
+            "恋のオーバーテイク",
+            "ウェィカッ!!"
+        ]
+    },   
+    {
+        "LIVEtitle": "ゆいかおり1st LIVE TOUR「WAKE UP!!」東京昼公演",
+        "tourtitle": "ゆいかおり1st LIVE TOUR「WAKE UP!!」",
+        "artist": "ゆいかおり",
+        "date": "2012年12月2日",
+        "venue": "Zepp DiverCity Tokyo",
+        "id": "2012120201",
+        "setlist": [
+            "ウェィカッ!!",
+            "Our Song",
+            "Our Steady Boy",            
+            "HEARTBEATが止まらないっ!",
+            "Shooting☆Smile",            
+            "Raise",
+            "黒髪流儀。技あり!",
+            "Magic starter",           
+            "キミのもとへ!",
+            "ゆびきりCalendar",       
+            "ふたり",
+            "未来形アイドル",            
+            "圧倒的な GO!!",
+            "君のYELL",
+            "PUPPY LOVE!!"
+        ],
+        "encore": [
+            "恋のオーバーテイク",
+            "ウェィカッ!!"
+        ]
+    },  
+    {
+        "LIVEtitle": "ゆいかおり1st LIVE TOUR「WAKE UP!!」愛知公演",
+        "tourtitle": "ゆいかおり1st LIVE TOUR「WAKE UP!!」",
+        "artist": "ゆいかおり",
+        "date": "2012年11月25日",
+        "venue": "THE BOTTOM LINE",
+        "id": "2012112501",
+        "setlist": [
+            "ウェィカッ!!",
+            "Our Song",
+            "Our Steady Boy",            
+            "HEARTBEATが止まらないっ!",
+            "Shooting☆Smile",            
+            "Raise",
+            "ともだちピンク",
+            "Magic starter",           
+            "運命は2度ベルを鳴らすんです",
+            "ゆびきりCalendar",       
+            "ふたり",
+            "未来形アイドル",            
+            "圧倒的な GO!!",
+            "君のYELL",
+            "PUPPY LOVE!!"
+        ],
+        "encore": [
+            "恋のオーバーテイク",
+            "ウェィカッ!!"
+        ]
+    },  
+    {
+        "LIVEtitle": "ゆいかおり1st LIVE TOUR「WAKE UP!!」大阪公演",
+        "tourtitle": "ゆいかおり1st LIVE TOUR「WAKE UP!!」",
+        "artist": "ゆいかおり",
+        "date": "2012年11月18日",
+        "venue": "umeda AKASO",
+        "id": "2012111801",
+        "setlist": [
+            "ウェィカッ!!",
+            "Our Song",
+            "Our Steady Boy",            
+            "HEARTBEATが止まらないっ!",
+            "Shooting☆Smile",            
+            "Raise",
+            "黒髪流儀。技あり!",
+            "Magic starter",           
+            "キミのもとへ!",
+            "ゆびきりCalendar",       
+            "ふたり",
+            "未来形アイドル",            
+            "圧倒的な GO!!",
+            "君のYELL",
+            "PUPPY LOVE!!"
+        ],
+        "encore": [
+            "恋のオーバーテイク",
+            "ウェィカッ!!"
+        ]
+    },  
+    {
+        "LIVEtitle": "Animelo Summer Live 2012 -INFINITY∞-",
+        "tourtitle": "Animelo Summer Live",
+        "artist": "ゆいかおり"
+        "date": "2012年8月25日",
+        "venue": "さいたまスーパーアリーナ",
+        "id": "2012082501",
+        "setlist": [
+            {
+                "medley": [
+                    "PUPPY LOVE!!",
+                    "Our Steady Boy"
+                ]
+            }   
         ]
     }
 ]
