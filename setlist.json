@@ -2801,5 +2801,153 @@
                 ]
             }   
         ]
+    },
+    {
+        "LIVEtitle": "小倉唯BIRTHDAY SPECIALミニライブ~SEVENTEEN! 夜公演",
+        "tourtitle": "小倉唯BIRTHDAY SPECIALミニライブ~SEVENTEEN!",
+        "artist": "小倉唯",
+        "date": "2012年8月15日",
+        "venue": "横浜ベイホール",
+        "id": "2012081502",
+        "setlist": [
+            "Raise",
+            "きみがここに来る二、三の理由",
+            "黒髪流儀。技あり!",
+            "PON de Fighting!",       
+            "キュッ!キュッ!CURIOSITY!!",
+            "ともだちピンク",
+            "Raise"
+        ]
+    },  
+    {
+        "LIVEtitle": "小倉唯BIRTHDAY SPECIALミニライブ~SEVENTEEN! 昼公演",
+        "tourtitle": "小倉唯BIRTHDAY SPECIALミニライブ~SEVENTEEN!",
+        "artist": "小倉唯",
+        "date": "2012年8月15日",
+        "venue": "横浜ベイホール",
+        "id": "2012081501",
+        "setlist": [
+            "Raise",
+            "きみがここに来る二、三の理由",
+            "黒髪流儀。技あり!",
+            "PON de Fighting!",       
+            "キュッ!キュッ!CURIOSITY!!",
+            "ともだちピンク",
+            "Raise"
+        ]
+    },  
+    {
+        "LIVEtitle": "ゆいかおり2nd LIVE「YELL for YOU」NIGHT ~夢見る君へ~",
+        "tourtitle": "ゆいかおり2nd LIVE「YELL for YOU」",
+        "artist": "ゆいかおり",
+        "date": "2012年5月6日",
+        "venue": "恵比寿LIQUIDROOM",
+        "id": "2012050602",
+        "setlist": [
+            "恋のオーバーテイク",
+            "Shooting☆Smile",
+            "圧倒的な GO!!",            
+            "未来形アイドル",
+            "VIVIVID PARTY!",            
+            "キュッ!キュッ!CURIOSITY!!",
+            "Magic starter",           
+            "ゆずれない願い",
+            "もうひとりの私",       
+            "クリスタルの誓い",
+            "ふたり",            
+            "君のYELL",
+            "Our Song",
+            "PUPPY LOVE!!"
+        ],
+        "encore": [
+            "駆け抜けてBlue",
+            "Our Steady Boy"
+        ]
+    },  
+    {
+        "LIVEtitle": "ゆいかおり2nd LIVE「YELL for YOU」DAY ~頑張る君へ~",
+        "tourtitle": "ゆいかおり2nd LIVE「YELL for YOU」",
+        "artist": "ゆいかおり",
+        "date": "2012年5月6日",
+        "venue": "恵比寿LIQUIDROOM",
+        "id": "2012050601",
+        "setlist": [
+            "恋のオーバーテイク",
+            "HEARTBEATが止まらないっ!",
+            "圧倒的な GO!!",            
+            "未来形アイドル",
+            "VIVIVID PARTY!",            
+            "キュッ!キュッ!CURIOSITY!!",
+            "Magic starter",           
+            "ゆずれない願い",
+            "もうひとりの私",       
+            "クリスタルの誓い",
+            "ふたり",            
+            "君のYELL",
+            "Our Song",
+            "PUPPY LOVE!!"
+        ],
+        "encore": [
+            "駆け抜けてBlue",
+            "Our Steady Boy"
+        ]
+    },  
+    {
+        "LIVEtitle": "ゆいかおり1st LIVE「PUPPY LOVE!!」夜公演",
+        "tourtitle": "ゆいかおり1st LIVE「PUPPY LOVE!!」",
+        "artist": "ゆいかおり",
+        "date": "2011年11月27日",
+        "venue": "原宿ASTRO HALL",
+        "id": "2011112702",
+        "setlist": [
+            "恋のオーバーテイク",
+            "PUPPY LOVE!!",
+            "VIVIVID PARTY!",           
+            "未来形アイドル",
+            "Our Song",   
+            "バランスKISS",
+            "もうひとりの私",               
+            "キュッ!キュッ!CURIOSITY!!",
+            "Magic starter",           
+            "ふたり",        
+            "クリスタルの誓い",      
+            "CUE the Future 〜「Q」のテーマ〜",
+            "駆け抜けてBlue",
+            "HEARTBEATが止まらないっ!",
+            "Shooting☆Smile"
+        ],
+        "encore": [
+            "Our Steady Boy",
+            "恋のオーバーテイク"
+        ]
+    },  
+    {
+        "LIVEtitle": "ゆいかおり1st LIVE「PUPPY LOVE!!」昼公演",
+        "tourtitle": "ゆいかおり1st LIVE「PUPPY LOVE!!」",
+        "artist": "ゆいかおり",
+        "date": "2011年11月27日",
+        "venue": "原宿ASTRO HALL",
+        "id": "2011112701",
+        "setlist": [
+            "恋のオーバーテイク",
+            "PUPPY LOVE!!",
+            "VIVIVID PARTY!",           
+            "未来形アイドル",
+            "Our Song",   
+            "ふたりのハニーボーイ",
+            "もうひとりの私",               
+            "キュッ!キュッ!CURIOSITY!!",
+            "Magic starter",           
+            "ふたり",        
+            "クリスタルの誓い",      
+            "CUE the Future 〜「Q」のテーマ〜",
+            "駆け抜けてBlue",
+            "HEARTBEATが止まらないっ!",
+            "Shooting☆Smile"
+        ],
+        "encore": [
+            "Our Steady Boy",
+            "恋のオーバーテイク"
+        ]
     }
 ]
