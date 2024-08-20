@@ -66,8 +66,8 @@
                         }
                     }
                 };
-                // addToData(setlist.setlist);
-                addToData(setlist.setlist || []);
+                addToData(setlist.setlist);
+                addToData(setlist.setlist.medley);
                 addToData(setlist.encore || []);
                 addToData(setlist.Wencore ? [setlist.Wencore] : []);
                 return acc;
