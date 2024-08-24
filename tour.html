@@ -126,7 +126,7 @@
               const setlistValues = concerts.map(concert => {
                 const song = concert.setlist[i];
                 if (typeof song === 'object' && song.medley) {
-                  return song.medley.join(' / '); // Medleyの中身を全て表示
+                  return song.medley.join(' <br> '); // Medleyの中身を全て表示
                 } else {
                   return song;
                 }
