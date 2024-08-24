@@ -747,7 +747,7 @@
     },
     {
         "LIVEtitle": "石原夏織 LIVE 2022「Starcast」-Altair- 夜公演",
-        "tourtitle": "石原夏織 LIVE 2022「Starcast」-Altair-",
+        "tourtitle": "石原夏織 LIVE 2022「Starcast」",
         "artist": "石原夏織",
         "date": "2022年3月27日",
         "venue": "神奈川県民ホール",
@@ -776,7 +776,7 @@
     },
     {
         "LIVEtitle": "石原夏織 LIVE 2022「Starcast」-Altair- 昼公演",
-        "tourtitle": "石原夏織 LIVE 2022「Starcast」-Altair-",
+        "tourtitle": "石原夏織 LIVE 2022「Starcast」",
         "artist": "石原夏織",
         "date": "2022年3月27日",
         "venue": "神奈川県民ホール",
@@ -805,7 +805,7 @@
     },
     {
         "LIVEtitle": "石原夏織 LIVE 2022「Starcast」-Vega- 夜公演",
-        "tourtitle": "石原夏織 LIVE 2022「Starcast」-Vega-",
+        "tourtitle": "石原夏織 LIVE 2022「Starcast」",
         "artist": "石原夏織",
         "date": "2022年3月12日",
         "venue": "TACHIKAWA STAGE GARDEN",
@@ -833,7 +833,7 @@
     },
     {
         "LIVEtitle": "石原夏織 LIVE 2022「Starcast」-Vega- 昼公演",
-        "tourtitle": "石原夏織 LIVE 2022「Starcast」-Vega-",
+        "tourtitle": "石原夏織 LIVE 2022「Starcast」",
         "artist": "石原夏織",
         "date": "2022年3月12日",
         "venue": "TACHIKAWA STAGE GARDEN",
@@ -2567,6 +2567,40 @@
             "Baby Sweet Berry Love",
             "FUN FUN MERRY JAM"
         ]
+    },
+    {
+        "LIVEtitle": "ゆいかおりLIVE TOUR「RAINBOW CANARY!!」~Brightest Stage~",
+        "tourtitle": "ゆいかおりLIVE TOUR「RAINBOW CANARY!!」",
+        "artist": "ゆいかおり",
+        "date": "2016年3月12日",
+        "venue": "日本武道館",
+        "id": "2016031201",
+        "setlist": [
+            "Ring Ring Rainbow!!",
+            "LUCKY DUCKY!!",
+            "倍速∞ラブストレート",
+            "Shiny Blue",
+            "Intro Situation",
+            "HEARTBEATが止まらないっ!",
+            "Telephone Call",
+            "Sunny Ray Beam!!",
+            "ライアーシープ",
+            "Honey♥Come!!",
+            "Calling Calling",
+            "VIVIVID PARTY!",
+            "NEO SIGNALIFE",
+            "君のYELL",
+            "翼になるよ",
+            "星降る夜のハッピーリンク",
+            "カナリア"
+        ],
+        "encore": [
+            "Shooting☆Smile",
+            "ウェィカッ!!",
+            "PUPPY LOVE!!",
+            "Our Steady Boy"
+        ],
+        "Wencore": "恋のオーバーテイク"
     },
     {
         "LIVEtitle": "ゆいかおりLIVE TOUR「RAINBOW CANARY!!」横浜公演2日目",
