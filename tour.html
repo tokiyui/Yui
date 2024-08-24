@@ -68,8 +68,7 @@
         <option value="「ゆいかおりの実♪デジタル」公開録音&ミニライブ">「ゆいかおりの実♪デジタル」公開録音&ミニライブ</option>     
         <option value="ゆいかおり1st LIVE TOUR「WAKE UP!!」">ゆいかおり1st LIVE TOUR「WAKE UP!!」</option>
         <option value="ゆいかおり2nd LIVE「YELL for YOU」">ゆいかおり2nd LIVE「YELL for YOU」</option>    
-        <option value="ゆいかおり1st LIVE「PUPPY LOVE!!」">ゆいかおり1st LIVE「PUPPY LOVE!!」</option>          
-
+        <option value="ゆいかおり1st LIVE「PUPPY LOVE!!」">ゆいかおり1st LIVE「PUPPY LOVE!!」</option>     
     </select>
 
     <br><br>
@@ -176,6 +175,17 @@
                                 wencorerow.insertCell().textContent = concert.Wencore;
                             });
                         }
+
+                        concerts.forEach(concert => {
+                            if (concert.medley) {
+                                const medleyRow = table.insertRow();
+                                medleyRow.insertCell().textContent = '';
+                                medleyRow.insertCell().textContent = '【Medley】';
+                                const medleyCell = medleyRow.insertCell();
+                                medleyCell.colSpan = concerts.length;
+                                medleyCell.textContent = concert.medley.join(', ');
+                            }
+                        });
 
                         setlistContainer.appendChild(table);
                     });
