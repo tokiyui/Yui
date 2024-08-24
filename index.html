@@ -96,7 +96,7 @@
             .then(data => {
               songData = data.filter(song => song.artist === "小倉唯");
             });
-    console.log(songData);
+    console.log(data);
     
     Promise.all([
         fetch('song.json')
