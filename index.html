@@ -98,17 +98,14 @@
             });
     console.log(data);
     
-    Promise.all([
-        fetch('song.json')
-            .then(response => response.json())
-            .then(data => {
-              songData = data.filter(song => song.artist === "小倉唯");
-            }),
-        fetch('CD.json').then(response => response.json()),
-        fetch('setlist.json').then(response => response.json())
-    ]).then(([songs, CDs, setlists]) => {
-        updateSongDetails(songs, CDs, setlists);
-    }).catch(error => console.error('Failed to fetch data:', error));
+Promise.all([
+    fetch('song.json').then(response => response.json()),
+    fetch('CD.json').then(response => response.json()),
+    fetch('setlist.json').then(response => response.json())
+]).then(([songs, CDs, setlists]) => {
+    const filteredSongs = songs.filter(song => song.artist === "小倉唯");
+    updateSongDetails(filteredSongs, CDs, setlists);
+}).catch(error => console.error('Failed to fetch data:', error));
 </script>
 </body>
 </html>
