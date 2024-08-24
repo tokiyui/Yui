@@ -137,10 +137,10 @@
               setlistValues.forEach((value, idx) => {
                 const cell = row.insertCell();
                 cell.textContent = value;
+                cell.style.whiteSpace = 'pre-wrap'; // 改行を反映させる
                 if (!isSame) {
                   row.style.backgroundColor = 'aqua';
                 }
-              });
             }
 
             const encoreList = concerts.map(concert => {
