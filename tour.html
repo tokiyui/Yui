@@ -11,6 +11,9 @@
       border: 1px solid #ccc;
       text-align: center;
     }
+    .color-pink {
+      background-color: pink;
+  　 }
   </style>
 </head>
 
@@ -72,7 +75,7 @@
   <div class="container" id="setlistContainer"></div>
 
   <script>
-    const concertTable = document.getElementById('concertTable');
+   const concertTable = document.getElementById('concertTable');
     const tourSelect = document.getElementById('tourSelect');
     const setlistContainer = document.getElementById('setlistContainer');
 
@@ -82,6 +85,18 @@
       const selectedTour = tourSelect.value;
 
       if (selectedTour) {
+        // Add logic to change color based on selected tour
+        if (selectedTour.includes('石原夏織')) {
+          tourSelect.classList.remove('orange', 'pink');
+          tourSelect.classList.add('cyan');
+        } else if (selectedTour.includes('ゆいかおり')) {
+          tourSelect.classList.remove('cyan', 'pink');
+          tourSelect.classList.add('orange');
+        } else {
+          tourSelect.classList.remove('cyan', 'orange');
+          tourSelect.classList.add('pink');
+        }
+        
         fetch('setlist.json')
           .then(response => response.json())
           .then(data => {
