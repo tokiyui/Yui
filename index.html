@@ -106,13 +106,27 @@ Promise.all([
     fetch('CD.json').then(response => response.json()),
     fetch('setlist.json').then(response => response.json())
 ]).then(([songs, CDs, setlists]) => {
+    const songCountMap = {}; // 曲ごとのカウントを管理するオブジェクト
+
+    // 曲ごとにカウントを管理
+    const countSong = song => {
+        const key = song.title + (song.artist || ''); // 曲の一意の識別子を作成
+        if (!songCountMap[key]) {
+            songCountMap[key] = 1; // 曲がまだカウントされていない場合はカウント
+            return true;
+        }
+        return false; // 既にカウントされている場合はスキップ
+    };
+
+    // メドレー内の曲を1回だけカウント
     const filteredSongs = songs.filter(song => {
-        if (Array.isArray(song.artist)) {
-            return song.artist.includes("小倉唯");
+        if (Array.isArray(song.medley)) {
+            return song.medley.some(medleySong => countSong(medleySong));
         } else {
-            return song.artist === "小倉唯";
+            return countSong(song);
         }
     });
+
     updateSongDetails(filteredSongs, CDs, setlists);
 }).catch(error => console.error('Failed to fetch data:', error));
 </script>
