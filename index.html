@@ -108,7 +108,7 @@ Promise.all([
 ]).then(([songs, CDs, setlists]) => {
     const filteredSongs = songs.filter(song => {
         if (Array.isArray(song.artist)) {
-            return song.artist.some(artist => artist === "小倉唯");
+            return song.artist.includes("小倉唯");
         } else {
             return song.artist === "小倉唯";
         }
