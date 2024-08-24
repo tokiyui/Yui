@@ -61,23 +61,23 @@ function updateSongDetails(songs, CDs, setlists) {
             const songsArray = Array.isArray(setlist.setlist) ? setlist.setlist : [setlist.setlist];
             if (Array.isArray(setlist.encore)) songsArray.push(...setlist.encore);
             if (setlist.Wencore) songsArray.push(setlist.Wencore);
-            songsArray.forEach(title => {
+
+            const titles = songsArray.reduce((acc, title) => {
                 if (typeof title === 'object' && 'medley' in title) {
-                    title.medley.forEach(medleyTitle => {
-                        if (song.title === medleyTitle) {
-                            acc.count += 1;
-                            if (!acc.latestDate || date > acc.latestDate) {
-                                acc.latestDate = date;
-                            }
-                        }
-                    });
-                } else if (song.title === title) {
-                    acc.count += 1;
-                    if (!acc.latestDate || date > acc.latestDate) {
-                        acc.latestDate = date;
-                    }
+                    acc.push(...title.medley);
+                } else {
+                    acc.push(title);
                 }
-            });
+                return acc;
+            }, []);
+
+            if (titles.includes(song.title)) {
+                acc.count += 1;
+                if (!acc.latestDate || date > acc.latestDate) {
+                    acc.latestDate = date;
+                }
+            }
+
             return acc;
         }, { count: 0, latestDate: null });
 
