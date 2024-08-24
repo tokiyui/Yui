@@ -107,7 +107,11 @@ Promise.all([
     fetch('setlist.json').then(response => response.json())
 ]).then(([songs, CDs, setlists]) => {
     const filteredSongs = songs.filter(song => {
-        return Array.isArray(song.artist) && song.artist.some(artist => artist === "小倉唯");
+        if (Array.isArray(song.artist)) {
+            return song.artist.some(artist => artist === "小倉唯");
+        } else {
+            return song.artist === "小倉唯";
+        }
     });
     updateSongDetails(filteredSongs, CDs, setlists);
 }).catch(error => console.error('Failed to fetch data:', error));
