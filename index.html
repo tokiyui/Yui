@@ -90,13 +90,6 @@
             songTable.innerHTML += row;
         });
     }
-
-            fetch('song.json')
-            .then(response => response.json())
-            .then(data => {
-              songData = data.filter(song => song.artist === "小倉唯");
-            });
-    console.log(data);
     
 Promise.all([
     fetch('song.json').then(response => response.json()),
