@@ -11,9 +11,18 @@
       border: 1px solid #ccc;
       text-align: center;
     }
-    .color-pink {
-      background-color: pink;
-  　 }
+    
+        .cyan {
+            background-color: cyan;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+
+        .pink {
+            background-color: pink;
+        }
   </style>
 </head>
 
@@ -84,19 +93,7 @@
       concertTable.innerHTML = '';
       const selectedTour = tourSelect.value;
 
-      if (selectedTour) {
-        // Add logic to change color based on selected tour
-        if (selectedTour.includes('石原夏織')) {
-          tourSelect.classList.remove('orange', 'pink');
-          tourSelect.classList.add('cyan');
-        } else if (selectedTour.includes('ゆいかおり')) {
-          tourSelect.classList.remove('cyan', 'pink');
-          tourSelect.classList.add('orange');
-        } else {
-          tourSelect.classList.remove('cyan', 'orange');
-          tourSelect.classList.add('pink');
-        }
-        
+      if (selectedTour) {        
         fetch('setlist.json')
           .then(response => response.json())
           .then(data => {
@@ -146,7 +143,13 @@
                 cell.textContent = value;
                 cell.style.whiteSpace = 'pre-wrap'; // 改行を反映させる
                 if (!isSame) {
-                  row.style.backgroundColor = 'aqua';
+                  if (selectedTour.includes('石原夏織')) {
+                    row.classList.add('cyan');
+                  } else if (selectedTour.includes('ゆいかおり')) {
+                    row.classList.add('orange');
+                　} else {
+                  　row.classList.add('pink');
+                  }
                 }
               });
             }
