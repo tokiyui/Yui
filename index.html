@@ -59,29 +59,37 @@ function updateSongDetails(songs, CDs, setlists) {
         const performanceData = setlists.reduce((acc, setlist) => {
             const date = new Date(setlist.date.replace(/年|月/g, '-').replace(/日/g, ''));
             const addToData = (songsArray) => {
-                songsArray.forEach(item => {
-                    if (typeof item === 'string') {
-                        if (item === song.title) {
-                            acc.count += 1;
-                            if (!acc.latestDate || date > acc.latestDate) {
-                                acc.latestDate = date;
-                            }
-                        }
-                    } else if (item.medley) {
-                        item.medley.forEach(medleySong => {
-                            if (medleySong === song.title) {
+                if (Array.isArray(songsArray)) {
+                    songsArray.forEach(item => {
+                        if (typeof item === 'string') {
+                            if (item === song.title) {
                                 acc.count += 1;
                                 if (!acc.latestDate || date > acc.latestDate) {
                                     acc.latestDate = date;
                                 }
                             }
-                        });
+                        } else if (item.medley) {
+                            item.medley.forEach(medleySong => {
+                                if (medleySong === song.title) {
+                                    acc.count += 1;
+                                    if (!acc.latestDate || date > acc.latestDate) {
+                                        acc.latestDate = date;
+                                    }
+                                }
+                            });
+                        }
+                    });
+                } else if (typeof songsArray === 'string' && songsArray === song.title) {
+                    acc.count += 1;
+                    if (!acc.latestDate || date > acc.latestDate) {
+                        acc.latestDate = date;
                     }
-                });
+                }
             };
+
             addToData(setlist.setlist);
-            addToData(setlist.encore || []);
-            addToData(setlist.Wencore ? [setlist.Wencore] : []);
+            addToData(setlist.encore);
+            addToData(setlist.Wencore);
             return acc;
         }, { count: 0, latestDate: null });
 
