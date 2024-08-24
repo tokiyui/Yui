@@ -112,7 +112,7 @@
         fetch('song.json')
             .then(response => response.json())
             .then(data => {
-                songData = data;
+              songData = data.filter(song => song.artist === "小倉唯");
             });
 
         fetch('setlist.json')
