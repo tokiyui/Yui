@@ -43,11 +43,9 @@
     }
 
 function updateSongDetails(songs, CDs, setlists) {
-
     const songTable = document.getElementById('songTable');
 
     songs.forEach(song => {
-
         const matchingCDs = [].concat(song.CDtitle).flatMap(songCDtitle => {
             return CDs.filter(cd => cd.CDtitle === songCDtitle);
         });
