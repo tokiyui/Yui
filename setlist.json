@@ -1,5 +1,69 @@
 [
     {
+        "LIVEtitle": "石原夏織 2nd LIVE TOUR -Calm Magic- 東京公演・ツアーファイナル",
+        "tourtitle": "石原夏織 2nd LIVE TOUR -Calm Magic-",
+        "artist": "石原夏織",
+        "date": "2024年7月7日",
+        "venue": "なかのZERO",
+        "id": "2024070701",
+        "setlist": [
+            "Harmonia",
+            "Paraglider",
+            "キラリアット",
+            "You & I",
+            "Face to Face",
+            "recipe",
+            "ILLUSION",
+            "Sugar Planets",
+            "恋の匂い",
+            "Plastic Smile",
+            "To My Dear",
+            "Blooming Flower",
+            "虹のソルフェージュ",
+            "夜とワンダーランド",
+            "プルケリマを朝に",
+            "Twinkle Ticking",
+            "Gift"
+        ],
+        "encore": [
+            "CREATION×CREATION",
+            "マジックマーチ",
+            "Starcast"
+        ]    
+    },
+    {
+        "LIVEtitle": "石原夏織 2nd LIVE TOUR -Calm Magic- 神奈川公演",
+        "tourtitle": "石原夏織 2nd LIVE TOUR -Calm Magic-",
+        "artist": "石原夏織",
+        "date": "2024年6月23日",
+        "venue": "KT Zepp Yokohama",
+        "id": "2024062301",
+        "setlist": [
+            "プルケリマを朝に",
+            "Paraglider",
+            "キラリアット",
+            "Cherish",
+            "Face to Face",
+            "recipe",
+            "ILLUSION",
+            "Sugar Planets",
+            "恋の匂い",
+            "Plastic Smile",
+            "To My Dear",
+            "Blooming Flower",
+            "Harmonia",
+            "キミしきる",
+            "Starcast",
+            "Twinkle Ticking",
+            "Gift"
+        ],
+        "encore": [
+            "ポペラ・ホリカ",
+            "マジックマーチ",
+            "Page Flip"
+        ]    
+    },
+    {
         "LIVEtitle": "Yui Ogura Fan Meeting in Seoul presented by KOE 夜公演",
         "tourtitle": "Yui Ogura Fan Meeting in Seoul presented by KOE",
         "artist": "小倉唯",
@@ -22,6 +86,70 @@
             "Honey♥Come!!",
             "夢にエール!パティシエール♪"
         ]
+    },
+    {
+        "LIVEtitle": "石原夏織 2nd LIVE TOUR -Calm Magic- 愛知公演",
+        "tourtitle": "石原夏織 2nd LIVE TOUR -Calm Magic-",
+        "artist": "石原夏織",
+        "date": "2024年6月2日",
+        "venue": "名古屋市公会堂",
+        "id": "2024060201",
+        "setlist": [
+            "プルケリマを朝に",
+            "Paraglider",
+            "キラリアット",
+            "CREATION×CREATION",
+            "Face to Face",
+            "recipe",
+            "ILLUSION",
+            "Sugar Planets",
+            "恋の匂い",
+            "Plastic Smile",
+            "To My Dear",
+            "Blooming Flower",
+            "Harmonia",
+            "雨模様リグレット",
+            "Sunny You",
+            "Twinkle Ticking",
+            "Gift"
+        ],
+        "encore": [
+            "Water Front",
+            "マジックマーチ",
+            "半透明の世界で"
+        ]    
+    },
+    {
+        "LIVEtitle": "石原夏織 2nd LIVE TOUR -Calm Magic- 大阪公演",
+        "tourtitle": "石原夏織 2nd LIVE TOUR -Calm Magic-",
+        "artist": "石原夏織",
+        "date": "2024年6月1日",
+        "venue": "大阪国際交流センター",
+        "id": "2024060101",
+        "setlist": [
+            "プルケリマを朝に",
+            "Paraglider",
+            "キラリアット",
+            "You & I",
+            "Face to Face",
+            "recipe",
+            "ILLUSION",
+            "Sugar Planets",
+            "恋の匂い",
+            "Plastic Smile",
+            "To My Dear",
+            "Blooming Flower",
+            "Harmonia",
+            "わざと触れた",
+            "Diorama-Drama",
+            "Twinkle Ticking",
+            "Gift"
+        ],
+        "encore": [
+            "Orange Note",
+            "マジックマーチ",
+            "虹のソルフェージュ"
+        ]    
     },
     {
         "LIVEtitle": "ゆいちゃん・ハローキティ~きらきらリボン♡大作戦~ 第3部",
