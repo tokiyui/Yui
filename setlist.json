@@ -1,5 +1,65 @@
 [
     {
+        "LIVEtitle": "Yui Ogura Fan Meeting in Seoul presented by KOE 夜公演",
+        "tourtitle": "Yui Ogura Fan Meeting in Seoul presented by KOE",
+        "artist": "小倉唯",
+        "date": "2024年6月8日",
+        "venue": "CTSアートホール",
+        "id": "2024060802",
+        "setlist": [
+            "Honey♥Come!!",
+            "サインはB"
+        ]
+    },
+    {
+        "LIVEtitle": "Yui Ogura Fan Meeting in Seoul presented by KOE 昼公演",
+        "tourtitle": "Yui Ogura Fan Meeting in Seoul presented by KOE",
+        "artist": "小倉唯",
+        "date": "2024年6月8日",
+        "venue": "CTSアートホール",
+        "id": "2024060801",
+        "setlist": [
+            "Honey♥Come!!",
+            "夢にエール!パティシエール♪"
+        ]
+    },
+    {
+        "LIVEtitle": "ゆいちゃん・ハローキティ~きらきらリボン♡大作戦~ 第3部",
+        "tourtitle": "ゆいちゃん・ハローキティ~きらきらリボン♡大作戦~",
+        "artist": "小倉唯",
+        "date": "2024年5月25日",
+        "venue": "サンリオピューロランド",
+        "id": "2024052503",
+        "setlist": [
+            "ハローキティ",
+            "Caramel Ribbon..."
+        ]
+    },
+    {
+        "LIVEtitle": "ゆいちゃん・ハローキティ~きらきらリボン♡大作戦~ 第2部",
+        "tourtitle": "ゆいちゃん・ハローキティ~きらきらリボン♡大作戦~",
+        "artist": "小倉唯",
+        "date": "2024年5月25日",
+        "venue": "サンリオピューロランド",
+        "id": "2024052502",
+        "setlist": [
+            "ハローキティ",
+            "Caramel Ribbon..."
+        ]
+    },
+    {
+        "LIVEtitle": "ゆいちゃん・ハローキティ~きらきらリボン♡大作戦~ 第1部",
+        "tourtitle": "ゆいちゃん・ハローキティ~きらきらリボン♡大作戦~",
+        "artist": "小倉唯",
+        "date": "2024年5月25日",
+        "venue": "サンリオピューロランド",
+        "id": "2024052501",
+        "setlist": [
+            "ハローキティ",
+            "Caramel Ribbon..."
+        ]
+    },
+    {
         "LIVEtitle": "Lemino presents ANIMAX MUSIX 2024 SPRING",
         "tourtitle": "",
         "artist": "石原夏織",
