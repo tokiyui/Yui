@@ -2,30 +2,30 @@
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ツアーセットリスト比較ページ</title>
-    <style>
-        th,
-        td {
-            border: 1px solid #ccc;
-            text-align: center;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ツアーセットリスト比較ページ</title>
+  <style>
+    th,
+    td {
+      border: 1px solid #ccc;
+      text-align: center;
+    }
 
-        .encore {
-            font-style: italic;
-        }
+    .encore {
+      font-style: italic;
+    }
 
-        .different {
-            background-color: cyan;
-        }
-    </style>
+    .different {
+      background-color: cyan;
+    }
+  </style>
 </head>
 
 <body>
-    <h1>ツアーセットリスト比較ページ</h1>
-    <label for="tourSelect">ツアー名を選択：</label>
-    <select id="tourSelect">
+  <h1>ツアーセットリスト比較ページ</h1>
+  <label for="tourSelect">ツアー名を選択：</label>
+  <select id="tourSelect">
         <option value="">Select a tour</option>
         <option value="小倉唯 Memorial LIVE 2023 ~To the 11'Eleven~">小倉唯 Memorial LIVE 2023 ~To the 11'Eleven~</option>
         <option value="小倉唯 Memorial LIVE 2023 ~10th Anniversary Assemble!!~">小倉唯 Memorial LIVE 2023 ~10th Anniversary Assemble!!~</option>
@@ -68,124 +68,130 @@
         <option value="「ゆいかおりの実♪デジタル」公開録音&ミニライブ">「ゆいかおりの実♪デジタル」公開録音&ミニライブ</option>     
         <option value="ゆいかおり1st LIVE TOUR「WAKE UP!!」">ゆいかおり1st LIVE TOUR「WAKE UP!!」</option>
         <option value="ゆいかおり2nd LIVE「YELL for YOU」">ゆいかおり2nd LIVE「YELL for YOU」</option>    
-        <option value="ゆいかおり1st LIVE「PUPPY LOVE!!」">ゆいかおり1st LIVE「PUPPY LOVE!!」</option>     
-    </select>
+        <option value="ゆいかおり1st LIVE「PUPPY LOVE!!」">ゆいかおり1st LIVE「PUPPY LOVE!!」</option>  
+  </select>
 
-    <br><br>
-    <table id="concertTable">
-        <!-- Concert data will be displayed here -->
-    </table>
+  <br><br>
 
-    <div id="setlistContainer"></div>
+  <table id="concertTable">
+    <!-- Concert data will be displayed here -->
+  </table>
 
-    <script>
-        const concertTable = document.getElementById('concertTable');
-        const tourSelect = document.getElementById('tourSelect');
-        const setlistContainer = document.getElementById('setlistContainer');
+  <div class="container" id="setlistContainer"></div>
 
-        tourSelect.addEventListener('change', () => {
-            setlistContainer.innerHTML = '';
-            concertTable.innerHTML = '';
-            const selectedTour = tourSelect.value;
+  <script>
+    const concertTable = document.getElementById('concertTable');
+    const tourSelect = document.getElementById('tourSelect');
+    const setlistContainer = document.getElementById('setlistContainer');
 
-            if (selectedTour) {
-                fetch('setlist.json')
-                    .then(response => response.json())
-                    .then(data => {
-                        const concerts = data.filter(item => item.tourtitle === selectedTour);
-                        concerts.sort((a, b) => a.id.localeCompare(b.id));
+    tourSelect.addEventListener('change', () => {
+      setlistContainer.innerHTML = '';
+      concertTable.innerHTML = '';
+      const selectedTour = tourSelect.value;
 
-                        const table = document.createElement('table');
+      if (selectedTour) {
+        fetch('setlist.json')
+          .then(response => response.json())
+          .then(data => {
+            const concerts = data.filter(item => item.tourtitle === selectedTour);
+            concerts.sort((a, b) => a.id.localeCompare(b.id));
 
-                        const headerRow = table.insertRow();
-                        headerRow.insertCell().textContent = '開催日';
-                        concerts.forEach(concert => {
-                            headerRow.insertCell().textContent = concert.date;
-                        });
+            const table = document.createElement('table');
 
-                        const venueRow = table.insertRow();
-                        venueRow.insertCell().textContent = '会場';
-                        concerts.forEach(concert => {
-                            venueRow.insertCell().textContent = concert.venue;
-                        });
+            const headerRow = table.insertRow();
+            headerRow.insertCell().textContent = '開催日';
+            concerts.forEach(concert => {
+              headerRow.insertCell().textContent = concert.date;
+            });
 
-                        const setlistRows = concerts[0].setlist.length;
-                        for (let i = 0; i < setlistRows; i++) {
-                            const row = table.insertRow();
-                            const indexCell = row.insertCell();
-                            indexCell.textContent = i + 1;
+            const venueRow = table.insertRow();
+            venueRow.insertCell().textContent = '会場';
+            concerts.forEach(concert => {
+              venueRow.insertCell().textContent = concert.venue;
+            });
 
-                            const setlistValues = concerts.map(concert => concert.setlist[i]);
-                            const isSame = setlistValues.every((val, idx, arr) => val === arr[0]);
+            const row = table.insertRow();
+            row.insertCell().textContent = '';
+            concerts.forEach(concert => {
+              row.insertCell().textContent = '【セットリスト】';
+            });
 
-                            concerts.forEach(concert => {
-                                const cell = row.insertCell();
-                                cell.textContent = concert.setlist[i];
-                                if (!isSame) {
-                                    row.classList.add('different');
-                                }
-                            });
-                        }
+            const setlistRows = concerts[0].setlist.length;
 
-                        const encoreList = concerts.map(concert => {
-                            if (Array.isArray(concert.encore)) {
-                                return concert.encore;
-                            } else {
-                                return [concert.encore];
-                            }
-                        });
+            for (let i = 0; i < setlistRows; i++) {
+              const row = table.insertRow();
+              const indexCell = row.insertCell();
+              indexCell.textContent = i + 1;
 
-                        if (encoreList[0][0]) {
-                            const encorerow = table.insertRow();
-                            encorerow.insertCell().textContent = '';
-                            concerts.forEach(concert => {
-                                encorerow.insertCell().textContent = '【アンコール】';
-                            });
+              const setlistValues = concerts.map(concert => {
+                const song = concert.setlist[i];
+                if (typeof song === 'object' && song.medley) {
+                  return song.medley.join(' / '); // Medleyの中身を全て表示
+                } else {
+                  return song;
+                }
+              });
 
-                            const maxEncoreRows = Math.max(...encoreList.map(encore => encore.length));
-                            for (let i = 0; i < maxEncoreRows; i++) {
-                                const row = table.insertRow();
-                                const indexCell = row.insertCell();
-                                indexCell.textContent = 'EC' + (i + 1);
+              const isSame = setlistValues.every((val, idx, arr) => val === arr[0]);
 
-                                const encoreValues = encoreList.map(encore => encore[i] || '');
-                                const isSameEncore = encoreValues.every((val, idx, arr) => val === arr[0]);
-
-                                encoreValues.forEach((value, idx) => {
-                                    const cell = row.insertCell();
-                                    cell.textContent = value;
-                                    if (!isSameEncore && value !== '') {
-                                        row.classList.add('different');
-                                    }
-                                });
-                            }
-                        }
-
-                        if (concerts.some(concert => concert.Wencore)) {
-                            const wencorerow = table.insertRow();
-                            const cell = wencorerow.insertCell();
-                            cell.textContent = 'WEC';
-                            concerts.forEach(concert => {
-                                wencorerow.insertCell().textContent = concert.Wencore;
-                            });
-                        }
-
-                        concerts.forEach(concert => {
-                            if (concert.medley) {
-                                const medleyRow = table.insertRow();
-                                medleyRow.insertCell().textContent = '';
-                                medleyRow.insertCell().textContent = '【Medley】';
-                                const medleyCell = medleyRow.insertCell();
-                                medleyCell.colSpan = concerts.length;
-                                medleyCell.textContent = concert.medley.join(', ');
-                            }
-                        });
-
-                        setlistContainer.appendChild(table);
-                    });
+              setlistValues.forEach((value, idx) => {
+                const cell = row.insertCell();
+                cell.textContent = value;
+                if (!isSame) {
+                  row.style.backgroundColor = 'aqua';
+                }
+              });
             }
-        });
-    </script>
+
+            const encoreList = concerts.map(concert => {
+              if (Array.isArray(concert.encore)) {
+                return concert.encore;
+              } else {
+                return [concert.encore];
+              }
+            });
+
+            if (encoreList[0][0]) {
+              const encorerow = table.insertRow();
+              encorerow.insertCell().textContent = '';
+              concerts.forEach(concert => {
+                encorerow.insertCell().textContent = '【アンコール】';
+              });
+
+              const maxEncoreRows = Math.max(...encoreList.map(encore => encore.length));
+
+              for (let i = 0; i < maxEncoreRows; i++) {
+                const row = table.insertRow();
+                const indexCell = row.insertCell();
+                indexCell.textContent = 'EC' + (i + 1);
+
+                const encoreValues = encoreList.map(encore => encore[i] || '');
+                const isSameEncore = encoreValues.every((val, idx, arr) => val === arr[0]);
+
+                encoreValues.forEach((value, idx) => {
+                  const cell = row.insertCell();
+                  cell.textContent = value;
+                  if (!isSameEncore && value !== '') {
+                    row.classList.add('different');
+                  }
+                });
+              }
+            }
+
+            if (concerts.some(concert => concert.Wencore)) {
+              const wencorerow = table.insertRow();
+              const cell = wencorerow.insertCell();
+              cell.textContent = 'WEC';
+              concerts.forEach(concert => {
+                wencorerow.insertCell().textContent = concert.Wencore;
+              });
+            }
+
+            setlistContainer.appendChild(table);
+          });
+      }
+    });
+  </script>
 </body>
 
 </html>
