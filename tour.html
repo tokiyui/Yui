@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ツアーセットリスト比較ページ</title>
+    <style>
+        th,
+        td {
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        .encore {
+            font-style: italic;
+        }
+
+        .different {
+            background-color: cyan;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ツアーセットリスト比較ページ</h1>
+    <label for="tourSelect">ツアー名を選択：</label>
+    <select id="tourSelect">
+        <option value="">Select a tour</option>
+        <option value="小倉唯 Memorial LIVE 2023 ~To the 11'Eleven~">小倉唯 Memorial LIVE 2023 ~To the 11'Eleven~</option>
+        <option value="小倉唯 Memorial LIVE 2023 ~10th Anniversary Assemble!!~">小倉唯 Memorial LIVE 2023 ~10th Anniversary Assemble!!~</option>
+        <option value="小倉唯 LIVE 2021「#Re♥LOVEcall」">小倉唯 LIVE 2021「#Re♥LOVEcall」</option>
+        <option value="小倉唯 LIVE TOUR 2019「Step Apple」">小倉唯 LIVE TOUR 2019「Step Apple」</option>
+        <option value="小倉唯 2nd LIVE TOUR「Platinum Airline☆」">小倉唯 2nd LIVE TOUR「Platinum Airline☆」</option>
+        <option value="小倉唯 LIVE「Smiley Cherry」">小倉唯 LIVE「Smiley Cherry」~</option>
+        <option value="小倉唯 1st LIVE TOUR「High-Touch☆Summer」">小倉唯 1st LIVE TOUR「High-Touch☆Summer」/option>
+        <option value="小倉唯 1st LIVE「HAPPY JAM」">小倉唯 1st LIVE「HAPPY JAM」~</option>
+
+<!-- 石原夏織 ファンクラブイベント「UNITY」vol.02 Yui's＊Company.大忘年会2022~天真爛漫ゆいらんらん♪~ ゆいこむ特別総会 -出張版- ~小倉唯 Birthday Party♡2022~ 石原夏織 ファンクラブイベント「UNITY」vol.01 石原夏織 LIVE 2022「Starcast」-Altair- 石原夏織 LIVE 2022「Starcast」-Vega- -->
+<!-- Yui’s＊Company.社員総会 2021 ~Twinkle Holy Day♪~ 石原夏織 SUMMER EVENT「Smile Go Happy」 石原夏織 2nd LIVE「MAKE SMILE」石原夏織 AUTUMN EVENT「ONE DROP」石原夏織 1st LIVE TOUR「Face to FACE」小倉唯 FCイベント「Yui's＊Company.社員総会 ~New Year Party♪2020~」-->
+<!-- 石原夏織 SUMMER EVENT「TEMPEST MISSION」「Step Apple」Blu-ray＆DVD発売記念イベント 石原夏織 1st LIVE「Sunny Spot Story」小倉唯 FCイベント「ゆいゆい＊カンパニー社員総会 ~Xmasイブ×3♪~」石原夏織 BIRTHDAY EVENT -Career up Carry- 2ndアルバム発売記念＆バースデーイベント -->
+<!-- ゆいかおりLIVE TOUR「Starlight Link」 ゆいかおりLIVE TOUR「RAINBOW CANARY!!」ゆいかおりLIVE TOUR「HEARTY PARTY!!」ゆいかおりBIRTHDAY SPECIAL LIVE「INTRODUCTION!!」ゆいかおりSPECIAL LIVE「LUCKY TUNES!!」ゆいかおりLIVE「BUNNY FLASH!!」「ゆいかおりの実♪デジタル」公開録音&ミニライブ -->
+<!-- ゆいかおり1st LIVE TOUR「WAKE UP!!」小倉唯BIRTHDAY SPECIALミニライブ~SEVENTEEN! ゆいかおり2nd LIVE「YELL for YOU」ゆいかおり1st LIVE「PUPPY LOVE!!」-->
+
+    </select>
+
+    <br><br>
+    <table id="concertTable">
+        <!-- Concert data will be displayed here -->
+    </table>
+
+    <div class="container" id="setlistContainer"></div>
+
+    <script>
+        const concertTable = document.getElementById('concertTable');
+        const tourSelect = document.getElementById('tourSelect');
+        const setlistContainer = document.getElementById('setlistContainer');
+
+        tourSelect.addEventListener('change', () => {
+            setlistContainer.innerHTML = '';
+            concertTable.innerHTML = '';
+            const selectedTour = tourSelect.value;
+
+            if (selectedTour) {
+                fetch('setlist.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const concerts = data.filter(item => item.tourtitle === selectedTour);
+                        concerts.sort((a, b) => a.id.localeCompare(b.id));
+
+                        const table = document.createElement('table');
+
+                        const headerRow = table.insertRow();
+                        headerRow.insertCell().textContent = '開催日';
+                        concerts.forEach(concert => {
+                            headerRow.insertCell().textContent = concert.date;
+                        });
+
+                        const venueRow = table.insertRow();
+                        venueRow.insertCell().textContent = '会場';
+                        concerts.forEach(concert => {
+                            venueRow.insertCell().textContent = concert.venue;
+                        });
+
+                        const row = table.insertRow();
+                        row.insertCell().textContent = '';
+                        concerts.forEach(concert => {
+                            row.insertCell().textContent = '【セットリスト】';
+                        });
+
+                        const setlistRows = concerts[0].setlist.length;
+                        for (let i = 0; i < setlistRows; i++) {
+                            const row = table.insertRow();
+                            const indexCell = row.insertCell();
+                            indexCell.textContent = i + 1;
+
+                            const setlistValues = concerts.map(concert => concert.setlist[i]);
+                            const isSame = setlistValues.every((val, idx, arr) => val === arr[0]);
+
+                            concerts.forEach(concert => {
+                                const cell = row.insertCell();
+                                cell.textContent = concert.setlist[i];
+                                if (!isSame) {
+                                    row.style.backgroundColor = 'aqua';
+                                }
+                            });
+                        }
+
+                        const encoreList = concerts.map(concert => {
+                            if (Array.isArray(concert.encore)) {
+                                return concert.encore;
+                            } else {
+                                return [concert.encore];
+                            }
+                        });
+
+                        if (encoreList[0][0]) {
+                            const encorerow = table.insertRow();
+                            encorerow.insertCell().textContent = '';
+                            concerts.forEach(concert => {
+                                encorerow.insertCell().textContent = '【アンコール】';
+                            });
+
+                            const maxEncoreRows = Math.max(...encoreList.map(encore => encore.length));
+                            for (let i = 0; i < maxEncoreRows; i++) {
+                                const row = table.insertRow();
+                                const indexCell = row.insertCell();
+                                indexCell.textContent = 'EC' + (i + 1);
+
+                                const encoreValues = encoreList.map(encore => encore[i] || '');
+                                const isSameEncore = encoreValues.every((val, idx, arr) => val === arr[0]);
+
+                                encoreValues.forEach((value, idx) => {
+                                    const cell = row.insertCell();
+                                    cell.textContent = value;
+                                    if (!isSameEncore && value !== '') {
+                                        row.classList.add('different');
+                                    }
+                                });
+                            }
+                        }
+
+                        if (concerts.some(concert => concert.Wencore)) {
+                            const wencorerow = table.insertRow();
+                            const cell = wencorerow.insertCell();
+                            cell.textContent = 'WEC';
+                            concerts.forEach(concert => {
+                                wencorerow.insertCell().textContent = concert.Wencore;
+                            });
+                        }
+
+                        setlistContainer.appendChild(table);
+                    });
+            }
+        });
+    </script>
+</body>
+
+</html>
