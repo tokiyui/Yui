@@ -178,22 +178,20 @@
 
                 const encoreValues = encoreList.map(encore => encore[i] || '');
                 const isSameEncore = encoreValues.every((val, idx, arr) => val === arr[0]);
-
-              const isSame = encoreValues.every((val, idx, arr) => val === arr[0]);
                 
-              encoreValues.forEach((value, idx) => {
-                const cell = row.insertCell();
-                cell.textContent = value;
-                if (!isSame) {
-                  if (selectedTour.includes('石原夏織')) {
-                    row.classList.add('cyan');
-                  } else if (selectedTour.includes('ゆいかおり')) {
-                    row.classList.add('orange');
-                　} else {
-                  　row.classList.add('pink');
+                encoreValues.forEach((value, idx) => {
+                  const cell = row.insertCell();
+                  cell.textContent = value;
+                  if (!isSameEncore) {
+                    if (selectedTour.includes('石原夏織')) {
+                      row.classList.add('cyan');
+                    } else if (selectedTour.includes('ゆいかおり')) {
+                      row.classList.add('orange');
+                  　} else {
+                    　row.classList.add('pink');
+                    }
                   }
-                }
-              });
+                });
               }
             }
 
