@@ -96,7 +96,7 @@
             .then(response => response.json())
             .then(data => {
               songData = data.filter(song => song.artist === "小倉唯");
-            });
+            }),
         fetch('CD.json').then(response => response.json()),
         fetch('setlist.json').then(response => response.json())
     ]).then(([songs, CDs, setlists]) => {
