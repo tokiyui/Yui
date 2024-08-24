@@ -76,7 +76,7 @@
         <!-- Concert data will be displayed here -->
     </table>
 
-    <div class="container" id="setlistContainer"></div>
+    <div id="setlistContainer"></div>
 
     <script>
         const concertTable = document.getElementById('concertTable');
@@ -109,12 +109,6 @@
                             venueRow.insertCell().textContent = concert.venue;
                         });
 
-                        const row = table.insertRow();
-                        row.insertCell().textContent = '';
-                        concerts.forEach(concert => {
-                            row.insertCell().textContent = '【セットリスト】';
-                        });
-
                         const setlistRows = concerts[0].setlist.length;
                         for (let i = 0; i < setlistRows; i++) {
                             const row = table.insertRow();
@@ -128,7 +122,7 @@
                                 const cell = row.insertCell();
                                 cell.textContent = concert.setlist[i];
                                 if (!isSame) {
-                                    row.style.backgroundColor = 'aqua';
+                                    row.classList.add('different');
                                 }
                             });
                         }
