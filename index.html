@@ -24,7 +24,7 @@
     <table>
         <thead>
             <tr>
-                <th>楽曲名(クリックすると歌詞)</th>
+                <th>楽曲名(クリックすると歌詞が開きます)</th>
                 <th>披露回数</th>
                 <th>最終披露日</th>
                 <th>作詞</th>
@@ -63,8 +63,6 @@ function updateSongDetails(songs, CDs, setlists) {
         const performanceData = setlists.reduce((acc, setlist) => {
             const date = new Date(setlist.date.replace(/年|月/g, '-').replace(/日/g, ''));
             
-            console.log(setlist.date);
-            
             const songsArray = Array.isArray(setlist.setlist) ? setlist.setlist : [setlist.setlist];
             if (Array.isArray(setlist.encore)) songsArray.push(...setlist.encore);
             if (setlist.Wencore) songsArray.push(setlist.Wencore);
@@ -82,11 +80,12 @@ function updateSongDetails(songs, CDs, setlists) {
                 acc.count += 1;
                 if (!acc.latestDate || date > acc.latestDate) {
                     acc.latestDate = date;
+                    acc.setlist = setlist.id;
                 }
             }
 
             return acc;
-        }, { count: 0, latestDate: null });
+        }, { count: 0, latestDate: null, id: null });
 
         const formattedDate = oldestDate.date !== 'No release date found' ? oldestDate.date : 'No release date found';
         const latestPerformanceDate = performanceData.latestDate ? formatDateToJapanese(performanceData.latestDate) : '未披露';
@@ -98,7 +97,7 @@ function updateSongDetails(songs, CDs, setlists) {
         <tr>
             <td><a href="https://www.uta-net.com/song/${song.utanet}">${song.title}</a></td>
             <td><a href="./sub/search.html?name=${song.title}">${performanceData.count}</a></td>
-            <td><a href="./sub/setlist.html?id=${song.title}">${latestPerformanceDate}</a></td>
+            <td><a href="./sub/setlist.html?id=${performanceData.id}">${latestPerformanceDate}</a></td>
             <td class="${lyricsClass}">${song.lyrics}</td>
             <td class="${musicClass}">${song.music}</td>
             <td>${song.arranger}</td>
