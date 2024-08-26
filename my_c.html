@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>未回収楽曲チェックツール</title>
+    <style>
+        h3 {
+            display: inline;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>未回収楽曲チェックツール</h1>
+    <h3><strong>石原夏織 2nd LIVE TOUR -Calm Magic-</strong></h3>
+    <input type="checkbox" id="2024060101" class="checkbox">大阪公演
+    <input type="checkbox" id="2024060201" class="checkbox">愛知公演
+    <input type="checkbox" id="2024062301" class="checkbox">神奈川公演
+    <input type="checkbox" id="2024070701" class="checkbox">東京公演
+    <br><h3>Ishihara Kaori 5th Anniversary Live -bouquet-</h3>
+    <input type="checkbox" id="2020120501" class="checkbox">Ishihara Kaori 5th Anniversary Live -bouquet-
+    <br><h3><strong>石原夏織 LIVE 2022「Starcast」</strong></h3>
+    <input type="checkbox" id="2022031201" class="checkbox">-Vega- 昼公演
+    <input type="checkbox" id="2022031202" class="checkbox">-Vega- 夜公演
+    <input type="checkbox" id="2022032701" class="checkbox">-Altair- 昼公演
+    <input type="checkbox" id="2022032702" class="checkbox">-Altair- 夜公演 
+    <br><h3><strong>石原夏織 2nd LIVE「MAKE SMILE」</strong></h3>
+    <input type="checkbox" id="2021022001" class="checkbox">昼公演
+    <input type="checkbox" id="2021022002" class="checkbox">夜公演
+    <br><h3><strong>石原夏織 1st LIVE TOUR「Face to FACE」</strong></h3>  
+    <input type="checkbox" id="2020011301" class="checkbox">大阪公演
+    <input type="checkbox" id="2020011801" class="checkbox">愛知公演
+    <input type="checkbox" id="2020022401" class="checkbox">東京公演
+    <br><h3><strong>石原夏織 1st LIVE「Sunny Spot Story」</strong></h3>
+    <input type="checkbox" id="2018122901" class="checkbox">昼公演
+    <input type="checkbox" id="2018122902" class="checkbox">夜公演
+
+    <br><h3><strong>石原夏織 ファンクラブイベント「UNITY」vol.03</strong></h3>
+    <input type="checkbox" id="2024030901" class="checkbox">大阪公演
+    <input type="checkbox" id="2024031601" class="checkbox">東京昼公演
+    <input type="checkbox" id="2024031602" class="checkbox">東京夜公演
+    <br><h3><strong>石原夏織ファンクラブイベント「Ishihara Kaori Xmas Sweets Party」</strong></h3>
+    <input type="checkbox" id="2023122501" class="checkbox">昼公演
+    <input type="checkbox" id="2023122502" class="checkbox">夜公演
+    <br><h3><strong>石原夏織 ファンクラブイベント「UNITY」vol.02</strong></h3>
+    <input type="checkbox" id="2023032101" class="checkbox">昼公演
+    <input type="checkbox" id="2023032102" class="checkbox">夜公演
+    <br><h3><strong>石原夏織 ファンクラブイベント「UNITY」vol.01</strong></h3>
+    <input type="checkbox" id="2022061901" class="checkbox">昼公演
+    <input type="checkbox" id="2022061902" class="checkbox">夜公演
+    <br><h3><strong>石原夏織 SUMMER EVENT「Smile Go Happy」</strong></h3>
+    <input type="checkbox" id="2021081401" class="checkbox">昼公演
+    <input type="checkbox" id="2021081402" class="checkbox">夜公演
+    <br><h3><strong>石原夏織 AUTUMN EVENT「ONE DROP」</strong></h3>
+    <input type="checkbox" id="2020092701" class="checkbox">第1部
+    <input type="checkbox" id="2020092702" class="checkbox">第2部
+    <input type="checkbox" id="2020092703" class="checkbox">第3部
+    <br><h3><strong>石原夏織 SUMMER EVENT「TEMPEST MISSION」</strong></h3>
+    <input type="checkbox" id="2019082401" class="checkbox">昼公演
+    <input type="checkbox" id="2019082402" class="checkbox">夜公演
+    <br><h3><strong>石原夏織 BIRTHDAY EVENT -Career up Carry-</strong></h3>
+    <input type="checkbox" id="2018081801" class="checkbox">昼公演
+    <input type="checkbox" id="2018081802" class="checkbox">夜公演
+
+    <br><h3><strong>Animelo Summer Live</strong></h3>
+    <input type="checkbox" id="2019083001" class="checkbox">2019
+    <input type="checkbox" id="2021082701" class="checkbox">2021  
+    <input type="checkbox" id="2022082701" class="checkbox">2022    
+    <input type="checkbox" id="2023082601" class="checkbox">2023
+    <br><h3><strong>ANIMAX MUSIX</strong></h3>
+    <input type="checkbox" id="2018111701" class="checkbox">2018
+    <input type="checkbox" id="2019102701" class="checkbox">2019 KOBE
+    <input type="checkbox" id="2021112001" class="checkbox">2021
+    <input type="checkbox" id="2022111901" class="checkbox">2022 
+    <input type="checkbox" id="2024033001" class="checkbox">2024 SPRING
+    <br><h3><strong>その他</strong></h3>
+    <input type="checkbox" id="2023120901" class="checkbox">京 Premium Live 2023
+    <input type="checkbox" id="2023031101" class="checkbox">EJ My Girl Festival 2023
+    <input type="checkbox" id="2022091701" class="checkbox">ANISAMA SYMPHONIC NIGHT 2022 hosted by 京まふ＆Ani Love KYOTO
+    <input type="checkbox" id="2018061701" class="checkbox">リスアニ！Park Vol.02
+    <input type="checkbox" id="2018032401" class="checkbox">AJ Night 2018
+    
+    <div id="searchResults" class="result"></div>
+
+    <script>
+        const checkboxes = document.querySelectorAll('.checkbox');
+        const searchResults = document.getElementById('searchResults');
+        let songData;
+        let setlistData;
+
+        fetch('song.json')
+            .then(response => response.json())
+            .then(data => {
+              songData = data.filter(song => song.artist === "石原夏織");
+            });
+
+        fetch('setlist.json')
+            .then(response => response.json())
+            .then(data => {
+                setlistData = data;
+            });
+
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                checkMissingSongs();
+            });
+        });
+
+        function checkMissingSongs() {
+            const checkedIds = Array.from(document.querySelectorAll('.checkbox:checked')).map(checkbox => checkbox.id);
+
+            if (checkedIds.length === 0) {
+                searchResults.innerHTML = '';
+                return;
+            }
+
+            if (!songData || !setlistData) {
+                return;
+            }
+
+            const songTitles = songData.map(song => song.title);
+
+            const missingSongs = songTitles.filter(title => {
+                let found = false;
+
+                setlistData.forEach(event => {
+                    if (checkedIds.includes(event.id)) {
+                        if (event.setlist && (event.setlist.includes(title) || (event.setlist.medley && event.setlist.medley.includes(title)))) {
+                            found = true;
+                        }
+                        if (event.encore && event.encore.includes(title)) {
+                            found = true;
+                        }
+                        if (event.Wencore && event.Wencore === title) {
+                            found = true;
+                        }
+                    }
+                });
+
+                return !found;
+            });
+
+            displayResults(missingSongs);
+        }
+
+        function displayResults(missingSongs) {
+            searchResults.innerHTML = `
+                <p>未回収楽曲数: ${missingSongs.length}</p>
+                <ul>
+                    ${missingSongs.map(song => `${song}<br>`).join('')}
+                </ul>
+            `;
+        }
+    </script>
+</body>
+
+</html>
