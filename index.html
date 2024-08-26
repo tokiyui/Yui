@@ -22,11 +22,13 @@
         <thead>
             <tr>
                 <th>楽曲名</th>
+                <th>歌詞</th>
                 <th>披露回数</th>
                 <th>最終披露日</th>
                 <th>作詞</th>
                 <th>作曲</th>
                 <th>編曲</th>
+                <th>長さ</th>
                 <th>収録CD</th>
                 <th>リリース日</th>
             </tr>
@@ -87,11 +89,13 @@ function updateSongDetails(songs, CDs, setlists) {
         const row = `
         <tr>
             <td><a href="./sub/search.html?name=${song.title}">${song.title}</a></td>
+            <td><a href="https://www.uta-net.com/song/${song.utanet}">歌詞</a></td>
             <td>${performanceData.count}</td>
             <td>${latestPerformanceDate}</td>
             <td>${song.lyrics}</td>
             <td>${song.music}</td>
             <td>${song.arranger}</td>
+            <td>${song.length}</td>
             <td>${song.CDtitle}</td>
             <td>${formattedDate}</td>
         </tr>
