@@ -66,7 +66,10 @@ if (!targetLiveId) {
 
                     const renderEncore = encore => {
                         let encoreHTML = '';
-                        if (Array.isArray(encore) && encore.length > 0) {
+                        if (!Array.isArray(encore)) {
+                            encore = [encore]; // encoreが配列でない場合は長さ1の配列として扱う
+                        }
+                        if (encore.length > 0) {
                             encoreHTML += '<ul>';
                             encore.forEach((song, index) => {
                                 encoreHTML += `<p>${index + 1}. <a href="./search.html?name=${song}">${song}</a></p>`;
