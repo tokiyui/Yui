@@ -24,7 +24,7 @@
     <table>
         <thead>
             <tr>
-                <th>楽曲名</th>
+                <th>楽曲名(クリックすると歌詞)</th>
                 <th>披露回数</th>
                 <th>最終披露日</th>
                 <th>作詞</th>
@@ -93,9 +93,9 @@ function updateSongDetails(songs, CDs, setlists) {
  
         const row = `
         <tr>
-            <td><a href="./sub/search.html?name=${song.title}">${song.title}</a> <a href="https://www.uta-net.com/song/${song.utanet}">歌詞</a></td>
-            <td>${performanceData.count}</td>
-            <td><a href="./sub/setlist.html?id=${performanceData.latestDate}">${latestPerformanceDate}</a></td>
+            <td><a href="https://www.uta-net.com/song/${song.utanet}">${song.title}</a></td>
+            <td><a href="./sub/search.html?name=${song.title}">${performanceData.count}</a></td>
+            <td><a href="./sub/setlist.html?id=${setlist.date}">${latestPerformanceDate}</a></td>
             <td class="${lyricsClass}">${song.lyrics}</td>
             <td class="${musicClass}">${song.music}</td>
             <td>${song.arranger}</td>
