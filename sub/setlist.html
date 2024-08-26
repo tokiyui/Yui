@@ -70,9 +70,11 @@ if (!targetLiveId) {
                             encore = [encore]; // encoreが配列でない場合は長さ1の配列として扱う
                         }
                         if (encore.length > 0) {
+                            encoreHTML += '<ul>';
                             encore.forEach((song, index) => {
                                 encoreHTML += `<p>${index + 1}. <a href="./search.html?name=${song}">${song}</a></p>`;
                             });
+                            encoreHTML += '</ul>';
                         }
                         return encoreHTML;
                     };
