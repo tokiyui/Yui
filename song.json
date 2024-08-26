@@ -780,7 +780,10 @@
         ],
         "arranger": "よる。",
         "length": "3:48",
-        "CDtitle": "Love∞Vision",
+        "CDtitle": [
+            "Love∞Vision",
+            "Bloomy"
+        ],
         "utanet": "329926",
         "info": ""
     },
@@ -813,7 +816,10 @@
         "music": "滝澤俊輔",
         "arranger": "滝澤俊輔",
         "length": "4:11",
-        "CDtitle": "秘密♡Melody",
+        "CDtitle": [
+            "秘密♡Melody",
+            "Bloomy"
+        ],
         "utanet": "335998",
         "info": ""
     },
@@ -852,7 +858,10 @@
         ],
         "arranger": "YASUHIRO (康寛)",
         "length": "3:22",
-        "CDtitle": "Empty//Princess.",
+        "CDtitle": [
+            "Empty//Princess.",
+            "Bloomy"
+        ],
         "utanet": "346538",
         "info": ""
     },
@@ -891,7 +900,10 @@
         "music": "武田将弥",
         "arranger": "武田将弥",
         "length": "4:12",
-        "CDtitle": "君色のキセキ",
+        "CDtitle": [
+            "君色のキセキ",
+            "Bloomy"
+        ],
         "utanet": "352983",
         "info": ""
     },
@@ -921,6 +933,106 @@
         "length": "3:18",
         "CDtitle": "君色のキセキ",
         "utanet": "353358",
+        "info": ""
+    },
+    {
+        "title": "Wind of Bloom",
+        "artist": "小倉唯",
+        "lyrics": "小倉唯",
+        "music": "滝澤俊輔",
+        "arranger": "滝澤俊輔",
+        "length": "",
+        "CDtitle": "Bloomy",
+        "utanet": "",
+        "info": ""
+    },
+    {
+        "title": "花占いするの♡",
+        "artist": "小倉唯",
+        "lyrics": "清竜人",
+        "music": "清竜人",
+        "arranger": "清竜人",
+        "length": "",
+        "CDtitle": "Bloomy",
+        "utanet": "",
+        "info": ""
+    },
+    {
+        "title": "恋の秒針",
+        "artist": "小倉唯",
+        "lyrics": "羽星",
+        "music": "武田将弥",
+        "arranger": "武田将弥",
+        "length": "",
+        "CDtitle": "Bloomy",
+        "utanet": "",
+        "info": ""
+    },
+    {
+        "title": "スターチス",
+        "artist": "小倉唯",
+        "lyrics": "鶴崎輝一",
+        "music": "鶴崎輝一",
+        "arranger": "鶴崎輝一",
+        "length": "",
+        "CDtitle": "Bloomy",
+        "utanet": "",
+        "info": ""
+    },
+    {
+        "title": "Lovely Happily Shiny Days",
+        "artist": "小倉唯",
+        "lyrics": [
+            "大森祥子",
+            "小倉唯"
+        ],
+        "music": "本田正樹",
+        "arranger": "本田正樹",
+        "length": "",
+        "CDtitle": "Bloomy",
+        "utanet": "",
+        "info": ""
+    },
+    {
+        "title": "One and Only",
+        "artist": "小倉唯",
+        "lyrics": "磯谷佳江",
+        "music": [
+            "青木康平",
+            "藤原彩豊"
+        ],
+        "arranger": [
+            "青木康平",
+            "藤原彩豊"
+        ],
+        "length": "",
+        "CDtitle": "Bloomy",
+        "utanet": "",
+        "info": ""
+    },
+    {
+        "title": "センチメンタルメッセージ",
+        "artist": "小倉唯",
+        "lyrics": [
+            "小倉唯",
+            "アッシュ井上"
+        ],
+        "music": "アッシュ井上",
+        "arranger": "アッシュ井上",
+        "length": "",
+        "CDtitle": "Bloomy",
+        "utanet": "",
+        "info": ""
+    },
+    {
+        "title": "わくわくシャンプー&リンス",
+        "artist": "小倉唯",
+        "lyrics": "小倉唯",
+        "music": "根本優樹",
+        "arranger": "藤原彩豊",
+        "length": "",
+        "CDtitle": "Bloomy",
+        "utanet": "",
         "info": ""
     },
     {
