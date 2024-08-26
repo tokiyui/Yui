@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>未回収楽曲チェックツール</title>
+    <style>
+        h3 {
+            display: inline;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>未回収楽曲チェックツール</h1>
+    <h3><strong>ゆいかおりLIVE TOUR「Starlight Link」</strong></h3>
+    <input type="checkbox" id="2017010901" class="checkbox">愛知公演
+    <input type="checkbox" id="2017011501" class="checkbox">宮城公演
+    <input type="checkbox" id="2017020501" class="checkbox">大阪公演
+    <input type="checkbox" id="2017021101" class="checkbox">東京公演
+    <br><h3><strong>ゆいかおりLIVE TOUR「RAINBOW CANARY!!」</strong></h3>
+    <input type="checkbox" id="2015122301" class="checkbox">大阪公演
+    <input type="checkbox" id="2015122601" class="checkbox">愛知公演
+    <input type="checkbox" id="2016010201" class="checkbox">横浜公演1日目
+    <input type="checkbox" id="2016010301" class="checkbox">横浜公演2日目
+    <input type="checkbox" id="2016031201" class="checkbox">~Brightest Stage~
+    <br><h3><strong>ゆいかおりLIVE TOUR「HEARTY PARTY!!」</strong></h3>  
+    <input type="checkbox" id="2014112201" class="checkbox">愛知公演
+    <input type="checkbox" id="2014112901" class="checkbox">大阪公演
+    <input type="checkbox" id="2014120701" class="checkbox">幕張公演
+    <br><h3><strong>ゆいかおりBIRTHDAY SPECIAL LIVE「INTRODUCTION!!」</strong></h3>
+    <input type="checkbox" id="2014081601" class="checkbox">昼公演
+    <input type="checkbox" id="2014081602" class="checkbox">夜公演
+    <br><h3><strong>ゆいかおりSPECIAL LIVE「LUCKY TUNES!!」</strong></h3>
+    <input type="checkbox" id="2014052401" class="checkbox">昼公演
+    <input type="checkbox" id="2014052402" class="checkbox">夜公演
+    <br><h3><strong>ゆいかおりLIVE「BUNNY FLASH!!」</strong></h3>
+    <input type="checkbox" id="2014020201" class="checkbox">昼公演
+    <input type="checkbox" id="2014020202" class="checkbox">夜公演 
+    <br><h3><strong>「ゆいかおりの実♪デジタル」公開録音&ミニライブ</strong></h3>
+    <input type="checkbox" id="2013111701" class="checkbox">昼公演
+    <input type="checkbox" id="2013111702" class="checkbox">夜公演
+    <br><h3><strong>石原夏織 AUTUMN EVENT「ONE DROP」</strong></h3>
+    <input type="checkbox" id="2012111801" class="checkbox">大阪公演
+    <input type="checkbox" id="2012112501" class="checkbox">愛知公演
+    <input type="checkbox" id="2012120201" class="checkbox">東京昼公演
+    <input type="checkbox" id="2012120202" class="checkbox">東京夜公演
+    <br><h3><strong>ゆいかおり2nd LIVE「YELL for YOU」</strong></h3>
+    <input type="checkbox" id="2012050601" class="checkbox">DAY ~頑張る君へ~
+    <input type="checkbox" id="2012050602" class="checkbox">NIGHT ~夢見る君へ~
+    <br><h3><strong>ゆいかおり1st LIVE「PUPPY LOVE!!」</strong></h3>
+    <input type="checkbox" id="2011112701" class="checkbox">昼公演
+    <input type="checkbox" id="2011112702" class="checkbox">夜公演 
+    <br><h3><strong>Animelo Summer Live</strong></h3>
+    <input type="checkbox" id="2012082501" class="checkbox">2012
+    <input type="checkbox" id="2013082501" class="checkbox">2013
+    <input type="checkbox" id="2014083101" class="checkbox">2014
+    <input type="checkbox" id="2015083001" class="checkbox">2015
+    <input type="checkbox" id="2016082801" class="checkbox">2016
+    <br><h3><strong>その他</strong></h3>
+    <input type="checkbox" id="2015062101" class="checkbox">KING SUPER LIVE 2015 day2
+    <input type="checkbox" id="2015062001" class="checkbox">KING SUPER LIVE 2015 day1
+    <input type="checkbox" id="2013032401" class="checkbox">ブシロードカードゲームライブ2013
+  
+    <div id="searchResults" class="result"></div>
+
+    <script>
+        const checkboxes = document.querySelectorAll('.checkbox');
+        const searchResults = document.getElementById('searchResults');
+        let songData;
+        let setlistData;
+
+        fetch('song.json')
+            .then(response => response.json())
+            .then(data => {
+              songData = data.filter(song => song.artist === "石原夏織");
+            });
+
+        fetch('setlist.json')
+            .then(response => response.json())
+            .then(data => {
+                setlistData = data;
+            });
+
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                checkMissingSongs();
+            });
+        });
+
+        function checkMissingSongs() {
+            const checkedIds = Array.from(document.querySelectorAll('.checkbox:checked')).map(checkbox => checkbox.id);
+
+            if (checkedIds.length === 0) {
+                searchResults.innerHTML = '';
+                return;
+            }
+
+            if (!songData || !setlistData) {
+                return;
+            }
+
+            const songTitles = songData.map(song => song.title);
+
+            const missingSongs = songTitles.filter(title => {
+                let found = false;
+
+                setlistData.forEach(event => {
+                    if (checkedIds.includes(event.id)) {
+                        if (event.setlist && (event.setlist.includes(title) || (event.setlist.medley && event.setlist.medley.includes(title)))) {
+                            found = true;
+                        }
+                        if (event.encore && event.encore.includes(title)) {
+                            found = true;
+                        }
+                        if (event.Wencore && event.Wencore === title) {
+                            found = true;
+                        }
+                    }
+                });
+
+                return !found;
+            });
+
+            displayResults(missingSongs);
+        }
+
+        function displayResults(missingSongs) {
+            searchResults.innerHTML = `
+                <p>未回収楽曲数: ${missingSongs.length}</p>
+                <ul>
+                    ${missingSongs.map(song => `${song}<br>`).join('')}
+                </ul>
+            `;
+        }
+    </script>
+</body>
+
+</html>
