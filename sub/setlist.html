@@ -50,11 +50,11 @@ if (!targetLiveId) {
                             if (typeof song === 'string') {
                                 setlistHTML += `<p>${index + 1}. <a href="./search.html?name=${song}">${song}</a></p>`;
                             } else if (typeof song === 'object' && Array.isArray(song.medley)) {
-                                setlistHTML += `<p>${index + 1}. メドレー: `;
+                                setlistHTML += `<p>${index + 1}. 【メドレー】`;
                                 song.medley.forEach((medleySong, medleyIndex) => {
                                     setlistHTML += `<a href="./search.html?name=${medleySong}">${medleySong}</a>`;
                                     if (medleyIndex < song.medley.length - 1) {
-                                        setlistHTML += ', ';
+                                        setlistHTML += '<br>';
                                     }
                                 });
                                 setlistHTML += `</p>`;
