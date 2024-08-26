@@ -62,11 +62,12 @@ function updateSongDetails(songs, CDs, setlists) {
 
         const performanceData = setlists.reduce((acc, setlist) => {
             const date = new Date(setlist.date.replace(/年|月/g, '-').replace(/日/g, ''));
+            
+            console.log(setlist.date);
+            
             const songsArray = Array.isArray(setlist.setlist) ? setlist.setlist : [setlist.setlist];
             if (Array.isArray(setlist.encore)) songsArray.push(...setlist.encore);
             if (setlist.Wencore) songsArray.push(setlist.Wencore);
-            
-            console.log(songsArray);
 
             const titles = songsArray.reduce((acc, title) => {
                 if (typeof title === 'object' && 'medley' in title) {
