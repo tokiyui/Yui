@@ -50,11 +50,11 @@ if (!targetLiveId) {
                             if (typeof song === 'string') {
                                 setlistHTML += `<p>${index + 1}. <a href="./search.html?name=${song}">${song}</a></p>`;
                             } else if (typeof song === 'object' && Array.isArray(song.medley)) {
-                                setlistHTML += `<p>${index + 1}. 【メドレー】`;
+                                setlistHTML += `<p>${index + 1}. メドレー: `;
                                 song.medley.forEach((medleySong, medleyIndex) => {
                                     setlistHTML += `<a href="./search.html?name=${medleySong}">${medleySong}</a>`;
                                     if (medleyIndex < song.medley.length - 1) {
-                                        setlistHTML += '<br>';
+                                        setlistHTML += ', ';
                                     }
                                 });
                                 setlistHTML += `</p>`;
@@ -65,14 +65,14 @@ if (!targetLiveId) {
                     };
 
                     const renderEncore = encore => {
-                        if (!encore || encore.length === 0) {
-                            return '';
+                        let encoreHTML = '';
+                        if (Array.isArray(encore) && encore.length > 0) {
+                            encoreHTML += '<ul>';
+                            encore.forEach((song, index) => {
+                                encoreHTML += `<p>${index + 1}. <a href="./search.html?name=${song}">${song}</a></p>`;
+                            });
+                            encoreHTML += '</ul>';
                         }
-                        let encoreHTML = '<ul>';
-                        encore.forEach((song, index) => {
-                            encoreHTML += `<p>${index + 1}. <a href="./search.html?name=${song}">${song}</a></p>`;
-                        });
-                        encoreHTML += '</ul>';
                         return encoreHTML;
                     };
 
@@ -80,7 +80,7 @@ if (!targetLiveId) {
                         <h2>${liveData.LIVEtitle}</h2>
                         <h3>${liveData.date} (${getDayOfWeek(liveData.date)}) @${liveData.venue}</h3>
                         ${renderSetlist(liveData.setlist)}
-                        ${liveData.encore && liveData.encore.length > 0 ? `<p>【アンコール】</p>${renderEncore(liveData.encore)}` : ''}
+                        ${renderEncore(liveData.encore)}
                         ${liveData.Wencore ? `<p>【ダブルアンコール】</p><p><ul><a href="./search.html?name=${liveData.Wencore}">${liveData.Wencore}</a></ul></p>` : ''}
                     `;
                     liveInfo.innerHTML = html;
