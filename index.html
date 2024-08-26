@@ -81,6 +81,7 @@ function updateSongDetails(songs, CDs, setlists) {
                 if (!acc.latestDate || date > acc.latestDate) {
                     acc.latestDate = date;
                     acc.setlist = setlist.id;
+                    console.log(setlist.id);
                 }
             }
 
