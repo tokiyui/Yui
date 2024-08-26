@@ -83,7 +83,7 @@ if (!targetLiveId) {
                         <h2>${liveData.LIVEtitle}</h2>
                         <h3>${liveData.date} (${getDayOfWeek(liveData.date)}) @${liveData.venue}</h3>
                         ${renderSetlist(liveData.setlist)}
-                        ${renderEncore(liveData.encore)}
+                        ${liveData.encore ? `<p>【アンコール】</p>${renderEncore(liveData.encore)}` : ''}
                         ${liveData.Wencore ? `<p>【ダブルアンコール】</p><p><ul><a href="./search.html?name=${liveData.Wencore}">${liveData.Wencore}</a></ul></p>` : ''}
                     `;
                     liveInfo.innerHTML = html;
