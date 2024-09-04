@@ -64,7 +64,11 @@ function updateSongDetails(songs, CDs, setlists) {
             const date = new Date(setlist.date.replace(/年|月/g, '-').replace(/日/g, ''));
             
             const songsArray = Array.isArray(setlist.setlist) ? setlist.setlist : [setlist.setlist];
-            if (Array.isArray(setlist.encore)) songsArray.push(...setlist.encore);
+            if (!Array.isArray(setlist.encore)) {
+                songsArray.push(setlist.encore); // If encore is not an array, treat it as a single element array
+            } else {
+                songsArray.push(...setlist.encore);
+            }
             if (setlist.Wencore) songsArray.push(setlist.Wencore);
 
             const titles = songsArray.reduce((acc, title) => {
