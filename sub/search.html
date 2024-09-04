@@ -20,7 +20,7 @@ function loadJSON(url, callback) {
     xobj.overrideMimeType("application/json");
     xobj.open('GET', url, true);
     xobj.onreadystatechange = function () {
-        if (xobj.readyState == 4 && xobj.status == 200) {
+        if (xobj.readyState == 4 && xobj.status == "200") {
             callback(JSON.parse(xobj.responseText));
         }
     };
@@ -47,10 +47,7 @@ function searchSetlist() {
 
     loadJSON('../setlist.json', function(data) {
         const matchingData = data.filter(item =>
-            (item.setlist && item.setlist.some(setlistItem =>
-                typeof setlistItem === 'string' && setlistItem === name ||
-                (typeof setlistItem === 'object' && setlistItem.medley && setlistItem.medley.includes(name))
-            )) ||
+            (item.setlist && item.setlist.flat(Infinity).includes(name)) ||
             (item.encore && item.encore.includes(name)) ||
             (item.Wencore && item.Wencore === name)
         );
