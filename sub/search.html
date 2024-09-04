@@ -61,9 +61,23 @@ function searchSetlist() {
         }
 
         const resultDiv = document.getElementById('results');
-        resultDiv.innerHTML = matchingData.map(item => `
-            <p><a href="./setlist.html?id=${item.id}">${item.date} ${item.LIVEtitle}</a></p>
-        `).join('');
+
+        resultDiv.innerHTML = matchingData.map(item => {
+            let setlistItems = item.setlist.map(song => {
+                if (Array.isArray(song)) {
+                    return song.medley.map(medleySong => {
+                        return `<div>${medleySong}</div>`;
+                    }).join('');
+                } else {
+                    return `<div>${song}</div>`;
+                }
+            }).join('');
+
+            return `
+                <p><a href="./setlist.html?id=${item.id}">${item.date} ${item.LIVEtitle}</a></p>
+                ${setlistItems}
+            `;
+        }).join('');
 
         document.getElementById('title').innerText = `「${name}」の披露一覧：${count}回`;
     });
