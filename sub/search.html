@@ -47,7 +47,7 @@ function searchSetlist() {
 
     loadJSON('../setlist.json', function(data) {
         const matchingData = data.filter(item =>
-            (item.setlist && item.setlist.flat(Infinity).includes(name)) ||
+            (item.setlist && flattenSetlist(item.setlist).includes(name)) ||
             (item.encore && item.encore.includes(name)) ||
             (item.Wencore && item.Wencore === name)
         );
@@ -64,12 +64,12 @@ function searchSetlist() {
 
         resultDiv.innerHTML = matchingData.map(item => {
             let setlistItems = item.setlist.map(song => {
-                if (Array.isArray(song)) {
+                if (typeof song === 'string') {
+                    return `<div>${song}</div>`;
+                } else if (Array.isArray(song.medley)) {
                     return song.medley.map(medleySong => {
                         return `<div>${medleySong}</div>`;
                     }).join('');
-                } else {
-                    return `<div>${song}</div>`;
                 }
             }).join('');
 
@@ -80,6 +80,16 @@ function searchSetlist() {
         }).join('');
 
         document.getElementById('title').innerText = `「${name}」の披露一覧：${count}回`;
+    });
+}
+
+function flattenSetlist(setlist) {
+    return setlist.flatMap(song => {
+        if (typeof song === 'string') {
+            return song;
+        } else if (Array.isArray(song.medley)) {
+            return song.medley;
+        }
     });
 }
 
