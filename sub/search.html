@@ -44,34 +44,32 @@ function searchSetlist() {
     const url = window.location.href;
     const queryParams = parseQueryString(url);
     const name = queryParams.name;
-    
+
     loadJSON('../setlist.json', function(data) {
         const matchingData = data.filter(item =>
             (item.setlist && item.setlist.includes(name)) ||
             (item.encore && item.encore.includes(name)) ||
             (item.Wencore && item.Wencore === name) ||
-            (item.setlist && item.setlist.some(song => song.medley && song.medley.includes(name)))
+            (item.medley && item.medley.includes(name))
         );
-        
+
         const count = matchingData.length;
-        
+
         if (count === 0) {
             document.getElementById('title').innerText = `「${name}」の披露一覧：0回`;
             document.getElementById('results').innerHTML = '<p>No live information found for the provided name.</p>';
             return;
         }
-        
-        // Display the results
+
         const resultDiv = document.getElementById('results');
-        resultDiv.innerHTML = matchingData.map(item => {
-            return `<p><a href="./setlist.html?id=${item.id}">${item.date} ${item.LIVEtitle}</a></p>`;
-        }).join('');
-        
+        resultDiv.innerHTML = matchingData.map(item => `
+            <p><a href="./setlist.html?id=${item.id}">${item.date} ${item.LIVEtitle}</a></p>
+        `).join('');
+
         document.getElementById('title').innerText = `「${name}」の披露一覧：${count}回`;
     });
 }
 
-// Call searchSetlist function on page load
 searchSetlist();
 </script>
 </body>
