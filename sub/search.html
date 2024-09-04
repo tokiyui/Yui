@@ -5,23 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>楽曲披露一覧</title>
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
-    }
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
 </style>
 </head>
 <body>
 <h2 id="title"></h2>
 <div id="results"></div>
-
 <script>
 function loadJSON(url, callback) {
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
     xobj.open('GET', url, true);
     xobj.onreadystatechange = function () {
-        if (xobj.readyState == 4 && xobj.status == 200) {
+        if (xobj.readyState == 4 && xobj.status == "200") {
             callback(JSON.parse(xobj.responseText));
         }
     };
@@ -45,29 +44,29 @@ function searchSetlist() {
     const url = window.location.href;
     const queryParams = parseQueryString(url);
     const name = queryParams.name;
-
+    
     loadJSON('../setlist.json', function(data) {
-        const matchingData = data.filter(item => 
+        const matchingData = data.filter(item =>
             (item.setlist && item.setlist.includes(name)) ||
             (item.encore && item.encore.includes(name)) ||
             (item.Wencore && item.Wencore === name) ||
-            (item.setlist && item.setlist.some(song => typeof song === 'object' && song.medley && song.medley.includes(name)))
+            (item.setlist && item.setlist.some(song => song.medley && song.medley.includes(name)))
         );
-
+        
         const count = matchingData.length;
-
+        
         if (count === 0) {
             document.getElementById('title').innerText = `「${name}」の披露一覧：0回`;
             document.getElementById('results').innerHTML = '<p>No live information found for the provided name.</p>';
             return;
         }
-
+        
         // Display the results
         const resultDiv = document.getElementById('results');
-        resultDiv.innerHTML = matchingData.map(item => `
-            <p><a href="./setlist.html?id=${item.id}">${item.date} ${item.LIVEtitle}</a></p>
-        `).join('');
-
+        resultDiv.innerHTML = matchingData.map(item => {
+            return `<p><a href="./setlist.html?id=${item.id}">${item.date} ${item.LIVEtitle}</a></p>`;
+        }).join('');
+        
         document.getElementById('title').innerText = `「${name}」の披露一覧：${count}回`;
     });
 }
