@@ -48,15 +48,16 @@
 
             loadJSON('../setlist.json', function(data) {
                 const matchingData = data.filter(item => {
-                    const setlistIncludesName = item.setlist && item.setlist.some(song => {
+                    const setlistIncludesName = Array.isArray(item.setlist) && item.setlist.some(song => {
                         if (typeof song === 'string') {
                             return song.includes(name);
-                        } else if (typeof song === 'object' && song.medley) {
+                        } else if (typeof song === 'object' && Array.isArray(song.medley)) {
                             return song.medley.some(medleySong => medleySong.includes(name));
                         }
                         return false;
                     });
-                    const encoreIncludesName = item.encore && item.encore.includes(name);
+
+                    const encoreIncludesName = Array.isArray(item.encore) && item.encore.includes(name);
                     const WencoreIncludesName = item.Wencore && item.Wencore === name;
 
                     return setlistIncludesName || encoreIncludesName || WencoreIncludesName;
