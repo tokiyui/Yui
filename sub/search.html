@@ -21,7 +21,7 @@ function loadJSON(url, callback) {
     xobj.overrideMimeType("application/json");
     xobj.open('GET', url, true);
     xobj.onreadystatechange = function () {
-        if (xobj.readyState == 4 && xobj.status == "200") {
+        if (xobj.readyState == 4 && xobj.status == 200) {
             callback(JSON.parse(xobj.responseText));
         }
     };
@@ -50,7 +50,8 @@ function searchSetlist() {
         const matchingData = data.filter(item => 
             (item.setlist && item.setlist.includes(name)) ||
             (item.encore && item.encore.includes(name)) ||
-            (item.Wencore && item.Wencore === name)
+            (item.Wencore && item.Wencore === name) ||
+            (item.setlist && item.setlist.some(song => typeof song === 'object' && song.medley && song.medley.includes(name)))
         );
 
         const count = matchingData.length;
