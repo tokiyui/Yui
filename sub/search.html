@@ -47,10 +47,9 @@ function searchSetlist() {
 
     loadJSON('../setlist.json', function(data) {
         const matchingData = data.filter(item =>
-            (item.setlist && item.setlist.includes(name)) ||
+            (item.setlist && (item.setlist.includes(name) || (item.setlist.some(setlistItem => typeof setlistItem === 'object' && setlistItem.medley && setlistItem.medley.includes(name))))) ||
             (item.encore && item.encore.includes(name)) ||
-            (item.Wencore && item.Wencore === name) ||
-            (item.medley && (item.medley.includes(name) || item.medley.some(medleyItem => typeof medleyItem === 'string' && medleyItem === name)))
+            (item.Wencore && item.Wencore === name)
         );
 
         const count = matchingData.length;
