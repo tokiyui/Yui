@@ -1,99 +1,85 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>楽曲披露一覧</title>
-<style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>楽曲披露一覧</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+    </style>
 </head>
 <body>
-<h2 id="title"></h2>
-<div id="results"></div>
-<script>
-function loadJSON(url, callback) {
-    var xobj = new XMLHttpRequest();
-    xobj.overrideMimeType("application/json");
-    xobj.open('GET', url, true);
-    xobj.onreadystatechange = function () {
-        if (xobj.readyState == 4 && xobj.status == "200") {
-            callback(JSON.parse(xobj.responseText));
-        }
-    };
-    xobj.send(null);
-}
+    <h2 id="title"></h2>
+    <div id="results"></div>
 
-function parseQueryString(url) {
-    var params = {};
-    var parser = document.createElement('a');
-    parser.href = url;
-    var query = parser.search.substring(1);
-    var vars = query.split('&');
-    for (var i = 0; i < vars.length; i++) {
-        var pair = vars[i].split('=');
-        params[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1]);
-    }
-    return params;
-}
-
-function searchSetlist() {
-    const url = window.location.href;
-    const queryParams = parseQueryString(url);
-    const name = queryParams.name;
-
-    loadJSON('../setlist.json', function(data) {
-        const matchingData = data.filter(item =>
-            (item.setlist && flattenSetlist(item.setlist).includes(name)) ||
-            (item.encore && item.encore.includes(name)) ||
-            (item.Wencore && item.Wencore === name)
-        );
-
-        const count = matchingData.length;
-
-        if (count === 0) {
-            document.getElementById('title').innerText = `「${name}」の披露一覧：0回`;
-            document.getElementById('results').innerHTML = '<p>No live information found for the provided name.</p>';
-            return;
-        }
-
-        const resultDiv = document.getElementById('results');
-
-        resultDiv.innerHTML = matchingData.map(item => {
-            let setlistItems = item.setlist.map(song => {
-                if (typeof song === 'string') {
-                    return `<div>${song}</div>`;
-                } else if (Array.isArray(song.medley)) {
-                    return song.medley.map(medleySong => {
-                        return `<div>${medleySong}</div>`;
-                    }).join('');
+    <script>
+        function loadJSON(url, callback) {
+            var xobj = new XMLHttpRequest();
+            xobj.overrideMimeType("application/json");
+            xobj.open('GET', url, true);
+            xobj.onreadystatechange = function () {
+                if (xobj.readyState == 4 && xobj.status == "200") {
+                    callback(JSON.parse(xobj.responseText));
                 }
-            }).join('');
-
-            return `
-                <p><a href="./setlist.html?id=${item.id}">${item.date} ${item.LIVEtitle}</a></p>
-                ${setlistItems}
-            `;
-        }).join('');
-
-        document.getElementById('title').innerText = `「${name}」の披露一覧：${count}回`;
-    });
-}
-
-function flattenSetlist(setlist) {
-    return setlist.flatMap(song => {
-        if (typeof song === 'string') {
-            return song;
-        } else if (Array.isArray(song.medley)) {
-            return song.medley;
+            };
+            xobj.send(null);
         }
-    });
-}
 
-searchSetlist();
-</script>
+        function parseQueryString(url) {
+            var params = {};
+            var parser = document.createElement('a');
+            parser.href = url;
+            var query = parser.search.substring(1);
+            var vars = query.split('&');
+            for (var i = 0; i < vars.length; i++) {
+                var pair = vars[i].split('=');
+                params[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1]);
+            }
+            return params;
+        }
+
+        function searchSetlist() {
+            const url = window.location.href;
+            const queryParams = parseQueryString(url);
+            const name = queryParams.name;
+
+            loadJSON('../setlist.json', function(data) {
+                const matchingData = data.filter(item => {
+                    const setlistIncludesName = item.setlist && item.setlist.some(song => {
+                        if (typeof song === 'string') {
+                            return song.includes(name);
+                        } else if (typeof song === 'object' && song.medley) {
+                            return song.medley.some(medleySong => medleySong.includes(name));
+                        }
+                        return false;
+                    });
+                    const encoreIncludesName = item.encore && item.encore.includes(name);
+                    const WencoreIncludesName = item.Wencore && item.Wencore === name;
+
+                    return setlistIncludesName || encoreIncludesName || WencoreIncludesName;
+                });
+
+                const count = matchingData.length;
+
+                if (count === 0) {
+                    document.getElementById('title').innerText = `「${name}」の披露一覧：0回`;
+                    document.getElementById('results').innerHTML = '<p>No live information found for the provided name.</p>';
+                    return;
+                }
+
+                const resultDiv = document.getElementById('results');
+                resultDiv.innerHTML = matchingData.map(item => `
+                    <p><a href="./setlist.html?id=${item.id}">${item.date} ${item.LIVEtitle}</a></p>
+                `).join('');
+
+                document.getElementById('title').innerText = `「${name}」の披露一覧：${count}回`;
+            });
+        }
+
+        searchSetlist();
+    </script>
 </body>
 </html>
