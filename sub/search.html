@@ -50,7 +50,7 @@ function searchSetlist() {
             (item.setlist && item.setlist.includes(name)) ||
             (item.encore && item.encore.includes(name)) ||
             (item.Wencore && item.Wencore === name) ||
-            (item.medley && (item.medley.includes(name) || (item.medley.some(medleyItem => typeof medleyItem === 'string' && medleyItem === name)))
+            (item.medley && (item.medley.includes(name) || item.medley.some(medleyItem => typeof medleyItem === 'string' && medleyItem === name))
         );
 
         const count = matchingData.length;
