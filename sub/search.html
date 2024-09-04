@@ -49,7 +49,7 @@ function searchSetlist() {
         const matchingData = data.filter(item =>
             (item.setlist && item.setlist.some(setlistItem =>
                 typeof setlistItem === 'string' && setlistItem === name ||
-                typeof setlistItem === 'object' && setlistItem.medley && setlistItem.medley.includes(name)
+                (typeof setlistItem === 'object' && setlistItem.medley && setlistItem.medley.includes(name))
             )) ||
             (item.encore && item.encore.includes(name)) ||
             (item.Wencore && item.Wencore === name)
