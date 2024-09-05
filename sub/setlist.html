@@ -42,7 +42,7 @@ function searchSetlist() {
   const queryParams = parseQueryString(url);
   const name = queryParams.name;
 
-  loadJSON('./setlist.json', function(data) {
+  loadJSON('../setlist.json', function(data) {
     const matchingData = data.filter(item => {
       return (item.setlist.includes(name) || 
               (item.medley && item.medley.some(song => song === name)));
