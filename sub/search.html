@@ -50,9 +50,7 @@ function searchSetlist() {
             (item.setlist && item.setlist.includes(name)) ||
             (item.encore && item.encore.includes(name)) ||
             (item.Wencore && item.Wencore === name) ||
-            (item.medley && item.medley.some(medleyItem =>
-                typeof medleyItem === 'string' ? medleyItem === name : medleyItem.includes(name)
-            ))
+            (item.medley && checkMedley(item.medley, name))
         );
 
         const count = matchingData.length;
@@ -69,6 +67,17 @@ function searchSetlist() {
         `).join('');
 
         document.getElementById('title').innerText = `「${name}」の披露一覧：${count}回`;
+    });
+}
+
+function checkMedley(medley, name) {
+    return medley.some(item => {
+        if (typeof item === 'string') {
+            return item === name;
+        } else if (item.medley) {
+            return item.medley.includes(name);
+        }
+        return false;
     });
 }
 
