@@ -59,22 +59,18 @@ function searchSetlist() {
         });
       }
 
-      if (Array.isArray(item.setlist)) {
-        extractSongs(item.setlist);
-      }
-
-      if (Array.isArray(item.encore)) {
-        if (!Array.isArray(item.encore)) {
-          item.encore = [item.encore];
+      function processSection(section) {
+        if (section) {
+          if (!Array.isArray(section)) {
+            section = [section];
+          }
+          extractSongs(section);
         }
-        extractSongs(item.encore);
       }
 
-      if (Array.isArray(item.Wencore)) {
-        extractSongs(item.Wencore);
-      } else if (Array.isArray(item.encore) && Array.isArray(item.encore[0])) {
-        extractSongs(item.encore[0]);
-      }
+      processSection(item.setlist);
+      processSection(item.encore);
+      processSection(item.Wencore);
 
       return allSongs.includes(name);
     });
