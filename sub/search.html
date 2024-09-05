@@ -45,7 +45,7 @@ const name = queryParams.name;
 
 loadJSON('../setlist.json', function(data) {
     const matchingData = data.filter(item =>
-        item.setlist && item.setlist.flat().includes(name)
+        item.setlist && item.setlist.some(sublist => Array.isArray(sublist) ? sublist.includes(name) : sublist === name)
     );
 
     const count = matchingData.length;
