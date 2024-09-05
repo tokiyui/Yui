@@ -54,6 +54,8 @@ function searchSetlist() {
             (item.medley && item.medley.includes(name))
         );
 
+        console.log(item.setlist.medley);
+
         const count = matchingData.length;
 
         if (count === 0) {
