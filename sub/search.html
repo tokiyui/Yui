@@ -64,6 +64,9 @@ function searchSetlist() {
       }
 
       if (Array.isArray(item.encore)) {
+        if (!Array.isArray(item.encore)) {
+          item.encore = [item.encore];
+        }
         extractSongs(item.encore);
       }
 
