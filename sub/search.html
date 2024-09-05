@@ -48,13 +48,15 @@ function searchSetlist() {
   loadJSON('../setlist.json', function(data) {
     const matchingData = data.filter(item => {
       let allSongs = [];
-      item.setlist.forEach(song => {
-        if (typeof song === 'string') {
-          allSongs.push(song);
-        } else if (song.medley) {
-          allSongs = allSongs.concat(song.medley);
-        }
-      });
+      if (Array.isArray(item.setlist)) {
+        item.setlist.forEach(song => {
+          if (typeof song === 'string') {
+            allSongs.push(song);
+          } else if (song.medley) {
+            allSongs = allSongs.concat(song.medley);
+          }
+        });
+      }
       return allSongs.includes(name);
     });
 
