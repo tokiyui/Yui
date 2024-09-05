@@ -45,17 +45,13 @@ function searchSetlist() {
     const queryParams = parseQueryString(url);
     const name = queryParams.name;
 
-    loadJSON('../setlist.json', function(data) {
-        const matchingData = data.filter(item =>
-            (item.setlist && item.setlist.includes(name)) ||
-            (item.setlist.medley && item.setlist.medley.includes(name)) ||
-            (item.encore && item.encore.includes(name)) ||
-            (item.Wencore && item.Wencore === name) ||
-            (item.medley && item.medley.includes(name))
-            console.log(item.setlist.medley);                          
-        );
-
-        
+loadJSON('../setlist.json', function(data) {
+    const matchingData = data.filter(item =>
+        (item.setlist && (item.setlist.includes(name) || (item.setlist.medley && item.setlist.medley.includes(name)))) ||
+        (item.encore && item.encore.includes(name)) ||
+        (item.Wencore && item.Wencore === name) ||
+        (item.medley && item.medley.includes(name))
+    );
 
         const count = matchingData.length;
 
