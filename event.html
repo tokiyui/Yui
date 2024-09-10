@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水瀬いのりイベントデータベース</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+<h2>水瀬いのりイベントデータベース <a href="index.html">楽曲一覧はこちら</a></h2>
+    <div id="checkboxContainer"></div>
+
+    <table id="eventTable">
+        <tr>
+            <th>年</th>
+            <th>月</th>
+            <th>日</th>
+            <th>曜日</th>
+            <th>時刻</th>
+            <th>大分類</th>
+            <th>中分類</th>
+            <th>小分類</th>
+            <th>タイトル</th>
+            <th>詳細タイトル</th>
+            <th>都道府県</th>
+            <th>会場</th>
+            <th>with</th>
+            <th>備考</th>
+            <th>セットリスト</th>
+        </tr>
+    </table>
+
+    <script>
+        fetch('event.json')
+            .then(response => response.json())
+            .then(data => {
+                const eventTable = document.getElementById('eventTable');
+
+                function populateTable(data) {
+                    eventTable.innerHTML = '<tr><th>年</th><th>月</th><th>日</th><th>曜日</th><th>時刻</th><th>大分類</th><th>中分類</th><th>小分類</th><th>タイトル</th><th>詳細タイトル</th><th>都道府県</th><th>会場</th><th>with</th><th>備考</th><th>セットリスト</th></tr>';
+
+                    data.forEach(event => {
+                        const row = eventTable.insertRow(-1);
+                        row.insertCell().textContent = event.Year;
+                        row.insertCell().textContent = event.Month;
+                        row.insertCell().textContent = event.Day;
+                        row.insertCell().textContent = event.Weekday;
+                        row.insertCell().textContent = event['Start Time'];
+                        row.insertCell().textContent = event.class1;
+                        row.insertCell().textContent = event.class2;
+                        row.insertCell().textContent = event.class3;
+                        row.insertCell().textContent = event.title;
+                        row.insertCell().textContent = event.title2;
+                        row.insertCell().textContent = event.prefecture;
+                        row.insertCell().textContent = event.Venue;
+                        row.insertCell().textContent = event.sponsor;
+                        row.insertCell().textContent = event.info;
+                        if (event.id) {
+                            const setlistCell = row.insertCell();
+                            const setlistLink = document.createElement('a');
+                            setlistLink.href = `https://tokiyui.github.io/Inori/sub/setlist.html?id=${event.id}`;
+                            setlistLink.textContent = 'セットリスト';
+                            setlistCell.appendChild(setlistLink);
+                        } else {
+                            row.insertCell().textContent = '';
+                        }
+                    });
+                }
+
+                populateTable(data);
+
+                const checkboxesData = [
+                    { id: 'year', label: '年', values: ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'] },
+                    { id: 'month', label: '月', values: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'] },
+                    { id: 'youbi', label: '曜日', values: ['日', '月', '火', '水', '木', '金', '土'] },
+                    { id: 'prefecture', label: '都道府県', values: ['東京', '神奈川', '千葉', '埼玉', '愛知', '大阪', '北海道', '青森', '岩手', '宮城', '秋田', '山形', '福島', '茨城', '栃木', '群馬', 
+                                                                    '新潟', '富山', '石川', '福井', '山梨', '長野', '岐阜', '静岡', '三重', '滋賀', '京都', '兵庫', '奈良', '和歌山', '鳥取', '島根', 
+                                                                    '岡山', '広島', '山口', '徳島', '香川', '愛媛', '高知', '福岡', '佐賀', '長崎', '熊本', '大分', '宮崎', '鹿児島', '沖縄', 
+                                                                    '中国', '台湾', '香港' ,'タイ'] },
+                    { id: 'class1', label: '大分類', values: ['ライブ', 'イベント', 'リリース', 'ツアー', 'フェス', '町民集会', 'シングル', 'アルバム'] },
+                ];
+
+                const checkboxContainer = document.getElementById('checkboxContainer');
+
+                checkboxesData.forEach(checkboxData => {
+                    const div = document.createElement('div');
+                    div.innerHTML = `<label for="${checkboxData.id}Checkboxes">${checkboxData.label}</label>`;
+                    checkboxData.values.forEach(value => {
+                        div.innerHTML += `
+                            <input type="checkbox" id="${checkboxData.id}${value}" value="${value}">${value}
+                        `;
+                    });
+                    checkboxContainer.appendChild(div);
+                });
+
+                const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                checkboxes.forEach(checkbox => {
+                    checkbox.addEventListener('change', () => {
+                        const selectedYears = [...document.querySelectorAll('input[type="checkbox"][id^="year"]:checked')].map(cb => cb.value);
+                        const selectedMonths = [...document.querySelectorAll('input[type="checkbox"][id^="month"]:checked')].map(cb => cb.value);
+                        const selectedYoubis = [...document.querySelectorAll('input[type="checkbox"][id^="youbi"]:checked')].map(cb => cb.value);
+                        const selectedPrefectures = [...document.querySelectorAll('input[type="checkbox"][id^="prefecture"]:checked')].map(cb => cb.value);
+                        const selectedClass = [...document.querySelectorAll('input[type="checkbox"][id^="class1"]:checked')].map(cb => cb.value);
+                        
+                        const filteredData = data.filter(event =>
+                            (selectedYears.length === 0 || selectedYears.includes(event.Year)) &&
+                            (selectedMonths.length === 0 || selectedMonths.includes(event.Month)) &&
+                            (selectedYoubis.length === 0 || selectedYoubis.includes(event.Weekday)) &&
+                            (selectedPrefectures.length === 0 || selectedPrefectures.includes(event.prefecture)) &&
+                            ((selectedClass.length === 0 || selectedClass.includes(event.class1)) || (selectedClass.length === 0 || selectedClass.includes(event.class2)))
+                        );
+                        populateTable(filteredData);
+                    });
+                });
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+
+</body>
+
+</html>
