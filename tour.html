@@ -88,42 +88,48 @@
 
   <div class="container" id="setlistContainer"></div>
 
-  <script>
-   const concertTable = document.getElementById('concertTable');
-    const tourSelect = document.getElementById('tourSelect');
-    const setlistContainer = document.getElementById('setlistContainer');
+    <script>
+        const concertTable = document.getElementById('concertTable');
+        const tourSelect = document.getElementById('tourSelect');
+        const setlistContainer = document.getElementById('setlistContainer');
 
-    tourSelect.addEventListener('change', () => {
-      setlistContainer.innerHTML = '';
-      concertTable.innerHTML = '';
-      const selectedTour = tourSelect.value;
+        tourSelect.addEventListener('change', () => {
+            setlistContainer.innerHTML = '';
+            concertTable.innerHTML = '';
+            const selectedTour = tourSelect.value;
 
-      if (selectedTour) {        
-        fetch('setlist.json')
-          .then(response => response.json())
-          .then(data => {
-            const concerts = data.filter(item => item.tourtitle === selectedTour);
-            concerts.sort((a, b) => a.id.localeCompare(b.id));
+            if (selectedTour) {
+                fetch('setlist.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const concerts = data.filter(item => item.tourtitle === selectedTour);
+                        concerts.sort((a, b) => a.id.localeCompare(b.id));
 
-            const table = document.createElement('table');
+                        const table = document.createElement('table');
 
-            const headerRow = table.insertRow();
-            headerRow.insertCell().textContent = '開催日';
-            concerts.forEach(concert => {
-              headerRow.insertCell().textContent = concert.date;
-            });
+                        const headerRow = table.insertRow();
+                        headerRow.insertCell().textContent = '';
+                        concerts.forEach(concert => {
+                            headerRow.insertCell().textContent = concert.LIVEtitle.replace(concert.tourtitle, '');
+                        });
+                        
+                        const dateRow = table.insertRow();
+                        dateRow.insertCell().textContent = '開催日';
+                        concerts.forEach(concert => {
+                            dateRow.insertCell().textContent = concert.date;
+                        });
 
-            const venueRow = table.insertRow();
-            venueRow.insertCell().textContent = '会場';
-            concerts.forEach(concert => {
-              venueRow.insertCell().textContent = concert.venue;
-            });
+                        const venueRow = table.insertRow();
+                        venueRow.insertCell().textContent = '会場';
+                        concerts.forEach(concert => {
+                            venueRow.insertCell().textContent = concert.venue;
+                        });
 
-            const row = table.insertRow();
-            row.insertCell().textContent = '';
-            concerts.forEach(concert => {
-              row.insertCell().textContent = '【セットリスト】';
-            });
+                        const row = table.insertRow();
+                        row.insertCell().textContent = '';
+                        concerts.forEach(concert => {
+                            row.insertCell().textContent = '【セットリスト】';
+                        });
 
             const setlistRows = concerts[0].setlist.length;
 
