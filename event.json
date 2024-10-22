@@ -12543,7 +12543,10 @@
         "id": ""
     },
     {
-        "Artist": "ゆいかおり",
+        "Artist": [
+            "小倉唯",
+            "ゆいかおり"
+        ],
         "Year": "2016",
         "Month": "8",
         "Day": "28",
@@ -13497,7 +13500,10 @@
         "id": ""
     },
     {
-        "Artist": "ゆいかおり",
+        "Artist": [
+            "小倉唯",
+            "ゆいかおり"
+        ],
         "Year": "2015",
         "Month": "8",
         "Day": "30",
@@ -13569,7 +13575,10 @@
         "id": ""
     },
     {
-        "Artist": "ゆいかおり",
+        "Artist": [
+            "小倉唯",
+            "ゆいかおり"
+        ],
         "Year": "2015",
         "Month": "8",
         "Day": "8",
@@ -13806,7 +13815,10 @@
         "id": ""
     },
     {
-        "Artist": "ゆいかおり",
+        "Artist": [
+            "小倉唯",
+            "ゆいかおり"
+        ],
         "Year": "2015",
         "Month": "6",
         "Day": "21",
@@ -13824,7 +13836,10 @@
         "id": ""
     },
     {
-        "Artist": "ゆいかおり",
+        "Artist": [
+            "小倉唯",
+            "ゆいかおり"
+        ],
         "Year": "2015",
         "Month": "6",
         "Day": "20",
@@ -14517,7 +14532,10 @@
         "id": ""
     },
     {
-        "Artist": "ゆいかおり",
+        "Artist": [
+            "小倉唯",
+            "ゆいかおり"
+        ],
         "Year": "2014",
         "Month": "8",
         "Day": "31",
@@ -15420,7 +15438,10 @@
         "id": ""
     },
     {
-        "Artist": "ゆいかおり",
+        "Artist": [
+            "小倉唯",
+            "ゆいかおり"
+        ],
         "Year": "2013",
         "Month": "8",
         "Day": "25",
@@ -16800,25 +16821,10 @@
         "id": ""
     },
     {
-        "Artist": "ゆいかおり",
-        "Year": "2012",
-        "Month": "8",
-        "Day": "25",
-        "Weekday": "土",
-        "Start Time": "16:00",
-        "class1": "",
-        "class2": "",
-        "class3": "",
-        "title": "Animelo Summer Live 2012 -INFINITY∞- 1日目",
-        "title2": "",
-        "prefecture": "",
-        "Venue": "さいたまスーパーアリーナ",
-        "sponsor": "",
-        "info": "",
-        "id": ""
-    },
-    {
-        "Artist": "Stylips",
+        "Artist": [
+            "ゆいかおり",
+            "Stylips"
+        ],
         "Year": "2012",
         "Month": "8",
         "Day": "25",
@@ -18043,8 +18049,8 @@
     },
     {
         "Artist": [
-            "Stylips",
-            "ゆいかおり"
+            "ゆいかおり",
+            "Stylips"           
         ],
         "Year": "2012",
         "Month": "1",
@@ -18383,25 +18389,7 @@
         "prefecture": "",
         "Venue": "AKIHABARAゲーマーズ本店",
         "sponsor": "",
-        "info": "",
-        "id": ""
-    },
-    {
-        "Artist": "小倉唯",
-        "Year": "2011",
-        "Month": "9",
-        "Day": "24",
-        "Weekday": "土",
-        "Start Time": "13:30",
-        "class1": "",
-        "class2": "",
-        "class3": "",
-        "title": "ゆいかおり1stアルバム「Puppy」キャンペーンイベント AKIHABARAゲーマーズ本店",
-        "title2": "",
-        "prefecture": "",
-        "Venue": "AKIHABARAゲーマーズ本店",
-        "sponsor": "",
-        "info": "",
+        "info": "小倉唯のみ",
         "id": ""
     },
     {
@@ -18419,25 +18407,7 @@
         "prefecture": "",
         "Venue": "アニメイト秋葉原1号館",
         "sponsor": "",
-        "info": "",
-        "id": ""
-    },
-    {
-        "Artist": "石原夏織",
-        "Year": "2011",
-        "Month": "9",
-        "Day": "23",
-        "Weekday": "金",
-        "Start Time": "13:30",
-        "class1": "",
-        "class2": "",
-        "class3": "",
-        "title": "ゆいかおり1stアルバム「Puppy」キャンペーンイベント アニメイト秋葉原店",
-        "title2": "",
-        "prefecture": "",
-        "Venue": "アニメイト秋葉原1号館",
-        "sponsor": "",
-        "info": "",
+        "info": "石原夏織のみ",
         "id": ""
     },
     {
