@@ -3330,25 +3330,10 @@
         "id": ""
     },
     {
-        "Artist": "石原夏織",
-        "Year": "2023",
-        "Month": "7",
-        "Day": "9",
-        "Weekday": "日",
-        "Start Time": "17:00",
-        "class1": "",
-        "class2": "",
-        "class3": "",
-        "title": "LAWSON presents 朗読歌劇アルマギア ～First Live 2023～",
-        "title2": "",
-        "prefecture": "",
-        "Venue": "TACHIKAWA STAGE GARDEN(立川ステージガーデン)",
-        "sponsor": "",
-        "info": "",
-        "id": ""
-    },
-    {
-        "Artist": "小倉唯",
+        "Artist": [
+            "小倉唯",
+            "石原夏織"
+        ],
         "Year": "2023",
         "Month": "7",
         "Day": "9",
@@ -4860,43 +4845,7 @@
         "id": ""
     },
     {
-        "Artist": "石原夏織",
-        "Year": "2022",
-        "Month": "8",
-        "Day": "27",
-        "Weekday": "土",
-        "Start Time": "16:00",
-        "class1": "",
-        "class2": "",
-        "class3": "",
-        "title": "【出演者変更】Animelo Summer Live 2022 -Sparkle- 2日目",
-        "title2": "",
-        "prefecture": "",
-        "Venue": "さいたまスーパーアリーナ",
-        "sponsor": "",
-        "info": "",
-        "id": ""
-    },
-    {
         "Artist": "Stylips",
-        "Year": "2022",
-        "Month": "8",
-        "Day": "27",
-        "Weekday": "土",
-        "Start Time": "16:00",
-        "class1": "",
-        "class2": "",
-        "class3": "",
-        "title": "【出演者変更】Animelo Summer Live 2022 -Sparkle- 2日目",
-        "title2": "",
-        "prefecture": "",
-        "Venue": "さいたまスーパーアリーナ",
-        "sponsor": "",
-        "info": "",
-        "id": ""
-    },
-    {
-        "Artist": "小倉唯",
         "Year": "2022",
         "Month": "8",
         "Day": "27",
@@ -30852,7 +30801,10 @@
         "id": ""
     },
     {
-        "Artist": "石原夏織",
+        "Artist": [
+            "小倉唯",
+            "石原夏織"
+        ],
         "Year": "2009",
         "Month": "1",
         "Day": "17",
@@ -30870,25 +30822,10 @@
         "id": ""
     },
     {
-        "Artist": "小倉唯",
-        "Year": "2009",
-        "Month": "1",
-        "Day": "17",
-        "Weekday": "土",
-        "Start Time": "17:30",
-        "class1": "",
-        "class2": "",
-        "class3": "",
-        "title": "GIRLs-RockPop stadium vol.41～年初めイイナSP～ 第2部",
-        "title2": "",
-        "prefecture": "",
-        "Venue": "赤坂L@N(閉店)",
-        "sponsor": "",
-        "info": "",
-        "id": ""
-    },
-    {
-        "Artist": "石原夏織",
+        "Artist": [
+            "小倉唯",
+            "石原夏織"
+        ],
         "Year": "2009",
         "Month": "1",
         "Day": "17",
@@ -30906,25 +30843,10 @@
         "id": ""
     },
     {
-        "Artist": "小倉唯",
-        "Year": "2009",
-        "Month": "1",
-        "Day": "17",
-        "Weekday": "土",
-        "Start Time": "12:00",
-        "class1": "",
-        "class2": "",
-        "class3": "",
-        "title": "GIRLs-RockPop stadium vol.41～年初めイイナSP～ 第1部",
-        "title2": "",
-        "prefecture": "",
-        "Venue": "赤坂L@N(閉店)",
-        "sponsor": "",
-        "info": "",
-        "id": ""
-    },
-    {
-        "Artist": "石原夏織",
+        "Artist": [
+            "小倉唯",
+            "石原夏織"
+        ],
         "Year": "2009",
         "Month": "1",
         "Day": "11",
@@ -30942,25 +30864,10 @@
         "id": ""
     },
     {
-        "Artist": "小倉唯",
-        "Year": "2009",
-        "Month": "1",
-        "Day": "11",
-        "Weekday": "日",
-        "Start Time": "18:00",
-        "class1": "",
-        "class2": "",
-        "class3": "",
-        "title": "GIRLs-RockPop stadium vol.40～40回記念スペシャル～ 第2部",
-        "title2": "",
-        "prefecture": "",
-        "Venue": "旧SHIBUYA DESEO(移転済)",
-        "sponsor": "",
-        "info": "",
-        "id": ""
-    },
-    {
-        "Artist": "石原夏織",
+        "Artist": [
+            "小倉唯",
+            "石原夏織"
+        ],
         "Year": "2009",
         "Month": "1",
         "Day": "11",
@@ -30978,25 +30885,10 @@
         "id": ""
     },
     {
-        "Artist": "小倉唯",
-        "Year": "2009",
-        "Month": "1",
-        "Day": "11",
-        "Weekday": "日",
-        "Start Time": "13:00",
-        "class1": "",
-        "class2": "",
-        "class3": "",
-        "title": "GIRLs-RockPop stadium vol.40～40回記念スペシャル～ 第1部",
-        "title2": "",
-        "prefecture": "",
-        "Venue": "旧SHIBUYA DESEO(移転済)",
-        "sponsor": "",
-        "info": "",
-        "id": ""
-    },
-    {
-        "Artist": "石原夏織",
+        "Artist": [
+            "小倉唯",
+            "石原夏織"
+        ],
         "Year": "2008",
         "Month": "12",
         "Day": "23",
@@ -31014,25 +30906,10 @@
         "id": ""
     },
     {
-        "Artist": "小倉唯",
-        "Year": "2008",
-        "Month": "12",
-        "Day": "23",
-        "Weekday": "火",
-        "Start Time": "18:30",
-        "class1": "",
-        "class2": "",
-        "class3": "",
-        "title": "HAPPY! STYLE Xmas Special Talk LIVE “Tiny Xmas Fantasy” 2回目",
-        "title2": "",
-        "prefecture": "",
-        "Venue": "パシフィックヘブン(閉店)",
-        "sponsor": "",
-        "info": "",
-        "id": ""
-    },
-    {
-        "Artist": "石原夏織",
+        "Artist": [
+            "小倉唯",
+            "石原夏織"
+        ],
         "Year": "2008",
         "Month": "12",
         "Day": "23",
@@ -31050,25 +30927,10 @@
         "id": ""
     },
     {
-        "Artist": "小倉唯",
-        "Year": "2008",
-        "Month": "12",
-        "Day": "23",
-        "Weekday": "火",
-        "Start Time": "15:30",
-        "class1": "",
-        "class2": "",
-        "class3": "",
-        "title": "HAPPY! STYLE Xmas Special Talk LIVE “Tiny Xmas Fantasy” 1回目",
-        "title2": "",
-        "prefecture": "",
-        "Venue": "パシフィックヘブン(閉店)",
-        "sponsor": "",
-        "info": "",
-        "id": ""
-    },
-    {
-        "Artist": "石原夏織",
+        "Artist": [
+            "小倉唯",
+            "石原夏織"
+        ],
         "Year": "2008",
         "Month": "12",
         "Day": "13",
@@ -31086,43 +30948,10 @@
         "id": ""
     },
     {
-        "Artist": "小倉唯",
-        "Year": "2008",
-        "Month": "12",
-        "Day": "13",
-        "Weekday": "土",
-        "Start Time": "18:30",
-        "class1": "",
-        "class2": "",
-        "class3": "",
-        "title": "TANOSINA STAGE 2008 Vol.1 ～最寄駅は四ツ橋です～ 2回目",
-        "title2": "",
-        "prefecture": "",
-        "Venue": "大阪スクールオブミュージック専門学校 LS-1",
-        "sponsor": "",
-        "info": "",
-        "id": ""
-    },
-    {
-        "Artist": "石原夏織",
-        "Year": "2008",
-        "Month": "12",
-        "Day": "13",
-        "Weekday": "土",
-        "Start Time": "15:00",
-        "class1": "",
-        "class2": "",
-        "class3": "",
-        "title": "TANOSINA STAGE 2008 Vol.1 ～最寄駅は四ツ橋です～ 1回目",
-        "title2": "",
-        "prefecture": "",
-        "Venue": "大阪スクールオブミュージック専門学校 LS-1",
-        "sponsor": "",
-        "info": "",
-        "id": ""
-    },
-    {
-        "Artist": "小倉唯",
+        "Artist": [
+            "小倉唯",
+            "石原夏織"
+        ],
         "Year": "2008",
         "Month": "12",
         "Day": "13",
@@ -31302,25 +31131,10 @@
         "id": ""
     },
     {
-        "Artist": "石原夏織",
-        "Year": "2008",
-        "Month": "10",
-        "Day": "25",
-        "Weekday": "土",
-        "Start Time": "18:30",
-        "class1": "",
-        "class2": "",
-        "class3": "",
-        "title": "Fantastic Fantasy Vol.1",
-        "title2": "",
-        "prefecture": "",
-        "Venue": "原宿アストロホール(閉店)",
-        "sponsor": "",
-        "info": "",
-        "id": ""
-    },
-    {
-        "Artist": "小倉唯",
+        "Artist": [
+            "小倉唯",
+            "石原夏織"
+        ],
         "Year": "2008",
         "Month": "10",
         "Day": "25",
@@ -31374,7 +31188,10 @@
         "id": ""
     },
     {
-        "Artist": "石原夏織",
+        "Artist": [
+            "小倉唯",
+            "石原夏織"
+        ],
         "Year": "2008",
         "Month": "9",
         "Day": "7",
@@ -31392,25 +31209,10 @@
         "id": ""
     },
     {
-        "Artist": "小倉唯",
-        "Year": "2008",
-        "Month": "9",
-        "Day": "7",
-        "Weekday": "日",
-        "Start Time": "18:30",
-        "class1": "",
-        "class2": "",
-        "class3": "",
-        "title": "HAPPY! STYLE Communication Circuit 003 (2回目)",
-        "title2": "",
-        "prefecture": "",
-        "Venue": "表参道FAB(閉店)",
-        "sponsor": "",
-        "info": "",
-        "id": ""
-    },
-    {
-        "Artist": "石原夏織",
+        "Artist": [
+            "小倉唯",
+            "石原夏織"
+        ],
         "Year": "2008",
         "Month": "9",
         "Day": "7",
@@ -31428,25 +31230,10 @@
         "id": ""
     },
     {
-        "Artist": "小倉唯",
-        "Year": "2008",
-        "Month": "9",
-        "Day": "7",
-        "Weekday": "日",
-        "Start Time": "14:30",
-        "class1": "",
-        "class2": "",
-        "class3": "",
-        "title": "HAPPY! STYLE Communication Circuit 003 (1回目)",
-        "title2": "",
-        "prefecture": "",
-        "Venue": "表参道FAB(閉店)",
-        "sponsor": "",
-        "info": "",
-        "id": ""
-    },
-    {
-        "Artist": "石原夏織",
+        "Artist": [
+            "小倉唯",
+            "石原夏織"
+        ],
         "Year": "2008",
         "Month": "7",
         "Day": "6",
@@ -31464,43 +31251,10 @@
         "id": ""
     },
     {
-        "Artist": "小倉唯",
-        "Year": "2008",
-        "Month": "7",
-        "Day": "6",
-        "Weekday": "日",
-        "Start Time": "18:30",
-        "class1": "",
-        "class2": "",
-        "class3": "",
-        "title": "HAPPY! STYLE Communication Circuit 002 (2回目)",
-        "title2": "",
-        "prefecture": "",
-        "Venue": "表参道FAB(閉店)",
-        "sponsor": "",
-        "info": "",
-        "id": ""
-    },
-    {
-        "Artist": "石原夏織",
-        "Year": "2008",
-        "Month": "7",
-        "Day": "6",
-        "Weekday": "日",
-        "Start Time": "14:30",
-        "class1": "",
-        "class2": "",
-        "class3": "",
-        "title": "HAPPY! STYLE Communication Circuit 002 (1回目)",
-        "title2": "",
-        "prefecture": "",
-        "Venue": "表参道FAB(閉店)",
-        "sponsor": "",
-        "info": "",
-        "id": ""
-    },
-    {
-        "Artist": "小倉唯",
+        "Artist": [
+            "小倉唯",
+            "石原夏織"
+        ],
         "Year": "2008",
         "Month": "7",
         "Day": "6",
