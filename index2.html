@@ -76,7 +76,9 @@ function updateSongDetails(songs, CDs, setlists) {
 
     songs.forEach(song => {
         // CD情報取得
-        const matchingCDs = CDs.filter(cd => cd.CDtitle === song.CDtitle);
+        const matchingCDs = [].concat(song.CDtitle).flatMap(songCDtitle => {
+            return CDs.filter(cd => cd.CDtitle === songCDtitle);
+        });
 
         const oldestDate = matchingCDs.length > 0
             ? matchingCDs.reduce((oldest, current) => {
