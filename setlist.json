@@ -1,5 +1,153 @@
 [
     {
+        "LIVEtitle": "小倉唯 LIVE TOUR 2024 ~Bloomy × Meet you!~ 愛知公演",
+        "tourtitle": "小倉唯 LIVE TOUR 2024 ~Bloomy × Meet you!~",
+        "artist": "小倉唯",
+        "date": "2024年11月9日",
+        "venue": "福岡市民会館",
+        "id": "2024110901",
+        "setlist": [
+            "Lovely Happily Shiny Days",
+            "Happy Strawberry",
+            "Baby Sweet Berry Love",
+            "アコガレCollection!",
+            "花占いするの♡",
+            "Dear",
+            "恋の秒針",
+            "秘密♡Melody",
+            "スターチス",
+            "Wild☆Kitty",
+            "ドキドキラビリンス",
+            "Empty//Princess.",
+            "白く咲く花",
+            "Clear Morning",
+            "One and Only",
+            "Wind of Bloom"
+        ],
+        "encore": [          
+            "わくわくシャンプー&リンス",
+            {
+                "medley": [
+                    "Look@Me♡",
+                    "トキメキWeekend!",
+                    "Honey♥Come!!"
+                ]
+            },
+            "君色のキセキ"
+        ]
+    },
+    {
+        "LIVEtitle": "小倉唯 LIVE TOUR 2024 ~Bloomy × Meet you!~ 大阪公演",
+        "tourtitle": "小倉唯 LIVE TOUR 2024 ~Bloomy × Meet you!~",
+        "artist": "小倉唯",
+        "date": "2024年11月4日",
+        "venue": "フェニーチェ堺",
+        "id": "2024110401",
+        "setlist": [
+            "Lovely Happily Shiny Days",
+            "パンドラ♡ショコラ",
+            "Baby Sweet Berry Love",
+            "アコガレCollection!",
+            "花占いするの♡",
+            "シュガーハートエイク",
+            "恋の秒針",
+            "秘密♡Melody",
+            "センチメンタルメッセージ",
+            "Wild☆Kitty",
+            "ドキドキラビリンス",
+            "Empty//Princess.",
+            "Raise",
+            "Clear Morning",
+            "One and Only",
+            "Wind of Bloom"
+        ],
+        "encore": [          
+            "わくわくシャンプー&リンス",
+            {
+                "medley": [
+                    "Look@Me♡",
+                    "トキメキWeekend!",
+                    "Honey♥Come!!"
+                ]
+            },
+            "君色のキセキ"
+        ]
+    },
+    {
+        "LIVEtitle": "小倉唯 LIVE TOUR 2024 ~Bloomy × Meet you!~ 福岡公演",
+        "tourtitle": "小倉唯 LIVE TOUR 2024 ~Bloomy × Meet you!~",
+        "artist": "小倉唯",
+        "date": "2024年11月2日",
+        "venue": "福岡市民会館",
+        "id": "2024110201",
+        "setlist": [
+            "Lovely Happily Shiny Days",
+            "Happy Strawberry",
+            "Baby Sweet Berry Love",
+            "アコガレCollection!",
+            "花占いするの♡",
+            "Dear",
+            "恋の秒針",
+            "秘密♡Melody",
+            "スターチス",
+            "Wild☆Kitty",
+            "ドキドキラビリンス",
+            "Empty//Princess.",
+            "白く咲く花",
+            "Clear Morning",
+            "One and Only",
+            "Wind of Bloom"
+        ],
+        "encore": [          
+            "わくわくシャンプー&リンス",
+            {
+                "medley": [
+                    "Look@Me♡",
+                    "トキメキWeekend!",
+                    "Honey♥Come!!"
+                ]
+            },
+            "君色のキセキ"
+        ]
+    },
+    {
+        "LIVEtitle": "小倉唯 LIVE TOUR 2024 ~Bloomy × Meet you!~ 群馬公演",
+        "tourtitle": "小倉唯 LIVE TOUR 2024 ~Bloomy × Meet you!~",
+        "artist": "小倉唯",
+        "date": "2024年10月27日",
+        "venue": "ベイシア文化ホール",
+        "id": "2024102701",
+        "setlist": [
+            "Lovely Happily Shiny Days",
+            "Happy Strawberry",
+            "Baby Sweet Berry Love",
+            "アコガレCollection!",
+            "花占いするの♡",
+            "シュガーハートエイク",
+            "恋の秒針",
+            "秘密♡Melody",
+            "スターチス",
+            "Wild☆Kitty",
+            "ドキドキラビリンス",
+            "Empty//Princess.",
+            "Raise",
+            "Clear Morning",
+            "One and Only",
+            "Wind of Bloom"
+        ],
+        "encore": [          
+            "わくわくシャンプー&リンス",
+            {
+                "medley": [
+                    "Look@Me♡",
+                    "トキメキWeekend!",
+                    "Honey♥Come!!"
+                ]
+            },
+            "君色のキセキ"
+        ]
+    },
+    {
         "LIVEtitle": "小倉唯 LIVE TOUR 2024 ~Bloomy × Meet you!~ 神奈川公演",
         "tourtitle": "小倉唯 LIVE TOUR 2024 ~Bloomy × Meet you!~",
         "artist": "小倉唯",
@@ -15,11 +163,11 @@
             "シュガーハートエイク",
             "恋の秒針",
             "秘密♡Melody",
-            "スターチス",
+            "センチメンタルメッセージ",
             "Wild☆Kitty",
             "ドキドキラビリンス",
             "Empty//Princess.",
-            "Raise",
+            "白く咲く花",
             "Clear Morning",
             "One and Only",
             "Wind of Bloom"
