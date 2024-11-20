@@ -20,13 +20,25 @@
 </style>
 </head>
 <body>
-    <h2>&#9825;小倉唯楽曲一覧&#9825; <a href="tour.html">ツアーセットリスト比較ページ</a> <a href="my.html">未回収楽曲チェックツール</a> <a href="event.html">イベント検索ページ（ベータ版）</a></h2> 
+    <h2>&#9825;小倉唯楽曲一覧&#9825; 
+        <a href="tour.html">ツアーセットリスト比較ページ</a> 
+        <a href="my.html">未回収楽曲チェックツール</a> 
+        <a href="event.html">イベント検索ページ（ベータ版）</a>
+    </h2> 
+
+    <div>
+        <label><input type="radio" name="artist" value="小倉唯" checked> 小倉唯</label>
+        <label><input type="radio" name="artist" value="石原夏織"> 石原夏織</label>
+        <label><input type="radio" name="artist" value="ゆいかおり"> ゆいかおり</label>
+    </div>
+
     <table>
         <thead>
             <tr>
                 <th>楽曲名(クリックすると歌詞が開きます)</th>
+                <th>コール表</th>
                 <th>MV(抜け有)</th>
-	        <th>ライブ映像(抜け有)</th>
+                <th>ライブ映像(抜け有)</th>
                 <th>披露回数</th>
                 <th>最終披露日</th>
                 <th>作詞</th>
@@ -48,8 +60,9 @@
         return `${year}年${month}月${day}日`;
     }
 
-function updateSongDetails(songs, CDs, setlists) {
-    const songTable = document.getElementById('songTable');
+    function updateSongDetails(songs, CDs, setlists) {
+        const songTable = document.getElementById('songTable');
+        songTable.innerHTML = ""; // テーブルをリセット
 
     songs.forEach(song => {
         const matchingCDs = [].concat(song.CDtitle).flatMap(songCDtitle => {
@@ -98,58 +111,52 @@ function updateSongDetails(songs, CDs, setlists) {
 
         const lyricsClass = song.lyrics.includes('小倉唯') ? 'pink-cell' : '';
         const musicClass = song.music.includes('小倉唯') ? 'pink-cell' : '';
- 
+	    
+        const callLink = song.call ? `<a href="https://yuicom-callbook.hatenablog.com/entry/${song.call}" target="_blank">コール表</a>` : '';
         const MVLink = song.MVlink ? `<a href="https://www.youtube.com/watch?v=${song.MVlink}" target="_blank">MV</a>` : '';
-	    const videoLink = song.videolink ? `<a href="https://www.youtube.com/watch?v=${song.videolink}" target="_blank">ライブ映像</a>` : '';
+	const videoLink = song.videolink ? `<a href="https://www.youtube.com/watch?v=${song.videolink}" target="_blank">ライブ映像</a>` : '';
 	
-	    const row = `
-	    <tr>
-	    <td><a href="https://www.uta-net.com/song/${song.utanet}">${song.title}</a></td>
-            <td>${MVLink}</td>
-	    <td>${videoLink}</td> 
-            <td><a href="./sub/search.html?name=${song.title}">${performanceData.count}</a></td> 	
-            <td><a href="./sub/setlist.html?id=${performanceData.id}">${latestPerformanceDate}</a></td>
-            <td class="${lyricsClass}">${song.lyrics}</td>
-            <td class="${musicClass}">${song.music}</td>
-            <td>${song.arranger}</td>
-            <td>${song.length}</td>
-            <td>${song.CDtitle}</td>
-            <td>${formattedDate}</td>
-        </tr>
-        `;
+            const row = `
+            <tr>
+                <td><a href="https://www.uta-net.com/song/${song.utanet}">${song.title}</a></td>
+                <td>${song.call ? `<a href="https://yuicom-callbook.hatenablog.com/entry/${song.call}" target="_blank">コール表</a>` : ''}</td>
+                <td>${song.MVlink ? `<a href="https://www.youtube.com/watch?v=${song.MVlink}" target="_blank">MV</a>` : ''}</td>
+                <td>${song.videolink ? `<a href="https://www.youtube.com/watch?v=${song.videolink}" target="_blank">ライブ映像</a>` : ''}</td>
+                <td>${song.count || 0}</td>
+                <td>${song.latestPerformanceDate || '未披露'}</td>
+                <td>${song.lyrics}</td>
+                <td>${song.music}</td>
+                <td>${song.arranger}</td>
+                <td>${song.length}</td>
+                <td>${song.CDtitle}</td>
+                <td>${song.releaseDate || '未発表'}</td>
+            </tr>
+            `;
+            songTable.innerHTML += row;
+        });
+    }
 
-        songTable.innerHTML += row;
-    });
-}
-    
-Promise.all([
-    fetch('song.json').then(response => response.json()),
-    fetch('CD.json').then(response => response.json()),
-    fetch('setlist.json').then(response => response.json())
-]).then(([songs, CDs, setlists]) => {
-    const songCountMap = {}; // 曲ごとのカウントを管理するオブジェクト
+    Promise.all([
+        fetch('song.json').then(response => response.json()),
+        fetch('CD.json').then(response => response.json()),
+        fetch('setlist.json').then(response => response.json())
+    ]).then(([songs, CDs, setlists]) => {
+        const artistFilter = document.querySelectorAll('input[name="artist"]');
+        
+        // アーティスト選択時のフィルタリング
+        artistFilter.forEach(radio => {
+            radio.addEventListener('change', () => {
+                const selectedArtist = document.querySelector('input[name="artist"]:checked').value;
+                const filteredSongs = songs.filter(song => song.artist === selectedArtist);
+                updateSongDetails(filteredSongs, CDs, setlists);
+            });
+        });
 
-    // 曲ごとにカウントを管理
-    const countSong = song => {
-        const key = song.title + (song.artist || ''); // 曲の一意の識別子を作成
-        if (!songCountMap[key]) {
-            songCountMap[key] = 1; // 曲がまだカウントされていない場合はカウント
-            return true;
-        }
-        return false; // 既にカウントされている場合はスキップ
-    };
-
-    // メドレー内の曲を1回だけカウント
-    const filteredSongs = songs.filter(song => {
-        if (Array.isArray(song.medley)) {
-            return song.medley.some(medleySong => countSong(medleySong));
-        } else {
-            return countSong(song);
-        }
-    });
-
-    updateSongDetails(filteredSongs, CDs, setlists);
-}).catch(error => console.error('Failed to fetch data:', error));
+        // 初期表示
+        const selectedArtist = document.querySelector('input[name="artist"]:checked').value;
+        const filteredSongs = songs.filter(song => song.artist === selectedArtist);
+        updateSongDetails(filteredSongs, CDs, setlists);
+    }).catch(error => console.error('Failed to fetch data:', error));
 </script>
 </body>
 </html>
