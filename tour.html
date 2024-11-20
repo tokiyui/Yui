@@ -188,7 +188,14 @@
                 const indexCell = row.insertCell();
                 indexCell.textContent = 'EC' + (i + 1);
 
-                const encoreValues = encoreList.map(encore => encore[i] || '');
+                const encoreValues = encoreList.map(encore => {
+                  const song = encore.setlist[i];
+                  if (typeof song === 'object' && song.medley) {
+                    return `【メドレー】\n${song.medley.join('\n')}`; // メドレーの前に「【メドレー】」を追加
+                  } else {
+                    return song;
+                  }
+                });
                 const isSameEncore = encoreValues.every((val, idx, arr) => val === arr[0]);
                 
                 encoreValues.forEach((value, idx) => {
