@@ -26,11 +26,13 @@
         ],
         "encore": [          
             "わくわくシャンプー&リンス",
-            "medley": [
-                "Look@Me♡",
-                "トキメキWeekend!",
-                "Honey♥Come!!"
-            ],
+            {
+                "medley": [
+                    "Look@Me♡",
+                    "トキメキWeekend!",
+                    "Honey♥Come!!"
+                ]
+            },
             "君色のキセキ"
         ]
     },
