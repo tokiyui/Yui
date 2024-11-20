@@ -25,6 +25,7 @@
         <thead>
             <tr>
                 <th>楽曲名(クリックすると歌詞が開きます)</th>
+		<th>コール表</th>
                 <th>MV(抜け有)</th>
 	        <th>ライブ映像(抜け有)</th>
                 <th>披露回数</th>
@@ -98,9 +99,10 @@ function updateSongDetails(songs, CDs, setlists) {
 
         const lyricsClass = song.lyrics.includes('小倉唯') ? 'pink-cell' : '';
         const musicClass = song.music.includes('小倉唯') ? 'pink-cell' : '';
- 
+	    
+        const callLink = song.call ? `<a href="https://yuicom-callbook.hatenablog.com/entry/${song.call}" target="_blank">コール表</a>` : '';
         const MVLink = song.MVlink ? `<a href="https://www.youtube.com/watch?v=${song.MVlink}" target="_blank">MV</a>` : '';
-	    const videoLink = song.videolink ? `<a href="https://www.youtube.com/watch?v=${song.videolink}" target="_blank">ライブ映像</a>` : '';
+	const videoLink = song.videolink ? `<a href="https://www.youtube.com/watch?v=${song.videolink}" target="_blank">ライブ映像</a>` : '';
 	
 	    const row = `
 	    <tr>
