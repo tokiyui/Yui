@@ -1,5 +1,43 @@
 [
     {
+        "LIVEtitle": "小倉唯 LIVE TOUR 2024 ~Bloomy × Meet you!~ 横浜公演",
+        "tourtitle": "小倉唯 LIVE TOUR 2024 ~Bloomy × Meet you!~",
+        "artist": "小倉唯",
+        "date": "2024年11月17日",
+        "venue": "ベイシア文化ホール",
+        "id": "2024111701",
+        "setlist": [
+            "Lovely Happily Shiny Days",
+            "パンドラショコラ",
+            "Baby Sweet Berry Love",
+            "アコガレCollection!",
+            "花占いするの♡",
+            "シュガーハートエイク",
+            "恋の秒針",
+            "秘密♡Melody",
+            "スターチス",
+            "Wild☆Kitty",
+            "ドキドキラビリンス",
+            "Empty//Princess.",
+            "Raise",
+            "Clear Morning",
+            "One and Only",
+            "Wind of Bloom"
+        ],
+        "encore": [          
+            "わくわくシャンプー&リンス",
+            {
+                "medley": [
+                    "Look@Me♡",
+                    "トキメキWeekend!",
+                    "Honey♥Come!!"
+                ]
+            },
+            "君色のキセキ"
+        ],
+        "Wencore": ""
+    },
+    {
         "LIVEtitle": "小倉唯 LIVE TOUR 2024 ~Bloomy × Meet you!~ 愛知公演",
         "tourtitle": "小倉唯 LIVE TOUR 2024 ~Bloomy × Meet you!~",
         "artist": "小倉唯",
