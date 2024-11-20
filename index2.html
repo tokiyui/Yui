@@ -70,41 +70,42 @@
         return `${year}年${month}月${day}日`;
     }
 
-    function updateSongDetails(songs, CDs, setlists) {
-        const songTable = document.getElementById('songTable');
-        songTable.innerHTML = ""; // テーブルをリセット
+function updateSongDetails(songs, CDs, setlists) {
+    const songTable = document.getElementById('songTable');
+    songTable.innerHTML = ""; // テーブルをリセット
 
     songs.forEach(song => {
-        const matchingCDs = [].concat(song.CDtitle).flatMap(songCDtitle => {
-            return CDs.filter(cd => cd.CDtitle === songCDtitle);
-        });
+        // CD情報取得
+        const matchingCDs = CDs.filter(cd => cd.CDtitle === song.CDtitle);
 
-        const oldestDate = matchingCDs.length > 0 ? matchingCDs.reduce((oldest, current) => {
-            const oldestDate = new Date(oldest.date.replace(/年|月/g, '-').replace(/日/g, ''));
-            const currentDate = new Date(current.date.replace(/年|月/g, '-').replace(/日/g, ''));
-            return oldestDate < currentDate ? oldest : current;
-        }) : { date: 'No release date found' };
+        const oldestDate = matchingCDs.length > 0
+            ? matchingCDs.reduce((oldest, current) => {
+                const oldestDate = new Date(oldest.date.replace(/年|月/g, '-').replace(/日/g, ''));
+                const currentDate = new Date(current.date.replace(/年|月/g, '-').replace(/日/g, ''));
+                return oldestDate < currentDate ? oldest : current;
+            }).date
+            : 'No release date found';
 
+        // セットリストからのパフォーマンスデータ集計
         const performanceData = setlists.reduce((acc, setlist) => {
             const date = new Date(setlist.date.replace(/年|月/g, '-').replace(/日/g, ''));
-            
-            const songsArray = Array.isArray(setlist.setlist) ? setlist.setlist : [setlist.setlist];
-            if (!Array.isArray(setlist.encore)) {
-                songsArray.push(setlist.encore); // If encore is not an array, treat it as a single element array
-            } else {
-                songsArray.push(...setlist.encore);
-            }
-            if (setlist.Wencore) songsArray.push(setlist.Wencore);
 
-            const titles = songsArray.reduce((acc, title) => {
-                if (typeof title === 'object' && 'medley' in title) {
-                    acc.push(...title.medley);
-                } else {
-                    acc.push(title);
+            // セットリストの全楽曲を統一リストに
+            const allSongs = [
+                ...(Array.isArray(setlist.setlist) ? setlist.setlist : [setlist.setlist]),
+                ...(Array.isArray(setlist.encore) ? setlist.encore : [setlist.encore]),
+                ...(Array.isArray(setlist.Wencore) ? setlist.Wencore : [setlist.Wencore]),
+            ].flat();
+
+            // メドレーなどを展開し、全タイトルを取得
+            const titles = allSongs.flatMap(item => {
+                if (typeof item === 'object' && 'medley' in item) {
+                    return item.medley;
                 }
-                return acc;
-            }, []);
+                return item;
+            });
 
+            // 対象楽曲が含まれている場合
             if (titles.includes(song.title)) {
                 acc.count += 1;
                 if (!acc.latestDate || date > acc.latestDate) {
@@ -116,35 +117,31 @@
             return acc;
         }, { count: 0, latestDate: null, id: null });
 
-        const formattedDate = oldestDate.date !== 'No release date found' ? oldestDate.date : 'No release date found';
-        const latestPerformanceDate = performanceData.latestDate ? formatDateToJapanese(performanceData.latestDate) : '未披露';
+        // 結果のフォーマット
+        const latestPerformanceDate = performanceData.latestDate
+            ? formatDateToJapanese(performanceData.latestDate)
+            : '未披露';
 
-        const lyricsClass = song.lyrics.includes('小倉唯') ? 'pink-cell' : '';
-        const musicClass = song.music.includes('小倉唯') ? 'pink-cell' : '';
-	    
-        const callLink = song.call ? `<a href="https://yuicom-callbook.hatenablog.com/entry/${song.call}" target="_blank">コール表</a>` : '';
-        const MVLink = song.MVlink ? `<a href="https://www.youtube.com/watch?v=${song.MVlink}" target="_blank">MV</a>` : '';
-	const videoLink = song.videolink ? `<a href="https://www.youtube.com/watch?v=${song.videolink}" target="_blank">ライブ映像</a>` : '';
-	
-            const row = `
+        // テーブル行を作成
+        const row = `
             <tr>
                 <td><a href="https://www.uta-net.com/song/${song.utanet}">${song.title}</a></td>
                 <td>${song.call ? `<a href="https://yuicom-callbook.hatenablog.com/entry/${song.call}" target="_blank">コール表</a>` : ''}</td>
                 <td>${song.MVlink ? `<a href="https://www.youtube.com/watch?v=${song.MVlink}" target="_blank">MV</a>` : ''}</td>
                 <td>${song.videolink ? `<a href="https://www.youtube.com/watch?v=${song.videolink}" target="_blank">ライブ映像</a>` : ''}</td>
-                <td>${song.count || 0}</td>
-                <td>${song.latestPerformanceDate || '未披露'}</td>
-                <td>${song.lyrics}</td>
-                <td>${song.music}</td>
+                <td>${performanceData.count}</td>
+                <td>${latestPerformanceDate}</td>
+                <td class="${song.lyrics.includes('小倉唯') ? 'pink-cell' : ''}">${song.lyrics}</td>
+                <td class="${song.music.includes('小倉唯') ? 'pink-cell' : ''}">${song.music}</td>
                 <td>${song.arranger}</td>
                 <td>${song.length}</td>
                 <td>${song.CDtitle}</td>
-                <td>${song.releaseDate || '未発表'}</td>
+                <td>${oldestDate}</td>
             </tr>
-            `;
-            songTable.innerHTML += row;
-        });
-    }
+        `;
+        songTable.innerHTML += row;
+    });
+}
 
     Promise.all([
         fetch('song.json').then(response => response.json()),
