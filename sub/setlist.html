@@ -64,20 +64,32 @@ if (!targetLiveId) {
                         return setlistHTML;
                     };
 
-                    const renderEncore = encore => {
-                        let encoreHTML = '';
-                        if (!Array.isArray(encore)) {
-                            encore = [encore]; // encoreが配列でない場合は長さ1の配列として扱う
-                        }
-                        if (encore.length > 0) {
-                            encoreHTML += '<ul>';
-                            encore.forEach((song, index) => {
-                                encoreHTML += `<p>${index + 1}. <a href="./search.html?name=${song}">${song}</a></p>`;
-                            });
-                            encoreHTML += '</ul>';
-                        }
-                        return encoreHTML;
-                    };
+const renderEncore = encore => {
+    let encoreHTML = '';
+    if (!Array.isArray(encore)) {
+        encore = [encore]; // encoreが配列でない場合は長さ1の配列として扱う
+    }
+    if (encore.length > 0) {
+        encoreHTML += '<ul>';
+        encore.forEach((song, index) => {
+            if (typeof song === 'string') {
+                encoreHTML += `<p>${index + 1}. <a href="./search.html?name=${song}">${song}</a></p>`;
+            } else if (typeof song === 'object' && Array.isArray(song.medley)) {
+                encoreHTML += `<p>${index + 1}. 【メドレー】<br>`;
+                song.medley.forEach((medleySong, medleyIndex) => {
+                    encoreHTML += `<a href="./search.html?name=${medleySong}">${medleySong}</a>`;
+                    if (medleyIndex < song.medley.length - 1) {
+                        encoreHTML += '<br>';
+                    }
+                });
+                encoreHTML += `</p>`;
+            }
+        });
+        encoreHTML += '</ul>';
+    }
+    return encoreHTML;
+};
+
 
                     const html = `
                         <h2>${liveData.LIVEtitle}</h2>
