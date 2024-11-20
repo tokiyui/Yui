@@ -1,5 +1,40 @@
 [
     {
+        "LIVEtitle": "小倉唯 LIVE TOUR 2024 ~Bloomy × Meet you!~ 神奈川公演",
+        "tourtitle": "小倉唯 LIVE TOUR 2024 ~Bloomy × Meet you!~",
+        "artist": "小倉唯",
+        "date": "2024年10月14日",
+        "venue": "相模女子大学グリーンホール",
+        "id": "2024101401",
+        "setlist": [
+            "Lovely Happily Shiny Days",
+            "パンドラ♡ショコラ",
+            "Baby Sweet Berry Love",
+            "アコガレCollection!",
+            "花占いするの♡",
+            "シュガーハートエイク",
+            "恋の秒針",
+            "秘密♡Melody",
+            "スターチス",
+            "Wild☆Kitty",
+            "ドキドキラビリンス",
+            "Empty//Princess.",
+            "Raise",
+            "Clear Morning",
+            "One and Only",
+            "Wind of Bloom"
+        ],
+        "encore": [          
+            "わくわくシャンプー&リンス",
+            "medley": [
+                "Look@Me♡",
+                "トキメキWeekend!",
+                "Honey♥Come!!"
+            ],
+            "君色のキセキ"
+        ]
+    },
+    {
         "LIVEtitle": "小倉唯 Birthday Event 2024“唯涼祭”~Cute or Cool?~ 夜公演",
         "tourtitle": "小倉唯 Birthday Event 2024“唯涼祭”~Cute or Cool?~",
         "artist": "小倉唯",
