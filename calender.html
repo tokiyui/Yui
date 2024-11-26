@@ -54,7 +54,7 @@
 
                             dateCell.textContent = i + '/' + j;
                             events.forEach(event => {
-                                titleCell.textContent += event.title + ' (' + event.Year + ')' + <br>;
+                                titleCell.innerHTML += event.title + ' (' + event.Year + ')' + (index < events.length - 1 ? '<br>' : '');
                             });
                         //}
                     }
