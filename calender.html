@@ -61,22 +61,22 @@
                         dateCell.textContent = i + '月' + j + '日';
                         events.forEach((event, index) => {
                             let artistClass = '';
-                            if (Array.isArray(event.artist)) {
-                                if (event.artist.length > 0) {
-                                    if (event.artist[0] === '小倉唯') {
+                            if (Array.isArray(event.Artist)) {
+                                if (event.Artist.length > 0) {
+                                    if (event.Artist[0] === '小倉唯') {
                                         artistClass = 'artist1';
-                                    } else if (event.artist[0] === '石原夏織') {
+                                    } else if (event.Artist[0] === '石原夏織') {
                                         artistClass = 'artist2';
-                                    } else if (event.artist[0] === 'ゆいかおり') {
+                                    } else if (event.Artist[0] === 'ゆいかおり') {
                                         artistClass = 'artist3';
                                     }
                                 }
                             } else {
-                                if (event.artist === '小倉唯') {
+                                if (event.Artist === '小倉唯') {
                                     artistClass = 'artist1';
-                                } else if (event.artist === '石原夏織') {
+                                } else if (event.Artist === '石原夏織') {
                                     artistClass = 'artist2';
-                                } else if (event.artist === 'ゆいかおり') {
+                                } else if (event.Artist === 'ゆいかおり') {
                                     artistClass = 'artist3';
                                 }
                             }
