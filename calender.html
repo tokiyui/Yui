@@ -45,7 +45,7 @@
                     for (let j = 1; j <= 31; j++) {
                         const events = data.filter(event => event.Month === String(i) && event.Day === String(j));
 
-                        if (events.length > 0) {
+                        //if (events.length > 0) {
                             const row = tbody.insertRow();
                             const dateCell = row.insertCell(0);
                             const titleCell = row.insertCell(1);
@@ -54,11 +54,9 @@
 
                             dateCell.textContent = i + '/' + j;
                             events.forEach(event => {
-                                titleCell.textContent += event.title + ' ';
-                                timeCell.textContent += event["Start Time"] + ' ';
-                                locationCell.textContent += event.Venue + ' ';
+                                titleCell.textContent += event.title + ' (' + event.year + ')<br>';
                             });
-                        }
+                        //}
                     }
                 }
             })
