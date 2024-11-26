@@ -10,7 +10,8 @@
             width: 100%;
             border-collapse: collapse;
         }
-        th, td {
+        th,
+        td {
             border: 1px solid #ccc;
             padding: 8px;
             text-align: left;
@@ -35,7 +36,7 @@
     </table>
 
     <script>
-        fetch('event.json')
+        fetch('events.json')
             .then(response => response.json())
             .then(data => {
                 const eventsTable = document.getElementById('eventsTable');
@@ -45,7 +46,7 @@
                     for (let j = 1; j <= 31; j++) {
                         const events = data.filter(event => event.Month === String(i) && event.Day === String(j));
 
-                        //if (events.length > 0) {
+                        if (events.length > 0) {
                             const row = tbody.insertRow();
                             const dateCell = row.insertCell(0);
                             const titleCell = row.insertCell(1);
@@ -53,10 +54,12 @@
                             const locationCell = row.insertCell(3);
 
                             dateCell.textContent = i + '/' + j;
-                            events.forEach(event => {
+                            events.forEach((event, index) => {
                                 titleCell.innerHTML += event.title + ' (' + event.Year + ')' + (index < events.length - 1 ? '<br>' : '');
+                                timeCell.textContent += event["Start Time"] + ' ';
+                                locationCell.textContent += event.Venue + ' ';
                             });
-                        //}
+                        }
                     }
                 }
             })
