@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Calendar</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="eventsTable">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Event Title</th>
+                <th>Start Time</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        fetch('events.json')
+            .then(response => response.json())
+            .then(data => {
+                const eventsTable = document.getElementById('eventsTable');
+                const tbody = eventsTable.getElementsByTagName('tbody')[0];
+
+                for (let i = 1; i <= 12; i++) {
+                    for (let j = 1; j <= 31; j++) {
+                        const events = data.filter(event => event.Month === String(i) && event.Day === String(j));
+
+                        if (events.length > 0) {
+                            const row = tbody.insertRow();
+                            const dateCell = row.insertCell(0);
+                            const titleCell = row.insertCell(1);
+                            const timeCell = row.insertCell(2);
+                            const locationCell = row.insertCell(3);
+
+                            dateCell.textContent = i + '/' + j;
+                            events.forEach(event => {
+                                titleCell.textContent += event.title + ' ';
+                                timeCell.textContent += event["Start Time"] + ' ';
+                                locationCell.textContent += event.Venue + ' ';
+                            });
+                        }
+                    }
+                }
+            })
+            .catch(error => console.error('Error fetching events data: ', error));
+    </script>
+</body>
+
+</html>
