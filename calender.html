@@ -19,6 +19,15 @@
         th {
             background-color: #f2f2f2;
         }
+        .artist1 {
+            color: pink;
+        }
+        .artist2 {
+            color: lightblue;
+        }
+        .artist3 {
+            color: orange;
+        }
     </style>
 </head>
 
@@ -42,21 +51,37 @@
                 const maxday = new Array(31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
 
                 for (let i = 1; i <= 12; i++) {
-                    for (let j = 1; j <= maxday[i-1]; j++) {
+                    for (let j = 1; j <= maxday[i - 1]; j++) {
                         const events = data.filter(event => event.Month === String(i) && event.Day === String(j));
 
-                        //if (events.length > 0) {
-                            const row = tbody.insertRow();
-                            const dateCell = row.insertCell(0);
-                            const titleCell = row.insertCell(1);
-                            const timeCell = row.insertCell(2);
-                            const locationCell = row.insertCell(3);
+                        const row = tbody.insertRow();
+                        const dateCell = row.insertCell(0);
+                        const titleCell = row.insertCell(1);
 
-                            dateCell.textContent = i + '月' + j +'日';
-                            events.forEach((event, index) => {
-                                titleCell.innerHTML += event.title + ' (' + event.Year + '年)' + (index < events.length - 1 ? '<br>' : '');
-                            });
-                        //}
+                        dateCell.textContent = i + '月' + j + '日';
+                        events.forEach((event, index) => {
+                            let artistClass = '';
+                            if (Array.isArray(event.artist)) {
+                                if (event.artist.length > 0) {
+                                    if (event.artist[0] === '小倉唯') {
+                                        artistClass = 'artist1';
+                                    } else if (event.artist[0] === '石原夏織') {
+                                        artistClass = 'artist2';
+                                    } else if (event.artist[0] === 'ゆいかおり') {
+                                        artistClass = 'artist3';
+                                    }
+                                }
+                            } else {
+                                if (event.artist === '小倉唯') {
+                                    artistClass = 'artist1';
+                                } else if (event.artist === '石原夏織') {
+                                    artistClass = 'artist2';
+                                } else if (event.artist === 'ゆいかおり') {
+                                    artistClass = 'artist3';
+                                }
+                            }
+                            titleCell.innerHTML += `<span class="${artistClass}">${event.title} (${event.Year}年)</span>` + (index < events.length - 1 ? '<br>' : '');
+                        });
                     }
                 }
             })
