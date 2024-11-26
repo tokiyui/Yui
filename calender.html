@@ -39,9 +39,10 @@
             .then(data => {
                 const eventsTable = document.getElementById('eventsTable');
                 const tbody = eventsTable.getElementsByTagName('tbody')[0];
+                const maxday = new Array(31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
 
                 for (let i = 1; i <= 12; i++) {
-                    for (let j = 1; j <= 31; j++) {
+                    for (let j = 1; j <= maxday[i-1]; j++) {
                         const events = data.filter(event => event.Month === String(i) && event.Day === String(j));
 
                         //if (events.length > 0) {
@@ -51,9 +52,9 @@
                             const timeCell = row.insertCell(2);
                             const locationCell = row.insertCell(3);
 
-                            dateCell.textContent = i + '/' + j;
+                            dateCell.textContent = i + '月' + j +'日';
                             events.forEach((event, index) => {
-                                titleCell.innerHTML += event.title + ' (' + event.Year + ')' + (index < events.length - 1 ? '<br>' : '');
+                                titleCell.innerHTML += event.title + ' (' + event.Year + '年)' + (index < events.length - 1 ? '<br>' : '');
                             });
                         //}
                     }
