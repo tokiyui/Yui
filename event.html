@@ -34,21 +34,16 @@
 
 <body>
     <h2>ゆいかおりイベントデータベース <a href="index.html">楽曲一覧はこちら</a></h2>
-    <div id="checkboxContainer">
-        <label for="artistFilter">アーティスト</label>
-        <div>
-            <input type="radio" id="yuiSolo" name="artist" value="小倉唯" checked>
-            <label for="yuiSolo">唯ソロ</label>
-        </div>
-        <div>
-            <input type="radio" id="natsuoSolo" name="artist" value="石原夏織">
-            <label for="natsuoSolo">夏織ソロ</label>
-        </div>
-        <div>
-            <input type="radio" id="yuikaori" name="artist" value="ゆいかおり">
-            <label for="yuikaori">ゆいかおり</label>
-        </div>
-    </div>
+<div id="radioButtons">
+    <label for="yuiSolo">唯ソロ</label>
+    <input type="radio" id="yuiSolo" name="artist" value="唯ソロ" checked>
+    
+    <label for="natsuoSolo">夏織ソロ</label>
+    <input type="radio" id="natsuoSolo" name="artist" value="夏織ソロ">
+    
+    <label for="yuiKaori">ゆいかおり</label>
+    <input type="radio" id="yuiKaori" name="artist" value="ゆいかおり">
+</div>
 
     <table id="eventTable">
         <tr>
@@ -106,9 +101,21 @@
                         }
                     });
                 }
-
-                populateTable(data);
-
+                
+const radioButtons = document.querySelectorAll('input[type="radio"]');
+radioButtons.forEach(radioButton => {
+    radioButton.addEventListener('change', () => {
+        const selectedArtist = document.querySelector('input[type="radio"]:checked').value;
+        const filteredData = data.filter(event => {
+            let artistName = event.Artist;
+            if (Array.isArray(artistName)) {
+                artistName = artistName[0];
+            }
+            return artistName === selectedArtist;
+        });
+        populateTable(filteredData);
+    });
+});
                 const checkboxesData = [
                     { id: 'year', label: '年', values: ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'] },
                     { id: 'month', label: '月', values: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'] },
