@@ -145,14 +145,14 @@
                     radio.addEventListener('change', () => {
                         const selectedArtist = document.querySelector('input[name="artist"]:checked').value;
                         const filteredData = data.filter(event => {
-                            const artist = Array.isArray(event.Artist) ? event.Artist[0] : event.Artist;
-                            return artist === selectedArtist;
+                            return event.with.includes(selectedArtist);
                         });
                         populateTable(filteredData);
                     });
                 });
+
             })
-            .catch(error => console.error('Error:', error));
+            .catch(error => console.error('Error fetching data:', error));
     </script>
 </body>
 
