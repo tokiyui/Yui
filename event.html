@@ -31,8 +31,9 @@
     <!-- ラジオボタンの追加 -->
     <div>
         <label><input type="radio" name="artistFilter" id="yuSolo" checked> 唯ソロ（小倉唯）</label>
-        <label><input type="radio" name="artistFilter" id="kaoriSolo"> 夏織ソロ（石原夏織）</label>
         <label><input type="radio" name="artistFilter" id="yuikaori"> ゆいかおり</label>
+        <label><input type="radio" name="artistFilter" id="kaoriSolo"> 夏織ソロ（石原夏織）</label>
+        <label><input type="radio" name="artistFilter" id="stylips"> Stylips</label>
     </div>
 
     <table id="eventTable">
@@ -92,18 +93,22 @@
                     });
                 }
 
-                // デフォルトで唯ソロ（小倉唯）のイベントを表示
+                // ラジオボタンによるアーティストフィルタリング
                 function filterByArtist(artist) {
-                    const filteredData = data.filter(event => {
-                        if (Array.isArray(event.Artist)) {
-                            return event.Artist[0] === artist;
-                        }
-                        return event.Artist === artist;
-                    });
+                    let filteredData;
+                    if (artist === '小倉唯') {
+                        filteredData = data.filter(event => event.Artist === '小倉唯');
+                    } else if (artist === 'ゆいかおり') {
+                        filteredData = data.filter(event => event.Artist === '小倉唯' || event.Artist === 'ゆいかおり');
+                    } else if (artist === '石原夏織') {
+                        filteredData = data.filter(event => event.Artist === '小倉唯' || event.Artist === 'ゆいかおり' || event.Artist === '石原夏織');
+                    } else if (artist === 'Stylips') {
+                        filteredData = data; // フィルタリングしない
+                    }
                     populateTable(filteredData);
                 }
 
-                // 初期表示（唯ソロ）
+                // デフォルトで唯ソロ（小倉唯）のイベントを表示
                 filterByArtist('小倉唯');
 
                 // ラジオボタンのイベントリスナーを追加
@@ -113,11 +118,14 @@
                             case 'yuSolo':
                                 filterByArtist('小倉唯');
                                 break;
+                            case 'yuikaori':
+                                filterByArtist('ゆいかおり');
+                                break;
                             case 'kaoriSolo':
                                 filterByArtist('石原夏織');
                                 break;
-                            case 'yuikaori':
-                                filterByArtist('ゆいかおり');
+                            case 'stylips':
+                                filterByArtist('Stylips');
                                 break;
                         }
                     });
@@ -161,13 +169,15 @@
                             (selectedMonths.length === 0 || selectedMonths.includes(event.Month)) &&
                             (selectedYoubis.length === 0 || selectedYoubis.includes(event.Weekday)) &&
                             (selectedPrefectures.length === 0 || selectedPrefectures.includes(event.prefecture)) &&
-                            (selectedClass.length === 0 || selectedClass.includes(event.class1))
+                            ((selectedClass.length === 0 || selectedClass.includes(event.class1)) || (selectedClass.length === 0 || selectedClass.includes(event.class2)))
                         );
                         populateTable(filteredData);
                     });
                 });
-            });
+            })
+            .catch(error => console.error('Error:', error));
     </script>
+
 </body>
 
 </html>
