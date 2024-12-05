@@ -21,22 +21,49 @@
         .pink-cell {
             background-color: pink;
         }
+
+        /*.radio-button {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }*/
+
+        .radio-input {
+            /*-webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;*/
+            width: 20px; /* ボタンの幅を指定 */
+            height: 20px; /* ボタンの高さを指定 */
+            /*border: 1px solid #333;
+            border-radius: 50%; /* 円形にする */ */
+            /*margin-right: 10px;*/
+        }
+
+        .radio-label {
+            font-size: 16px; /* ラベルのフォントサイズを指定 */
+        }
     </style>
 </head>
 
 <body>
     <h2>&#9825;小倉唯楽曲一覧&#9825; <a href="tour.html">ツアーセットリスト比較ページ</a> <a href="my.html">未回収楽曲チェックツール</a> <a
             href="event.html">イベント検索ページ（ベータ版）</a></h2>
-    <div>
-        <input type="radio" id="yui-solo" name="artist-filter" value="yui" checked>
-        <label for="yui-solo">唯ソロ</label>
-
-        <input type="radio" id="kaori-solo" name="artist-filter" value="kaori">
-        <label for="kaori-solo">夏織ソロ</label>
-
-        <input type="radio" id="yuikaori" name="artist-filter" value="yuikaori">
-        <label for="yuikaori">ゆいかおり</label>
+<div class="radio-group">
+    <div class="radio-button">
+        <input type="radio" id="yui-solo" name="artist-filter" value="yui" checked class="radio-input">
+        <label for="yui-solo" class="radio-label">唯ソロ</label>
     </div>
+
+    <div class="radio-button">
+        <input type="radio" id="kaori-solo" name="artist-filter" value="kaori" class="radio-input">
+        <label for="kaori-solo" class="radio-label">夏織ソロ</label>
+    </div>
+
+    <div class="radio-button">
+        <input type="radio" id="yuikaori" name="artist-filter" value="yuikaori" class="radio-input">
+        <label for="yuikaori" class="radio-label">ゆいかおり</label>
+    </div>
+</div>
     <table>
         <thead>
             <tr>
