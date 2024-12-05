@@ -77,7 +77,12 @@
                                     artistClass = 'artist3';
                                 }
                             }
-                            titleCell.innerHTML += `<span class="${artistClass}">${event.title} (${event.Year}年)</span>` + (index < events.length - 1 ? '<br>' : '');
+                            if (event.class1 === ('class1') {
+                                release = 'リリース';
+                            } else {
+                                release = '';
+                            }
+                            titleCell.innerHTML += `<span class="${artistClass}">${event.title}${release} (${event.Year}年)</span>` + (index < events.length - 1 ? '<br>' : '');
                         });
                     }
                 }
