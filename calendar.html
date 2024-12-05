@@ -77,12 +77,14 @@
                                     artistClass = 'artist3';
                                 }
                             }
-                            if (event.class1 === ('class1') {
-                                release = 'リリース';
+                            if (event.class1 === 'class1') {
+                                release1 = ${class2} + '「';
+                                release2 = '」リリース';
                             } else {
-                                release = '';
+                                release1 = '';
+                                release2 = '';
                             }
-                            titleCell.innerHTML += `<span class="${artistClass}">「${event.title}」${release} (${event.Year}年)</span>` + (index < events.length - 1 ? '<br>' : '');
+                            titleCell.innerHTML += `<span class="${artistClass}">${release1}${event.title}${release2} (${event.Year}年)</span>` + (index < events.length - 1 ? '<br>' : '');
                         });
                     }
                 }
