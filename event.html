@@ -17,33 +17,12 @@
             padding: 8px;
             text-align: left;
         }
-
-        #checkboxContainer {
-            margin-top: 10px;
-        }
-
-        #checkboxContainer label {
-            font-weight: bold;
-        }
-
-        #checkboxContainer div {
-            margin-top: 5px;
-        }
     </style>
 </head>
 
 <body>
     <h2>ゆいかおりイベントデータベース <a href="index.html">楽曲一覧はこちら</a></h2>
-<div id="radioButtons">
-    <label for="yuiSolo">唯ソロ</label>
-    <input type="radio" id="yuiSolo" name="artist" value="唯ソロ" checked>
-    
-    <label for="natsuoSolo">夏織ソロ</label>
-    <input type="radio" id="natsuoSolo" name="artist" value="夏織ソロ">
-    
-    <label for="yuiKaori">ゆいかおり</label>
-    <input type="radio" id="yuiKaori" name="artist" value="ゆいかおり">
-</div>
+    <div id="checkboxContainer"></div>
 
     <table id="eventTable">
         <tr>
@@ -101,31 +80,21 @@
                         }
                     });
                 }
-                
-const radioButtons = document.querySelectorAll('input[type="radio"]');
-radioButtons.forEach(radioButton => {
-    radioButton.addEventListener('change', () => {
-        const selectedArtist = document.querySelector('input[type="radio"]:checked').value;
-        const filteredData = data.filter(event => {
-            let artistName = event.Artist;
-            if (Array.isArray(artistName)) {
-                artistName = artistName[0];
-            }
-            return artistName === selectedArtist;
-        });
-        populateTable(filteredData);
-    });
-});
+
+                populateTable(data);
+
                 const checkboxesData = [
                     { id: 'year', label: '年', values: ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'] },
                     { id: 'month', label: '月', values: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'] },
                     { id: 'youbi', label: '曜日', values: ['日', '月', '火', '水', '木', '金', '土'] },
-                    { id: 'prefecture', label: '都道府県', values: ['東京', '神奈川', '千葉', '埼玉', '愛知', '大阪', '北海道', '青森', '岩手', '宮城', '秋田', '山形', '福島', '茨城', '栃木', '群馬', 
-                                                                    '新潟', '富山', '石川', '福井', '山梨', '長野', '岐阜', '静岡', '三重', '滋賀', '京都', '兵庫', '奈良', '和歌山', '鳥取', '島根', 
-                                                                    '岡山', '広島', '山口', '徳島', '香川', '愛媛', '高知', '福岡', '佐賀', '長崎', '熊本', '大分', '宮崎', '鹿児島', '沖縄', 
-                                                                    '中国', '台湾', '香港' ,'タイ'] },
+                    { id: 'prefecture', label: '都道府県', values: ['東京', '神奈川', '千葉', '埼玉', '愛知', '大阪', '北海道', '青森', '岩手', '宮城', '秋田', '山形', '福島', '茨城', '栃木', '群馬',
+                        '新潟', '富山', '石川', '福井', '山梨', '長野', '岐阜', '静岡', '三重', '滋賀', '京都', '兵庫', '奈良', '和歌山', '鳥取', '島根',
+                        '岡山', '広島', '山口', '徳島', '香川', '愛媛', '高知', '福岡', '佐賀', '長崎', '熊本', '大分', '宮崎', '鹿児島', '沖縄',
+                        '中国', '台湾', '香港', 'タイ'] },
                     { id: 'class1', label: '大分類', values: ['ライブ', 'イベント', 'リリース', 'ツアー', 'フェス', '社員総会', 'シングル', 'アルバム'] },
                 ];
+
+                const checkboxContainer = document.getElementById('checkboxContainer');
 
                 checkboxesData.forEach(checkboxData => {
                     const div = document.createElement('div');
@@ -147,8 +116,6 @@ radioButtons.forEach(radioButton => {
                         const selectedPrefectures = [...document.querySelectorAll('input[type="checkbox"][id^="prefecture"]:checked')].map(cb => cb.value);
                         const selectedClass = [...document.querySelectorAll('input[type="checkbox"][id^="class1"]:checked')].map(cb => cb.value);
 
-                        const selectedArtist = document.querySelector('input[name="artist"]:checked').value;
-
                         const filteredData = data.filter(event =>
                             (selectedYears.length === 0 || selectedYears.includes(event.Year)) &&
                             (selectedMonths.length === 0 || selectedMonths.includes(event.Month)) &&
@@ -159,10 +126,34 @@ radioButtons.forEach(radioButton => {
                         populateTable(filteredData);
                     });
                 });
+
+                // Add radio buttons for filtering by artist
+                const radioContainer = document.createElement('div');
+                radioContainer.innerHTML = `
+                    <label for="artistFilter">アーティスト:</label>
+                    <input type="radio" id="yuiSolo" name="artist" value="小倉唯" checked>
+                    <label for="yuiSolo">唯ソロ</label>
+                    <input type="radio" id="natsuoSolo" name="artist" value="石原夏織">
+                    <label for="natsuoSolo">夏織ソロ</label>
+                    <input type="radio" id="yuikaori" name="artist" value="ゆいかおり">
+                    <label for="yuikaori">ゆいかおり</label>
+                `;
+                checkboxContainer.appendChild(radioContainer);
+
+                const radioButtons = document.querySelectorAll('input[type="radio"]');
+                radioButtons.forEach(radio => {
+                    radio.addEventListener('change', () => {
+                        const selectedArtist = document.querySelector('input[name="artist"]:checked').value;
+                        const filteredData = data.filter(event => {
+                            const artist = Array.isArray(event.Artist) ? event.Artist[0] : event.Artist;
+                            return artist === selectedArtist;
+                        });
+                        populateTable(filteredData);
+                    });
+                });
             })
             .catch(error => console.error('Error:', error));
     </script>
-
 </body>
 
 </html>
