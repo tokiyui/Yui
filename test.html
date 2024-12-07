@@ -1,0 +1,144 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&#9825;小倉唯楽曲一覧&#9825;</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th.sortable:hover {
+            cursor: pointer;
+            background-color: #f0f0f0;
+        }
+
+        .pink-cell {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>&#9825;小倉唯楽曲一覧&#9825;</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>楽曲名(クリックすると歌詞が開きます)</th>
+                <th>コール表</th>
+                <th>MV(抜け有)</th>
+                <th>ライブ映像(抜け有)</th>
+                <th class="sortable" data-sort="披露回数">披露回数</th>
+                <th class="sortable" data-sort="最終披露日">最終披露日</th>
+                <th>作詞</th>
+                <th>作曲</th>
+                <th>編曲</th>
+                <th>長さ</th>
+                <th>収録CD</th>
+                <th>リリース日</th>
+            </tr>
+        </thead>
+        <tbody id="songTable"></tbody>
+    </table>
+
+    <script>
+        let originalData = []; // 元の順序を保持
+
+        function formatDateToJapanese(date) {
+            const year = date.getFullYear();
+            const month = (date.getMonth() + 1).toString();
+            const day = date.getDate().toString();
+            return `${year}年${month}月${day}日`;
+        }
+
+        function sortTable(column, type) {
+            const table = document.getElementById('songTable');
+            const rows = Array.from(table.rows);
+
+            // ソート処理
+            rows.sort((a, b) => {
+                const cellA = a.cells[column].textContent.trim();
+                const cellB = b.cells[column].textContent.trim();
+
+                if (type === '数値') {
+                    return parseInt(cellA, 10) - parseInt(cellB, 10);
+                } else if (type === '日付') {
+                    const dateA = new Date(cellA.replace(/年|月/g, '-').replace(/日/g, ''));
+                    const dateB = new Date(cellB.replace(/年|月/g, '-').replace(/日/g, ''));
+                    return dateA - dateB;
+                }
+                return 0;
+            });
+
+            // 並び替え後の行をテーブルに反映
+            table.innerHTML = '';
+            rows.forEach(row => table.appendChild(row));
+        }
+
+        function resetTable() {
+            const table = document.getElementById('songTable');
+            table.innerHTML = '';
+            originalData.forEach(rowHTML => {
+                const row = document.createElement('tr');
+                row.innerHTML = rowHTML;
+                table.appendChild(row);
+            });
+        }
+
+        function updateSongDetails() {
+            fetch('song.json')
+                .then(response => response.json())
+                .then(songs => {
+                    const songTable = document.getElementById('songTable');
+                    songTable.innerHTML = ''; // Clear existing table rows
+
+                    originalData = []; // 元のデータをリセット
+
+                    songs.forEach(song => {
+                        const row = `
+                            <tr>
+                                <td>${song.title}</td>
+                                <td>${song.call}</td>
+                                <td>${song.MVlink}</td>
+                                <td>${song.videolink}</td>
+                                <td>${song.performanceCount}</td>
+                                <td>${song.latestPerformanceDate}</td>
+                                <td>${song.lyrics}</td>
+                                <td>${song.music}</td>
+                                <td>${song.arranger}</td>
+                                <td>${song.length}</td>
+                                <td>${song.CDtitle}</td>
+                                <td>${song.releaseDate}</td>
+                            </tr>
+                        `;
+                        songTable.innerHTML += row;
+                        originalData.push(row); // 元のデータを保存
+                    });
+                });
+        }
+
+        // ソートヘッダーにイベントを追加
+        document.querySelectorAll('th.sortable').forEach((header, index) => {
+            header.addEventListener('click', () => {
+                const sortType = header.dataset.sort === '披露回数' ? '数値' : '日付';
+                sortTable(index, sortType);
+            });
+        });
+
+        // 元の順序に戻すボタンの例
+        const resetButton = document.createElement('button');
+        resetButton.textContent = '元の順序に戻す';
+        resetButton.addEventListener('click', resetTable);
+        document.body.insertBefore(resetButton, document.querySelector('table'));
+
+        updateSongDetails(); // Initial call to populate the table
+    </script>
+</body>
