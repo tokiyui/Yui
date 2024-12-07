@@ -26,15 +26,6 @@
             cursor: pointer;
             text-decoration: underline;
         }
-
-        .radio-input {
-            width: 20px;
-            height: 20px;
-        }
-
-        .radio-label {
-            font-size: 16px;
-        }
     </style>
 </head>
 
@@ -43,31 +34,26 @@
             href="event.html">イベント検索ページ（ベータ版）</a></h2>
     <div class="radio-group">
         <div class="radio-button">
-            <input type="radio" id="yui-solo" name="artist-filter" value="yui" checked class="radio-input">
-            <label for="yui-solo" class="radio-label">唯ソロ</label>
+            <input type="radio" id="yui-solo" name="artist-filter" value="yui" checked>
+            <label for="yui-solo">唯ソロ</label>
 
-            <input type="radio" id="kaori-solo" name="artist-filter" value="kaori" class="radio-input">
-            <label for="kaori-solo" class="radio-label">夏織ソロ</label>
+            <input type="radio" id="kaori-solo" name="artist-filter" value="kaori">
+            <label for="kaori-solo">夏織ソロ</label>
 
-            <input type="radio" id="yuikaori" name="artist-filter" value="yuikaori" class="radio-input">
-            <label for="yuikaori" class="radio-label">ゆいかおり</label>
+            <input type="radio" id="yuikaori" name="artist-filter" value="yuikaori">
+            <label for="yuikaori">ゆいかおり</label>
         </div>
     </div>
     <button id="resetOrder">元の順に戻す</button>
     <table>
         <thead>
             <tr>
-                <th>楽曲名(クリックすると歌詞が開きます)</th>
+                <th>楽曲名</th>
                 <th>コール表</th>
-                <th>MV(抜け有)</th>
-                <th>ライブ映像(抜け有)</th>
-                <th class="sortable" data-sort-key="count">披露回数</th>
-                <th class="sortable" data-sort-key="latestDate">最終披露日</th>
-                <th>作詞</th>
-                <th>作曲</th>
-                <th>編曲</th>
-                <th>長さ</th>
-                <th>収録CD</th>
+                <th>MV</th>
+                <th>ライブ映像</th>
+                <th>披露回数 <span class="sortable" data-sort-key="count">(ソート)</span></th>
+                <th>最終披露日 <span class="sortable" data-sort-key="latestDate">(ソート)</span></th>
                 <th>リリース日</th>
             </tr>
         </thead>
@@ -80,100 +66,81 @@
 
         function formatDateToJapanese(date) {
             const year = date.getFullYear();
-            const month = (date.getMonth() + 1).toString();
-            const day = date.getDate().toString();
+            const month = date.getMonth() + 1;
+            const day = date.getDate();
             return `${year}年${month}月${day}日`;
         }
 
         function sortTable(key) {
-            const isDateKey = key === "latestDate";
             currentSongData.sort((a, b) => {
-                const valA = isDateKey ? new Date(a[key] || 0) : a[key];
-                const valB = isDateKey ? new Date(b[key] || 0) : b[key];
-                return valA > valB ? -1 : valA < valB ? 1 : 0;
+                if (key === "latestDate") {
+                    const dateA = a.latestDate ? new Date(a.latestDate) : new Date(0);
+                    const dateB = b.latestDate ? new Date(b.latestDate) : new Date(0);
+                    return dateB - dateA; // 降順
+                } else {
+                    return b[key] - a[key]; // 数値の降順
+                }
             });
             renderTable();
         }
 
         function renderTable() {
-            const songTable = document.getElementById('songTable');
-            songTable.innerHTML = currentSongData.map(row => row.html).join('');
+            const songTable = document.getElementById("songTable");
+            songTable.innerHTML = currentSongData.map(song => song.html).join("");
         }
 
         function updateSongDetails(selectedArtist) {
             fetch('song.json')
                 .then(response => response.json())
                 .then(songs => {
-                    fetch('CD.json')
+                    fetch('setlist.json')
                         .then(response => response.json())
-                        .then(CDs => {
-                            fetch('setlist.json')
+                        .then(setlists => {
+                            fetch('CD.json')
                                 .then(response => response.json())
-                                .then(setlists => {
+                                .then(CDs => {
                                     originalSongData = [];
                                     songs.forEach(song => {
-                                        if (selectedArtist === 'yui' && song.artist !== '小倉唯') {
-                                            return;
-                                        } else if (selectedArtist === 'kaori' && song.artist !== '石原夏織') {
-                                            return;
-                                        } else if (selectedArtist === 'yuikaori' && song.artist !== 'ゆいかおり') {
-                                            return;
-                                        }
+                                        if (selectedArtist === "yui" && song.artist !== "小倉唯") return;
+                                        if (selectedArtist === "kaori" && song.artist !== "石原夏織") return;
+                                        if (selectedArtist === "yuikaori" && song.artist !== "ゆいかおり") return;
 
                                         const performanceData = setlists.reduce((acc, setlist) => {
-                                            const date = new Date(setlist.date.replace(/年|月/g, '-').replace(/日/g, ''));
-
-                                            const songsArray = Array.isArray(setlist.setlist) ? setlist.setlist : [setlist.setlist];
-                                            if (!Array.isArray(setlist.encore)) {
-                                                songsArray.push(setlist.encore);
-                                            } else {
-                                                songsArray.push(...setlist.encore);
-                                            }
-                                            if (setlist.Wencore) songsArray.push(setlist.Wencore);
-
-                                            const titles = songsArray.reduce((acc, title) => {
-                                                if (typeof title === 'object' && 'medley' in title) {
-                                                    acc.push(...title.medley);
-                                                } else {
-                                                    acc.push(title);
-                                                }
-                                                return acc;
-                                            }, []);
-
-                                            if (titles.includes(song.title)) {
-                                                acc.count += 1;
+                                            const date = new Date(setlist.date.replace(/年|月/g, "-").replace(/日/g, ""));
+                                            const allSongs = [
+                                                ...(Array.isArray(setlist.setlist) ? setlist.setlist : [setlist.setlist]),
+                                                ...(Array.isArray(setlist.encore) ? setlist.encore : [setlist.encore]),
+                                                ...(setlist.Wencore ? [setlist.Wencore] : [])
+                                            ];
+                                            if (allSongs.includes(song.title)) {
+                                                acc.count++;
                                                 if (!acc.latestDate || date > acc.latestDate) {
                                                     acc.latestDate = date;
-                                                    acc.id = setlist.id;
                                                 }
                                             }
-
                                             return acc;
-                                        }, {
-                                            count: 0,
-                                            latestDate: null,
-                                            id: null
-                                        });
+                                        }, { count: 0, latestDate: null });
 
-                                        const latestPerformanceDate = performanceData.latestDate ? formatDateToJapanese(performanceData.latestDate) : '未披露';
+                                        const latestPerformanceDate = performanceData.latestDate
+                                            ? formatDateToJapanese(performanceData.latestDate)
+                                            : "未披露";
+
+                                        const matchingCDs = CDs.filter(cd => cd.CDtitle === song.CDtitle);
+                                        const releaseDate = matchingCDs.length > 0
+                                            ? matchingCDs[0].date
+                                            : "リリース情報なし";
 
                                         const rowHTML = `
                                             <tr>
-                                                <td>${song.title}</td>
-                                                <td>${song.call || ''}</td>
-                                                <td>${song.MVlink || ''}</td>
-                                                <td>${song.videolink || ''}</td>
+                                                <td><a href="https://www.uta-net.com/song/${song.utanet}" target="_blank">${song.title}</a></td>
+                                                <td>${song.call ? `<a href="https://yuicom-callbook.hatenablog.com/entry/${song.call}" target="_blank">コール表</a>` : ""}</td>
+                                                <td>${song.MVlink ? `<a href="https://www.youtube.com/watch?v=${song.MVlink}" target="_blank">MV</a>` : ""}</td>
+                                                <td>${song.videolink ? `<a href="https://www.youtube.com/watch?v=${song.videolink}" target="_blank">ライブ映像</a>` : ""}</td>
                                                 <td>${performanceData.count}</td>
                                                 <td>${latestPerformanceDate}</td>
-                                                <td>${song.lyrics}</td>
-                                                <td>${song.music}</td>
-                                                <td>${song.arranger}</td>
-                                                <td>${song.length}</td>
-                                                <td>${song.CDtitle}</td>
-                                                <td>${song.date}</td>
+                                                <td>${releaseDate}</td>
                                             </tr>
                                         `;
-
                                         originalSongData.push({
                                             ...song,
                                             count: performanceData.count,
@@ -181,7 +148,6 @@
                                             html: rowHTML
                                         });
                                     });
-
                                     currentSongData = [...originalSongData];
                                     renderTable();
                                 });
@@ -189,27 +155,25 @@
                 });
         }
 
-        document.getElementById('resetOrder').addEventListener('click', () => {
+        document.getElementById("resetOrder").addEventListener("click", () => {
             currentSongData = [...originalSongData];
             renderTable();
         });
 
-        document.querySelectorAll('.sortable').forEach(header => {
-            header.addEventListener('click', () => {
+        document.querySelectorAll(".sortable").forEach(header => {
+            header.addEventListener("click", () => {
                 sortTable(header.dataset.sortKey);
             });
         });
 
-        const artistFilters = document.getElementsByName('artist-filter');
-        let selectedArtist = 'yui';
+        const artistFilters = document.getElementsByName("artist-filter");
         artistFilters.forEach(filter => {
-            filter.addEventListener('change', () => {
-                selectedArtist = filter.value;
-                updateSongDetails(selectedArtist);
+            filter.addEventListener("change", () => {
+                updateSongDetails(filter.value);
             });
         });
 
-        updateSongDetails(selectedArtist);
+        updateSongDetails("yui");
     </script>
 </body>
 
