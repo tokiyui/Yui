@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,20 +18,31 @@
             text-align: left;
         }
 
-        th.sortable:hover {
-            cursor: pointer;
-            background-color: #f0f0f0;
-        }
-
         .pink-cell {
             background-color: pink;
+        }
+
+        th.sortable {
+            cursor: pointer;
         }
     </style>
 </head>
 
 <body>
-    <h2>&#9825;小倉唯楽曲一覧&#9825;</h2>
+    <h2>&#9825;小倉唯楽曲一覧&#9825; <a href="tour.html">ツアーセットリスト比較ページ</a> <a href="my.html">未回収楽曲チェックツール</a> <a
+            href="event.html">イベント検索ページ（ベータ版）</a></h2>
+    <div class="radio-group">
+        <div class="radio-button">
+            <input type="radio" id="yui-solo" name="artist-filter" value="yui" checked>
+            <label for="yui-solo">唯ソロ</label>
 
+            <input type="radio" id="kaori-solo" name="artist-filter" value="kaori">
+            <label for="kaori-solo">夏織ソロ</label>
+
+            <input type="radio" id="yuikaori" name="artist-filter" value="yuikaori">
+            <label for="yuikaori">ゆいかおり</label>
+        </div>
+    </div>
     <table>
         <thead>
             <tr>
@@ -36,8 +50,8 @@
                 <th>コール表</th>
                 <th>MV(抜け有)</th>
                 <th>ライブ映像(抜け有)</th>
-                <th class="sortable" data-sort="披露回数">披露回数</th>
-                <th class="sortable" data-sort="最終披露日">最終披露日</th>
+                <th class="sortable" data-sort="count">披露回数</th>
+                <th class="sortable" data-sort="latestDate">最終披露日</th>
                 <th>作詞</th>
                 <th>作曲</th>
                 <th>編曲</th>
@@ -50,7 +64,8 @@
     </table>
 
     <script>
-        let originalData = []; // 元の順序を保持
+        let originalSongs = []; // 元の順番を保持
+        let currentSort = { field: null, direction: 'asc' }; // ソート状態
 
         function formatDateToJapanese(date) {
             const year = date.getFullYear();
@@ -59,86 +74,82 @@
             return `${year}年${month}月${day}日`;
         }
 
-        function sortTable(column, type) {
-            const table = document.getElementById('songTable');
-            const rows = Array.from(table.rows);
+        function sortSongs(songs, field, direction) {
+            return [...songs].sort((a, b) => {
+                const valA = a[field];
+                const valB = b[field];
 
-            // ソート処理
-            rows.sort((a, b) => {
-                const cellA = a.cells[column].textContent.trim();
-                const cellB = b.cells[column].textContent.trim();
-
-                if (type === '数値') {
-                    return parseInt(cellA, 10) - parseInt(cellB, 10);
-                } else if (type === '日付') {
-                    const dateA = new Date(cellA.replace(/年|月/g, '-').replace(/日/g, ''));
-                    const dateB = new Date(cellB.replace(/年|月/g, '-').replace(/日/g, ''));
-                    return dateA - dateB;
+                if (field === 'latestDate' && valA && valB) {
+                    return direction === 'asc' ? new Date(valA) - new Date(valB) : new Date(valB) - new Date(valA);
                 }
-                return 0;
-            });
 
-            // 並び替え後の行をテーブルに反映
-            table.innerHTML = '';
-            rows.forEach(row => table.appendChild(row));
-        }
+                if (field === 'count') {
+                    return direction === 'asc' ? valA - valB : valB - valA;
+                }
 
-        function resetTable() {
-            const table = document.getElementById('songTable');
-            table.innerHTML = '';
-            originalData.forEach(rowHTML => {
-                const row = document.createElement('tr');
-                row.innerHTML = rowHTML;
-                table.appendChild(row);
+                return 0; // 他のフィールドではソートしない
             });
         }
 
-        function updateSongDetails() {
+        function updateTable(songs) {
+            const songTable = document.getElementById('songTable');
+            songTable.innerHTML = ''; // Clear existing table rows
+
+            songs.forEach(song => {
+                const row = `
+                    <tr>
+                        <td><a href="https://www.uta-net.com/song/${song.utanet}">${song.title}</a></td>
+                        <td>${song.call}</td>
+                        <td>${song.MVlink}</td>
+                        <td>${song.videolink}</td>
+                        <td>${song.count}</td>
+                        <td>${song.latestDate || '未披露'}</td>
+                        <td>${song.lyrics}</td>
+                        <td>${song.music}</td>
+                        <td>${song.arranger}</td>
+                        <td>${song.length}</td>
+                        <td>${song.CDtitle}</td>
+                        <td>${song.releaseDate}</td>
+                    </tr>
+                `;
+                songTable.innerHTML += row;
+            });
+        }
+
+        function updateSongDetails(selectedArtist) {
             fetch('song.json')
                 .then(response => response.json())
                 .then(songs => {
-                    const songTable = document.getElementById('songTable');
-                    songTable.innerHTML = ''; // Clear existing table rows
-
-                    originalData = []; // 元のデータをリセット
-
-                    songs.forEach(song => {
-                        const row = `
-                            <tr>
-                                <td>${song.title}</td>
-                                <td>${song.call}</td>
-                                <td>${song.MVlink}</td>
-                                <td>${song.videolink}</td>
-                                <td>${song.performanceCount}</td>
-                                <td>${song.latestPerformanceDate}</td>
-                                <td>${song.lyrics}</td>
-                                <td>${song.music}</td>
-                                <td>${song.arranger}</td>
-                                <td>${song.length}</td>
-                                <td>${song.CDtitle}</td>
-                                <td>${song.releaseDate}</td>
-                            </tr>
-                        `;
-                        songTable.innerHTML += row;
-                        originalData.push(row); // 元のデータを保存
+                    originalSongs = songs.filter(song => {
+                        if (selectedArtist === 'yui') return song.artist === '小倉唯';
+                        if (selectedArtist === 'kaori') return song.artist === '石原夏織';
+                        if (selectedArtist === 'yuikaori') return song.artist === 'ゆいかおり';
+                        return true;
                     });
+
+                    updateTable(originalSongs);
                 });
         }
 
-        // ソートヘッダーにイベントを追加
-        document.querySelectorAll('th.sortable').forEach((header, index) => {
+        document.querySelectorAll('.sortable').forEach(header => {
             header.addEventListener('click', () => {
-                const sortType = header.dataset.sort === '披露回数' ? '数値' : '日付';
-                sortTable(index, sortType);
+                const field = header.dataset.sort;
+                const direction = currentSort.field === field && currentSort.direction === 'asc' ? 'desc' : 'asc';
+                currentSort = { field, direction };
+
+                const sortedSongs = currentSort.field ? sortSongs(originalSongs, field, direction) : originalSongs;
+                updateTable(sortedSongs);
             });
         });
 
-        // 元の順序に戻すボタンの例
-        const resetButton = document.createElement('button');
-        resetButton.textContent = '元の順序に戻す';
-        resetButton.addEventListener('click', resetTable);
-        document.body.insertBefore(resetButton, document.querySelector('table'));
+        document.getElementsByName('artist-filter').forEach(filter => {
+            filter.addEventListener('change', () => {
+                updateSongDetails(filter.value);
+            });
+        });
 
-        updateSongDetails(); // Initial call to populate the table
+        updateSongDetails('yui'); // 初期呼び出し
     </script>
 </body>
+
+</html>
