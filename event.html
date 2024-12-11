@@ -32,9 +32,9 @@
 
 <body>
     <h2>ゆいかおりイベントデータベース
-        <label><font color="hotpink"><input type="radio" name="artistFilter" id="yuiSolo" checked>唯ソロのみ</font></label>
+        <label><font color="hotpink"><input type="radio" name="artistFilter" id="yuiSolo">唯ソロのみ</font></label>
         <label><font color="orange"><input type="radio" name="artistFilter" id="yuikaori">ゆいかおり含む</font></label>
-        <label><font color="deepskyblue"><input type="radio" name="artistFilter" id="kaoriSolo">夏織ソロ含む</font></label>
+        <label><font color="deepskyblue"><input type="radio" name="artistFilter" id="kaoriSolo" checked>夏織ソロ含む</font></label>
         <label><input type="radio" name="artistFilter" id="stylips">Stylips含む</label>        
         <a href="index.html">楽曲一覧はこちら</a>
     </h2>
@@ -250,7 +250,7 @@ checkboxesData.forEach(data => {
 // 都道府県の地域ごとのチェックボックスの動的生成
 checkboxesDataByRegion.forEach(region => {
     const regionDiv = document.createElement('div');
-    regionDiv.innerHTML = `<strong>${region.label}</strong>`;
+    regionDiv.innerHTML = `        <strong>${region.label}</strong>`;
     region.values.forEach(value => {
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
