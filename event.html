@@ -17,13 +17,15 @@
             padding: 8px;
             text-align: left;
         }
-        
+
         .artist1 {
             color: hotpink;
         }
+
         .artist2 {
             color: deepskyblue;
         }
+
         .artist3 {
             color: orange;
         }
@@ -35,15 +37,12 @@
         <label><font color="hotpink"><input type="radio" name="artistFilter" id="yuiSolo">唯ソロのみ</font></label>
         <label><font color="orange"><input type="radio" name="artistFilter" id="yuikaori">ゆいかおり含む</font></label>
         <label><font color="deepskyblue"><input type="radio" name="artistFilter" id="kaoriSolo" checked>夏織ソロ含む</font></label>
-        <label><input type="radio" name="artistFilter" id="stylips">Stylips含む</label>        
+        <label><input type="radio" name="artistFilter" id="stylips">Stylips含む</label>
         <a href="index.html">楽曲一覧はこちら</a>
     </h2>
     <div id="checkboxContainer"></div>
 
-    <!-- データ順序入れ替えボタン -->
     <button id="toggleOrderButton">データ順序を入れ替える</button>
-
-    <div></div>
 
     <table id="eventTable">
         <tr>
@@ -70,8 +69,7 @@
             .then(response => response.json())
             .then(data => {
                 const eventTable = document.getElementById('eventTable');
-
-                let isReversed = false; // データ順序の状態を追跡
+                let isAscending = true; // データ順序を管理するフラグ
 
                 function populateTable(data) {
                     eventTable.innerHTML = '<tr><th>年</th><th>月</th><th>日</th><th>曜日</th><th>時刻</th><th>大分類</th><th>中分類</th><th>小分類</th><th>タイトル</th><th>詳細タイトル</th><th>都道府県</th><th>会場</th><th>with</th><th>備考</th><th>セットリスト</th></tr>';
@@ -131,35 +129,105 @@
                     }
                 }
 
-                // データ順序を反転させる関数
-                function toggleOrder() {
-                    isReversed = !isReversed;
-                    const orderedData = isReversed ? [...data].reverse() : data;
-                    populateTable(orderedData);
-                }
-
-                // ラジオボタンによるアーティストフィルタリング
-                function filterByArtist(artist) {
-                    let filteredData = [];
-
-                    if (artist === 'yuiSolo') {
-                        filteredData = data.filter(event => event.Artist === '小倉唯');
-                    } else if (artist === 'yuikaori') {
-                        filteredData = data.filter(event => event.Artist === '小倉唯' || event.Artist === 'ゆいかおり');
-                    } else if (artist === 'kaoriSolo') {
-                        filteredData = data.filter(event => event.Artist === '小倉唯' || event.Artist === 'ゆいかおり' || event.Artist === '石原夏織');
-                    } else if (artist === 'stylips') {
-                        filteredData = data;
-                    }
-
-                    return filteredData;
-                }
+                // データ順序を入れ替えるボタンのイベントリスナー
+                document.getElementById('toggleOrderButton').addEventListener('click', () => {
+                    isAscending = !isAscending;
+                    const sortedData = data.slice().sort((a, b) => {
+                        if (isAscending) {
+                            return new Date(a.Year, a.Month - 1, a.Day) - new Date(b.Year, b.Month - 1, b.Day);
+                        } else {
+                            return new Date(b.Year, b.Month - 1, b.Day) - new Date(a.Year, a.Month - 1, a.Day);
+                        }
+                    });
+                    populateTable(sortedData);
+                });
 
                 // 最初にフィルタリングされたデータを表示
                 populateTable(data);
 
-                // ボタンのイベントリスナー
-                document.getElementById('toggleOrderButton').addEventListener('click', toggleOrder);
+                const checkboxesData = [
+                    { id: 'year', label: '年', values: ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'] },
+                    { id: 'month', label: '月', values: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'] },
+                    { id: 'day', label: '日', values: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31'] },
+                    { id: 'youbi', label: '曜日', values: ['日', '月', '火', '水', '木', '金', '土'] },
+                    { id: 'class1', label: '大分類', values: ['ライブ', 'ツアー', 'フェス', '社員総会', '特典会', 'リリース', 'シングル', 'アルバム', '写真集'] },
+                ];
+
+                const checkboxesDataByRegion = [
+                    {
+                        label: '関東地方',
+                        values: ['東京', '神奈川', '千葉', '埼玉', '茨城', '栃木', '群馬']
+                    },
+                    {
+                        label: '北日本',
+                        values: ['宮城', '青森', '秋田', '山形', '岩手', '福島', '北海道']
+                    },
+                    {
+                        label: '中部地方',
+                        values: ['新潟', '富山', '石川', '福井', '山梨', '長野', '岐阜', '静岡', '三重', '愛知']
+                    },
+                    {
+                        label: '近畿地方',
+                        values: ['大阪', '滋賀', '京都', '兵庫', '奈良', '和歌山']
+                    },
+                    {
+                        label: '中国地方',
+                        values: ['鳥取', '島根', '岡山', '広島', '山口']
+                    },
+                    {
+                        label: '四国地方',
+                        values: ['徳島', '香川', '愛媛', '高知']
+                    },
+                    {
+                        label: '九州地方',
+                        values: ['福岡', '佐賀', '長崎', '熊本', '大分', '宮崎', '鹿児島', '沖縄']
+                    },
+                    {
+                        label: '海外',
+                        values: ['中国', '台湾', '香港', 'タイ']
+                    }
+                ];
+
+                const checkboxContainer = document.getElementById('checkboxContainer');
+
+                // 他のチェックボックスの動的生成
+                checkboxesData.forEach(data => {
+                    const div = document.createElement('div');
+                    div.innerHTML = `<strong>${data.label}</strong>`;
+                    data.values.forEach(value => {
+                        const checkbox = document.createElement('input');
+                        checkbox.type = 'checkbox';
+                        checkbox.id = `${data.id}-${value}`;
+                        checkbox.value = value;
+                        const label = document.createElement('label');
+                        label.setAttribute('for', checkbox.id);
+                        label.textContent = value;
+                        div.appendChild(checkbox);
+                        div.appendChild(label);
+                    });
+                    checkboxContainer.appendChild(div);
+                });
+
+                // 都道府県の地域ごとのチェックボックスの動的生成
+                checkboxContainer.appendChild(document.createElement('br')); // 空行を追加
+                checkboxesDataByRegion.forEach(region => {
+                    const regionDiv = document.createElement('div');
+                    regionDiv.innerHTML = `        <strong>${region.label}</strong>`;
+                    region.values.forEach(value => {
+                        const checkbox = document.createElement('input');
+                        checkbox.type = 'checkbox';
+                        checkbox.id = `prefecture-${value}`;
+                        checkbox.value = value;
+
+                        const label = document.createElement('label');
+                        label.setAttribute('for', checkbox.id);
+                        label.textContent = value;
+
+                        regionDiv.appendChild(checkbox);
+                        regionDiv.appendChild(label);
+                    });
+                    checkboxContainer.appendChild(regionDiv);
+                });
             });
     </script>
 </body>
