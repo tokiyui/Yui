@@ -71,6 +71,26 @@
                     } else {
                         data.forEach(event => {
                             const row = eventTable.insertRow(-1);
+                            let artistClass = '';
+                            if (Array.isArray(event.Artist)) {
+                                if (event.Artist.length > 0) {
+                                    if (event.Artist[0] === '小倉唯') {
+                                        artistClass = 'artist1';
+                                    } else if (event.Artist[0] === '石原夏織') {
+                                        artistClass = 'artist2';
+                                    } else if (event.Artist[0] === 'ゆいかおり') {
+                                        artistClass = 'artist3';
+                                    }
+                                }
+                            } else {
+                                if (event.Artist === '小倉唯') {
+                                    artistClass = 'artist1';
+                                } else if (event.Artist === '石原夏織') {
+                                    artistClass = 'artist2';
+                                } else if (event.Artist === 'ゆいかおり') {
+                                    artistClass = 'artist3';
+                                }
+                            }
                             row.insertCell().textContent = event.Year;
                             row.insertCell().textContent = event.Month;
                             row.insertCell().textContent = event.Day;
@@ -79,7 +99,7 @@
                             row.insertCell().textContent = event.class1;
                             row.insertCell().textContent = event.class2;
                             row.insertCell().textContent = event.class3;
-                            row.insertCell().textContent = event.title;
+                            row.insertCell().innerHTML = `<span class="${artistClass}">${event.title}</span>`;
                             row.insertCell().textContent = event.title2;
                             row.insertCell().textContent = event.prefecture;
                             row.insertCell().textContent = event.Venue;
