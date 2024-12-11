@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ゆいかおりイベントデータベース</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .artist1 {
+            color: hotpink;
+        }
+
+        .artist2 {
+            color: deepskyblue;
+        }
+
+        .artist3 {
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>ゆいかおりイベントデータベース
+        <label><font color="hotpink"><input type="radio" name="artistFilter" id="yuiSolo">唯ソロのみ</font></label>
+        <label><font color="orange"><input type="radio" name="artistFilter" id="yuikaori">ゆいかおり含む</font></label>
+        <label><font color="deepskyblue"><input type="radio" name="artistFilter" id="kaoriSolo" checked>夏織ソロ含む</font></label>
+        <label><input type="radio" name="artistFilter" id="stylips">Stylips含む</label>
+        <a href="index.html">楽曲一覧はこちら</a>
+    </h2>
+    <div id="checkboxContainer"></div>
+
+    <div>
+        <button id="toggleOrder">順序を入れ替える</button>
+    </div>
+
+    <table id="eventTable">
+        <tr>
+            <th>年</th>
+            <th>月</th>
+            <th>日</th>
+            <th>曜日</th>
+            <th>時刻</th>
+            <th>大分類</th>
+            <th>中分類</th>
+            <th>小分類</th>
+            <th>タイトル</th>
+            <th>詳細タイトル</th>
+            <th>都道府県</th>
+            <th>会場</th>
+            <th>with</th>
+            <th>備考</th>
+            <th>セットリスト</th>
+        </tr>
+    </table>
+
+    <script>
+        fetch('event.json')
+            .then(response => response.json())
+            .then(data => {
+                const eventTable = document.getElementById('eventTable');
+                let isAscending = true; // デフォルトは昇順
+
+                function populateTable(data) {
+                    eventTable.innerHTML = '<tr><th>年</th><th>月</th><th>日</th><th>曜日</th><th>時刻</th><th>大分類</th><th>中分類</th><th>小分類</th><th>タイトル</th><th>詳細タイトル</th><th>都道府県</th><th>会場</th><th>with</th><th>備考</th><th>セットリスト</th></tr>';
+
+                    if (data.length === 0) {
+                        const row = eventTable.insertRow(-1);
+                        const cell = row.insertCell();
+                        cell.colSpan = 15;
+                        cell.textContent = '条件に一致するイベントはありません。';
+                    } else {
+                        data.forEach(event => {
+                            const row = eventTable.insertRow(-1);
+                            let artistClass = '';
+                            if (Array.isArray(event.Artist)) {
+                                if (event.Artist.length > 0) {
+                                    if (event.Artist[0] === '小倉唯') {
+                                        artistClass = 'artist1';
+                                    } else if (event.Artist[0] === '石原夏織') {
+                                        artistClass = 'artist2';
+                                    } else if (event.Artist[0] === 'ゆいかおり') {
+                                        artistClass = 'artist3';
+                                    }
+                                }
+                            } else {
+                                if (event.Artist === '小倉唯') {
+                                    artistClass = 'artist1';
+                                } else if (event.Artist === '石原夏織') {
+                                    artistClass = 'artist2';
+                                } else if (event.Artist === 'ゆいかおり') {
+                                    artistClass = 'artist3';
+                                }
+                            }
+                            row.insertCell().textContent = event.Year;
+                            row.insertCell().textContent = event.Month;
+                            row.insertCell().textContent = event.Day;
+                            row.insertCell().textContent = event.Weekday;
+                            row.insertCell().textContent = event['Start Time'];
+                            row.insertCell().textContent = event.class1;
+                            row.insertCell().textContent = event.class2;
+                            row.insertCell().textContent = event.class3;
+                            row.insertCell().innerHTML = `<span class="${artistClass}">${event.title}</span>`;
+                            row.insertCell().textContent = event.title2;
+                            row.insertCell().textContent = event.prefecture;
+                            row.insertCell().textContent = event.Venue;
+                            row.insertCell().textContent = event.sponsor;
+                            row.insertCell().textContent = event.info;
+                            if (event.id) {
+                                const setlistCell = row.insertCell();
+                                const setlistLink = document.createElement('a');
+                                setlistLink.href = `https://tokiyui.github.io/Yui/sub/setlist.html?id=${event.id}`;
+                                setlistLink.textContent = 'セットリスト';
+                                setlistCell.appendChild(setlistLink);
+                            } else {
+                                row.insertCell().textContent = '';
+                            }
+                        });
+                    }
+                }
+
+                // ラジオボタンによるアーティストフィルタリング
+                function filterByArtist(artist) {
+                    let filteredData = []; // デフォルト値として空の配列を設定
+
+                    if (artist === 'yuiSolo') {
+                        filteredData = data.filter(event => event.Artist === '小倉唯');
+                    } else if (artist === 'yuikaori') {
+                        filteredData = data.filter(event => event.Artist === '小倉唯' || event.Artist === 'ゆいかおり');
+                    } else if (artist === 'kaoriSolo') {
+                        filteredData = data.filter(event => event.Artist === '小倉唯' || event.Artist === 'ゆいかおり' || event.Artist === '石原夏織');
+                    } else if (artist === 'stylips') {
+                        filteredData = data; // Stylipsはフィルタリングしない
+                    }
+
+                    return filteredData;
+                }
+
+                // ラジオボタンの選択によるフィルタリングとチェックボックスの条件を反映
+                function filterData() {
+                    const selectedArtist = document.querySelector('input[name="artistFilter"]:checked').id;
+                    let filteredData = filterByArtist(selectedArtist);
+
+                    // チェックボックスの条件によるフィルタリング
+                    const selectedYears = [...document.querySelectorAll('input[type="checkbox"][id^="year"]:checked')].map(cb => cb.value);
+                    const selectedMonths = [...document.querySelectorAll('input[type="checkbox"][id^="month"]:checked')].map(cb => cb.value);
+                    const selectedDays = [...document.querySelectorAll('input[type="checkbox"][id^="day"]:checked')].map(cb => cb.value);
+                    const selectedYoubis = [...document.querySelectorAll('input[type="checkbox"][id^="youbi"]:checked')].map(cb => cb.value);
+                    const selectedPrefectures = [...document.querySelectorAll('input[type="checkbox"][id^="prefecture"]:checked')].map(cb => cb.value);
+                    const selectedClass = [...document.querySelectorAll('input[type="checkbox"][id^="class1"]:checked')].map(cb => cb.value);
+
+                    filteredData = filteredData.filter(event =>
+                        (selectedYears.length === 0 || selectedYears.includes(event.Year)) &&
+                        (selectedMonths.length === 0 || selectedMonths.includes(event.Month)) &&
+                        (selectedDays.length === 0 || selectedDays.includes(event.Day)) &&
+                        (selectedYoubis.length === 0 || selectedYoubis.includes(event.Weekday)) &&
+                        (selectedPrefectures.length === 0 || selectedPrefectures.includes(event.prefecture)) &&
+                        ((selectedClass.length === 0 || selectedClass.includes(event.class1)) || (selectedClass.length === 0 || selectedClass.includes(event.class2)))
+                    );
+
+                    populateTable(filteredData);
+                }
+
+                // 最初にフィルタリングされたデータを表示（デフォルトは唯ソロ）
+                filterData();
+
+                // ラジオボタンのイベントリスナー
+                document.querySelectorAll('input[name="artistFilter"]').forEach(radio => {
+                    radio.addEventListener('change', filterData);
+                });
+
+                const checkboxesData = [
+                    { id: 'year', label: '年', values: ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'] },
+                    { id: 'month', label: '月', values: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'] },
+                    { id: 'day', label: '日', values: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31'] },
+                    { id: 'youbi', label: '曜日', values: ['日', '月', '火', '水', '木', '金', '土'] },
+                    { id: 'class1', label: '大分類', values: ['ライブ', 'イベント', '放送', 'リリース'] },
+                    { id: 'prefecture', label: '都道府県', values: ['東京', '神奈川', '埼玉', '千葉', '大阪', '愛知', '福岡', '北海道'] }
+                ];
+
+                const checkboxContainer = document.getElementById('checkboxContainer');
+
+                checkboxesData.forEach(group => {
+                    const groupDiv = document.createElement('div');
+                    groupDiv.innerHTML = `<p>${group.label}:</p>`;
+                    group.values.forEach(value => {
+                        const label = document.createElement('label');
+                        label.innerHTML = `<input type="checkbox" id="${group.id}_${value}" value="${value}">${value}`;
+                        groupDiv.appendChild(label);
+                    });
+                    checkboxContainer.appendChild(groupDiv);
+                    checkboxContainer.appendChild(document.createElement('br'));
+                });
+
+                document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+                    checkbox.addEventListener('change', filterData);
+                });
+
+                // 順序を入れ替えるボタンのイベントリスナー
+                const toggleOrderButton = document.getElementById('toggleOrder');
+                toggleOrderButton.addEventListener('click', () => {
+                    isAscending = !isAscending;
+                    data.reverse(); // データの順序を反転
+                    filterData(); // フィルタリングして再表示
+                });
+            });
+    </script>
+</body>
+
+</html>
