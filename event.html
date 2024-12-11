@@ -69,7 +69,7 @@
             .then(response => response.json())
             .then(data => {
                 const eventTable = document.getElementById('eventTable');
-                let isAscending = true; // データ順序を管理するフラグ
+                let isAscending = true; // デフォルトは昇順
 
                 function populateTable(data) {
                     eventTable.innerHTML = '<tr><th>年</th><th>月</th><th>日</th><th>曜日</th><th>時刻</th><th>大分類</th><th>中分類</th><th>小分類</th><th>タイトル</th><th>詳細タイトル</th><th>都道府県</th><th>会場</th><th>with</th><th>備考</th><th>セットリスト</th></tr>';
@@ -129,21 +129,55 @@
                     }
                 }
 
-                // データ順序を入れ替えるボタンのイベントリスナー
-                document.getElementById('toggleOrderButton').addEventListener('click', () => {
-                    isAscending = !isAscending;
-                    const sortedData = data.slice().sort((a, b) => {
-                        if (isAscending) {
-                            return new Date(a.Year, a.Month - 1, a.Day) - new Date(b.Year, b.Month - 1, b.Day);
-                        } else {
-                            return new Date(b.Year, b.Month - 1, b.Day) - new Date(a.Year, a.Month - 1, a.Day);
-                        }
-                    });
-                    populateTable(sortedData);
-                });
+                // ラジオボタンによるアーティストフィルタリング
+                function filterByArtist(artist) {
+                    let filteredData = []; // デフォルト値として空の配列を設定
 
-                // 最初にフィルタリングされたデータを表示
-                populateTable(data);
+                    if (artist === 'yuiSolo') {
+                        filteredData = data.filter(event => event.Artist === '小倉唯');
+                    } else if (artist === 'yuikaori') {
+                        filteredData = data.filter(event => event.Artist === '小倉唯' || event.Artist === 'ゆいかおり');
+                    } else if (artist === 'kaoriSolo') {
+                        filteredData = data.filter(event => event.Artist === '小倉唯' || event.Artist === 'ゆいかおり' || event.Artist === '石原夏織');
+                    } else if (artist === 'stylips') {
+                        filteredData = data; // Stylipsはフィルタリングしない
+                    }
+
+                    return filteredData;
+                }
+
+                // ラジオボタンの選択によるフィルタリングとチェックボックスの条件を反映
+                function filterData() {
+                    const selectedArtist = document.querySelector('input[name="artistFilter"]:checked').id;
+                    let filteredData = filterByArtist(selectedArtist);
+
+                    // チェックボックスの条件によるフィルタリング
+                    const selectedYears = [...document.querySelectorAll('input[type="checkbox"][id^="year"]:checked')].map(cb => cb.value);
+                    const selectedMonths = [...document.querySelectorAll('input[type="checkbox"][id^="month"]:checked')].map(cb => cb.value);
+                    const selectedDays = [...document.querySelectorAll('input[type="checkbox"][id^="day"]:checked')].map(cb => cb.value);
+                    const selectedYoubis = [...document.querySelectorAll('input[type="checkbox"][id^="youbi"]:checked')].map(cb => cb.value);
+                    const selectedPrefectures = [...document.querySelectorAll('input[type="checkbox"][id^="prefecture"]:checked')].map(cb => cb.value);
+                    const selectedClass = [...document.querySelectorAll('input[type="checkbox"][id^="class1"]:checked')].map(cb => cb.value);
+
+                    filteredData = filteredData.filter(event =>
+                        (selectedYears.length === 0 || selectedYears.includes(event.Year)) &&
+                        (selectedMonths.length === 0 || selectedMonths.includes(event.Month)) &&
+                        (selectedDays.length === 0 || selectedDays.includes(event.Day)) &&
+                        (selectedYoubis.length === 0 || selectedYoubis.includes(event.Weekday)) &&
+                        (selectedPrefectures.length === 0 || selectedPrefectures.includes(event.prefecture)) &&
+                        ((selectedClass.length === 0 || selectedClass.includes(event.class1)) || (selectedClass.length === 0 || selectedClass.includes(event.class2)))
+                    );
+
+                    populateTable(filteredData);
+                }
+
+                // 最初にフィルタリングされたデータを表示（デフォルトは唯ソロ）
+                filterData();
+
+                // ラジオボタンのイベントリスナー
+                document.querySelectorAll('input[name="artistFilter"]').forEach(radio => {
+                    radio.addEventListener('change', filterData);
+                });
 
                 const checkboxesData = [
                     { id: 'year', label: '年', values: ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'] },
