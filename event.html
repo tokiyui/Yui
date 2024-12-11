@@ -35,7 +35,7 @@
         <label><font color="hotpink"><input type="radio" name="artistFilter" id="yuiSolo">唯ソロのみ</font></label>
         <label><font color="orange"><input type="radio" name="artistFilter" id="yuikaori">ゆいかおり含む</font></label>
         <label><font color="deepskyblue"><input type="radio" name="artistFilter" id="kaoriSolo" checked>夏織ソロ含む</font></label>
-        <label><input type="radio" name="artistFilter" id="stylips">Stylips含む</label>        
+        <label><input type="radio" name="artistFilter" id="stylipS">StylipS含む</label>        
         <a href="index.html">楽曲一覧はこちら</a>
     </h2>
     <div id="checkboxContainer"></div>
@@ -138,8 +138,8 @@
                         filteredData = data.filter(event => event.Artist === '小倉唯' || event.Artist === 'ゆいかおり');
                     } else if (artist === 'kaoriSolo') {
                         filteredData = data.filter(event => event.Artist === '小倉唯' || event.Artist === 'ゆいかおり' || event.Artist === '石原夏織');
-                    } else if (artist === 'stylips') {
-                        filteredData = data; // Stylipsはフィルタリングしない
+                    } else if (artist === 'stylipS') {
+                        filteredData = data; // StylipSはフィルタリングしない
                     }
 
                     return filteredData;
