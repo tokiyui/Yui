@@ -106,13 +106,27 @@
                         const concerts = data.filter(item => item.tourtitle === selectedTour);
                         concerts.sort((a, b) => a.id.localeCompare(b.id));
 
-                        const table = document.createElement('table');
+            const maxSetlistLength = Math.max(...concerts.map(concert => concert.setlist.length));
+            const maxEncoreLength = Math.max(...concerts.map(concert => concert.encore ? concert.encore.length : 0));
 
-                        const headerRow = table.insertRow();
-                        headerRow.insertCell().textContent = '';
-                        concerts.forEach(concert => {
-                            headerRow.insertCell().textContent = concert.LIVEtitle.replace(concert.tourtitle, '');
-                        });
+            concerts.forEach(concert => {
+              while (concert.setlist.length < maxSetlistLength) {
+                concert.setlist.push('');
+              }
+              if (concert.encore) {
+                while (concert.encore.length < maxEncoreLength) {
+                  concert.encore.push('');
+                }
+              }
+            });
+
+            const table = document.createElement('table');
+
+            const headerRow = table.insertRow();
+            headerRow.insertCell().textContent = '';
+            concerts.forEach(concert => {
+              headerRow.insertCell().textContent = concert.LIVEtitle.replace(concert.tourtitle, '');
+            });
                         
                         const dateRow = table.insertRow();
                         dateRow.insertCell().textContent = '開催日';
@@ -132,7 +146,7 @@
                             row.insertCell().textContent = '【セットリスト】';
                         });
 
-            const setlistRows = concerts[0].setlist.length;
+            const setlistRows = maxSetlistLength;
 
             for (let i = 0; i < setlistRows; i++) {
               const row = table.insertRow();
