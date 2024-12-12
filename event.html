@@ -129,7 +129,7 @@
                 }
 
                 // ラジオボタンによるアーティストフィルタリング
-                function filterEvents(data) {
+                function filterByArtist() {
                     // 選択されているチェックボックスの値を取得
                     const selectedArtists = Array.from(document.querySelectorAll('input[name="artistFilter"]:checked'))
                         .map(input => input.value);
