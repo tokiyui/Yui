@@ -32,10 +32,10 @@
 
 <body>
     <h2>ゆいかおりイベントデータベース
-        <label><font color="hotpink"><input type="radio" name="artistFilter" id="yuiSolo">唯ソロのみ</font></label>
-        <label><font color="orange"><input type="radio" name="artistFilter" id="yuikaori">ゆいかおり含む</font></label>
-        <label><font color="deepskyblue"><input type="radio" name="artistFilter" id="kaoriSolo" checked>夏織ソロ含む</font></label>
-        <label><input type="radio" name="artistFilter" id="stylipS">StylipS含む</label>        
+        <label><font color="hotpink"><input type="checkbox" name="artistFilter" value="yuiSolo">唯ソロのみ</font></label>
+        <label><font color="orange"><input type="checkbox" name="artistFilter" value="yuikaori">ゆいかおり含む</font></label>
+        <label><font color="deepskyblue"><input type="checkbox" name="artistFilter" value="kaoriSolo" checked>夏織ソロ含む</font></label>
+        <label><input type="checkbox" name="artistFilter" value="stylipS">StylipS含む</label>
         <a href="index.html">楽曲一覧はこちら</a>
     </h2>
     <div id="checkboxContainer"></div>
@@ -129,18 +129,20 @@
                 }
 
                 // ラジオボタンによるアーティストフィルタリング
-                function filterByArtist(artist) {
-                    let filteredData = []; // デフォルト値として空の配列を設定
+                function filterEvents(data) {
+                    // 選択されているチェックボックスの値を取得
+                    const selectedArtists = Array.from(document.querySelectorAll('input[name="artistFilter"]:checked'))
+                        .map(input => input.value);
 
-                    if (artist === 'yuiSolo') {
-                        filteredData = data.filter(event => event.Artist === '小倉唯');
-                    } else if (artist === 'yuikaori') {
-                        filteredData = data.filter(event => event.Artist === '小倉唯' || event.Artist === 'ゆいかおり');
-                    } else if (artist === 'kaoriSolo') {
-                        filteredData = data.filter(event => event.Artist === '小倉唯' || event.Artist === 'ゆいかおり' || event.Artist === '石原夏織');
-                    } else if (artist === 'stylipS') {
-                        filteredData = data; // StylipSはフィルタリングしない
-                    }
+                    // フィルタリング
+                    const filteredData = data.filter(event => {
+                        return (
+                            (selectedArtists.includes('yuiSolo') && event.Artist === '小倉唯') ||
+                            (selectedArtists.includes('yuikaori') && event.Artist === 'ゆいかおり') ||
+                            (selectedArtists.includes('kaoriSolo') && event.Artist === '石原夏織') ||
+                            (selectedArtists.includes('StylipS') && event.Artist === 'StylipS')
+                        );
+                    });
 
                     return filteredData;
                 }
