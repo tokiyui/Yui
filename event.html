@@ -164,7 +164,8 @@ function filterByArtist() {
                     const selectedDays = [...document.querySelectorAll('input[type="checkbox"][id^="day"]:checked')].map(cb => cb.value);
                     const selectedYoubis = [...document.querySelectorAll('input[type="checkbox"][id^="youbi"]:checked')].map(cb => cb.value);
                     const selectedPrefectures = [...document.querySelectorAll('input[type="checkbox"][id^="prefecture"]:checked')].map(cb => cb.value);
-                    const selectedClass = [...document.querySelectorAll('input[type="checkbox"][id^="class1"]:checked')].map(cb => cb.value);
+                    const selectedClass1 = [...document.querySelectorAll('input[type="checkbox"][id^="class1"]:checked')].map(cb => cb.value);
+                    const selectedClass2 = [...document.querySelectorAll('input[type="checkbox"][id^="class2"]:checked')].map(cb => cb.value);
 
                     filteredData = filteredData.filter(event =>
                         (selectedYears.length === 0 || selectedYears.includes(event.Year)) &&
@@ -172,7 +173,8 @@ function filterByArtist() {
                         (selectedDays.length === 0 || selectedDays.includes(event.Day)) &&
                         (selectedYoubis.length === 0 || selectedYoubis.includes(event.Weekday)) &&
                         (selectedPrefectures.length === 0 || selectedPrefectures.includes(event.prefecture)) &&
-                        ((selectedClass.length === 0 || selectedClass.includes(event.class1)) || (selectedClass.length === 0 || selectedClass.includes(event.class2)))
+                        (selectedClass1.length === 0 || selectedClass1.includes(event.class1)) &&
+                        (selectedClass2.length === 0 || selectedClass2.includes(event.class2))
                     );
 
                     populateTable(filteredData);
