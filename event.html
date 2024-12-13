@@ -128,24 +128,24 @@
                     }
                 }
 
-                // ラジオボタンによるアーティストフィルタリング
-                function filterByArtist() {
-                    // 選択されているチェックボックスの値を取得
-                    const selectedArtists = Array.from(document.querySelectorAll('input[name="artistFilter"]:checked'))
-                        .map(input => input.value);
+// ラジオボタンによるアーティストフィルタリング
+function filterByArtist() {
+    // 選択されているチェックボックスの値を取得
+    const selectedArtists = Array.from(document.querySelectorAll('input[name="artistFilter"]:checked'))
+        .map(input => input.value);
 
-                    // フィルタリング
-                    const filteredData = data.filter(event => {
-                        return (
-                            (selectedArtists.includes('yuiSolo') && event.Artist === '小倉唯') ||
-                            (selectedArtists.includes('yuikaori') && event.Artist === 'ゆいかおり') ||
-                            (selectedArtists.includes('kaoriSolo') && event.Artist === '石原夏織') ||
-                            (selectedArtists.includes('StylipS') && event.Artist === 'StylipS')
-                        );
-                    });
+    // フィルタリング
+    const filteredData = data.filter(event => {
+        return (
+            (selectedArtists.includes('yuiSolo') && (event.Artist === '小倉唯' || (Array.isArray(event.Artist) && event.Artist.includes('小倉唯')))) ||
+            (selectedArtists.includes('yuikaori') && (event.Artist === 'ゆいかおり' || (Array.isArray(event.Artist) && event.Artist.includes('ゆいかおり')))) ||
+            (selectedArtists.includes('kaoriSolo') && (event.Artist === '石原夏織' || (Array.isArray(event.Artist) && event.Artist.includes('石原夏織')))) ||
+            (selectedArtists.includes('StylipS') && (event.Artist === 'StylipS' || (Array.isArray(event.Artist) && event.Artist.includes('StylipS'))))
+        );
+    });
 
-                    return filteredData;
-                }
+    return filteredData;
+}
 
                 // ラジオボタンの選択によるフィルタリングとチェックボックスの条件を反映
                 function filterData() {
