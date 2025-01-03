@@ -48,11 +48,11 @@ if (!targetLiveId) {
                         let setlistHTML = '<ul>';
                         setlist.forEach((song, index) => {
                             if (typeof song === 'string') {
-                                setlistHTML += `<p>${index + 1}. <a href="./search.html?name=${song}">${song}</a></p>`;
+                                setlistHTML += `<p>${index + 1}. <a href="./search.html?name=${encodeURIComponent(song)}">${song}</a></p>`;
                             } else if (typeof song === 'object' && Array.isArray(song.medley)) {
                                 setlistHTML += `<p>${index + 1}. 【メドレー】<br>`;
                                 song.medley.forEach((medleySong, medleyIndex) => {
-                                    setlistHTML += `<a href="./search.html?name=${medleySong}">${medleySong}</a>`;
+                                    setlistHTML += `<a href="./search.html?name=${encodeURIComponent(medleySong)}">${medleySong}</a>`;
                                     if (medleyIndex < song.medley.length - 1) {
                                         setlistHTML += '<br>';
                                     }
@@ -73,11 +73,11 @@ const renderEncore = encore => {
         encoreHTML += '<ul>';
         encore.forEach((song, index) => {
             if (typeof song === 'string') {
-                encoreHTML += `<p>${index + 1}. <a href="./search.html?name=${song}">${song}</a></p>`;
+                encoreHTML += `<p>${index + 1}. <a href="./search.html?name=${encodeURIComponent(song)}">${song}</a></p>`;
             } else if (typeof song === 'object' && Array.isArray(song.medley)) {
                 encoreHTML += `<p>${index + 1}. 【メドレー】<br>`;
                 song.medley.forEach((medleySong, medleyIndex) => {
-                    encoreHTML += `<a href="./search.html?name=${medleySong}">${medleySong}</a>`;
+                    encoreHTML += `<a href="./search.html?name=${encodeURIComponent(medleySong)}">${medleySong}</a>`;
                     if (medleyIndex < song.medley.length - 1) {
                         encoreHTML += '<br>';
                     }
@@ -96,7 +96,7 @@ const renderEncore = encore => {
                         <h3>${liveData.date} (${getDayOfWeek(liveData.date)}) @${liveData.venue}</h3>
                         ${renderSetlist(liveData.setlist)}
                         ${liveData.encore ? `<p>【アンコール】</p>${renderEncore(liveData.encore)}` : ''}
-                        ${liveData.Wencore ? `<p>【ダブルアンコール】</p><p><ul><a href="./search.html?name=${liveData.Wencore}">${liveData.Wencore}</a></ul></p>` : ''}
+                        ${liveData.Wencore ? `<p>【ダブルアンコール】</p><p><ul><a href="./search.html?name=${encodeURIComponent(liveData.Wencore)}">${liveData.Wencore}</a></ul></p>` : ''}
                     `;
                     liveInfo.innerHTML = html;
 
