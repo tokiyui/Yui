@@ -142,10 +142,11 @@
 
                                         // const callLink = song.call ? `<a href="https://yuicom-callbook.hatenablog.com/entry/${song.call}" target="_blank">コール表</a>` : '';
                                         const callLink = song.call
-                                            ? (typeof song.call === 'number'
-                                                                      ? `<a href="https://salvageyuikaori.seesaa.net/article/${song.call}.html" target="_blank">コール表</a>`
-                                                                      : `<a href="https://yuicom-callbook.hatenablog.com/entry/${song.call}" target="_blank">コール表</a>`)
-                                            : '';
+                                          ? (!isNaN(Number(song.call))
+                                              ? `<a href="https://salvageyuikaori.seesaa.net/article/${song.call}.html" target="_blank">コール表</a>`
+                                              : `<a href="https://yuicom-callbook.hatenablog.com/entry/${song.call}" target="_blank">コール表</a>`)
+                                          : '';
+
 
                                         const MVLink = song.MVlink ? `<a href="https://www.youtube.com/watch?v=${song.MVlink}" target="_blank">MV</a>` : '';
                                         const videoLink = song.videolink ? `<a href="https://www.youtube.com/watch?v=${song.videolink}" target="_blank">ライブ映像</a>` : '';
