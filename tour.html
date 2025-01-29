@@ -105,21 +105,20 @@
                     .then(data => {
                         const concerts = data.filter(item => item.tourtitle === selectedTour);
                         concerts.sort((a, b) => a.id.localeCompare(b.id));
-
-              // concert.encore が null や undefined の場合は空の配列にする
-              if (!Array.isArray(concert.encore)) {
-                  concert.encore = concert.encore ? [concert.encore] : [];
-              }
                       
             const maxSetlistLength = Math.max(...concerts.map(concert => concert.setlist.length));
-            const maxEncoreLength = Math.max(...concerts.map(concert => concert.encore ? concert.encore.length : 0));
+            const maxEncoreLength = Math.max(...concerts.map(concert => Array.isArray(concert.encore) ? concert.encore.length : (concert.encore ? 1 : 0)));
 
             concerts.forEach(concert => {
               while (concert.setlist.length < maxSetlistLength) {
                 concert.setlist.push('');
               }
 
-
+              // concert.encore が null や undefined の場合は空の配列にする
+              if (!Array.isArray(concert.encore)) {
+                  concert.encore = concert.encore ? [concert.encore] : [];
+              }
+              
               if (concert.encore) {
                 while (concert.encore.length < maxEncoreLength) {
                   concert.encore.push('');
