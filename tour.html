@@ -186,7 +186,13 @@
               });
             }
 
-const encoreList = concert.encore;
+const encoreList = concerts.map(concert => {
+  if (Array.isArray(concert.encore)) {
+    return concert.encore;
+  } else {
+    return [concert.encore];
+  }
+});
 
 if (encoreList[0][0]) {
   const encorerow = table.insertRow();
