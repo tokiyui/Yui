@@ -52,13 +52,18 @@
                 <th>編曲</th>
                 <th>長さ</th>
                 <th>収録CD</th>
-                <th class="sortable" onclick="updateSongDetails('yui')">リリース日</th>
+                <th class="sortable" onclick="resetTable()">リリース日</th>
+
             </tr>
         </thead>
         <tbody id="songTable"></tbody>
     </table>
 
     <script>
+        function resetTable() {
+    updateSongDetails(selectedArtist);
+}
+
         function parseDateString(dateStr) {
             if (!dateStr.includes('年')) return null;
             return new Date(dateStr.replace(/年|月/g, '-').replace(/日/g, ''));
