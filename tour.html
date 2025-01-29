@@ -113,6 +113,11 @@
               while (concert.setlist.length < maxSetlistLength) {
                 concert.setlist.push('');
               }
+              // concert.encore が null や undefined の場合は空の配列にする
+              if (!Array.isArray(concert.encore)) {
+                  concert.encore = concert.encore ? [concert.encore] : [];
+              }
+
               if (concert.encore) {
                 while (concert.encore.length < maxEncoreLength) {
                   concert.encore.push('');
