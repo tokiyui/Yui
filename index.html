@@ -48,12 +48,13 @@
 
 <script>
 
-            function formatDateToJapanese(date) {
-            const year = date.getFullYear();
-            const month = (date.getMonth() + 1).toString();
-            const day = date.getDate().toString();
-            return ${year}年${month}月${day}日;
-        }
+    function formatDateToJapanese(date) {
+        const year = date.getFullYear();
+        const month = (date.getMonth() + 1).toString();
+        const day = date.getDate().toString();
+        return ${year}年${month}月${day}日;
+    }
+    
     let defaultSongData = [];
 
     function updateSongDetails(selectedArtist) {
