@@ -53,17 +53,12 @@
                 <th>長さ</th>
                 <th>収録CD</th>
                 <th class="sortable" onclick="resetTable()">リリース日</th>
-
             </tr>
         </thead>
         <tbody id="songTable"></tbody>
     </table>
 
     <script>
-        function resetTable() {
-    updateSongDetails(selectedArtist);
-}
-
         function parseDateString(dateStr) {
             if (!dateStr.includes('年')) return null;
             return new Date(dateStr.replace(/年|月/g, '-').replace(/日/g, ''));
@@ -92,6 +87,42 @@
             });
 
             rows.forEach(row => table.appendChild(row));
+        }
+
+        function updateSongDetails(selectedArtist) {
+            fetch('song.json')
+                .then(response => response.json())
+                .then(songs => {
+                    const songTable = document.getElementById('songTable');
+                    songTable.innerHTML = '';
+
+                    songs.forEach(song => {
+                        if (selectedArtist === 'yui' && song.artist !== '小倉唯') return;
+                        if (selectedArtist === 'kaori' && song.artist !== '石原夏織') return;
+                        if (selectedArtist === 'yuikaori' && song.artist !== 'ゆいかおり') return;
+
+                        const row = document.createElement("tr");
+                        row.innerHTML = `
+                            <td><a href="https://www.uta-net.com/song/${song.utanet}">${song.title}</a></td>
+                            <td>${song.call ? `<a href="https://yuicom-callbook.hatenablog.com/entry/${song.call}" target="_blank">コール表</a>` : ''}</td>
+                            <td>${song.MVlink ? `<a href="https://www.youtube.com/watch?v=${song.MVlink}" target="_blank">MV</a>` : ''}</td>
+                            <td>${song.videolink ? `<a href="https://www.youtube.com/watch?v=${song.videolink}" target="_blank">ライブ映像</a>` : ''}</td>
+                            <td>${song.performanceCount}</td>
+                            <td>${song.lastPerformanceDate || '未披露'}</td>
+                            <td>${song.lyrics}</td>
+                            <td>${song.music}</td>
+                            <td>${song.arranger}</td>
+                            <td>${song.length}</td>
+                            <td>${song.CDtitle}</td>
+                            <td>${song.releaseDate || '不明'}</td>
+                        `;
+                        songTable.appendChild(row);
+                    });
+                });
+        }
+
+        function resetTable() {
+            updateSongDetails(document.querySelector('input[name="artist-filter"]:checked').value);
         }
 
         document.querySelectorAll(".radio-input").forEach(filter => {
