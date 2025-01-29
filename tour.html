@@ -244,19 +244,20 @@ if (encoreList[0][0]) {
     });
   }
 }
+if (concerts.some(concert => concert.Wencore)) {
+  const wencorerow = table.insertRow();
+  const cell = wencorerow.insertCell();
+  cell.textContent = 'WEC';
 
-            if (concerts.some(concert => concert.Wencore)) {
-              const wencorerow = table.insertRow();
-              const cell = wencorerow.insertCell();
-              cell.textContent = 'WEC';
-              concerts.forEach(concert => {
-if (concert.Wencore) {
-  cell.innerHTML = `<a href="./sub/search.html?name=${encodeURIComponent(concert.Wencore)}">${concert.Wencore}</a>`;
-} else {
-  cell.innerHTML = '&nbsp;'; // 空の場合はテキストを空にする
+  concerts.forEach(concert => {
+    const cell = wencorerow.insertCell();
+    if (concert.Wencore) {
+      cell.innerHTML = `<a href="./sub/search.html?name=${encodeURIComponent(concert.Wencore)}">${concert.Wencore}</a>`;
+    } else {
+      cell.innerHTML = '&nbsp;'; // 空白のセルを維持
+    }
+  });
 }
-              });
-            }
 
             setlistContainer.appendChild(table);
           });
