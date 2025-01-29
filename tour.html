@@ -172,7 +172,7 @@
 
               setlistValues.forEach((value, idx) => {
                 const cell = row.insertCell();
-                cell.textContent = value;
+                cell.innerHTML = value;
                 cell.style.whiteSpace = 'pre-wrap'; // 改行を反映させる
                 if (!isSame) {
                   if (selectedTour.includes('石原夏織')) {
