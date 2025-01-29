@@ -253,7 +253,7 @@ if (encoreList[0][0]) {
 if (concert.Wencore) {
   cell.innerHTML = `<a href="./sub/search.html?name=${encodeURIComponent(concert.Wencore)}">${concert.Wencore}</a>`;
 } else {
-  cell.textContent = '&nbsp;'; // 空の場合はテキストを空にする
+  cell.innerHTML = '&nbsp;'; // 空の場合はテキストを空にする
 }
               });
             }
