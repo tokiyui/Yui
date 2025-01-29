@@ -41,7 +41,7 @@
     <div id="checkboxContainer"></div>
 
     <div>
-
+        <button id="toggleOrder">順序を入れ替える</button>
     </div>
 
     <table id="eventTable">
@@ -275,6 +275,14 @@ checkboxesDataByRegion.forEach(region => {
                 // チェックボックスのイベントリスナー
                 document.querySelectorAll('input[type="checkbox"]').forEach(cb => {
                     cb.addEventListener('change', filterData);
+                });
+
+                                // 順序を入れ替えるボタンのイベントリスナー
+                const toggleOrderButton = document.getElementById('toggleOrder');
+                toggleOrderButton.addEventListener('click', () => {
+                    isAscending = !isAscending;
+                    data.reverse(); // データの順序を反転
+                    filterData(); // フィルタリングして再表示
                 });
             });
     </script>
