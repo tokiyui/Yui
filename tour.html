@@ -164,7 +164,7 @@
                 if (typeof song === 'object' && song.medley) {
                   return `【メドレー】\n${song.medley.join('\n')}`; // メドレーの前に「【メドレー】」を追加
                 } else {
-                  return `<a href="./sub/search.html?name=${song}">song`;
+                  return `<a href="./sub/search.html?name=${encodeURIComponent(song)}">${song}</a>`;
                 }
               });
 
