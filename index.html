@@ -57,6 +57,8 @@
 
     <script>
         let songData = []; // 追加: 曲データを保存する配列
+        let reverseSortPerformanceCount = false; // 披露回数の逆順フラグ
+        let reverseSortPerformanceDate = false; // 最終披露日の逆順フラグ
 
         function formatDateToJapanese(date) {
             const year = date.getFullYear();
@@ -200,13 +202,15 @@
             let sortedData;
 
             if (column === 'performanceCount') {
-                sortedData = [...songData].sort((a, b) => a.performanceCount - b.performanceCount);
+                sortedData = [...songData].sort((a, b) => reverseSortPerformanceCount ? b.performanceCount - a.performanceCount : a.performanceCount - b.performanceCount);
+                reverseSortPerformanceCount = !reverseSortPerformanceCount; // Sort order toggle
             } else if (column === 'latestPerformanceDate') {
                 sortedData = [...songData].sort((a, b) => {
                     if (!a.latestPerformanceDate) return 1;
                     if (!b.latestPerformanceDate) return -1;
-                    return new Date(a.latestPerformanceDate) - new Date(b.latestPerformanceDate);
+                    return reverseSortPerformanceDate ? new Date(b.latestPerformanceDate) - new Date(a.latestPerformanceDate) : new Date(a.latestPerformanceDate) - new Date(b.latestPerformanceDate);
                 });
+                reverseSortPerformanceDate = !reverseSortPerformanceDate; // Sort order toggle
             } else if (column === 'releaseDate') {
                 sortedData = [...songData].sort((a, b) => new Date(a.releaseDate) - new Date(b.releaseDate));
             } else {
