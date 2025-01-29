@@ -159,14 +159,19 @@
               const indexCell = row.insertCell();
               indexCell.textContent = i + 1;
 
-              const setlistValues = concerts.map(concert => {
-                const song = concert.setlist[i];
-                if (typeof song === 'object' && song.medley) {
-                  return `【メドレー】\n${song.medley.join('\n')}`; // メドレーの前に「【メドレー】」を追加
-                } else {
-                  return `<a href="./sub/search.html?name=${encodeURIComponent(song)}">${song}</a>`;
-                }
-              });
+const setlistValues = concerts.map(concert => {
+  const song = concert.setlist[i];
+  if (typeof song === 'object' && song.medley) {
+    // メドレーの各曲にリンクを追加し、改行して表示
+    const medleyLinks = song.medley.map(track => 
+      `<a href="./sub/search.html?name=${encodeURIComponent(track)}">${track}</a>`
+    ).join('<br>');
+    return `【メドレー】<br>${medleyLinks}`;
+  } else {
+    return song ? `<a href="./sub/search.html?name=${encodeURIComponent(song)}">${song}</a>` : ''; 
+  }
+});
+
 
               const isSame = setlistValues.every((val, idx, arr) => val === arr[0]);
 
@@ -210,18 +215,22 @@ if (encoreList[0][0]) {
 
     const encoreValues = encoreList.map(encore => {
       const song = encore[i];
-      if (typeof song === 'object' && song.medley) {
-        return `【メドレー】\n${song.medley.join('\n')}`; // メドレーの前に「【メドレー】」を追加
-      } else {
-        return song || ''; // 曲が存在しない場合は空文字列
-      }
-    });
+  if (typeof song === 'object' && song.medley) {
+    // メドレーの各曲にリンクを追加し、改行して表示
+    const medleyLinks = song.medley.map(track => 
+      `<a href="./sub/search.html?name=${encodeURIComponent(track)}">${track}</a>`
+    ).join('<br>');
+    return `【メドレー】<br>${medleyLinks}`;
+  } else {
+    return song ? `<a href="./sub/search.html?name=${encodeURIComponent(song)}">${song}</a>` : ''; 
+  }
+});
 
     const isSameEncore = encoreValues.every((val, idx, arr) => val === arr[0]);
 
     encoreValues.forEach((value, idx) => {
       const cell = row.insertCell();
-      cell.textContent = value;
+      cell.innerHTML = value;
       cell.style.whiteSpace = 'pre-wrap'; // 改行を反映させる
       if (!isSameEncore) {
         if (selectedTour.includes('石原夏織')) {
