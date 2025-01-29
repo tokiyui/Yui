@@ -60,8 +60,8 @@
 
         function formatDateToJapanese(date) {
             const year = date.getFullYear();
-            const month = (date.getMonth() + 1).toString();
-            const day = date.getDate().toString();
+            const month = (date.getMonth() + 1).toString().padStart(2, '0');
+            const day = date.getDate().toString().padStart(2, '0');
             return `${year}年${month}月${day}日`;
         }
 
@@ -135,7 +135,7 @@
                                         });
 
                                         const formattedDate = oldestDate.date !== 'No release date found' ? oldestDate.date : 'No release date found';
-                                        const latestPerformanceDate = performanceData.latestDate ? formatDateToJapanese(performanceData.latestDate) : '未披露';
+                                        const latestPerformanceDate = performanceData.latestDate ? performanceData.latestDate.toISOString().split('T')[0] : null;
 
                                         const lyricsClass = song.lyrics.includes('小倉唯') ? 'pink-cell' : '';
                                         const musicClass = song.music.includes('小倉唯') ? 'pink-cell' : '';
@@ -157,7 +157,7 @@
                                                 <td>${MVLink}</td>
                                                 <td>${videoLink}</td> 
                                                 <td><a href="./sub/search.html?name=${song.title}">${performanceData.count}</a></td> 	
-                                                <td><a href="./sub/setlist.html?id=${performanceData.id}">${latestPerformanceDate}</a></td>
+                                                <td><a href="./sub/setlist.html?id=${performanceData.id}">${performanceData.latestDate ? formatDateToJapanese(new Date(performanceData.latestDate)) : '未披露'}</a></td>
                                                 <td class="${lyricsClass}">${song.lyrics}</td>
                                                 <td class="${musicClass}">${song.music}</td>
                                                 <td>${song.arranger}</td>
@@ -170,7 +170,7 @@
                                             title: song.title,
                                             rowHTML: row,
                                             performanceCount: performanceData.count,
-                                            latestPerformanceDate,
+                                            latestPerformanceDate: latestPerformanceDate, // 日付のISO形式で保存
                                             releaseDate: formattedDate
                                         });
 
@@ -202,7 +202,11 @@
             if (column === 'performanceCount') {
                 sortedData = [...songData].sort((a, b) => a.performanceCount - b.performanceCount);
             } else if (column === 'latestPerformanceDate') {
-                sortedData = [...songData].sort((a, b) => new Date(a.latestPerformanceDate) - new Date(b.latestPerformanceDate));
+                sortedData = [...songData].sort((a, b) => {
+                    if (!a.latestPerformanceDate) return 1;
+                    if (!b.latestPerformanceDate) return -1;
+                    return new Date(a.latestPerformanceDate) - new Date(b.latestPerformanceDate);
+                });
             } else if (column === 'releaseDate') {
                 sortedData = [...songData].sort((a, b) => new Date(a.releaseDate) - new Date(b.releaseDate));
             } else {
