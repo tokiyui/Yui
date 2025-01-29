@@ -250,7 +250,11 @@ if (encoreList[0][0]) {
               const cell = wencorerow.insertCell();
               cell.textContent = 'WEC';
               concerts.forEach(concert => {
-                cell.innerHTML = `<a href="./sub/search.html?name=${encodeURIComponent(concert.Wencore)}">${concert.Wencore}</a>`;
+if (concert.Wencore) {
+  cell.innerHTML = `<a href="./sub/search.html?name=${encodeURIComponent(concert.Wencore)}">${concert.Wencore}</a>`;
+} else {
+  cell.textContent = ''; // 空の場合はテキストを空にする
+}
               });
             }
 
