@@ -10,145 +10,158 @@
             border-collapse: collapse;
             width: 100%;
         }
-
-        th,
-        td {
+        th, td {
             border: 1px solid black;
             padding: 8px;
             text-align: left;
         }
-
+        .sortable {
+            cursor: pointer;
+        }
         .pink-cell {
             background-color: hotpink;
-        }
-
-        th.sortable {
-            cursor: pointer;
         }
     </style>
 </head>
 
 <body>
-    <h2>ゆいかおり楽曲一覧 
-        <font color="hotpink"><input type="radio" id="yui-solo" name="artist-filter" value="yui" checked class="radio-input">
-        <label for="yui-solo" class="radio-label">唯ソロ</label></font>
-        <font color="deepskyblue"><input type="radio" id="kaori-solo" name="artist-filter" value="kaori" class="radio-input">
-        <label for="kaori-solo" class="radio-label">夏織ソロ</label></font>
-        <font color="orange"><input type="radio" id="yuikaori" name="artist-filter" value="yuikaori" class="radio-input">
-        <label for="yuikaori" class="radio-label">ゆいかおり</label></font>
-<a href="tour.html">ツアーセットリスト比較ページ</a> <a href="event.html">イベント検索ページ</a> <a href="calendar.html">ゆいかおりカレンダー</a>
-        未回収楽曲チェックツール→ <a href="my.html">唯ソロ</a> <a href="my_c.html">夏織ソロ</a> <a href="my_f.html">ゆいかおり</a></h2>
+    <h2>ゆいかおり楽曲一覧</h2>
     <table>
         <thead>
             <tr>
-                <th>楽曲名(クリックすると歌詞が開きます)</th>
+                <th>楽曲名</th>
                 <th>コール表</th>
-                <th>MV(抜け有)</th>
-                <th>ライブ映像(抜け有)</th>
-                <th class="sortable" onclick="sortTable(4)">披露回数</th>
-                <th class="sortable" onclick="sortTable(5)">最終披露日</th>
+                <th>MV</th>
+                <th>ライブ映像</th>
+                <th class="sortable" data-column="count">披露回数</th>
+                <th class="sortable" data-column="latestDate">最終披露日</th>
                 <th>作詞</th>
                 <th>作曲</th>
                 <th>編曲</th>
                 <th>長さ</th>
                 <th>収録CD</th>
-                <th>リリース日</th>
+                <th class="sortable" data-column="releaseDate">リリース日</th>
             </tr>
         </thead>
         <tbody id="songTable"></tbody>
     </table>
 
-<script>
-    let originalData = [];
+    <script>
+        let originalData = [];
+        let sortedColumn = null;
+        let ascending = true;
 
-    function updateSongDetails(selectedArtist) {
-        fetch('song.json')
-            .then(response => response.json())
-            .then(songs => {
-                fetch('CD.json')
-                    .then(response => response.json())
-                    .then(CDs => {
-                        fetch('setlist.json')
-                            .then(response => response.json())
-                            .then(setlists => {
-                                const songTable = document.getElementById('songTable');
-                                songTable.innerHTML = '';
-                                
-                                originalData = songs.map(song => {
-                                    if ((selectedArtist === 'yui' && song.artist !== '小倉唯') ||
-                                        (selectedArtist === 'kaori' && song.artist !== '石原夏織') ||
-                                        (selectedArtist === 'yuikaori' && song.artist !== 'ゆいかおり')) {
-                                        return null;
-                                    }
+        function formatDateToJapanese(date) {
+            const year = date.getFullYear();
+            const month = (date.getMonth() + 1).toString();
+            const day = date.getDate().toString();
+            return `${year}年${month}月${day}日`;
+        }
 
-                                    const performanceData = setlists.reduce((acc, setlist) => {
-                                        const date = new Date(setlist.date.replace(/年|月/g, '-').replace(/日/g, ''));
-                                        const songsArray = Array.isArray(setlist.setlist) ? setlist.setlist : [setlist.setlist];
-                                        if (!Array.isArray(setlist.encore)) {
-                                            songsArray.push(setlist.encore);
-                                        } else {
-                                            songsArray.push(...setlist.encore);
-                                        }
-                                        if (setlist.Wencore) songsArray.push(setlist.Wencore);
-                                        
-                                        const titles = songsArray.flatMap(title => typeof title === 'object' && 'medley' in title ? title.medley : title);
+        function parseDate(dateStr) {
+            return dateStr === '未披露' || dateStr === 'No release date found' ? new Date(0) : new Date(dateStr.replace(/年|月/g, '-').replace(/日/g, ''));
+        }
 
-                                        if (titles.includes(song.title)) {
-                                            acc.count++;
-                                            if (!acc.latestDate || date > acc.latestDate) {
-                                                acc.latestDate = date;
-                                            }
-                                        }
-                                        return acc;
-                                    }, { count: 0, latestDate: null });
-
-                                    return {
-                                        title: song.title,
-                                        count: performanceData.count,
-                                        latestDate: performanceData.latestDate ? performanceData.latestDate.toISOString().split('T')[0] : '未披露'
-                                    };
-                                }).filter(song => song !== null);
-                                
-                                renderTable(originalData);
-                            });
-                    });
+        function updateSongTable(songs) {
+            const songTable = document.getElementById('songTable');
+            songTable.innerHTML = '';
+            songs.forEach(song => {
+                const row = `
+                    <tr>
+                        <td>${song.title}</td>
+                        <td>${song.callLink}</td>
+                        <td>${song.MVLink}</td>
+                        <td>${song.videoLink}</td>
+                        <td>${song.count}</td>
+                        <td>${song.latestDate}</td>
+                        <td>${song.lyrics}</td>
+                        <td>${song.music}</td>
+                        <td>${song.arranger}</td>
+                        <td>${song.length}</td>
+                        <td>${song.CDtitle}</td>
+                        <td>${song.releaseDate}</td>
+                    </tr>
+                `;
+                songTable.innerHTML += row;
             });
-    }
+        }
 
-    function renderTable(data) {
-        const songTable = document.getElementById('songTable');
-        songTable.innerHTML = data.map(song => `
-            <tr>
-                <td>${song.title}</td>
-                <td>${song.count}</td>
-                <td>${song.latestDate}</td>
-            </tr>
-        `).join('');
-    }
+        function sortTable(column) {
+            if (sortedColumn === column) {
+                ascending = !ascending;
+            } else {
+                sortedColumn = column;
+                ascending = true;
+            }
 
-    function sortTable(columnIndex, isDate = false) {
-        let table = document.getElementById("songTable");
-        let rows = Array.from(table.rows);
-        const isAscending = table.getAttribute("data-sort") !== `col${columnIndex}-asc`;
-        table.setAttribute("data-sort", isAscending ? `col${columnIndex}-asc` : `col${columnIndex}-desc`);
-        
-        rows.sort((rowA, rowB) => {
-            let cellA = rowA.cells[columnIndex].textContent.trim();
-            let cellB = rowB.cells[columnIndex].textContent.trim();
-            
-            let valA = isDate ? (cellA === '未披露' ? new Date(0) : new Date(cellA)) : Number(cellA) || cellA;
-            let valB = isDate ? (cellB === '未披露' ? new Date(0) : new Date(cellB)) : Number(cellB) || cellB;
-            
-            return isAscending ? (valA > valB ? 1 : -1) : (valA < valB ? 1 : -1);
+            let sortedData = [...originalData];
+            sortedData.sort((a, b) => {
+                if (column === 'count') {
+                    return ascending ? a.count - b.count : b.count - a.count;
+                } else if (column === 'latestDate' || column === 'releaseDate') {
+                    return ascending ? parseDate(a[column]) - parseDate(b[column]) : parseDate(b[column]) - parseDate(a[column]);
+                }
+                return 0;
+            });
+            updateSongTable(sortedData);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('song.json')
+                .then(response => response.json())
+                .then(songs => {
+                    fetch('CD.json')
+                        .then(response => response.json())
+                        .then(CDs => {
+                            fetch('setlist.json')
+                                .then(response => response.json())
+                                .then(setlists => {
+                                    originalData = songs.map(song => {
+                                        const performanceData = setlists.reduce((acc, setlist) => {
+                                            const date = parseDate(setlist.date);
+                                            if (setlist.setlist.includes(song.title) || setlist.encore.includes(song.title) || setlist.Wencore === song.title) {
+                                                acc.count += 1;
+                                                if (!acc.latestDate || date > acc.latestDate) {
+                                                    acc.latestDate = date;
+                                                }
+                                            }
+                                            return acc;
+                                        }, { count: 0, latestDate: null });
+
+                                        const oldestDate = CDs.find(cd => cd.CDtitle === song.CDtitle)?.date || 'No release date found';
+
+                                        return {
+                                            title: `<a href="https://www.uta-net.com/song/${song.utanet}">${song.title}</a>`,
+                                            callLink: song.call ? `<a href="https://yuicom-callbook.hatenablog.com/entry/${song.call}" target="_blank">コール表</a>` : '',
+                                            MVLink: song.MVlink ? `<a href="https://www.youtube.com/watch?v=${song.MVlink}" target="_blank">MV</a>` : '',
+                                            videoLink: song.videolink ? `<a href="https://www.youtube.com/watch?v=${song.videolink}" target="_blank">ライブ映像</a>` : '',
+                                            count: performanceData.count,
+                                            latestDate: performanceData.latestDate ? formatDateToJapanese(performanceData.latestDate) : '未披露',
+                                            lyrics: song.lyrics,
+                                            music: song.music,
+                                            arranger: song.arranger,
+                                            length: song.length,
+                                            CDtitle: song.CDtitle,
+                                            releaseDate: oldestDate
+                                        };
+                                    });
+                                    updateSongTable(originalData);
+                                });
+                        });
+                });
         });
 
-        rows.forEach(row => table.appendChild(row));
-    }
-
-    function resetTable() {
-        renderTable(originalData);
-    }
-</script>
-
+        document.querySelectorAll('.sortable').forEach(th => {
+            th.addEventListener('click', () => {
+                const column = th.dataset.column;
+                if (column === 'releaseDate') {
+                    updateSongTable(originalData);
+                } else {
+                    sortTable(column);
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>
