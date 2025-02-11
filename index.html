@@ -197,6 +197,11 @@
             });
         });
 
+function parseJapaneseDate(dateStr) {
+    // "2009年9月26日" → "2009-09-26" のように変換してDateオブジェクトに変換
+    return new Date(dateStr.replace(/年|月/g, '-').replace(/日/g, ''));
+}
+
 function sortTable(column) {
     const songTable = document.getElementById('songTable');
     let sortedData;
@@ -216,15 +221,16 @@ function sortTable(column) {
         });
         reverseSortPerformanceDate = !reverseSortPerformanceDate; // ソート順の切り替え
     } else if (column === 'releaseDate') {
+        // 日本語の日付をパースしてソート
         sortedData = [...songData].sort((a, b) => {
             if (!a.releaseDate) return 1;
             if (!b.releaseDate) return -1;
-            // ソート順の逆転
             return reverseSortReleaseDate 
-                ? new Date(b.releaseDate) - new Date(a.releaseDate) 
-                : new Date(a.releaseDate) - new Date(b.releaseDate);
+                ? parseJapaneseDate(b.releaseDate) - parseJapaneseDate(a.releaseDate)
+                : parseJapaneseDate(a.releaseDate) - parseJapaneseDate(b.releaseDate);
         });
-        // クリックごとに逆順を切り替え
+
+        // 逆順フラグの反転
         reverseSortReleaseDate = !reverseSortReleaseDate;
     } else {
         sortedData = [...songData].sort((a, b) => a.title.localeCompare(b.title));
@@ -236,7 +242,7 @@ function sortTable(column) {
         songTable.innerHTML += song.rowHTML;
     });
 }
-
+        
         updateSongDetails(selectedArtist); // Initial call to populate the table
     </script>
 </body>
