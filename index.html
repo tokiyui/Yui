@@ -219,11 +219,13 @@ function sortTable(column) {
         sortedData = [...songData].sort((a, b) => {
             if (!a.releaseDate) return 1;
             if (!b.releaseDate) return -1;
+            // ソート順の逆転
             return reverseSortReleaseDate 
                 ? new Date(b.releaseDate) - new Date(a.releaseDate) 
                 : new Date(a.releaseDate) - new Date(b.releaseDate);
         });
-        reverseSortReleaseDate = !reverseSortReleaseDate; // ソート順の切り替え
+        // クリックごとに逆順を切り替え
+        reverseSortReleaseDate = !reverseSortReleaseDate;
     } else {
         sortedData = [...songData].sort((a, b) => a.title.localeCompare(b.title));
     }
