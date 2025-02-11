@@ -197,49 +197,43 @@
             });
         });
 
-        function sortTable(column) {
-            const songTable = document.getElementById('songTable');
-            let sortedData;
+function sortTable(column) {
+    const songTable = document.getElementById('songTable');
+    let sortedData;
 
-            if (column === 'performanceCount') {
-                sortedData = [...songData].sort((a, b) => 
-                    reverseSortPerformanceCount ? b.performanceCount - a.performanceCount : a.performanceCount - b.performanceCount
-                );
-                reverseSortPerformanceCount = !reverseSortPerformanceCount; // ソート順の切り替え
-            } else if (column === 'latestPerformanceDate') {
-                sortedData = [...songData].sort((a, b) => {
-                    if (!a.latestPerformanceDate) return 1;
-                    if (!b.latestPerformanceDate) return -1;
-                    return reverseSortPerformanceDate 
-                        ? new Date(b.latestPerformanceDate) - new Date(a.latestPerformanceDate) 
-                        : new Date(a.latestPerformanceDate) - new Date(b.latestPerformanceDate);
-                });
-                reverseSortPerformanceDate = !reverseSortPerformanceDate; // ソート順の切り替え
-            } else if (column === 'releaseDate') {
-                if (releaseDateToggle % 2 === 0) {
-                    sortedData = [...songData].sort((a, b) => {
-                        if (!a.releaseDate) return 1;
-                        if (!b.releaseDate) return -1;
-                        return new Date(a.releaseDate) - new Date(b.releaseDate);
-                    });
-                } else {
-                    sortedData = [...songData].sort((a, b) => {
-                        if (!a.releaseDate) return 1;
-                        if (!b.releaseDate) return -1;
-                        return new Date(b.releaseDate) - new Date(a.releaseDate);
-                    });
-                }
-                releaseDateToggle++; // 切り替え
-            } else {
-                sortedData = [...songData].sort((a, b) => a.title.localeCompare(b.title));
-            }
+    if (column === 'performanceCount') {
+        sortedData = [...songData].sort((a, b) => 
+            reverseSortPerformanceCount ? b.performanceCount - a.performanceCount : a.performanceCount - b.performanceCount
+        );
+        reverseSortPerformanceCount = !reverseSortPerformanceCount; // ソート順の切り替え
+    } else if (column === 'latestPerformanceDate') {
+        sortedData = [...songData].sort((a, b) => {
+            if (!a.latestPerformanceDate) return 1;
+            if (!b.latestPerformanceDate) return -1;
+            return reverseSortPerformanceDate 
+                ? new Date(b.latestPerformanceDate) - new Date(a.latestPerformanceDate) 
+                : new Date(a.latestPerformanceDate) - new Date(b.latestPerformanceDate);
+        });
+        reverseSortPerformanceDate = !reverseSortPerformanceDate; // ソート順の切り替え
+    } else if (column === 'releaseDate') {
+        sortedData = [...songData].sort((a, b) => {
+            if (!a.releaseDate) return 1;
+            if (!b.releaseDate) return -1;
+            return reverseSortReleaseDate 
+                ? new Date(b.releaseDate) - new Date(a.releaseDate) 
+                : new Date(a.releaseDate) - new Date(b.releaseDate);
+        });
+        reverseSortReleaseDate = !reverseSortReleaseDate; // ソート順の切り替え
+    } else {
+        sortedData = [...songData].sort((a, b) => a.title.localeCompare(b.title));
+    }
 
-            // テーブルの再描画
-            songTable.innerHTML = '';
-            sortedData.forEach(song => {
-                songTable.innerHTML += song.rowHTML;
-            });
-        }
+    // テーブルの再描画
+    songTable.innerHTML = '';
+    sortedData.forEach(song => {
+        songTable.innerHTML += song.rowHTML;
+    });
+}
 
         updateSongDetails(selectedArtist); // Initial call to populate the table
     </script>
