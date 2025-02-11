@@ -60,7 +60,8 @@
         let reverseSortPerformanceCount = true; // 披露回数の逆順フラグ
         let reverseSortPerformanceDate = true; // 最終披露日の逆順フラグ
         let reverseSortReleaseDate = true; // リリース日の逆順フラグ
-        
+        let releaseDateToggle = 0; // リリース日ソートの状態を管理
+
         function formatDateToJapanese(date) {
             const year = date.getFullYear();
             const month = (date.getMonth() + 1).toString().padStart(2, '0');
@@ -149,7 +150,6 @@
                                               : `<a href="https://yuicom-callbook.hatenablog.com/entry/${song.call}" target="_blank">コール表</a>`)
                                           : '';
 
-
                                         const MVLink = song.MVlink ? `<a href="https://www.youtube.com/watch?v=${song.MVlink}" target="_blank">MV</a>` : '';
                                         const videoLink = song.videolink ? `<a href="https://www.youtube.com/watch?v=${song.videolink}" target="_blank">ライブ映像</a>` : '';
 
@@ -176,7 +176,6 @@
                                             latestPerformanceDate: latestPerformanceDate, // 日付のISO形式で保存
                                             releaseDate: formattedDate
                                         });
-
                                     });
 
                                     // 初期表示
@@ -198,43 +197,49 @@
             });
         });
 
-    function sortTable(column) {
-        const songTable = document.getElementById('songTable');
-        let sortedData;
+        function sortTable(column) {
+            const songTable = document.getElementById('songTable');
+            let sortedData;
 
-        if (column === 'performanceCount') {
-            sortedData = [...songData].sort((a, b) => 
-                reverseSortPerformanceCount ? b.performanceCount - a.performanceCount : a.performanceCount - b.performanceCount
-            );
-            reverseSortPerformanceCount = !reverseSortPerformanceCount; // ソート順の切り替え
-        } else if (column === 'latestPerformanceDate') {
-            sortedData = [...songData].sort((a, b) => {
-                if (!a.latestPerformanceDate) return 1;
-                if (!b.latestPerformanceDate) return -1;
-                return reverseSortPerformanceDate 
-                    ? new Date(b.latestPerformanceDate) - new Date(a.latestPerformanceDate) 
-                    : new Date(a.latestPerformanceDate) - new Date(b.latestPerformanceDate);
+            if (column === 'performanceCount') {
+                sortedData = [...songData].sort((a, b) => 
+                    reverseSortPerformanceCount ? b.performanceCount - a.performanceCount : a.performanceCount - b.performanceCount
+                );
+                reverseSortPerformanceCount = !reverseSortPerformanceCount; // ソート順の切り替え
+            } else if (column === 'latestPerformanceDate') {
+                sortedData = [...songData].sort((a, b) => {
+                    if (!a.latestPerformanceDate) return 1;
+                    if (!b.latestPerformanceDate) return -1;
+                    return reverseSortPerformanceDate 
+                        ? new Date(b.latestPerformanceDate) - new Date(a.latestPerformanceDate) 
+                        : new Date(a.latestPerformanceDate) - new Date(b.latestPerformanceDate);
+                });
+                reverseSortPerformanceDate = !reverseSortPerformanceDate; // ソート順の切り替え
+            } else if (column === 'releaseDate') {
+                if (releaseDateToggle % 2 === 0) {
+                    sortedData = [...songData].sort((a, b) => {
+                        if (!a.releaseDate) return 1;
+                        if (!b.releaseDate) return -1;
+                        return new Date(a.releaseDate) - new Date(b.releaseDate);
+                    });
+                } else {
+                    sortedData = [...songData].sort((a, b) => {
+                        if (!a.releaseDate) return 1;
+                        if (!b.releaseDate) return -1;
+                        return new Date(b.releaseDate) - new Date(a.releaseDate);
+                    });
+                }
+                releaseDateToggle++; // 切り替え
+            } else {
+                sortedData = [...songData].sort((a, b) => a.title.localeCompare(b.title));
+            }
+
+            // テーブルの再描画
+            songTable.innerHTML = '';
+            sortedData.forEach(song => {
+                songTable.innerHTML += song.rowHTML;
             });
-            reverseSortPerformanceDate = !reverseSortPerformanceDate; // ソート順の切り替え
-        } else if (column === 'releaseDate') {
-            sortedData = [...songData].sort((a, b) => {
-                if (!a.releaseDate) return 1;
-                if (!b.releaseDate) return -1;
-                return reverseSortReleaseDate 
-                    ? new Date(b.releaseDate) - new Date(a.releaseDate) 
-                    : new Date(a.releaseDate) - new Date(b.releaseDate);
-            });
-            reverseSortReleaseDate = !reverseSortReleaseDate; // ソート順の切り替え
-        } else {
-            sortedData = [...songData].sort((a, b) => a.title.localeCompare(b.title));
         }
-
-        // テーブルの再描画
-        songTable.innerHTML = '';
-        sortedData.forEach(song => {
-            songTable.innerHTML += song.rowHTML;
-        });
-    }
 
         updateSongDetails(selectedArtist); // Initial call to populate the table
     </script>
