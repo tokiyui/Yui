@@ -207,7 +207,6 @@ function parseJapaneseDate(dateStr) {
 function parseTimeToSeconds(timeStr) {
     if (!timeStr) return 0; // 空の値は 0 とする
     const parts = timeStr.split(":");
-    console.log(parts);
     return parseInt(parts[0]) * 60 + parseInt(parts[1]); // 分を秒換算
 }
 
