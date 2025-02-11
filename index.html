@@ -61,6 +61,7 @@
         let reverseSortPerformanceDate = true; // 最終披露日の逆順フラグ
         let reverseSortReleaseDate = false; // リリース日の逆順フラグ
         let releaseDateToggle = 0; // リリース日ソートの状態を管理
+        let reverseSortLength = false; // 長さのソート用
 
         function formatDateToJapanese(date) {
             const year = date.getFullYear();
@@ -202,6 +203,12 @@ function parseJapaneseDate(dateStr) {
     return new Date(dateStr.replace(/年|月/g, '-').replace(/日/g, ''));
 }
 
+function parseTimeToSeconds(timeStr) {
+    if (!timeStr) return 0; // 空の値は 0 とする
+    const parts = timeStr.split(":");
+    return parseInt(parts[0]) * 60 + parseInt(parts[1]); // 分を秒換算
+}
+
 function sortTable(column) {
     const songTable = document.getElementById('songTable');
     let sortedData;
@@ -210,7 +217,7 @@ function sortTable(column) {
         sortedData = [...songData].sort((a, b) => 
             reverseSortPerformanceCount ? b.performanceCount - a.performanceCount : a.performanceCount - b.performanceCount
         );
-        reverseSortPerformanceCount = !reverseSortPerformanceCount; // ソート順の切り替え
+        reverseSortPerformanceCount = !reverseSortPerformanceCount;
     } else if (column === 'latestPerformanceDate') {
         sortedData = [...songData].sort((a, b) => {
             if (!a.latestPerformanceDate) return 1;
@@ -219,9 +226,8 @@ function sortTable(column) {
                 ? new Date(b.latestPerformanceDate) - new Date(a.latestPerformanceDate) 
                 : new Date(a.latestPerformanceDate) - new Date(b.latestPerformanceDate);
         });
-        reverseSortPerformanceDate = !reverseSortPerformanceDate; // ソート順の切り替え
+        reverseSortPerformanceDate = !reverseSortPerformanceDate;
     } else if (column === 'releaseDate') {
-        // 日本語の日付をパースしてソート
         sortedData = [...songData].sort((a, b) => {
             if (!a.releaseDate) return 1;
             if (!b.releaseDate) return -1;
@@ -229,14 +235,18 @@ function sortTable(column) {
                 ? parseJapaneseDate(b.releaseDate) - parseJapaneseDate(a.releaseDate)
                 : parseJapaneseDate(a.releaseDate) - parseJapaneseDate(b.releaseDate);
         });
-
-        // 逆順フラグの反転
         reverseSortReleaseDate = !reverseSortReleaseDate;
+    } else if (column === 'length') {
+        sortedData = [...songData].sort((a, b) => {
+            return reverseSortLength 
+                ? parseTimeToSeconds(b.length) - parseTimeToSeconds(a.length)
+                : parseTimeToSeconds(a.length) - parseTimeToSeconds(b.length);
+        });
+        reverseSortLength = !reverseSortLength;
     } else {
         sortedData = [...songData].sort((a, b) => a.title.localeCompare(b.title));
     }
 
-    // テーブルの再描画
     songTable.innerHTML = '';
     sortedData.forEach(song => {
         songTable.innerHTML += song.rowHTML;
