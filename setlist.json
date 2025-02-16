@@ -1,5 +1,145 @@
 [
     {
+        "LIVEtitle": "石原夏織 Billboard Live 2025 横浜夜公演",
+        "tourtitle": "石原夏織 Billboard Live 2025 横浜",
+        "artist": "石原夏織",
+        "date": "2025年1月26日",
+        "venue": "ビルボードライブ横浜",
+        "id": "2025012602",
+        "setlist": [
+            "Sugar Planets",
+            "恋の匂い",
+            "曖昧蜃気楼",
+            "Paraglider",
+            "マジックマーチ",
+            "Page Flip",
+            "プルケリマを朝に",
+            "Orange Note",
+            "Remember Heart, Remember Love",
+            "虹のソルフェージュ",
+            "Gift"
+        ]
+    },
+    {
+        "LIVEtitle": "石原夏織 Billboard Live 2025 横浜昼公演",
+        "tourtitle": "石原夏織 Billboard Live 2025 横浜",
+        "artist": "石原夏織",
+        "date": "2025年1月26日",
+        "venue": "ビルボードライブ横浜",
+        "id": "2025012601",
+        "setlist": [
+            "Sugar Planets",
+            "恋の匂い",
+            "曖昧蜃気楼",
+            "To My Dear",
+            "Harmonia",
+            "Page Flip",
+            "プルケリマを朝に",
+            "Starcast",
+            "Remember Heart, Remember Love",
+            "虹のソルフェージュ",
+            "Gift"
+        ]
+    },
+    {
+        "LIVEtitle": "小倉唯 Yuiʼs*Company.社員総会2025~あけおめ Rock you ☆ The time has come~ 夜公演",
+        "tourtitle": "小倉唯 Yuiʼs*Company.社員総会2025~あけおめ Rock you ☆ The time has come~",
+        "artist": "小倉唯",
+        "date": "2025年1月11日",
+        "venue": "昭和女子大学 人見記念講堂",
+        "id": "2025011102",
+        "setlist": [
+            "Destiny",
+            "ココロテレパシー",
+            "かけがえのない瞬間",
+            "センチメンタルメッセージ",
+            "Don't say \"lazy\"",
+            "Future Strike"
+        ]
+    },
+    {
+        "LIVEtitle": "小倉唯 Yuiʼs*Company.社員総会2025~あけおめ Rock you ☆ The time has come~ 昼公演",
+        "tourtitle": "小倉唯 Yuiʼs*Company.社員総会2025~あけおめ Rock you ☆ The time has come~",
+        "artist": "小倉唯",
+        "date": "2025年1月11日",
+        "venue": "昭和女子大学 人見記念講堂",
+        "id": "2025011101",
+        "setlist": [
+            "Destiny",
+            "ココロテレパシー",
+            "かけがえのない瞬間",
+            "Wherever",
+            "God knows...",
+            "Future Strike"
+        ]
+    },
+    {
+        "LIVEtitle": "石原夏織 Billboard Live 2025 大阪夜公演",
+        "tourtitle": "石原夏織 Billboard Live 2025 大阪",
+        "artist": "石原夏織",
+        "date": "2025年1月4日",
+        "venue": "ビルボードライブ大阪",
+        "id": "2025010402",
+        "setlist": [
+            "虹のソルフェージュ",
+            "Crispy love",
+            "プルケリマを朝に",
+            "Against.",
+            "Taste of Marmalade",
+            "曖昧蜃気楼",
+            "恋の匂い",
+            "Sugar Planets",
+            "Gift",
+            "Page Flip",
+            "Remember Heart, Remember Love"
+        ]
+    },
+    {
+        "LIVEtitle": "石原夏織 Billboard Live 2025 大阪昼公演",
+        "tourtitle": "石原夏織 Billboard Live 2025 大阪",
+        "artist": "石原夏織",
+        "date": "2025年1月4日",
+        "venue": "ビルボードライブ大阪",
+        "id": "2025010401",
+        "setlist": [
+            "虹のソルフェージュ",
+            "Orange Note",
+            "プルケリマを朝に",
+            "♮ Melody",
+            "キミに空とクローバー",
+            "曖昧蜃気楼",
+            "恋の匂い",
+            "Sugar Planets",
+            "Gift",
+            "Page Flip",
+            "Remember Heart, Remember Love"
+        ]
+    },
+    {
+        "LIVEtitle": "京 Premium Live 2024",
+        "tourtitle": "",
+        "artist": "石原夏織",
+        "date": "2024年12月8日",
+        "venue": "ロームシアター京都",
+        "id": "2024120801",
+        "setlist": [
+            "Harmonia",
+            "Face to Face",
+            "キラリアット",
+            "Abracada-Boo",
+            "Gift"
+        ]
+    },
+    {
+        "LIVEtitle": "声優グランプリ30周年記念「声グラFES.」",
+        "tourtitle": "",
+        "artist": "小倉唯",
+        "date": "2024年12月1日",
+        "venue": "幕張メッセ",
+        "id": "2024120101",
+        "setlist": "Baby Sweet Berry Love"
+    },
+    {
         "LIVEtitle": "小倉唯 LIVE TOUR 2024 ~Bloomy × Meet you!~ 横浜公演",
         "tourtitle": "小倉唯 LIVE TOUR 2024 ~Bloomy × Meet you!~",
         "artist": "小倉唯",
