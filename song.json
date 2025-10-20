@@ -8,7 +8,8 @@
         "length": "4:31",
         "CDtitle": [
             "Raise",
-            "Strawberry JAM"
+            "Strawberry JAM",
+            "Bloomy"
         ],
         "utanet": "132560",
         "MVlink": "6sSi4oVfX5I",
@@ -46,7 +47,8 @@
         "length": "4:06",
         "CDtitle": [
             "Baby Sweet Berry Love",
-            "Strawberry JAM"
+            "Strawberry JAM",
+            "Labo-Ratory"
         ],
         "utanet": "146069",
         "MVlink": "7li53JlW9oU",
@@ -1458,7 +1460,7 @@
         "arranger": "本田正樹(Dream Monster)",
         "length": "",
         "CDtitle": "So☆Lucky",
-        "utanet": "",
+        "utanet": "371933",
         "MVlink": "",
         "Dancelink": "",
         "videolink": "",
@@ -1474,7 +1476,86 @@
         "arranger": "早川博隆",
         "length": "",
         "CDtitle": "So☆Lucky",
-        "utanet": "",
+        "utanet": "371932",
+        "MVlink": "",
+        "Dancelink": "",
+        "videolink": "",
+        "otherlink": "",
+        "call": "",
+        "info": ""
+    },
+    {
+        "title": "Magic♡Happy",
+        "artist": "小倉唯",
+        "lyrics": "ヤマモトショウ",
+        "music": "ヤマモトショウ",
+        "arranger": "釣俊輔",
+        "length": "",
+        "CDtitle": [
+            "Magic♡Happy",
+            "Labo-Ratory"
+        ]
+        "utanet": "378436",
+        "MVlink": "",
+        "Dancelink": "",
+        "videolink": "",
+        "otherlink": "",
+        "call": "",
+        "info": ""
+    },
+    {
+        "title": "治癒治癒ちゅっ♡",
+        "artist": "小倉唯",
+        "lyrics": "佐々木喫茶",
+        "music": "佐々木喫茶",
+        "arranger": "佐々木喫茶",
+        "length": "",
+        "CDtitle": [
+            "治癒治癒ちゅっ♡",
+            "Labo-Ratory"
+        ]
+        "utanet": "380127",
+        "MVlink": "",
+        "Dancelink": "",
+        "videolink": "",
+        "otherlink": "",
+        "call": "",
+        "info": ""
+    },
+    {
+        "title": "きょんきょん♡らぶぽーしょん",
+        "artist": "小倉唯",
+        "lyrics": "小倉唯",
+        "music": "金山秀士",
+        "arranger": "金山秀士",
+        "length": "",
+        "CDtitle": [
+            "きょんきょん♡らぶぽーしょん",
+            "Labo-Ratory"
+        ]
+        "utanet": "381650",
+        "MVlink": "",
+        "Dancelink": "",
+        "videolink": "",
+        "otherlink": "",
+        "call": "",
+        "info": ""
+    },
+    {
+        "title": "True Path",
+        "artist": "小倉唯",
+        "lyrics": "小倉唯",
+        "music": [
+            "浅野尚志",
+            "村カワ基成"
+        ],
+        "arranger": [
+            "浅野尚志",
+            "村カワ基成"
+        ],
+        "length": "",
+        "CDtitle": "Labo-Ratory",
+        "utanet": "381650",
         "MVlink": "",
         "Dancelink": "",
         "videolink": "",
@@ -2303,7 +2384,8 @@
         "length": "4:27",
         "CDtitle": [
             "Blooming Flower",
-            "Sunny Spot"
+            "Sunny Spot",
+            "As I Am"
         ],
         "utanet": "246255",
         "MVlink": "G2MZTYRpctQ",
@@ -3124,5 +3206,56 @@
         "otherlink": "",
         "call": "",
         "info": ""
-    }
+    },
+    {
+        "title": "As I Am",
+        "artist": "石原夏織",
+        "lyrics": "石原夏織",
+        "music": "フワリ",
+        "arranger": "フワリ",
+        "length": "3:52",
+        "CDtitle": "As I Am",
+        "utanet": "375612",
+        "MVlink": "",
+        "Dancelink": "",
+        "videolink": "",
+        "otherlink": "",
+        "call": "",
+        "info": ""
+    },
+    {
+        "title": "ムーンランナー",
+        "artist": "石原夏織",
+        "lyrics": "koshi",
+        "music": "安月名莉子",
+        "arranger": [
+            "栁舘周平",
+            "大畑拓也"
+        ],
+        "length": "3:31",
+        "CDtitle": "As I Am",
+        "utanet": "375611",
+        "MVlink": "",
+        "Dancelink": "",
+        "videolink": "",
+        "otherlink": "",
+        "call": "",
+        "info": ""
+    },
+    {
+        "title": "ムーンランナー",
+        "artist": "石原夏織",
+        "lyrics": "柿沼雅美",
+        "music": "宮野弦士",
+        "arranger": "宮野弦士",
+        "length": "3:59",
+        "CDtitle": "As I Am",
+        "utanet": "375610",
+        "MVlink": "",
+        "Dancelink": "",
+        "videolink": "",
+        "otherlink": "",
+        "call": "",
+        "info": ""
+    },	
 ]
