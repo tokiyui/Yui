@@ -21,7 +21,12 @@
         .pink-cell {
             background-color: hotpink;
         }
-
+        .cyan-cell {
+            background-color: cyan;
+        }
+        .green-cell {
+            background-color: limegreen;
+        }
     </style>
 </head>
 
@@ -142,8 +147,23 @@
                                         const formattedDate = oldestDate.date !== 'No release date found' ? oldestDate.date : 'No release date found';
                                         const latestPerformanceDate = performanceData.latestDate ? performanceData.latestDate.toISOString().split('T')[0] : null;
 
-                                        const lyricsClass = song.lyrics.includes('小倉唯') ? 'pink-cell' : '';
-                                        const musicClass = song.music.includes('小倉唯') ? 'pink-cell' : '';
+                                        let lyricsClass = ''
+                                        if (song.lyrics.includes('小倉唯')) {
+                                            lyricsClass = 'pink-cell';
+                                        } else if (song.lyrics.includes('石原夏織')) {
+                                            lyricsClass = 'cyan-cell';
+                                        }  else {
+                                            lyricsClass = '';
+                                        }
+;
+                                        let musicClass = ''
+                                        if (song.music.includes('小倉唯')) {
+                                            musicClass = 'pink-cell';
+                                        } else if (song.music.includes('俊龍')) {
+                                            musicClass = 'green-cell';
+                                        }  else {
+                                            musicClass = '';
+                                        }
 
                                         const callLink = song.call
                                           ? (!isNaN(Number(song.call))
