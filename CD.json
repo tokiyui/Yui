@@ -406,5 +406,17 @@
         "type": "single",
         "artist": "小倉唯",
         "date": "2025年4月23日"
+    },
+    {
+        "CDtitle": "As I Am",
+        "type": "minialbum",
+        "artist": "石原夏織",
+        "date": "2025年7月2日"
+    },
+    {
+        "CDtitle": "Labo-Ratory",
+        "type": "minialbum",
+        "artist": "小倉唯",
+        "date": "2025年11月25日"
     }
 ]
