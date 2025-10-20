@@ -1,5 +1,278 @@
 [
     {
+        "LIVEtitle": "石原夏織 2025 LIVE「As I Am」in Taipei",
+        "tourtitle": "石原夏織 2025 LIVE「As I Am」",
+        "artist": "石原夏織",
+        "date": "2025年10月4日",
+        "venue": "花漾Hana展演空間",
+        "id": "2025100401",
+        "setlist": [
+            "リトルシング",
+            "キラリアット",
+            "Cherish",
+            "半透明の世界で",
+            "夢想的クロニクル",
+            "RefLight",
+            "ムーンランナー",
+            "Abracada-Boo",
+            "TEMPEST",
+            "Water Front",
+            "恋の匂い",
+            "Blooming Flower",
+            "As I Am",
+            "Plastic Smile",
+            "プルケリマを朝に",
+            "Face to Face",
+            "Gift",
+            "Blooming Flower"
+        ]
+    },
+    {
+        "LIVEtitle": "石原夏織 2025 LIVE「As I Am」/"Just Me/"",
+        "tourtitle": "石原夏織 2025 LIVE「As I Am」",
+        "artist": "石原夏織",
+        "date": "2025年9月20日",
+        "venue": "KT Zepp Yokohama",
+        "id": "2025092002",
+        "setlist": [
+            "As I Am",
+            "半透明の世界で",
+            "Water Front",
+            "夜とワンダーランド",
+            "Twinkle Ticking",
+            "Abracada-Boo",
+            "ILLUSION",
+            "ムーンランナー",
+            "プルケリマを朝に",
+            "RefLight",
+            "リトルシング",
+            "Face to Face",
+            "Cherish",
+            "夢想的クロニクル",
+            "Plastic Smile",
+            "Blooming Flower",
+            "Gift"
+        ]
+    },
+    {
+        "LIVEtitle": "石原夏織 2025 LIVE「As I Am」/"Little Me/"",
+        "tourtitle": "石原夏織 2025 LIVE「As I Am」",
+        "artist": "石原夏織",
+        "date": "2025年9月20日",
+        "venue": "KT Zepp Yokohama",
+        "id": "2025092001",
+        "setlist": [
+            "リトルシング",
+            "Cherish",
+            "キラリアット",
+            "Face to Face",
+            "半透明の世界で",
+            "RefLight",
+            "ムーンランナー",
+            "Abracada-Boo",
+            "ILLUSION",
+            "Twinkle Ticking",
+            "TEMPEST",
+            "Water Front",
+            "恋の匂い",
+            "夜とワンダーランド",
+            "キミしきる",
+            "Blooming Flower",
+            "As I Am"
+        ]
+    },
+    {
+        "LIVEtitle": "Animelo Summer Live 2025 -ThanXX!",
+        "tourtitle": "Animelo Summer Live",
+        "artist": "小倉唯",
+        "date": "2025年8月29日",
+        "venue": "さいたまスーパーアリーナ",
+        "id": "2025082901",
+        "setlist": [
+            "So☆Lucky",
+            "Baby Sweet Berry Love",
+            "ハイタッチ☆メモリー"
+        ]
+    },
+    {
+        "LIVEtitle": "小倉唯 Birthday Event 2025『Magical♡Party~永遠の魔法~』 東京夜公演",
+        "tourtitle": "小倉唯 Birthday Event 2025『Magical♡Party~永遠の魔法~』 ",
+        "artist": "小倉唯",
+        "date": "2025年8月16日",
+        "venue": "LINE CUBE SHIBUYA",
+        "id": "2025081602",
+        "setlist": [
+            "Charming Do!",
+            "すうぃ～と♡ぱーてぃー",
+            "Magic♡Happy",
+            "瞳の国のアリス -Dance Music Edition-",
+            "Catch You Catch Me",
+            "おジャ魔女カーニバル!!",
+            "So☆Lucky"
+        ]
+    },
+    {
+        "LIVEtitle": "小倉唯 Birthday Event 2025『Magical♡Party~永遠の魔法~』 東京昼公演",
+        "tourtitle": "小倉唯 Birthday Event 2025『Magical♡Party~永遠の魔法~』 ",
+        "artist": "小倉唯",
+        "date": "2025年8月16日",
+        "venue": "LINE CUBE SHIBUYA",
+        "id": "2025081601",
+        "setlist": [
+            "Honey♥Come!!",
+            "すうぃ～と♡ぱーてぃー",
+            "Magic♡Happy",
+            "瞳の国のアリス -Dance Music Edition-",
+            "オトメロディー",
+            "DANZEN! ふたりはプリキュア",
+            "So☆Lucky"
+        ]
+    },
+    {
+        "LIVEtitle": "小倉唯 Birthday Event 2025『Magical♡Party~永遠の魔法~』 大阪夜公演",
+        "tourtitle": "小倉唯 Birthday Event 2025『Magical♡Party~永遠の魔法~』 ",
+        "artist": "小倉唯",
+        "date": "2025年7月13日",
+        "venue": "サンケイホールブリーゼ",
+        "id": "2025071302",
+        "setlist": [
+            "Honey♥Come!!",
+            "すうぃ～と♡ぱーてぃー",
+            "Magic♡Happy",
+            "瞳の国のアリス -Dance Music Edition-",
+            "オトメロディー",
+            "DANZEN! ふたりはプリキュア",
+            "So☆Lucky"
+        ]
+    },
+    {
+        "LIVEtitle": "小倉唯 Birthday Event 2025『Magical♡Party~永遠の魔法~』 大阪昼公演",
+        "tourtitle": "小倉唯 Birthday Event 2025『Magical♡Party~永遠の魔法~』 ",
+        "artist": "小倉唯",
+        "date": "2025年7月13日",
+        "venue": "サンケイホールブリーゼ",
+        "id": "2025071301",
+        "setlist": [
+            "Charming Do!",
+            "すうぃ～と♡ぱーてぃー",
+            "Magic♡Happy",
+            "瞳の国のアリス -Dance Music Edition-",
+            "Catch You Catch Me",
+            "おジャ魔女カーニバル!!",
+            "So☆Lucky"
+        ]
+    },
+    {
+        "LIVEtitle": "Yui Ogura Fan Meeting 2025 in Seoul presented by KOE 夜公演",
+        "tourtitle": "Yui Ogura Fan Meeting 2025 in Seoul presented by KOE",
+        "artist": "小倉唯",
+        "date": "2025年5月17日",
+        "venue": "YES24 WANDERLOCH HALL",
+        "id": "2025051702",
+        "setlist": [
+            "Raise",
+            "君色のキセキ",
+            "So☆Lucky",
+            "ハイタッチ☆メモリー",
+            "Empty//Princess."
+        ]
+    },
+    {
+        "LIVEtitle": "Yui Ogura Fan Meeting 2025 in Seoul presented by KOE 昼公演",
+        "tourtitle": "Yui Ogura Fan Meeting 2025 in Seoul presented by KOE",
+        "artist": "小倉唯",
+        "date": "2025年5月17日",
+        "venue": "YES24 WANDERLOCH HALL",
+        "id": "2025051701",
+        "setlist": [
+            "Raise",
+            "花占いするの♡",
+            "So☆Lucky",
+            "ハイタッチ☆メモリー",
+            "Empty//Princess."
+        ]
+    },
+    {
+        "LIVEtitle": "ユイースター祭2025♡〜もっと輝くわたしになぁれ！〜with美的 夜公演",
+        "tourtitle": "ユイースター祭2025♡〜もっと輝くわたしになぁれ！〜with美的",
+        "artist": "小倉唯",
+        "date": "2025年3月30日",
+        "venue": "はまぎんホール ヴィアマーレ",
+        "id": "2025033002",
+        "setlist": [
+            "So☆Lucky",
+            "Hopeful Days",
+            "Dramatic!"
+        ]
+    },
+    {
+        "LIVEtitle": "ユイースター祭2025♡〜もっと輝くわたしになぁれ！〜with美的 昼公演",
+        "tourtitle": "ユイースター祭2025♡〜もっと輝くわたしになぁれ！〜with美的",
+        "artist": "小倉唯",
+        "date": "2025年3月30日",
+        "venue": "はまぎんホール ヴィアマーレ",
+        "id": "2025033001",
+        "setlist": [
+            "So☆Lucky",
+            "Hopeful Days",
+            "Caramel Ribbon…"
+        ]
+    },
+    {
+        "LIVEtitle": "石原夏織 ファンクラブイベント「UNITY」vol.04 夜公演",
+        "tourtitle": "石原夏織 ファンクラブイベント「UNITY」vol.04",
+        "artist": "石原夏織",
+        "date": "2025年3月29日",
+        "venue": "恵比寿ザ・ガーデンホール",
+        "id": "2025032902",
+        "setlist": [
+            "プルケリマを朝に",
+            "わざと触れた。",
+            "Gift"
+        ]
+    },
+    {
+        "LIVEtitle": "石原夏織 ファンクラブイベント「UNITY」vol.04 昼公演",
+        "tourtitle": "石原夏織 ファンクラブイベント「UNITY」vol.04",
+        "artist": "石原夏織",
+        "date": "2025年3月29日",
+        "venue": "恵比寿ザ・ガーデンホール",
+        "id": "2025032901",
+        "setlist": [
+            "Cherish",
+            "Gift",
+            "SUMMER DROP"
+        ]
+    },
+    {
+        "LIVEtitle": "P's LIVE! 08 ～P's GR∞VE～ DAY1",
+        "tourtitle": "",
+        "artist": "石原夏織",
+        "date": "2025年3月8日",
+        "venue": "LINE CUBE SHIBUYA",
+        "id": "2025030801",
+        "setlist": [
+            "Gift",
+            "Paraglider",
+            "Blooming Flower"
+        ]
+    },
+    {
+        "LIVEtitle": "オダイバ!!超次元音楽祭 フユフェス2025",
+        "tourtitle": "",
+        "artist": "小倉唯",
+        "date": "2025年2月23日",
+        "venue": "ぴあアリーナMM",
+        "id": "2025022301",
+        "setlist": [
+            "Honey♡Come!!",
+            "花占いするの♡",
+            "君色のキセキ",
+            "秘密♡Melody",
+            "Empty//Princess."
+        ]
+    },
+    {
         "LIVEtitle": "石原夏織 Billboard Live 2025 横浜夜公演",
         "tourtitle": "石原夏織 Billboard Live 2025 横浜",
         "artist": "石原夏織",
