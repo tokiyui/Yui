@@ -22,12 +22,10 @@ if (!targetLiveId) {
     document.getElementById('liveInfo').innerHTML = '<p>No ID provided in the query parameters.</p>';
 } else {
     const jsonFiles = [];
-    
     jsonFiles.push("../setlist.json");
 
     let found = false;
 
-    // 各JSONファイルを順番に読み込み、IDが一致するライブ情報を表示
     const loadLiveInfo = async () => {
         for (const file of jsonFiles) {
             try {
@@ -44,6 +42,7 @@ if (!targetLiveId) {
                         return days[date.getDay()];
                     };
 
+                    // セットリスト表示（メドレー対応）
                     const renderSetlist = setlist => {
                         let setlistHTML = '<ul>';
                         setlist.forEach((song, index) => {
@@ -64,40 +63,70 @@ if (!targetLiveId) {
                         return setlistHTML;
                     };
 
-const renderEncore = encore => {
-    let encoreHTML = '';
-    if (!Array.isArray(encore)) {
-        encore = [encore]; // encoreが配列でない場合は長さ1の配列として扱う
-    }
-    if (encore.length > 0) {
-        encoreHTML += '<ul>';
-        encore.forEach((song, index) => {
-            if (typeof song === 'string') {
-                encoreHTML += `<p>${index + 1}. <a href="./search.html?name=${encodeURIComponent(song)}">${song}</a></p>`;
-            } else if (typeof song === 'object' && Array.isArray(song.medley)) {
-                encoreHTML += `<p>${index + 1}. 【メドレー】<br>`;
-                song.medley.forEach((medleySong, medleyIndex) => {
-                    encoreHTML += `<a href="./search.html?name=${encodeURIComponent(medleySong)}">${medleySong}</a>`;
-                    if (medleyIndex < song.medley.length - 1) {
-                        encoreHTML += '<br>';
-                    }
-                });
-                encoreHTML += `</p>`;
-            }
-        });
-        encoreHTML += '</ul>';
-    }
-    return encoreHTML;
-};
+                    // Encore（EC）の表示
+                    const renderEncore = encore => {
+                        if (!Array.isArray(encore)) encore = encore ? [encore] : [];
+                        let encoreHTML = '';
 
+                        if (encore.length > 0) {
+                            encoreHTML += '<ul>';
+                            encore.forEach((song, index) => {
+                                if (typeof song === 'string') {
+                                    encoreHTML += `<p>EC${index + 1}. <a href="./search.html?name=${encodeURIComponent(song)}">${song}</a></p>`;
+                                } else if (typeof song === 'object' && Array.isArray(song.medley)) {
+                                    encoreHTML += `<p>EC${index + 1}. 【メドレー】<br>`;
+                                    song.medley.forEach((medleySong, medleyIndex) => {
+                                        encoreHTML += `<a href="./search.html?name=${encodeURIComponent(medleySong)}">${medleySong}</a>`;
+                                        if (medleyIndex < song.medley.length - 1) {
+                                            encoreHTML += '<br>';
+                                        }
+                                    });
+                                    encoreHTML += `</p>`;
+                                }
+                            });
+                            encoreHTML += '</ul>';
+                        }
+                        return encoreHTML;
+                    };
 
+                    // WEncore（WEC）の表示
+                    const renderWencore = wencore => {
+                        if (!Array.isArray(wencore)) wencore = wencore ? [wencore] : [];
+                        let wencoreHTML = '';
+
+                        if (wencore.length > 0) {
+                            wencoreHTML += '<ul>';
+                            wencore.forEach((song, index) => {
+                                if (typeof song === 'string') {
+                                    wencoreHTML += `<p>WEC${index + 1}. <a href="./search.html?name=${encodeURIComponent(song)}">${song}</a></p>`;
+                                } else if (typeof song === 'object' && Array.isArray(song.medley)) {
+                                    wencoreHTML += `<p>WEC${index + 1}. 【メドレー】<br>`;
+                                    song.medley.forEach((medleySong, medleyIndex) => {
+                                        wencoreHTML += `<a href="./search.html?name=${encodeURIComponent(medleySong)}">${medleySong}</a>`;
+                                        if (medleyIndex < song.medley.length - 1) {
+                                            wencoreHTML += '<br>';
+                                        }
+                                    });
+                                    wencoreHTML += `</p>`;
+                                }
+                            });
+                            wencoreHTML += '</ul>';
+                        }
+                        return wencoreHTML;
+                    };
+
+                    // HTMLまとめて出力
                     const html = `
                         <h2>${liveData.LIVEtitle}</h2>
                         <h3>${liveData.date} (${getDayOfWeek(liveData.date)}) @${liveData.venue}</h3>
+
                         ${renderSetlist(liveData.setlist)}
+
                         ${liveData.encore ? `<p>【アンコール】</p>${renderEncore(liveData.encore)}` : ''}
-                        ${liveData.Wencore ? `<p>【ダブルアンコール】</p><p><ul><a href="./search.html?name=${encodeURIComponent(liveData.Wencore)}">${liveData.Wencore}</a></ul></p>` : ''}
+
+                        ${liveData.Wencore ? `<p>【ダブルアンコール】</p>${renderWencore(liveData.Wencore)}` : ''}
                     `;
+
                     liveInfo.innerHTML = html;
 
                     found = true;
@@ -109,12 +138,14 @@ const renderEncore = encore => {
         }
 
         if (!found) {
-            document.getElementById('liveInfo').innerHTML = '<p>No live information found for the provided ID.</p>';
+            document.getElementById('liveInfo').innerHTML =
+                '<p>No live information found for the provided ID.</p>';
         }
     };
 
     loadLiveInfo();
 }
 </script>
+
 </body>
 </html>
