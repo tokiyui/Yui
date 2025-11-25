@@ -1,5 +1,24 @@
 [
     {
+        "LIVEtitle": "小倉唯 LIVE TOUR 2025「Love♡Ratory」アフターパーティ",
+        "tourtitle": "小倉唯 LIVE TOUR 2025「Love♡Ratory」",
+        "artist": "小倉唯",
+        "date": "2025年11月24日",
+        "venue": "パシフィコ横浜",
+        "id": "2025112402",
+        "setlist": [
+            "Love∞Vision",
+            "花占いするの♡",
+            {
+            "medley": [
+                "LOVE涙色",
+                "ラムのラブソング",
+                "Baby, Baby, Baby♡"
+                ]
+            }
+        ]
+    },
+    {
         "LIVEtitle": "小倉唯 LIVE TOUR 2025「Love♡Ratory」横浜公演",
         "tourtitle": "小倉唯 LIVE TOUR 2025「Love♡Ratory」",
         "artist": "小倉唯",
