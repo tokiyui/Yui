@@ -83,121 +83,139 @@
     const tourSelect = document.getElementById('tourSelect');
     const setlistContainer = document.getElementById('setlistContainer');
 
-    tourSelect.addEventListener('change', () => {
-      setlistContainer.innerHTML = '';
-      concertTable.innerHTML = '';
-      const selectedTour = tourSelect.value;
-
-      if (selectedTour) {
-        fetch('setlist.json')
-          .then(response => response.json())
-          .then(data => {
-            const concerts = data.filter(item => item.tourtitle === selectedTour);
-            concerts.sort((a, b) => a.id.localeCompare(b.id));
-
-            const maxSetlistLength = Math.max(...concerts.map(c => c.setlist.length));
-            const maxEncoreLength = Math.max(...concerts.map(c => Array.isArray(c.encore) ? c.encore.length : (c.encore ? 1 : 0)));
-
-            concerts.forEach(concert => {
-              while (concert.setlist.length < maxSetlistLength) concert.setlist.push('');
-
-              if (!Array.isArray(concert.encore)) concert.encore = concert.encore ? [concert.encore] : [];
-              while (concert.encore.length < maxEncoreLength) concert.encore.push('');
-            });
-
-            const table = document.createElement('table');
-            const headerRow = table.insertRow();
-            headerRow.insertCell().textContent = '';
-            concerts.forEach(concert => headerRow.insertCell().textContent = concert.LIVEtitle.replace(concert.tourtitle, ''));
-
-            const dateRow = table.insertRow();
-            dateRow.insertCell().textContent = '開催日';
-            concerts.forEach(concert => dateRow.insertCell().textContent = concert.date);
-
-            const venueRow = table.insertRow();
-            venueRow.insertCell().textContent = '会場';
-            concerts.forEach(concert => venueRow.insertCell().textContent = concert.venue);
-
-            const labelRow = table.insertRow();
-            labelRow.insertCell().textContent = '';
-            concerts.forEach(() => labelRow.insertCell().textContent = '【セットリスト】');
-
-            // Setlist rows
-            for (let i = 0; i < maxSetlistLength; i++) {
-              const row = table.insertRow();
-              row.insertCell().textContent = i + 1;
-
-              const setlistValues = concerts.map(concert => formatSong(concert.setlist[i]));
-              const isSame = setlistValues.every((v, _, arr) => v === arr[0]);
-
-              setlistValues.forEach(v => applyCell(row, v, isSame, selectedTour));
-            }
-
-            // Encore block
-            const encoreList = concerts.map(c => c.encore);
-            if (encoreList.some(e => e[0])) {
-              const encorerow = table.insertRow();
-              encorerow.insertCell().textContent = '';
-              concerts.forEach(() => encorerow.insertCell().textContent = '【アンコール】');
-
-              const maxEncoreRows = Math.max(...encoreList.map(e => e.length));
-
-              for (let i = 0; i < maxEncoreRows; i++) {
-                const row = table.insertRow();
-                row.insertCell().textContent = 'EC' + (i + 1);
-
-                const encoreValues = encoreList.map(encore => formatSong(encore[i]));
-                const isSameEncore = encoreValues.every((v, _, arr) => v === arr[0]);
-
-                encoreValues.forEach(v => applyCell(row, v, isSameEncore, selectedTour));
-              }
-            }
-
-            // Wencore (formatted same as Encore)
-            const wencoreList = concerts.map(c => Array.isArray(c.Wencore) ? c.Wencore : (c.Wencore ? [c.Wencore] : []));
-            const maxWencore = Math.max(...wencoreList.map(w => w.length));
-
-            if (maxWencore > 0) {
-              const wencoreHeader = table.insertRow();
-              wencoreHeader.insertCell().textContent = '';
-              concerts.forEach(() => wencoreHeader.insertCell().textContent = '【ダブルアンコール】');
-
-              for (let i = 0; i < maxWencore; i++) {
-                const row = table.insertRow();
-                row.insertCell().textContent = 'WEC' + (i + 1);
-
-                const wencoreValues = wencoreList.map(w => formatSong(w[i]));
-                const isSameWencore = wencoreValues.every((v, _, arr) => v === arr[0]);
-
-                wencoreValues.forEach(v => applyCell(row, v, isSameWencore, selectedTour));
-              }
-            }
-
-            setlistContainer.appendChild(table);
-          });
-      }
-    });
-
-    function formatSong(song) {
+    const formatSong = (song) => {
       if (!song) return '';
       if (typeof song === 'object' && song.medley) {
-        const links = song.medley.map(track => `<a href="./sub/search.html?name=${encodeURIComponent(track)}">${track}</a>`).join('<br>');
-        return `【メドレー】<br>${links}`;
+        return `【メドレー】<br>` +
+          song.medley.map(track =>
+            `<a href="./sub/search.html?name=${encodeURIComponent(track)}">${track}</a>`
+          ).join('<br>');
       }
       return `<a href="./sub/search.html?name=${encodeURIComponent(song)}">${song}</a>`;
-    }
+    };
 
-    function applyCell(row, value, isSame, selectedTour) {
+    const applyCell = (row, value, isSame, selectedTour) => {
       const cell = row.insertCell();
       cell.innerHTML = value;
       cell.style.whiteSpace = 'pre-wrap';
-
       if (!isSame) {
-        if (selectedTour.includes('石原夏織')) row.classList.add('cyan');
-        else if (selectedTour.includes('ゆいかおり')) row.classList.add('orange');
-        else row.classList.add('pink');
+        if (selectedTour.includes('石原夏織')) {
+          row.classList.add('cyan');
+        } else if (selectedTour.includes('ゆいかおり')) {
+          row.classList.add('orange');
+        } else {
+          row.classList.add('pink');
+        }
       }
-    }
+    };
+
+    tourSelect.addEventListener('change', () => {
+      setlistContainer.innerHTML = '';
+      concertTable.innerHTML = '';
+
+      const selectedTour = tourSelect.value;
+      if (!selectedTour) return;
+
+      fetch('setlist.json')
+        .then(response => response.json())
+        .then(data => {
+          const concerts = data.filter(item => item.tourtitle === selectedTour);
+          concerts.sort((a, b) => a.id.localeCompare(b.id));
+
+          const maxSetlistLength = Math.max(...concerts.map(c => c.setlist.length));
+          const maxEncoreLength = Math.max(...concerts.map(c =>
+            Array.isArray(c.encore) ? c.encore.length : (c.encore ? 1 : 0)
+          ));
+
+          concerts.forEach(c => {
+            while (c.setlist.length < maxSetlistLength) c.setlist.push('');
+
+            if (!Array.isArray(c.encore)) c.encore = c.encore ? [c.encore] : [];
+            while (c.encore.length < maxEncoreLength) c.encore.push('');
+
+            if (!Array.isArray(c.Wencore)) c.Wencore = c.Wencore ? [c.Wencore] : [];
+          });
+
+          const table = document.createElement('table');
+
+          const headerRow = table.insertRow();
+          headerRow.insertCell().textContent = '';
+          concerts.forEach(concert =>
+            headerRow.insertCell().textContent =
+            concert.LIVEtitle.replace(concert.tourtitle, '')
+          );
+
+          const dateRow = table.insertRow();
+          dateRow.insertCell().textContent = '開催日';
+          concerts.forEach(c => dateRow.insertCell().textContent = c.date);
+
+          const venueRow = table.insertRow();
+          venueRow.insertCell().textContent = '会場';
+          concerts.forEach(c => venueRow.insertCell().textContent = c.venue);
+
+          const setHeader = table.insertRow();
+          setHeader.insertCell().textContent = '';
+          concerts.forEach(() => setHeader.insertCell().textContent = '【セットリスト】');
+
+          for (let i = 0; i < maxSetlistLength; i++) {
+            const row = table.insertRow();
+            row.insertCell().textContent = i + 1;
+
+            const setlistValues = concerts.map(c => formatSong(c.setlist[i]));
+            const isSame = setlistValues.every((v, _, arr) => v === arr[0]);
+
+            setlistValues.forEach(v => applyCell(row, v, isSame, selectedTour));
+          }
+
+          const encoreList = concerts.map(c => c.encore);
+
+          if (maxEncoreLength > 0) {
+            const encHeader = table.insertRow();
+            encHeader.insertCell().textContent = '';
+            concerts.forEach(() => encHeader.insertCell().textContent = '【アンコール】');
+
+            for (let i = 0; i < maxEncoreLength; i++) {
+              const row = table.insertRow();
+              row.insertCell().textContent = 'EC' + (i + 1);
+
+              const encoreValues = encoreList.map(enc => formatSong(enc[i]));
+              const isSame = encoreValues.every((v, _, arr) => v === arr[0]);
+
+              encoreValues.forEach(v => applyCell(row, v, isSame, selectedTour));
+            }
+          }
+
+          const wencoreList = concerts.map(c => c.Wencore);
+          const maxWencore = Math.max(...wencoreList.map(w => w.length));
+
+          if (maxWencore > 0) {
+
+            const wencoreHeader = table.insertRow();
+            wencoreHeader.insertCell().textContent = '';
+
+            concerts.forEach((concert, idx) => {
+              if (wencoreList[idx].some(item => item && item !== '')) {
+                wencoreHeader.insertCell().textContent = '【ダブルアンコール】';
+              } else {
+                wencoreHeader.insertCell().textContent = '';
+              }
+            });
+
+            for (let i = 0; i < maxWencore; i++) {
+              const row = table.insertRow();
+              row.insertCell().textContent = 'WEC' + (i + 1);
+
+              const wencoreValues = wencoreList.map(w => formatSong(w[i] || ''));
+              const isSame = wencoreValues.every((v, _, arr) => v === arr[0]);
+
+              wencoreValues.forEach(v => applyCell(row, v, isSame, selectedTour));
+            }
+          }
+
+          setlistContainer.appendChild(table);
+        });
+    });
   </script>
 </body>
+
 </html>
