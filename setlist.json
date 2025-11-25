@@ -1,5 +1,205 @@
 [
     {
+        "LIVEtitle": "小倉唯 LIVE TOUR 2025「Love♡Ratory」横浜公演",
+        "tourtitle": "小倉唯 LIVE TOUR 2025「Love♡Ratory」",
+        "artist": "小倉唯",
+        "date": "2025年11月24日",
+        "venue": "パシフィコ横浜",
+        "id": "2025112401",
+        "setlist": [
+            "すうぃ～と♡ぱーてぃー",
+            "I・LOVE・YOU!!",
+            "トキメキWeekend!",
+            "ココロテレパシー",
+            "Caramel Ribbon...",
+            "きょんきょん♡らぶぽーしょん",
+            "Empty//Princess.",
+            "治癒治癒ちゅっ♡",
+            "ドキドキラビリンス",
+            {
+            "medley": [
+                "エンジョイ!",
+                "PRISM BEAT"
+                ]
+            },
+            "True Path",
+            "So☆Lucky",
+            "Future Strike",
+            "Wish",
+            "ハートフォレスト",
+            "medley": [
+                "君色のキセキ",
+                "Lovely Happily Shiny Days",
+                "ハピネス*センセーション"
+                ]
+            },
+            "Baby Sweet Berry Love"
+        ],
+        "encore": [          
+            "Magic♡Happy",
+            "Fightin★Pose",
+            {
+                "medley": [
+                    "pyua purely",
+                    "秘密♡Melody",
+                    "Honey♥Come!!"
+                ]
+            },
+            "君色のキセキ"
+        ],
+        "Wencore": [
+            "winter tale",
+            "治癒治癒ちゅっ♡"
+        ]
+    },
+    {
+        "LIVEtitle": "小倉唯 LIVE TOUR 2025「Love♡Ratory」大阪公演",
+        "tourtitle": "小倉唯 LIVE TOUR 2025「Love♡Ratory」",
+        "artist": "小倉唯",
+        "date": "2025年11月2日",
+        "venue": "Brillia HALL 箕面",
+        "id": "2025110201",
+        "setlist": [
+            "すうぃ～と♡ぱーてぃー",
+            "I・LOVE・YOU!!",
+            "トキメキWeekend!",
+            "ココロテレパシー",
+            "Caramel Ribbon...",
+            "きょんきょん♡らぶぽーしょん",
+            "Empty//Princess.",
+            "治癒治癒ちゅっ♡",
+            "Wild☆Kitty",
+            {
+            "medley": [
+                "エンジョイ!",
+                "PRISM BEAT"
+                ]
+            },
+            "True Path",
+            "So☆Lucky",
+            "Raise",
+            "Wish",
+            "ハートフォレスト",
+            "medley": [
+                "君色のキセキ",
+                "Lovely Happily Shiny Days",
+                "ハピネス*センセーション"
+                ]
+            },
+            "Baby Sweet Berry Love"
+        ],
+        "encore": [          
+            "Magic♡Happy",
+            "Fightin★Pose",
+            {
+                "medley": [
+                    "pyua purely",
+                    "秘密♡Melody",
+                    "Honey♥Come!!"
+                ]
+            },
+            "君色のキセキ"
+        ]
+    },
+    {
+        "LIVEtitle": "小倉唯 LIVE TOUR 2025「Love♡Ratory」宮城公演",
+        "tourtitle": "小倉唯 LIVE TOUR 2025「Love♡Ratory」",
+        "artist": "小倉唯",
+        "date": "2025年10月26日",
+        "venue": "仙台サンプラザホール",
+        "id": "2025102601",
+        "setlist": [
+            "すうぃ～と♡ぱーてぃー",
+            "Tinkling Smile",
+            "トキメキWeekend!",
+            "ココロテレパシー",
+            "Caramel Ribbon...",
+            "きょんきょん♡らぶぽーしょん",
+            "Empty//Princess.",
+            "治癒治癒ちゅっ♡",
+            "Wild☆Kitty",
+            {
+            "medley": [
+                "エンジョイ!",
+                "PRISM BEAT"
+                ]
+            },
+            "True Path",
+            "So☆Lucky",
+            "Raise",
+            "Wish",
+            "ハートフォレスト",
+            "medley": [
+                "君色のキセキ",
+                "Lovely Happily Shiny Days",
+                "ハピネス*センセーション"
+                ]
+            },
+            "Baby Sweet Berry Love"
+        ],
+        "encore": [          
+            "Magic♡Happy",
+            "Fightin★Pose",
+            {
+                "medley": [
+                    "pyua purely",
+                    "秘密♡Melody",
+                    "Honey♥Come!!"
+                ]
+            },
+            "君色のキセキ"
+        ]
+    },
+    {
+        "LIVEtitle": "小倉唯 LIVE TOUR 2025「Love♡Ratory」千葉公演",
+        "tourtitle": "小倉唯 LIVE TOUR 2025「Love♡Ratory」",
+        "artist": "小倉唯",
+        "date": "2025年10月19日",
+        "venue": "市川市文化会館",
+        "id": "2025101901",
+        "setlist": [
+            "すうぃ～と♡ぱーてぃー",
+            "Tinkling Smile",
+            "トキメキWeekend!",
+            "ココロテレパシー",
+            "Caramel Ribbon...",
+            "きょんきょん♡らぶぽーしょん",
+            "Empty//Princess.",
+            "治癒治癒ちゅっ♡",
+            "ドキドキラビリンス",
+            {
+            "medley": [
+                "エンジョイ!",
+                "PRISM BEAT"
+                ]
+            },
+            "True Path",
+            "So☆Lucky",
+            "Future Strike",
+            "Wish",
+            "ハートフォレスト",
+            "medley": [
+                "君色のキセキ",
+                "Lovely Happily Shiny Days",
+                "ハピネス*センセーション"
+                ]
+            },
+            "Baby Sweet Berry Love"
+        ],
+        "encore": [          
+            "Magic♡Happy",
+            "Fightin★Pose",
+            {
+                "medley": [
+                    "pyua purely",
+                    "秘密♡Melody",
+                    "Honey♥Come!!"
+                ]
+            },
+            "君色のキセキ"
+        ]
+    },
+    {
         "LIVEtitle": "石原夏織 2025 LIVE「As I Am」in Taipei",
         "tourtitle": "石原夏織 2025 LIVE「As I Am」",
         "artist": "石原夏織",
