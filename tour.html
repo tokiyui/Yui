@@ -201,30 +201,3 @@
   </script>
 </body>
 </html>
-
-
-function formatSong(song) {
-if (!song) return '';
-if (typeof song === 'object' && song.medley) {
-const links = song.medley.map(track => `<a href="./sub/search.html?name=${encodeURIComponent(track)}">${track}</a>`).join('<br>');
-return `【メドレー】<br>${links}`;
-}
-return `<a href="./sub/search.html?name=${encodeURIComponent(song)}">${song}</a>`;
-}
-
-
-function applyCell(row, value, isSame, selectedTour) {
-const cell = row.insertCell();
-cell.innerHTML = value;
-cell.style.whiteSpace = 'pre-wrap';
-
-
-if (!isSame) {
-if (selectedTour.includes('石原夏織')) row.classList.add('cyan');
-else if (selectedTour.includes('ゆいかおり')) row.classList.add('orange');
-else row.classList.add('pink');
-}
-}
-</script>
-</body>
-</html>
