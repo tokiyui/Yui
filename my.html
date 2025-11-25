@@ -155,76 +155,99 @@
     
     <div id="searchResults" class="result"></div>
 
-    <script>
-        const checkboxes = document.querySelectorAll('.checkbox');
-        const searchResults = document.getElementById('searchResults');
-        let songData;
-        let setlistData;
+<script>
+    const checkboxes = document.querySelectorAll('.checkbox');
+    const searchResults = document.getElementById('searchResults');
+    let songData;
+    let setlistData;
 
-        fetch('song.json')
-            .then(response => response.json())
-            .then(data => {
-              songData = data.filter(song => song.artist === "小倉唯");
-            });
-
-        fetch('setlist.json')
-            .then(response => response.json())
-            .then(data => {
-                setlistData = data;
-            });
-
-        checkboxes.forEach(checkbox => {
-            checkbox.addEventListener('change', () => {
-                checkMissingSongs();
-            });
+    // 小倉唯の楽曲だけ抽出
+    fetch('song.json')
+        .then(response => response.json())
+        .then(data => {
+            songData = data.filter(song => song.artist === "小倉唯");
         });
 
-        function checkMissingSongs() {
-            const checkedIds = Array.from(document.querySelectorAll('.checkbox:checked')).map(checkbox => checkbox.id);
+    // セットリストデータを読み込み
+    fetch('setlist.json')
+        .then(response => response.json())
+        .then(data => {
+            setlistData = data;
+        });
 
-            if (checkedIds.length === 0) {
-                searchResults.innerHTML = '';
-                return;
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+            checkMissingSongs();
+        });
+    });
+
+    function extractSongs(arr) {
+        if (!Array.isArray(arr)) return [];
+
+        const songs = [];
+
+        arr.forEach(item => {
+            if (typeof item === "string") {
+                songs.push(item);
+            } else if (item && item.medley && Array.isArray(item.medley)) {
+                songs.push(...item.medley);
             }
+        });
 
-            if (!songData || !setlistData) {
-                return;
-            }
+        return songs;
+    }
 
-            const songTitles = songData.map(song => song.title);
+    function checkMissingSongs() {
+        const checkedIds = Array.from(document.querySelectorAll('.checkbox:checked'))
+            .map(cb => cb.id);
 
-            const missingSongs = songTitles.filter(title => {
-                let found = false;
+        if (checkedIds.length === 0) {
+            searchResults.innerHTML = '';
+            return;
+        }
 
-                setlistData.forEach(event => {
-                    if (checkedIds.includes(event.id)) {
-                        if (event.setlist && (event.setlist.includes(title) || (event.setlist.medley && event.setlist.medley.includes(title)))) {
-                            found = true;
-                        }
-                        if (event.encore && (event.encore.includes(title) || (event.encore.medley && event.encore.medley.includes(title)))) {
-                            found = true;
-                        }
-                        if (event.Wencore && (event.Wencore.includes(title) || (event.Wencore.medley && event.Wencore.medley.includes(title)))) {
-                            found = true;
-                        }
+        if (!songData || !setlistData) {
+            return;
+        }
+
+        const allSongTitles = songData.map(song => song.title);
+
+        const missingSongs = allSongTitles.filter(title => {
+            let found = false;
+
+            setlistData.forEach(event => {
+                if (!checkedIds.includes(event.id)) return;
+
+                // 各セクションから楽曲を抽出して検索
+                const sections = ["setlist", "encore", "Wencore"];
+
+                for (const section of sections) {
+                    if (!event[section]) continue;
+
+                    const flatSongs = extractSongs(event[section]);
+
+                    if (flatSongs.includes(title)) {
+                        found = true;
+                        return;
                     }
-                });
-
-                return !found;
+                }
             });
 
-            displayResults(missingSongs);
-        }
+            return !found;
+        });
 
-        function displayResults(missingSongs) {
-            searchResults.innerHTML = `
-                <p>未回収楽曲数: ${missingSongs.length}</p>
-                <ul>
-                    ${missingSongs.map(song => `${song}<br>`).join('')}
-                </ul>
-            `;
-        }
-    </script>
+        displayResults(missingSongs);
+    }
+
+    function displayResults(missingSongs) {
+        searchResults.innerHTML = `
+            <p>未回収楽曲数: ${missingSongs.length}</p>
+            <ul>
+                ${missingSongs.map(song => `${song}<br>`).join('')}
+            </ul>
+        `;
+    }
+</script>
 </body>
 
 </html>
