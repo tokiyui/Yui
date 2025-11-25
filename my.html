@@ -201,10 +201,10 @@
                         if (event.setlist && (event.setlist.includes(title) || (event.setlist.medley && event.setlist.medley.includes(title)))) {
                             found = true;
                         }
-                        if (event.encore && event.encore.includes(title)) {
+                        if (event.encore && (event.encore.includes(title) || (event.encore.medley && event.encore.medley.includes(title)))) {
                             found = true;
                         }
-                        if (event.Wencore && event.Wencore === title) {
+                        if (event.Wencore && (event.Wencore.includes(title) || (event.Wencore.medley && event.Wencore.medley.includes(title)))) {
                             found = true;
                         }
                     }
